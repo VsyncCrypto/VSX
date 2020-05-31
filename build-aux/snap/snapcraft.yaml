@@ -68,7 +68,7 @@ apps:
     plugs: [home]
 parts:
   pivx-core:
-    source: https://github.com/PIVX-Project/PIVX
+    source: https://github.com/Carbon-Reduction-Initiative/CARI
     source-type: git
     source-tag: master
     plugin: nil

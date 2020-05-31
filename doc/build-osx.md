@@ -43,7 +43,7 @@ Build PIVX Core
 
 1. Clone the PIVX Core source code:
 
-        git clone https://github.com/pivx-project/pivx
+        git clone https://github.com/Carbon-Reduction-Initiative/CARI
         cd pivx
 
 2.  Make the Homebrew OpenSSL headers visible to the configure script  (do ```brew info openssl``` to find out why this is necessary, or if you use Homebrew with installation folders different from the default).

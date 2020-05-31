@@ -29,8 +29,8 @@ Build-Depends: debhelper,
  dh-systemd
 Standards-Version: 3.9.2
 Homepage: http://www.pivx.org
-Vcs-Git: git://github.com/PIVX-Project/PIVX.git
-Vcs-Browser: http://github.com/PIVX-Project/PIVX
+Vcs-Git: git://github.com/Carbon-Reduction-Initiative/CARI.git
+Vcs-Browser: http://github.com/Carbon-Reduction-Initiative/CARI
 
 Package: pivxd
 Architecture: any

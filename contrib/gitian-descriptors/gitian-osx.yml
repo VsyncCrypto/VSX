@@ -29,7 +29,7 @@ packages:
 - "python3-setuptools"
 - "fonts-tuffy"
 remotes:
-- "url": "https://github.com/pivx-project/pivx.git"
+- "url": "https://github.com/Carbon-Reduction-Initiative/CARI.git"
   "dir": "pivx"
 files:
 - "MacOSX10.11.sdk.tar.gz"

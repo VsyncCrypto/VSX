@@ -112,7 +112,7 @@ gpg --output ${VERSION}-win-unsigned/$NAME/pivx-win-${VERSION%\.*}-build.assert.
 Uploading Signatures
 --------------------
 Make a Pull Request (both the `.assert` and `.assert.sig` files) to the
-[gitian.sigs](https://github.com/pivx-project/gitian.sigs/) repository:
+[gitian.sigs](https://github.com/Carbon-Reduction-Initiative/gitian.sigs/) repository:
 
 ```bash
 git checkout -b ${VERSION}-not-codesigned
