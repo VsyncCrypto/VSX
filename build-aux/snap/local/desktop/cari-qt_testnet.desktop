@@ -2,14 +2,14 @@
 
 [Desktop Entry]
 Encoding=UTF-8
-Name=PIVX Core
-Comment=PIVX Core QT test network
-GenericName=PIVX Digital Currency QT client testnet network
-Exec=pivx-core.qt-testnet %u
+Name=CARI Core
+Comment=CARI Core QT test network
+GenericName=CARI Digital Currency QT client testnet network
+Exec=cari-core.qt-testnet %u
 Terminal=false
 Type=Application
-Icon=${SNAP}/share/pixmaps/pivx_testnet.png
-MimeType=x-scheme-handler/piv;
+Icon=${SNAP}/share/pixmaps/cari_testnet.png
+MimeType=x-scheme-handler/cari;
 Categories=X-Office;X-Finance;
-Keywords=internet;pivx;zpiv;tpiv;core;wallet;qt;testnet;snap;launchpad;crypto;digital;currency;coin;token;zerocoin;
+Keywords=internet;cari;zcari;tcari;core;wallet;qt;testnet;snap;launchpad;crypto;digital;currency;coin;token;zerocoin;
 Version=1.0

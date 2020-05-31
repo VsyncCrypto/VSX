@@ -2,14 +2,14 @@
 
 [Desktop Entry]
 Encoding=UTF-8
-Name=PIVX Core Daemon SNAP
+Name=CARI Core Daemon SNAP
 Comment=testnet
-GenericName=PIVX Digital Currency Daemon Client testnet network
-Exec=pivx-core.daemon-testnet %u
+GenericName=CARI Digital Currency Daemon Client testnet network
+Exec=cari-core.daemon-testnet %u
 Terminal=true
 Type=Application
-Icon=${SNAP}/share/pixmaps/pivx_testnet.png
-MimeType=x-scheme-handler/piv;
+Icon=${SNAP}/share/pixmaps/cari_testnet.png
+MimeType=x-scheme-handler/cari;
 Categories=X-Office;X-Finance;
-Keywords=internet;pivx;zpiv;core;wallet;daemon;testnet;snap;launchpad;crypto;digital;currency;coin;token;zerocoin;
+Keywords=internet;cari;zcari;core;wallet;daemon;testnet;snap;launchpad;crypto;digital;currency;coin;token;zerocoin;
 Version=1.0
