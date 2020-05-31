@@ -3,7 +3,7 @@ PIVX Core
 
 Setup
 ---------------------
-[PIVX Core](http://pivx.org/wallet) is the original PIVX client and it builds the backbone of the network. However, it downloads and stores the entire history of PIVX transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
+[PIVX Core](http://cri.eco/wallet) is the original PIVX client and it builds the backbone of the network. However, it downloads and stores the entire history of PIVX transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
 
 Running
 ---------------------
@@ -28,8 +28,7 @@ Drag PIVX-Qt to your applications folder, and then run PIVX-Qt.
 
 * See the documentation at the [PIVX Wiki](https://github.com/Carbon-Reduction-Initiative/CARI/wiki)
 for help and more information.
-* Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or on the [PIVX Forum](http://forum.pivx.org/).
-* Join our Discord server [Discord Server](https://discord.pivx.org)
+* Ask for help on our Discord server [Discord Server](https://discord.gg/m9CwKFp)
 
 Building
 ---------------------
@@ -56,8 +55,7 @@ The PIVX repo's [root README](/README.md) contains relevant information on the d
 - [Dnsseed Policy](dnsseed-policy.md)
 
 ### Resources
-* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or the [PIVX](http://forum.pivx.org/) forum.
-* Join the [PIVX Discord](https://discord.pivx.org).
+* Discuss on our [PIVX Discord](https://discord.gg/m9CwKFp).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

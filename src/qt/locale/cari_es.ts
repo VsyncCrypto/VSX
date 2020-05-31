@@ -3845,14 +3845,14 @@ Tu cartera PIVX también necesita estar completamente sincronizada para que pued
                            zPIV is an optional privacy-centric method of coin mixing on the
                            PIVX blockchain. Basically all your transactions cannot be tracked
                            on to any block explorer. You can read more about the technicals in the
-                           &lt;a style='color: #b088ff' href='https://PIVX.org/zpiv/'&gt;
+                           &lt;a style='color: #b088ff' href='https://cri.eco/zpiv/'&gt;
                            "PIVX Zerocoin (zPIV) Technical Paper"&lt;/a&gt;.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
         <translation>
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt; 
 zPIV es un método opcional centrado en la privacidad de monedas en la Blockchain PIVX. Básicamente, todas sus transacciones no pueden ser rastreadas en ningún explorador de bloques. Puedes leer más sobre los aspectos técnicos en el
- &lt;a style='color: #b088ff' href='https://PIVX.org/zpiv/'&gt;
+ &lt;a style='color: #b088ff' href='https://cri.eco/zpiv/'&gt;
 "Documentación Técnica de PIVX Zerocoin (zPIV) ". &lt;/a&gt;.
 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
 </translation>
@@ -3897,7 +3897,7 @@ zPIV es un método opcional centrado en la privacidad de monedas en la Blockchai
                            marks and restart your wallet to disable automint.&lt;/p&gt;
                            &lt;/p&gt;&lt;p align="justify"&gt;
                            You can read more about zPIV in the
-                           &lt;a style='color: #b088ff' href='https://PIVX.org/zpiv/'&gt; "PIVX Zerocoin (zPIV) Technical Paper"&lt;/a&gt;.
+                           &lt;a style='color: #b088ff' href='https://cri.eco/zpiv/'&gt; "PIVX Zerocoin (zPIV) Technical Paper"&lt;/a&gt;.
                            If you would like to keep and stake your zPIV, please read the "How do I stake"
                            section of the FAQ below.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
@@ -3914,7 +3914,7 @@ tu archivo pivx.conf y agregar &lt;i&gt; enablezeromint=0&lt;/i&gt; Sin las comi
 luego reinicia tu billetera para deshabilitar la impresión automática.&lt;/p&gt;
 &lt;/p&gt;&lt;p align="justify"&gt;
 Puedes leer más sobre zPIV en el
-&lt;a style='color: #b088ff' href='https://PIVX.org/zpiv/'&gt; "Documentación Técnica de PIVX Zerocoin (zPIV)" &lt;/a&gt;.
+&lt;a style='color: #b088ff' href='https://cri.eco/zpiv/'&gt; "Documentación Técnica de PIVX Zerocoin (zPIV)" &lt;/a&gt;.
 Si deseas conservar y hacer stake tu zPIV, lee la sección "¿Cómo puedo hacer stake?"de las preguntas frecuentes a continuación.
 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -3971,7 +3971,7 @@ Si quieres más zPIV necesitarás acuñar tu saldo en la pestaña "Privacidad".
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
                            We have support channels in most of our official chat groups, for example
-                           &lt;a style='color: #b088ff' href='https://discord.PIVX.org'&gt;
+                           &lt;a style='color: #b088ff' href='https://discord.gg/m9CwKFp'&gt;
                            #support in our Discord&lt;/a&gt;.
                            If you prefer to submit a ticket, One can be
                            &lt;a style='color: #b088ff' href='https://PIVX.freshdesk.com'&gt;
@@ -3981,7 +3981,7 @@ Si quieres más zPIV necesitarás acuñar tu saldo en la pestaña "Privacidad".
         <translation>
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
 Tenemos canales de ayuda en la mayoría de nuestros grupos de chat oficiales, por ejemplo
-&lt;a style='color: #b088ff' href='https://discord.PIVX.org'&gt;
+&lt;a style='color: #b088ff' href='https://discord.gg/m9CwKFp'&gt;
 #support en nuestro Discord&lt;/a&gt;.
 Si prefieres enviar una solicitud, una puede ser
 &lt;a style='color: #b088ff' href='https://PIVX.freshdesk.com'&gt;

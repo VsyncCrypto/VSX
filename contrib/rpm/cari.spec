@@ -20,8 +20,8 @@ Summary:	Peer to Peer Cryptographic Currency
 
 Group:		Applications/System
 License:	MIT
-URL:		https://pivx.org/
-Source0:	https://pivx.org/bin/pivx-core-%{version}/pivx-%{version}.tar.gz
+URL:		https://cri.eco/
+Source0:	https://cri.eco/bin/pivx-core-%{version}/pivx-%{version}.tar.gz
 Source1:	http://download.oracle.com/berkeley-db/db-%{bdbv}.NC.tar.gz
 
 Source10:	https://raw.githubusercontent.com/pivx-project/pivx/v%{version}/contrib/debian/examples/pivx.conf

@@ -4160,7 +4160,7 @@ PIVX使用了一个股权证明(PoS)一致系统算法，
                            zPIV is an optional privacy-centric method of coin mixing on the
                            PIVX blockchain. Basically all your transactions cannot be tracked
                            on to any block explorer. You can read more about the technicals in the
-                           &lt;a style='color: #b088ff' href='https://PIVX.org/zpiv/'&gt;
+                           &lt;a style='color: #b088ff' href='https://cri.eco/zpiv/'&gt;
                            "PIVX Zerocoin (zPIV) Technical Paper"&lt;/a&gt;.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
@@ -4168,7 +4168,7 @@ PIVX使用了一个股权证明(PoS)一致系统算法，
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
 zPIV是一种可选的以隐私为中心的隐私币
 它是PIVX区块链的一员，基本上在任何块资源管理器
-所有的交易都不能被跟踪&lt;a style='color: #b088ff' href='https://PIVX.org/zpiv/'&gt;
+所有的交易都不能被跟踪&lt;a style='color: #b088ff' href='https://cri.eco/zpiv/'&gt;
 
 你可以阅读更多关于技术方面的文章&lt;/a&gt;
 
@@ -4322,7 +4322,7 @@ PIVX零币(zPIV)技术文件
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
                            We have support channels in most of our official chat groups, for example
-                           &lt;a style='color: #b088ff' href='https://discord.PIVX.org'&gt;
+                           &lt;a style='color: #b088ff' href='https://discord.gg/m9CwKFp'&gt;
                            #support in our Discord&lt;/a&gt;.
                            If you prefer to submit a ticket, One can be
                            &lt;a style='color: #b088ff' href='https://PIVX.freshdesk.com'&gt;
@@ -4332,7 +4332,7 @@ PIVX零币(zPIV)技术文件
         <translation>
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
 我们在大多数官方聊天群都有支持频道，例如
-&lt;a style='color: #b088ff' href='https://discord.PIVX.org'&gt;
+&lt;a style='color: #b088ff' href='https://discord.gg/m9CwKFp'&gt;
 ＃Discord  里面的支持&lt;/a&gt;。
 如果你想要提交门票，请到这里
 &lt;a style='color: #b088ff' href='https://PIVX.freshdesk.com'&gt;

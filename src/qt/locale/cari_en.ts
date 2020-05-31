@@ -5230,7 +5230,7 @@ There was an error trying to save the address list to %1. Please try again.</sou
                            zPIV is an optional privacy-centric method of coin mixing on the
                            PIVX blockchain. Basically all your transactions cannot be tracked
                            on to any block explorer. You can read more about the technicals in the
-                           &lt;a style=&apos;color: #b088ff&apos; href=&apos;https://PIVX.org/zpiv/&apos;&gt;
+                           &lt;a style=&apos;color: #b088ff&apos; href=&apos;https://cri.eco/zpiv/&apos;&gt;
                            &quot;PIVX Zerocoin (zPIV) Technical Paper&quot;&lt;/a&gt;.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
@@ -5281,7 +5281,7 @@ There was an error trying to save the address list to %1. Please try again.</sou
                            marks and restart your wallet to disable automint.&lt;/p&gt;
                            &lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;
                            You can read more about zPIV in the
-                           &lt;a style=&apos;color: #b088ff&apos; href=&apos;https://PIVX.org/zpiv/&apos;&gt; &quot;PIVX Zerocoin (zPIV) Technical Paper&quot;&lt;/a&gt;.
+                           &lt;a style=&apos;color: #b088ff&apos; href=&apos;https://cri.eco/zpiv/&apos;&gt; &quot;PIVX Zerocoin (zPIV) Technical Paper&quot;&lt;/a&gt;.
                            If you would like to keep and stake your zPIV, please read the &quot;How do I stake&quot;
                            section of the FAQ below.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
@@ -5382,7 +5382,7 @@ There was an error trying to save the address list to %1. Please try again.</sou
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;
                            We have support channels in most of our official chat groups, for example
-                           &lt;a style=&apos;color: #b088ff&apos; href=&apos;https://discord.PIVX.org&apos;&gt;
+                           &lt;a style=&apos;color: #b088ff&apos; href=&apos;https://discord.gg/m9CwKFp&apos;&gt;
                            #support in our Discord&lt;/a&gt;.
                            If you prefer to submit a ticket, One can be
                            &lt;a style=&apos;color: #b088ff&apos; href=&apos;https://PIVX.freshdesk.com&apos;&gt;

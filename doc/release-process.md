@@ -279,9 +279,7 @@ Note: check that SHA256SUMS itself doesn't end up in SHA256SUMS, which is a spur
 
 - Announce the release:
 
-  - bitcointalk announcement thread
-
-  - Optionally twitter, reddit /r/pivx, ... but this will usually sort out itself
+  - Optionally twitter, ... but this will usually sort out itself
 
   - Archive release notes for the new version to `doc/release-notes/` (branch `master` and branch of the release)
 
