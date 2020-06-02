@@ -5,19 +5,19 @@
 # See "man systemd.service" for details.
 
 # Note that almost all daemon options could be specified in
-# /etc/pivx/pivx.conf
+# /etc/cari/cari.conf
 
 [Unit]
-Description=PIVX daemon
+Description=CARI daemon
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/pivxd -daemon -conf=/etc/pivx/pivx.conf -pid=/run/pivxd/pivxd.pid
-# Creates /run/pivxd owned by pivx
-RuntimeDirectory=pivxd
-User=pivx
+ExecStart=/usr/bin/carid -daemon -conf=/etc/cari/cari.conf -pid=/run/carid/carid.pid
+# Creates /run/carid owned by cari
+RuntimeDirectory=carid
+User=cari
 Type=forking
-PIDFile=/run/pivxd/pivxd.pid
+PIDFile=/run/carid/carid.pid
 Restart=on-failure
 
 # Hardening measures

@@ -1,31 +1,31 @@
 #!/bin/bash
 #
-#  pivxd The PIVX core server.
+#  carid The CARI core server.
 #
 #
 # chkconfig: 345 80 20
-# description: pivxd
-# processname: pivxd
+# description: carid
+# processname: carid
 #
 
 # Source function library.
 . /etc/init.d/functions
 
-# you can override defaults in /etc/sysconfig/pivxd, see below
-if [ -f /etc/sysconfig/pivxd ]; then
-        . /etc/sysconfig/pivxd
+# you can override defaults in /etc/sysconfig/carid, see below
+if [ -f /etc/sysconfig/carid ]; then
+        . /etc/sysconfig/carid
 fi
 
 RETVAL=0
 
-prog=pivxd
-# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/pivxd
-lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/pivxd}
+prog=carid
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/carid
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/carid}
 
-# pivxd defaults to /usr/bin/pivxd, override with BITCOIND_BIN
-bitcoind=${BITCOIND_BIN-/usr/bin/pivxd}
+# carid defaults to /usr/bin/carid, override with BITCOIND_BIN
+bitcoind=${BITCOIND_BIN-/usr/bin/carid}
 
-# pivxd opts default to -disablewallet, override with BITCOIND_OPTS
+# carid opts default to -disablewallet, override with BITCOIND_OPTS
 bitcoind_opts=${BITCOIND_OPTS}
 
 start() {
