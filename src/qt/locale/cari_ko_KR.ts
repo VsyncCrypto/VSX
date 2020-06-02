@@ -130,12 +130,12 @@
         <translation>받을 주소</translation>
     </message>
     <message>
-        <source>These are your PIVX addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>이 주소들은 송금할 PIVX 주소입니다. 송금하기 전 항상 금액과 주소를 확인해주세요.</translation>
+        <source>These are your CARI addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>이 주소들은 송금할 CARI 주소입니다. 송금하기 전 항상 금액과 주소를 확인해주세요.</translation>
     </message>
     <message>
-        <source>These are your PIVX addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>이 주소들은 입금 받을 PIVX 주소입니다. 매 거래마다 새로운 입금 주소를 사용하는 것이 좋습니다.</translation>
+        <source>These are your CARI addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>이 주소들은 입금 받을 CARI 주소입니다. 매 거래마다 새로운 입금 주소를 사용하는 것이 좋습니다.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -251,8 +251,8 @@
         <translation>예) 홍길동</translation>
     </message>
     <message>
-        <source>Enter PIVX address</source>
-        <translation>PIVX 주소를 입력하세요</translation>
+        <source>Enter CARI address</source>
+        <translation>CARI 주소를 입력하세요</translation>
     </message>
     <message>
         <source>SAVE</source>
@@ -377,8 +377,8 @@ for staking</source>
         <translation>지갑 암호화 후 암호를 분실하게 되면</translation>
     </message>
     <message>
-        <source>LOSE ALL OF YOUR PIV</source>
-        <translation>모든 PIV를 잃게 됩니다</translation>
+        <source>LOSE ALL OF YOUR CARI</source>
+        <translation>모든 CARI를 잃게 됩니다</translation>
     </message>
     <message>
         <source>ENCRYPT</source>
@@ -393,8 +393,8 @@ for staking</source>
         <translation>경고: Caps Lock 키가 활성화 되있습니다!</translation>
     </message>
     <message>
-        <source>PIVX will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your PIVs from being stolen by malware infecting your computer.</source>
-        <translation>PIVX는 이제 암호화 프로세스를 마치기 위해 닫힐것입니다. 지갑을 암호화하더라도 맬웨어로 인한 PIVs 의 도난당하는 것을 완벽하게 보호 할 수는 없습니다.</translation>
+        <source>CARI will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your CARIs from being stolen by malware infecting your computer.</source>
+        <translation>CARI는 이제 암호화 프로세스를 마치기 위해 닫힐것입니다. 지갑을 암호화하더라도 맬웨어로 인한 CARIs 의 도난당하는 것을 완벽하게 보호 할 수는 없습니다.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -463,8 +463,8 @@ for staking</source>
         <translation>계좌</translation>
     </message>
     <message>
-        <source>0,00 PIV</source>
-        <translation>0,00 PIV</translation>
+        <source>0,00 CARI</source>
+        <translation>0,00 CARI</translation>
     </message>
     <message>
         <source>address</source>
@@ -505,8 +505,8 @@ for staking</source>
         <translation>코인 선택</translation>
     </message>
     <message>
-        <source>Select PIV Outputs to Spend</source>
-        <translation>사용할 PIV 아웃풋 선택</translation>
+        <source>Select CARI Outputs to Spend</source>
+        <translation>사용할 CARI 아웃풋 선택</translation>
     </message>
     <message>
         <source>Dust:</source>
@@ -533,8 +533,8 @@ for staking</source>
         <translation>금액</translation>
     </message>
     <message>
-        <source>0.00 PIV</source>
-        <translation>0.00 PIV</translation>
+        <source>0.00 CARI</source>
+        <translation>0.00 CARI</translation>
     </message>
     <message>
         <source>0</source>
@@ -717,8 +717,8 @@ for staking</source>
         <translation>받는 사람이 %1 보다 작은 금액을 받으면 라벨이 빨간색으로 변경됩니다.</translation>
     </message>
     <message>
-        <source>Can vary +/- %1 upiv per input.</source>
-        <translation>Can vary +/- %1 upiv per input.</translation>
+        <source>Can vary +/- %1 ucari per input.</source>
+        <translation>Can vary +/- %1 ucari per input.</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -800,17 +800,17 @@ for staking</source>
         <translation>위임 데이터 로딩 에러: %1</translation>
     </message>
     <message>
-        <source>You can delegate your PIVs, letting a hot node (24/7 online node)
+        <source>You can delegate your CARIs, letting a hot node (24/7 online node)
 stake on your behalf, while you keep the keys securely offline.</source>
-        <translation>안전히 개인 프라이빗 키를 오프라인으로 보관한 상태로, 가지고 계신 PIV 를 매일 24시간 온라인으로 돌아가는 핫 노드로 위임하여, 대신 스테이킹을 하게 할수 있습니다. </translation>
+        <translation>안전히 개인 프라이빗 키를 오프라인으로 보관한 상태로, 가지고 계신 CARI 를 매일 24시간 온라인으로 돌아가는 핫 노드로 위임하여, 대신 스테이킹을 하게 할수 있습니다. </translation>
     </message>
     <message>
         <source>Enter owner address</source>
         <translation>Owner 주소 입력</translation>
     </message>
     <message>
-        <source>Accept PIV delegation / Delegate PIV</source>
-        <translation>PIV 위임권 수락하기 / PIV 위임 하기</translation>
+        <source>Accept CARI delegation / Delegate CARI</source>
+        <translation>CARI 위임권 수락하기 / CARI 위임 하기</translation>
     </message>
     <message>
         <source>Cold Staking address</source>
@@ -876,8 +876,8 @@ Do you wish to proceed?</source>
         <translation>위임된 코인</translation>
     </message>
     <message>
-        <source>You don't have any PIV to select.</source>
-        <translation>선택할 PIV를 가지고 있지 않습니다.</translation>
+        <source>You don't have any CARI to select.</source>
+        <translation>선택할 CARI를 가지고 있지 않습니다.</translation>
     </message>
     <message>
         <source>Cannot perform operation, wallet locked</source>
@@ -1008,12 +1008,12 @@ address</source>
         <translation>스테이킹 통계</translation>
     </message>
     <message>
-        <source>PIV</source>
-        <translation>PIV</translation>
+        <source>CARI</source>
+        <translation>CARI</translation>
     </message>
     <message>
-        <source>zPIV</source>
-        <translation>zPIV</translation>
+        <source>zCARI</source>
+        <translation>zCARI</translation>
     </message>
     <message>
         <source>Sort by</source>
@@ -1044,8 +1044,8 @@ address</source>
         <translation>당신의 입출금 이력을 확인할 수 있습니다.</translation>
     </message>
     <message>
-        <source>Amount of PIV and zPIV staked.</source>
-        <translation>스테이킹 된 PIV와 zPIV 양</translation>
+        <source>Amount of CARI and zCARI staked.</source>
+        <translation>스테이킹 된 CARI와 zCARI 양</translation>
     </message>
     <message>
         <source>Please wait until the wallet is fully synced to see your correct balance</source>
@@ -1056,8 +1056,8 @@ address</source>
         <translation>아직 전송기록 없음</translation>
     </message>
     <message>
-        <source>How to get PIV or zPIV</source>
-        <translation>PIV 혹은 zPIV를 얻는 법</translation>
+        <source>How to get CARI or zCARI</source>
+        <translation>CARI 혹은 zCARI를 얻는 법</translation>
     </message>
     <message>
         <source>You can verify the staking activity in the status bar at the top right of the wallet.
@@ -1151,8 +1151,8 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation>보내는 주소 수정</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid PIVX address.</source>
-        <translation>입력된 주소 "%1"는 올바른 PIVX 주소가 아닙니다.</translation>
+        <source>The entered address "%1" is not a valid CARI address.</source>
+        <translation>입력된 주소 "%1"는 올바른 CARI 주소가 아닙니다.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1204,16 +1204,16 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation>버전</translation>
     </message>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>CARI Core</source>
+        <translation>CARI Core</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
         <translation>(%1-bit)</translation>
     </message>
     <message>
-        <source>About PIVX Core</source>
-        <translation>PIVX Core 정보</translation>
+        <source>About CARI Core</source>
+        <translation>CARI Core 정보</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1267,16 +1267,16 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation>환영합니다</translation>
     </message>
     <message>
-        <source>Welcome to PIVX Core.</source>
-        <translation>PIVX Core에 오신 것을 환영합니다.</translation>
+        <source>Welcome to CARI Core.</source>
+        <translation>CARI Core에 오신 것을 환영합니다.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where PIVX Core will store its data.</source>
-        <translation>이 프로그램이 처음 실행되었으므로 PIVX Core가 데이터를 저장할 위치를 선택할 수 있습니다.</translation>
+        <source>As this is the first time the program is launched, you can choose where CARI Core will store its data.</source>
+        <translation>이 프로그램이 처음 실행되었으므로 CARI Core가 데이터를 저장할 위치를 선택할 수 있습니다.</translation>
     </message>
     <message>
-        <source>PIVX Core will download and store a copy of the PIVX block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>PIVX Core는 PIVX 블록체인을 다운로드하여 저장합니다. 최소 %1GB의 데이터가 디렉토리에 저장되며 시간이 지날수록 증가합니다. 또한 지갑도 해당 디렉토리에 저장됩니다.</translation>
+        <source>CARI Core will download and store a copy of the CARI block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>CARI Core는 CARI 블록체인을 다운로드하여 저장합니다. 최소 %1GB의 데이터가 디렉토리에 저장되며 시간이 지날수록 증가합니다. 또한 지갑도 해당 디렉토리에 저장됩니다.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1295,8 +1295,8 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation>선택</translation>
     </message>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>CARI Core</source>
+        <translation>CARI Core</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -1395,8 +1395,8 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation>새로운 마스터노드 컨트롤러 만들기</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To create a PIVX Masternode you must dedicate 10,000 PIV (the unit of PIVX) to the network (however, these coins are still yours and will never leave your possession). &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;You can deactivate the node and unlock the coins at any time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;PIVX 마스터노드를 생성하기 위해서는 10,000 PIV (PIVX 단위)를 네트워크에 예치해야 합니다. (예치한 코인은 계속 본인의 소유입니다.) &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;언제든지 노드를 비활성화 시키고 코인을 잠금해제할 수 있습니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To create a CARI Masternode you must dedicate 10,000 CARI (the unit of CARI) to the network (however, these coins are still yours and will never leave your possession). &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;You can deactivate the node and unlock the coins at any time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CARI 마스터노드를 생성하기 위해서는 10,000 CARI (CARI 단위)를 네트워크에 예치해야 합니다. (예치한 코인은 계속 본인의 소유입니다.) &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;언제든지 노드를 비활성화 시키고 코인을 잠금해제할 수 있습니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Set Masternode Name</source>
@@ -1415,8 +1415,8 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation>이만큼의 코인을 보유하고 있는지 확인하십시오.</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A transaction of 10,000 PIV will be made&lt;/p&gt;&lt;p&gt;to a new empty address in your wallet.&lt;/p&gt;&lt;p&gt;The Address is labeled under the master node's name.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;10,000 PIV의 트랜잭션은&lt;/p&gt;&lt;p&gt;지갑의 새로운 빈 주소로 만들어질 것입니다.&lt;/p&gt;&lt;p&gt;그 주소는 마스터노드 이름에 따라 레이블링됩니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A transaction of 10,000 CARI will be made&lt;/p&gt;&lt;p&gt;to a new empty address in your wallet.&lt;/p&gt;&lt;p&gt;The Address is labeled under the master node's name.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;10,000 CARI의 트랜잭션은&lt;/p&gt;&lt;p&gt;지갑의 새로운 빈 주소로 만들어질 것입니다.&lt;/p&gt;&lt;p&gt;그 주소는 마스터노드 이름에 따라 레이블링됩니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Address of the node that must always be online running the actual master node.</source>
@@ -1613,7 +1613,7 @@ Please wait few more minutes (masternode collaterals require %1 confirmations).<
 on a remote server to your clipboard.
 
 
-You will only have to paste the data in the pivx.conf file
+You will only have to paste the data in the cari.conf file
 of your remote server and start it, then start the Masternode using
 this controller wallet (select the Masternode in the list and press "start").
 </source>
@@ -1621,7 +1621,7 @@ this controller wallet (select the Masternode in the list and press "start").
 클립보드로 내보내려고 합니다.
 
 
-그 데이터를 리모트 서버의 pivx.conf 파일에
+그 데이터를 리모트 서버의 cari.conf 파일에
 붙여넣고 시작합니다. 그리고 컨트롤러 지갑에서 마스터노드를
 시작합니다. (리스트에서 마스터노드를 선택하고 "시작"을 누르십시오.)
 </translation>
@@ -1656,8 +1656,8 @@ Are you sure?</source>
         <translation>마스터노드 컨트롤러를 생성할 수 없습니다. 지갑이 잠겨 있습니다.</translation>
     </message>
     <message>
-        <source>Not enough balance to create a masternode, 10,000 PIV required.</source>
-        <translation>마스터노드 생성에 필요한 잔고가 부족합니다. 마스터노드 생성에는 10,000 PIV가 필요합니다.</translation>
+        <source>Not enough balance to create a masternode, 10,000 CARI required.</source>
+        <translation>마스터노드 생성에 필요한 잔고가 부족합니다. 마스터노드 생성에는 10,000 CARI가 필요합니다.</translation>
     </message>
     <message>
         <source>Error creating masternode</source>
@@ -1788,8 +1788,8 @@ Are you sure?</source>
         <translation>구문 분석된 데이터가 너무 큽니다.</translation>
     </message>
     <message>
-        <source>Invalid URI, not starting with "pivx" prefix</source>
-        <translation>"pivx"로 시작하지 않아 유효하지 않은 URI</translation>
+        <source>Invalid URI, not starting with "cari" prefix</source>
+        <translation>"cari"로 시작하지 않아 유효하지 않은 URI</translation>
     </message>
 </context>
 <context>
@@ -1838,8 +1838,8 @@ Are you sure?</source>
         <translation>확인되지 않은 잔엑을 사용하지 않도록 설정하면 해당 트랜잭션에 하나 이상의 컨펌이 진행되야&lt;br/&gt;트랜잭션의 잔액을 전송할 수 있습니다.&lt;br/&gt;또한 이것은 잔액 계산 방식에도 영향을 줍니다.</translation>
     </message>
     <message>
-        <source>Automatically open the PIVX client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>라우터에서 PIVX 클라이언트 포트를 자동으로 엽니다. 이 기능은 라우터가 UPnP를 지원하고 활성화 된 경우에만 사용할 수 있습니다.</translation>
+        <source>Automatically open the CARI client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>라우터에서 CARI 클라이언트 포트를 자동으로 엽니다. 이 기능은 라우터가 UPnP를 지원하고 활성화 된 경우에만 사용할 수 있습니다.</translation>
     </message>
     <message>
         <source>Accept connections from outside</source>
@@ -1858,12 +1858,12 @@ Are you sure?</source>
         <translation>전문적</translation>
     </message>
     <message>
-        <source>Automatically start PIVX after logging in to the system.</source>
-        <translation>시스템 로그인 후 PIVX을 자동으로 시작합니다.</translation>
+        <source>Automatically start CARI after logging in to the system.</source>
+        <translation>시스템 로그인 후 CARI을 자동으로 시작합니다.</translation>
     </message>
     <message>
-        <source>&amp;Start PIVX on system login</source>
-        <translation>&amp;시스템 로그인시 PIVX 시작</translation>
+        <source>&amp;Start CARI on system login</source>
+        <translation>&amp;시스템 로그인시 CARI 시작</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1890,58 +1890,58 @@ Are you sure?</source>
         <translation>&amp;네트워크</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting PIVX.</source>
-        <translation>사용자 인터페이스 언어를 설정할 수 있습니다. 이 설정은 PIVX을 다시 시작한 후에 적용됩니다.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting CARI.</source>
+        <translation>사용자 인터페이스 언어를 설정할 수 있습니다. 이 설정은 CARI을 다시 시작한 후에 적용됩니다.</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/pivx-project/pivx-project-translations</source>
+https://www.transifex.com/cari-project/cari-project-translations</source>
         <translation>지원 언어가 없거나 번역이 불완전한가요? 번역을 도와주세요 :
-https://www.transifex.com/pivx-project/pivx-project-translations</translation>
+https://www.transifex.com/cari-project/cari-project-translations</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>&amp;UPnp를 사용하여 포트 매핑</translation>
     </message>
     <message>
-        <source>Enable automatic minting of PIV units to zPIV</source>
-        <translation>보상받은 PIV를 zPIV로 자동변환 활성화</translation>
+        <source>Enable automatic minting of CARI units to zCARI</source>
+        <translation>보상받은 CARI를 zCARI로 자동변환 활성화</translation>
     </message>
     <message>
-        <source>Enable zPIV Automint</source>
-        <translation>zPIV 자동생성 활성화</translation>
+        <source>Enable zCARI Automint</source>
+        <translation>zCARI 자동생성 활성화</translation>
     </message>
     <message>
-        <source>Enable automatic zPIV minting from specific addresses</source>
-        <translation>특정 주소들로부터 자동으로 zPIV 민트되는 것을 허용</translation>
+        <source>Enable automatic zCARI minting from specific addresses</source>
+        <translation>특정 주소들로부터 자동으로 zCARI 민트되는 것을 허용</translation>
     </message>
     <message>
         <source>Enable Automint Addresses</source>
         <translation>Automint 주소 사용</translation>
     </message>
     <message>
-        <source>Percentage of incoming PIV which get automatically converted to zPIV via Zerocoin Protocol (min: 10%)</source>
-        <translation>PIV수신시 자동변환 zPIV 비율 (최소값:10%)</translation>
+        <source>Percentage of incoming CARI which get automatically converted to zCARI via Zerocoin Protocol (min: 10%)</source>
+        <translation>CARI수신시 자동변환 zCARI 비율 (최소값:10%)</translation>
     </message>
     <message>
-        <source>Percentage of autominted zPIV</source>
-        <translation>자동 변환되는 zPIV 비율</translation>
+        <source>Percentage of autominted zCARI</source>
+        <translation>자동 변환되는 zCARI 비율</translation>
     </message>
     <message>
-        <source>Wait with automatic conversion to Zerocoin until enough PIV for this denomination is available</source>
-        <translation>이 디노미네이션의 PIV가 충분해질 때까지 Zerocoin으로 자동전환은 보류됩니다.</translation>
+        <source>Wait with automatic conversion to Zerocoin until enough CARI for this denomination is available</source>
+        <translation>이 디노미네이션의 CARI가 충분해질 때까지 Zerocoin으로 자동전환은 보류됩니다.</translation>
     </message>
     <message>
-        <source>Preferred Automint zPIV Denomination</source>
-        <translation>선호하는 자동생성 zPIV 디노미네이션 </translation>
+        <source>Preferred Automint zCARI Denomination</source>
+        <translation>선호하는 자동생성 zCARI 디노미네이션 </translation>
     </message>
     <message>
         <source>Stake split threshold:</source>
         <translation>Stake split threshold:</translation>
     </message>
     <message>
-        <source>Connect to the PIVX network through a SOCKS5 proxy.</source>
-        <translation>SOCKS5 프록시를 통해 PIVX 네트워크에 연결해주세요.</translation>
+        <source>Connect to the CARI network through a SOCKS5 proxy.</source>
+        <translation>SOCKS5 프록시를 통해 CARI 네트워크에 연결해주세요.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -2085,10 +2085,10 @@ https://www.transifex.com/pivx-project/pivx-project-translations</translation>
     </message>
 </context>
 <context>
-    <name>PIVXGUI</name>
+    <name>CARIGUI</name>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>CARI Core</source>
+        <translation>CARI Core</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -2115,8 +2115,8 @@ https://www.transifex.com/pivx-project/pivx-project-translations</translation>
         <translation>어플리케이션 종료</translation>
     </message>
     <message>
-        <source>PIVX Core client</source>
-        <translation>PIVX Core 클라이언트</translation>
+        <source>CARI Core client</source>
+        <translation>CARI Core 클라이언트</translation>
     </message>
     <message>
         <source>Error</source>
@@ -2159,8 +2159,8 @@ Address: %4
 </translation>
     </message>
     <message>
-        <source>A fatal error occurred. PIVX can no longer continue safely and will quit.</source>
-        <translation>치명적인 오류가 발생하였습니다. PIVX는 더 이상 안전하게 계속될 수 없으며, 곧 종료됩니다.</translation>
+        <source>A fatal error occurred. CARI can no longer continue safely and will quit.</source>
+        <translation>치명적인 오류가 발생하였습니다. CARI는 더 이상 안전하게 계속될 수 없으며, 곧 종료됩니다.</translation>
     </message>
 </context>
 <context>
@@ -2186,12 +2186,12 @@ Address: %4
         <translation>잘못된 결제 주소 %1</translation>
     </message>
     <message>
-        <source>Cannot start pivx: click-to-pay handler</source>
-        <translation>PIVX을 시작할 수 없습니다: 결제하기 위한 클릭 처리</translation>
+        <source>Cannot start cari: click-to-pay handler</source>
+        <translation>CARI을 시작할 수 없습니다: 결제하기 위한 클릭 처리</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid PIVX address or malformed URI parameters.</source>
-        <translation>URI를 분석할 수 없습니다! 이는 잘못된 PIVX 주소 또는 URI 매개변수 손상으로 인해 발생할 수 있습니다.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid CARI address or malformed URI parameters.</source>
+        <translation>URI를 분석할 수 없습니다! 이는 잘못된 CARI 주소 또는 URI 매개변수 손상으로 인해 발생할 수 있습니다.</translation>
     </message>
     <message>
         <source>Payment request file cannot be read! This can be caused by an invalid payment request file.</source>
@@ -2308,28 +2308,28 @@ Address: %4
         <translation>아직 전송기록 없음</translation>
     </message>
     <message>
-        <source>Mint zPIV</source>
-        <translation>zPIV 생성</translation>
+        <source>Mint zCARI</source>
+        <translation>zCARI 생성</translation>
     </message>
     <message>
-        <source>Enter amount of PIV to mint into zPIV</source>
-        <translation>zPIV 로 바꿀 PIV의 양을 넣으세요.</translation>
+        <source>Enter amount of CARI to mint into zCARI</source>
+        <translation>zCARI 로 바꿀 CARI의 양을 넣으세요.</translation>
     </message>
     <message>
-        <source>Convert back to PIV</source>
-        <translation>PIV 로 재변환</translation>
+        <source>Convert back to CARI</source>
+        <translation>CARI 로 재변환</translation>
     </message>
     <message>
-        <source>Enter amount of zPIV to convert back into PIV</source>
-        <translation>PIV로 바꿀 zPIV의 양을 넣으세요.</translation>
+        <source>Enter amount of zCARI to convert back into CARI</source>
+        <translation>CARI로 바꿀 zCARI의 양을 넣으세요.</translation>
     </message>
     <message>
         <source>Zerocoin</source>
         <translation>제로코인</translation>
     </message>
     <message>
-        <source>zPIV is currently undergoing maintenance</source>
-        <translation>zPIV는 현재 점검중입니다</translation>
+        <source>zCARI is currently undergoing maintenance</source>
+        <translation>zCARI는 현재 점검중입니다</translation>
     </message>
     <message>
         <source>convert</source>
@@ -2344,24 +2344,24 @@ Address: %4
         <translation>유효하지 않은 값</translation>
     </message>
     <message>
-        <source>zPIV minted successfully</source>
-        <translation>zPIV 생성 성공</translation>
+        <source>zCARI minted successfully</source>
+        <translation>zCARI 생성 성공</translation>
     </message>
     <message>
-        <source>zPIV converted back to PIV</source>
-        <translation>PIV 로 zPIV 변환됨</translation>
+        <source>zCARI converted back to CARI</source>
+        <translation>CARI 로 zCARI 변환됨</translation>
     </message>
     <message>
-        <source>You don't have any PIV to select.</source>
-        <translation>선택할 PIV를 가지고 있지 않습니다.</translation>
+        <source>You don't have any CARI to select.</source>
+        <translation>선택할 CARI를 가지고 있지 않습니다.</translation>
     </message>
     <message>
         <source>Rescan Mints</source>
         <translation>민트를 재탐색</translation>
     </message>
     <message>
-        <source>Reset Spent zPIV</source>
-        <translation>전송된 zPIV 초기화</translation>
+        <source>Reset Spent zCARI</source>
+        <translation>전송된 zCARI 초기화</translation>
     </message>
     <message>
         <source>Total %1</source>
@@ -2375,8 +2375,8 @@ Address: %4
         <translation>금액</translation>
     </message>
     <message>
-        <source>Enter PIVX address (e.g. %1)</source>
-        <translation>PIVX 주소 입력(예 : %1)</translation>
+        <source>Enter CARI address (e.g. %1)</source>
+        <translation>CARI 주소 입력(예 : %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -2419,16 +2419,16 @@ Address: %4
         <translation>%1 ms</translation>
     </message>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>CARI Core</source>
+        <translation>CARI Core</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" does not exist.</source>
         <translation>Error: Specified data directory "%1" does not exist.</translation>
     </message>
     <message>
-        <source>PIVX Core didn't yet exit safely...</source>
-        <translation>PIVX Core가 아직 안전하게 종료되지 않았습니다....</translation>
+        <source>CARI Core didn't yet exit safely...</source>
+        <translation>CARI Core가 아직 안전하게 종료되지 않았습니다....</translation>
     </message>
     <message>
         <source>Contact</source>
@@ -2586,8 +2586,8 @@ Address: %4
         <translation>블록체인</translation>
     </message>
     <message>
-        <source>Open the PIVX debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>현재 데이터 디렉토리에서 PIVX 디버그 로그 파일을 엽니다. 로그 파일이 클 경우, 약간의 시간이 걸릴 수 있습니다.</translation>
+        <source>Open the CARI debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>현재 데이터 디렉토리에서 CARI 디버그 로그 파일을 엽니다. 로그 파일이 클 경우, 약간의 시간이 걸릴 수 있습니다.</translation>
     </message>
     <message>
         <source>Number of Masternodes</source>
@@ -2730,8 +2730,8 @@ Address: %4
         <translation>맞춤 백업 경로 :</translation>
     </message>
     <message>
-        <source>Custom zPIV Backup Path:</source>
-        <translation>맞춤 zPIV 백업 경로 :</translation>
+        <source>Custom zCARI Backup Path:</source>
+        <translation>맞춤 zCARI 백업 경로 :</translation>
     </message>
     <message>
         <source>Custom Backups Threshold:</source>
@@ -2811,8 +2811,8 @@ Address: %4
         <translation>출력:</translation>
     </message>
     <message>
-        <source>Welcome to the PIVX RPC console.</source>
-        <translation>PIVX RPC 콘솔에 오신 것을 환영합니다.</translation>
+        <source>Welcome to the CARI RPC console.</source>
+        <translation>CARI RPC 콘솔에 오신 것을 환영합니다.</translation>
     </message>
     <message>
         <source>&amp;Disconnect Node</source>
@@ -2977,8 +2977,8 @@ Address: %4
         <translation>받기</translation>
     </message>
     <message>
-        <source>Scan the QR code or copy the address to receive PIV.</source>
-        <translation>PIV 를 받기 위해 QR 코드를 스캔하거나 주소를 복사 하십시요.</translation>
+        <source>Scan the QR code or copy the address to receive CARI.</source>
+        <translation>CARI 를 받기 위해 QR 코드를 스캔하거나 주소를 복사 하십시요.</translation>
     </message>
     <message>
         <source>No address </source>
@@ -3087,8 +3087,8 @@ Address: %4
         <translation>금액</translation>
     </message>
     <message>
-        <source>PIV</source>
-        <translation>PIV</translation>
+        <source>CARI</source>
+        <translation>CARI</translation>
     </message>
     <message>
         <source>TextLabel</source>
@@ -3197,8 +3197,8 @@ Address: %4
         <translation>권장</translation>
     </message>
     <message>
-        <source>PIV/kilobyte</source>
-        <translation>PIV/Kilobyte</translation>
+        <source>CARI/kilobyte</source>
+        <translation>CARI/Kilobyte</translation>
     </message>
     <message>
         <source>0.00 KB</source>
@@ -3291,12 +3291,12 @@ Address: %4
         <translation>전송할 총 액수</translation>
     </message>
     <message>
-        <source>Send PIV</source>
-        <translation>PIV 보내기</translation>
+        <source>Send CARI</source>
+        <translation>CARI 보내기</translation>
     </message>
     <message>
-        <source>Send zPIV</source>
-        <translation>zPIV 전송하기</translation>
+        <source>Send zCARI</source>
+        <translation>zCARI 전송하기</translation>
     </message>
     <message>
         <source>Total remaining from the selected UTXO</source>
@@ -3319,8 +3319,8 @@ Address: %4
         <translation>최대 한도의 output 갯수에 도달함</translation>
     </message>
     <message>
-        <source>PIVX address or contact label</source>
-        <translation>PIVX 주소 / 연락처 라벨</translation>
+        <source>CARI address or contact label</source>
+        <translation>CARI 주소 / 연락처 라벨</translation>
     </message>
     <message>
         <source>Invalid entry</source>
@@ -3351,8 +3351,8 @@ Cold-staking 중인 코인을 사용하여 전송하며, 무효화됩니다.
         <translation>제로코인 보내기</translation>
     </message>
     <message>
-        <source>zPIV is currently undergoing maintenance.</source>
-        <translation>zPIV는 현재 점검중입니다.</translation>
+        <source>zCARI is currently undergoing maintenance.</source>
+        <translation>zCARI는 현재 점검중입니다.</translation>
     </message>
     <message>
         <source>Sending %1 to address %2
@@ -3367,12 +3367,12 @@ Cold-staking 중인 코인을 사용하여 전송하며, 무효화됩니다.
 %2</translation>
     </message>
     <message>
-        <source>zPIV transaction sent!</source>
-        <translation>zPIVX 전송 완료!</translation>
+        <source>zCARI transaction sent!</source>
+        <translation>zCARI 전송 완료!</translation>
     </message>
     <message>
-        <source>Version 1 zPIV require a security level of 100 to successfully spend.</source>
-        <translation>zPIV 버전 1은 성공적으로 보내기 위해서 100 시큐리티 레벨이 필요합니다.</translation>
+        <source>Version 1 zCARI require a security level of 100 to successfully spend.</source>
+        <translation>zCARI 버전 1은 성공적으로 보내기 위해서 100 시큐리티 레벨이 필요합니다.</translation>
     </message>
     <message>
         <source>Too much inputs (</source>
@@ -3406,8 +3406,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>커스텀 수수료 %1</translation>
     </message>
     <message>
-        <source>You don't have any PIV to select.</source>
-        <translation>선택할 수 있는 PIV를 가지고 있지 않습니다.</translation>
+        <source>You don't have any CARI to select.</source>
+        <translation>선택할 수 있는 CARI를 가지고 있지 않습니다.</translation>
     </message>
     <message>
         <source>No contacts available, you can go to the contacts screen and add some there!</source>
@@ -3564,8 +3564,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>키 암호 해재</translation>
     </message>
     <message>
-        <source>PIVX address</source>
-        <translation>PIVX 주소</translation>
+        <source>CARI address</source>
+        <translation>CARI 주소</translation>
     </message>
     <message>
         <source>Enter address</source>
@@ -3689,8 +3689,8 @@ Verify that you have installed a predetermined text editor.</source>
 미리 결정된 텍스트 에디터를 인스톨했는지 확인하세요.</translation>
     </message>
     <message>
-        <source>Welcome to the PIVX RPC console.</source>
-        <translation>PIVX RPC 콘솔에 오신 것을 환영합니다.</translation>
+        <source>Welcome to the CARI RPC console.</source>
+        <translation>CARI RPC 콘솔에 오신 것을 환영합니다.</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and %1 to clear screen.</source>
@@ -3969,8 +3969,8 @@ Verify that you have installed a predetermined text editor.</source>
         <translation>백업 폴더를 열 수 없습니다.</translation>
     </message>
     <message>
-        <source>Unable to open pivx.conf with default application</source>
-        <translation>pivx.conf 파일을 기본 앱으로 열 수 없습니다.</translation>
+        <source>Unable to open cari.conf with default application</source>
+        <translation>cari.conf 파일을 기본 앱으로 열 수 없습니다.</translation>
     </message>
     <message>
         <source>In:</source>
@@ -4028,8 +4028,8 @@ Verify that you have installed a predetermined text editor.</source>
         <translation>스크립트 검증 스레드 개수</translation>
     </message>
     <message>
-        <source>Start PIVX on system login</source>
-        <translation>시스템 로그인시 PIVX 지갑 시작</translation>
+        <source>Start CARI on system login</source>
+        <translation>시스템 로그인시 CARI 지갑 시작</translation>
     </message>
     <message>
         <source>Minimize to the tray instead of the taskbar</source>
@@ -4116,7 +4116,7 @@ Are you sure?
         <translation>체크박스</translation>
     </message>
     <message>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other PIVX addresses after it matures.</source>
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other CARI addresses after it matures.</source>
         <translation>멀티 전송 기능은 확인된 새로 받은 스테이킹 혹은 마스터노드 보상을 100% 전부 까지 지정된 다른 주소로 자동 전송할수 있는 기능입니다.</translation>
     </message>
     <message>
@@ -4217,8 +4217,8 @@ Please check the address and try again.</source>
         <translation>메세지</translation>
     </message>
     <message>
-        <source>PIVX address or contact label</source>
-        <translation>PIVX 주소 / 연락처 라벨</translation>
+        <source>CARI address or contact label</source>
+        <translation>CARI 주소 / 연락처 라벨</translation>
     </message>
     <message>
         <source>Enter address</source>
@@ -4546,8 +4546,8 @@ Please check the address and try again.</source>
         <translation>FAQ</translation>
     </message>
     <message>
-        <source>About PIVX</source>
-        <translation>PIVX 정보</translation>
+        <source>About CARI</source>
+        <translation>CARI 정보</translation>
     </message>
     <message>
         <source>Settings</source>
@@ -4613,8 +4613,8 @@ Are you sure?
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>PIVX Core is shutting down...</source>
-        <translation>PIVX Core가 종료됩니다...</translation>
+        <source>CARI Core is shutting down...</source>
+        <translation>CARI Core가 종료됩니다...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -4643,15 +4643,15 @@ Are you sure?
         <translation>로딩중...</translation>
     </message>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>CARI Core</source>
+        <translation>CARI Core</translation>
     </message>
 </context>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>CARI Core</source>
+        <translation>CARI Core</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -4666,8 +4666,8 @@ Are you sure?
         <translation>Dash Core 개발자</translation>
     </message>
     <message>
-        <source>The PIVX Core developers</source>
-        <translation>PIVX Core 개발자</translation>
+        <source>The CARI Core developers</source>
+        <translation>CARI Core 개발자</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -5100,40 +5100,40 @@ NOTE: 업그레이드 이후에는
         <translation>수신됨</translation>
     </message>
     <message>
-        <source>PIV Stake</source>
-        <translation>PIV stake</translation>
+        <source>CARI Stake</source>
+        <translation>CARI stake</translation>
     </message>
     <message>
-        <source>zPIV Stake</source>
-        <translation>zPIV stake</translation>
+        <source>zCARI Stake</source>
+        <translation>zCARI stake</translation>
     </message>
     <message>
-        <source>PIV Cold Stake</source>
-        <translation>PIV Cold Stake</translation>
+        <source>CARI Cold Stake</source>
+        <translation>CARI Cold Stake</translation>
     </message>
     <message>
         <source>Stake delegation</source>
         <translation>Stake delegation</translation>
     </message>
     <message>
-        <source>Converted PIV to zPIV</source>
-        <translation>PIV를 zPIV로 변환</translation>
+        <source>Converted CARI to zCARI</source>
+        <translation>CARI를 zCARI로 변환</translation>
     </message>
     <message>
-        <source>Spent zPIV</source>
-        <translation>zPIV 사용</translation>
+        <source>Spent zCARI</source>
+        <translation>zCARI 사용</translation>
     </message>
     <message>
-        <source>Received PIV from zPIV</source>
-        <translation>zPIV를 PIV로 받음</translation>
+        <source>Received CARI from zCARI</source>
+        <translation>zCARI를 CARI로 받음</translation>
     </message>
     <message>
-        <source>Minted Change as zPIV from zPIV Spend</source>
-        <translation>zPIV 전송후 남은 zPIV로 잔돈 생성</translation>
+        <source>Minted Change as zCARI from zCARI Spend</source>
+        <translation>zCARI 전송후 남은 zCARI로 잔돈 생성</translation>
     </message>
     <message>
-        <source>Converted zPIV to PIV</source>
-        <translation>zPIV를 PIV로 변환</translation>
+        <source>Converted zCARI to CARI</source>
+        <translation>zCARI를 CARI로 변환</translation>
     </message>
     <message>
         <source>Sent to</source>
@@ -5294,8 +5294,8 @@ NOTE: 업그레이드 이후에는
         <translation>18/05/18</translation>
     </message>
     <message>
-        <source>+0.000585 PIV</source>
-        <translation>+0.000585 PIV</translation>
+        <source>+0.000585 CARI</source>
+        <translation>+0.000585 CARI</translation>
     </message>
 </context>
 <context>
@@ -5305,8 +5305,8 @@ NOTE: 업그레이드 이후에는
         <translation>코인 전송 </translation>
     </message>
     <message>
-        <source>SwiftX doesn't support sending values that high yet. Transactions are currently limited to %1 PIV.</source>
-        <translation>SwiftTX는 아직 높은 값을 전송하는 것을 지원하지 않습니다. 트랜잭션은 현재 %1 PIV로 제한됩니다.</translation>
+        <source>SwiftX doesn't support sending values that high yet. Transactions are currently limited to %1 CARI.</source>
+        <translation>SwiftTX는 아직 높은 값을 전송하는 것을 지원하지 않습니다. 트랜잭션은 현재 %1 CARI로 제한됩니다.</translation>
     </message>
 </context>
 <context>
@@ -5349,21 +5349,21 @@ NOTE: 업그레이드 이후에는
     </message>
     <message>
         <source>Welcome to
-PIVX Core Wallet</source>
+CARI Core Wallet</source>
         <translation>환영합니다.
-PIVX Core Wallet</translation>
+CARI Core Wallet</translation>
     </message>
     <message>
-        <source>PIVX is the world’s most innovative Proof of Stake blockchain based technology. Developed by a team of highly experienced developers and cryptographers.</source>
-        <translation>PIVX 는 많은 경험과 뛰어난 실력을 겸비한 개발자와 암호학자로 구성된 팀이 개발하는 연신적인 Proof of Stake 블록체인 기술을 자랑하는 오픈소스 프로젝트 입니다. </translation>
+        <source>CARI is the world’s most innovative Proof of Stake blockchain based technology. Developed by a team of highly experienced developers and cryptographers.</source>
+        <translation>CARI 는 많은 경험과 뛰어난 실력을 겸비한 개발자와 암호학자로 구성된 팀이 개발하는 연신적인 Proof of Stake 블록체인 기술을 자랑하는 오픈소스 프로젝트 입니다. </translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;As our manifesto says: Privacy is a non-negotiable basic human right; it grants users the freedom to share their data whenever and with whomever they want - PIVX believes in self sovereignty.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;PIVX 는 Manifesto 선언서에 적힌대로: 프라이버시는 협상이 불가능한 인간의 기본적인 인권중 하나이다. 이로 인해 그 언제나 그 누구에게나 데이터를 공유할수 있는 자유를 얻게 될것이다. PIVX 프로젝트는 개인 독립을 추구한다. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;As our manifesto says: Privacy is a non-negotiable basic human right; it grants users the freedom to share their data whenever and with whomever they want - CARI believes in self sovereignty.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CARI 는 Manifesto 선언서에 적힌대로: 프라이버시는 협상이 불가능한 인간의 기본적인 인권중 하나이다. 이로 인해 그 언제나 그 누구에게나 데이터를 공유할수 있는 자유를 얻게 될것이다. CARI 프로젝트는 개인 독립을 추구한다. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>How PIVX respects your privacy?</source>
-        <translation>PIVX 가 당신의 프라이버시를 존중하는 방법은?</translation>
+        <source>How CARI respects your privacy?</source>
+        <translation>CARI 가 당신의 프라이버시를 존중하는 방법은?</translation>
     </message>
     <message>
         <source>What is a Masternode?</source>
@@ -5375,10 +5375,10 @@ PIVX Core Wallet</translation>
     </message>
 </context>
 <context>
-    <name>ZPivControlDialog</name>
+    <name>ZCariControlDialog</name>
     <message>
-        <source>Select zPIV to Spend</source>
-        <translation>사용할 zPIV 선택</translation>
+        <source>Select zCARI to Spend</source>
+        <translation>사용할 zCARI 선택</translation>
     </message>
     <message>
         <source>Coin Control</source>
@@ -5389,8 +5389,8 @@ PIVX Core Wallet</translation>
         <translation>누르기</translation>
     </message>
     <message>
-        <source>zPiv</source>
-        <translation>zPiv</translation>
+        <source>zCari</source>
+        <translation>zCari</translation>
     </message>
     <message>
         <source>0.00 </source>
@@ -5414,7 +5414,7 @@ PIVX Core Wallet</translation>
     </message>
     </context>
 <context>
-    <name>pivx-core</name>
+    <name>cari-core</name>
     <message>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
         <translation>(1 = tx 메타 데이터 유지 예 : 계정 소유자 및 지불 요청 정보, 2 = tx 메타 데이터 삭제)</translation>
@@ -5436,8 +5436,8 @@ PIVX Core Wallet</translation>
         <translation>JSON-RPC연결 수신을 위해 주어진 주소를 지정합니다. [host]: IPv6 포트 표기법 사용. 이 옵션은 여러번 지정할 수 있습니다. (기본값 : 모든 인터페이스에 지정)</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s. PIVX Core is probably already running.</source>
-        <translation>        &lt;translation&gt;잠겨진 데이터 디렉토리 %s 를 가져올 수 없습니다. PIVX Core는 이미 실행 중입니다.</translation>
+        <source>Cannot obtain a lock on data directory %s. CARI Core is probably already running.</source>
+        <translation>        &lt;translation&gt;잠겨진 데이터 디렉토리 %s 를 가져올 수 없습니다. CARI Core는 이미 실행 중입니다.</translation>
     </message>
     <message>
         <source>Change automatic finalized budget voting behavior. mode=auto: Vote for only exact finalized budget match to my generated budget. (string, default: auto)</source>
@@ -5464,12 +5464,12 @@ PIVX Core Wallet</translation>
         <translation>MIT 소프트웨어 라이센스에 따라 배포, 첨부 파일 COPYING 또는 &lt;http://www.opensource.org/licenses/mit-license.php&gt; 를 참조하십시오.</translation>
     </message>
     <message>
-        <source>Enable or disable staking functionality for PIV inputs (0-1, default: %u)</source>
-        <translation>Enable or disable staking functionality for PIV inputs (0-1, default: %u)</translation>
+        <source>Enable or disable staking functionality for CARI inputs (0-1, default: %u)</source>
+        <translation>Enable or disable staking functionality for CARI inputs (0-1, default: %u)</translation>
     </message>
     <message>
-        <source>Enable or disable staking functionality for zPIV inputs (0-1, default: %u)</source>
-        <translation>Enable or disable staking functionality for zPIV inputs (0-1, default: %u)</translation>
+        <source>Enable or disable staking functionality for zCARI inputs (0-1, default: %u)</source>
+        <translation>Enable or disable staking functionality for zCARI inputs (0-1, default: %u)</translation>
     </message>
     <message>
         <source>Enable spork administration functionality with the appropriate private key.</source>
@@ -5504,12 +5504,12 @@ PIVX Core Wallet</translation>
         <translation>최고 블록이 변경될 경우 명령을 실행하십시오 (명령 내 %s 는 블록 해시로 대체 되었습니다)</translation>
     </message>
     <message>
-        <source>Fees (in PIV/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>이것보다 작은 수수료 (PIV/Kb)는 중계 수수료가 없는 것으로 간주됩니다 (기본값: %s)</translation>
+        <source>Fees (in CARI/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>이것보다 작은 수수료 (CARI/Kb)는 중계 수수료가 없는 것으로 간주됩니다 (기본값: %s)</translation>
     </message>
     <message>
-        <source>Fees (in PIV/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>이것보다 작은 수수료 (PIV/Kb)는 트랜잭션 생성 수수료가 없는 것으로 간주됩니다 (기본값: %s)</translation>
+        <source>Fees (in CARI/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>이것보다 작은 수수료 (CARI/Kb)는 트랜잭션 생성 수수료가 없는 것으로 간주됩니다 (기본값: %s)</translation>
     </message>
     <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>
@@ -5600,8 +5600,8 @@ PIVX Core Wallet</translation>
         <translation>이 제품은 OpenSSL이 개발한 Open SSL 툴킷 &lt;https://www.openssl.org/&gt; 에서 사용하기 위한 프로젝트 소프트웨어, Eric Young이 개발한 암호화 소프트웨어, Thomas Bernard가 개발한 UPnP 소프트웨어가 포함되어 있습니다.</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. PIVX Core is probably already running.</source>
-        <translation>이 컴퓨터를 %s 로 지정하는것은 불가능합니다. PIVX Core는 이미 실행 중입니다.</translation>
+        <source>Unable to bind to %s on this computer. CARI Core is probably already running.</source>
+        <translation>이 컴퓨터를 %s 로 지정하는것은 불가능합니다. CARI Core는 이미 실행 중입니다.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -5616,8 +5616,8 @@ PIVX Core Wallet</translation>
         <translation>경고 : -paytxfee가 매우 높게 설정되었습니다! 이것은 전송할 경우 지불 할 트랜잭션 수수료입니다.</translation>
     </message>
     <message>
-        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong PIVX Core will not work properly.</source>
-        <translation>경고: 컴퓨터의 날짜와 시간이 올바르게 설정되어 있는지 확인해 주세요! 만일 시계가 잘못되어 있다면 PIVX 코어는 정상적으로 작동하지 않을 수 있습니다.</translation>
+        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong CARI Core will not work properly.</source>
+        <translation>경고: 컴퓨터의 날짜와 시간이 올바르게 설정되어 있는지 확인해 주세요! 만일 시계가 잘못되어 있다면 CARI 코어는 정상적으로 작동하지 않을 수 있습니다.</translation>
     </message>
     <message>
         <source>Warning: The network does not appear to fully agree! Some miners appear to be experiencing issues.</source>
@@ -5728,8 +5728,8 @@ PIVX Core Wallet</translation>
         <translation>Copyright (C) 2014-%i The Dash Core 개발자들</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The PIVX Core Developers</source>
-        <translation>Copyright (C) 2015-%i The PIVX Core 개발자</translation>
+        <source>Copyright (C) 2015-%i The CARI Core Developers</source>
+        <translation>Copyright (C) 2015-%i The CARI Core 개발자</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>
@@ -5804,8 +5804,8 @@ PIVX Core Wallet</translation>
         <translation>wallet.dat을 불러오는 중 오류가 발생했습니다: 지갑 손상됨</translation>
     </message>
     <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of PIVX Core</source>
-        <translation>wallet.dat를 로드하는 중 오류가 발생했습니다. 지갑에 최신 버전의 PIVX 코어가 필요합니다.</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of CARI Core</source>
+        <translation>wallet.dat를 로드하는 중 오류가 발생했습니다. 지갑에 최신 버전의 CARI 코어가 필요합니다.</translation>
     </message>
     <message>
         <source>Error opening block database</source>
@@ -5856,8 +5856,8 @@ PIVX Core Wallet</translation>
         <translation>블록을 받아오는데 실패했습니다.</translation>
     </message>
     <message>
-        <source>Fee (in PIV/kB) to add to transactions you send (default: %s)</source>
-        <translation>당신이 보내는 트랜잭션에 추가 할 수수료 (PIV/kB) (기본값: %s)</translation>
+        <source>Fee (in CARI/kB) to add to transactions you send (default: %s)</source>
+        <translation>당신이 보내는 트랜잭션에 추가 할 수수료 (CARI/kB) (기본값: %s)</translation>
     </message>
     <message>
         <source>Force safe mode (default: %u)</source>
@@ -5896,8 +5896,8 @@ PIVX Core Wallet</translation>
         <translation>정보</translation>
     </message>
     <message>
-        <source>Initialization sanity check failed. PIVX Core is shutting down.</source>
-        <translation>초기화 정확성 검사에 실패 했습니다. PIVX Core가 종료됩니다.</translation>
+        <source>Initialization sanity check failed. CARI Core is shutting down.</source>
+        <translation>초기화 정확성 검사에 실패 했습니다. CARI Core가 종료됩니다.</translation>
     </message>
     <message>
         <source>Insufficient funds</source>
@@ -5932,12 +5932,12 @@ PIVX Core Wallet</translation>
         <translation>masternode.conf 에서 유효하지 않은 포트가 감지되었습니다</translation>
     </message>
     <message>
-        <source>Recalculating PIV supply...</source>
-        <translation>PIV 공급 재계산중...</translation>
+        <source>Recalculating CARI supply...</source>
+        <translation>CARI 공급 재계산중...</translation>
     </message>
     <message>
-        <source>Reindex the PIV and zPIV money supply statistics</source>
-        <translation>PIV 및 zPIV 공급량 다시 색인</translation>
+        <source>Reindex the CARI and zCARI money supply statistics</source>
+        <translation>CARI 및 zCARI 공급량 다시 색인</translation>
     </message>
     <message>
         <source>Reindexing zerocoin database...</source>
@@ -5976,8 +5976,8 @@ PIVX Core Wallet</translation>
 </translation>
     </message>
     <message>
-        <source>Disable all PIVX specific functionality (Masternodes, Zerocoin, SwiftX, Budgeting) (0-1, default: %u)</source>
-        <translation>PIVX의 모든 특정 기능들을 비활성화합니다(마스터노드, 난독화, SwiftTX, Budgeting) (0-1, 기본값: %u)</translation>
+        <source>Disable all CARI specific functionality (Masternodes, Zerocoin, SwiftX, Budgeting) (0-1, default: %u)</source>
+        <translation>CARI의 모든 특정 기능들을 비활성화합니다(마스터노드, 난독화, SwiftTX, Budgeting) (0-1, 기본값: %u)</translation>
     </message>
     <message>
         <source>Enable SwiftX, show confirmations for locked transactions (bool, default: %s)</source>
@@ -6216,8 +6216,8 @@ PIVX Core Wallet</translation>
         <translation>재동기화 준비중...</translation>
     </message>
     <message>
-        <source>Please check that your computer's date and time are correct! If your clock is wrong PIVX Core will not work properly.</source>
-        <translation>컴퓨터의 날짜와 시간이 올바르게 설정되어 있는지 확인해 주세요! 만일 시계가 잘못되어 있다면 PIVX 코어는 정상적으로 작동하지 않을 수 있습니다.</translation>
+        <source>Please check that your computer's date and time are correct! If your clock is wrong CARI Core will not work properly.</source>
+        <translation>컴퓨터의 날짜와 시간이 올바르게 설정되어 있는지 확인해 주세요! 만일 시계가 잘못되어 있다면 CARI 코어는 정상적으로 작동하지 않을 수 있습니다.</translation>
     </message>
     <message>
         <source>Cannot resolve -%s address: '%s'</source>
@@ -6404,8 +6404,8 @@ PIVX Core Wallet</translation>
         <translation>sporks와 동기화 중입니다...</translation>
     </message>
     <message>
-        <source>Syncing zPIV wallet...</source>
-        <translation>zPIV 지갑 동기화중...</translation>
+        <source>Syncing zCARI wallet...</source>
+        <translation>zCARI 지갑 동기화중...</translation>
     </message>
     <message>
         <source>This help message</source>
@@ -6512,8 +6512,8 @@ PIVX Core Wallet</translation>
         <translation>JSON-RPC 연결 사용자 이름</translation>
     </message>
     <message>
-        <source>Value is below the smallest available denomination (= 1) of zPIV</source>
-        <translation>Value is below the smallest available denomination (= 1) of zPIV</translation>
+        <source>Value is below the smallest available denomination (= 1) of zCARI</source>
+        <translation>Value is below the smallest available denomination (= 1) of zCARI</translation>
     </message>
     <message>
         <source>Verifying blocks...</source>
@@ -6528,8 +6528,8 @@ PIVX Core Wallet</translation>
         <translation>지갑 %s 가 데이터 디렉토리 외부에 존재합니다 %s</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart PIVX Core to complete</source>
-        <translation>지갑을 다시 작성해야 합니다: 완료하려면 PIVX 코어를 재시작해야 합니다</translation>
+        <source>Wallet needed to be rewritten: restart CARI Core to complete</source>
+        <translation>지갑을 다시 작성해야 합니다: 완료하려면 CARI 코어를 재시작해야 합니다</translation>
     </message>
     <message>
         <source>Wallet options:</source>
@@ -6557,7 +6557,7 @@ PIVX Core Wallet</translation>
     </message>
     <message>
         <source>You don't have enough Zerocoins in your wallet</source>
-        <translation>지갑에 zPIV 가 부족합니다.</translation>
+        <translation>지갑에 zCARI 가 부족합니다.</translation>
     </message>
     <message>
         <source>You need to rebuild the database using -reindex to change -txindex</source>

@@ -130,12 +130,12 @@
         <translation>Адреса получения</translation>
     </message>
     <message>
-        <source>These are your PIVX addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Это ваши PIVX-адреса для отправки платежей. Перед отправкой монет всегда проверяйте сумму и адрес получателя.</translation>
+        <source>These are your CARI addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Это ваши CARI-адреса для отправки платежей. Перед отправкой монет всегда проверяйте сумму и адрес получателя.</translation>
     </message>
     <message>
-        <source>These are your PIVX addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Это ваши PIVX-адреса для получения платежей. Для каждой транзакции рекомендуется использовать новый адрес получения.</translation>
+        <source>These are your CARI addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Это ваши CARI-адреса для получения платежей. Для каждой транзакции рекомендуется использовать новый адрес получения.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -251,8 +251,8 @@
         <translation>Например, Иван Петров</translation>
     </message>
     <message>
-        <source>Enter PIVX address</source>
-        <translation>Ввести адрес PIVX</translation>
+        <source>Enter CARI address</source>
+        <translation>Ввести адрес CARI</translation>
     </message>
     <message>
         <source>SAVE</source>
@@ -379,8 +379,8 @@ for staking</source>
         <translation>Если вы зашифруете свой кошелек и потеряете парольную фразу, вы</translation>
     </message>
     <message>
-        <source>LOSE ALL OF YOUR PIV</source>
-        <translation>ПОТЕРЯЕТЕ ВСЕ ВАШИ PIV</translation>
+        <source>LOSE ALL OF YOUR CARI</source>
+        <translation>ПОТЕРЯЕТЕ ВСЕ ВАШИ CARI</translation>
     </message>
     <message>
         <source>ENCRYPT</source>
@@ -395,8 +395,8 @@ for staking</source>
         <translation>ВНИМАНИЕ: Включена клавиша Caps Lock!</translation>
     </message>
     <message>
-        <source>PIVX will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your PIVs from being stolen by malware infecting your computer.</source>
-        <translation>PIVX сейчас закроется, чтобы завершить процесс шифрования. Помните, что шифрование вашего кошелька не может полностью защитить ваши PIVX от кражи с использованием вредоносного ПО.</translation>
+        <source>CARI will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your CARIs from being stolen by malware infecting your computer.</source>
+        <translation>CARI сейчас закроется, чтобы завершить процесс шифрования. Помните, что шифрование вашего кошелька не может полностью защитить ваши CARI от кражи с использованием вредоносного ПО.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -465,8 +465,8 @@ for staking</source>
         <translation>Сбережения</translation>
     </message>
     <message>
-        <source>0,00 PIV</source>
-        <translation>0.00 PIV</translation>
+        <source>0,00 CARI</source>
+        <translation>0.00 CARI</translation>
     </message>
     <message>
         <source>address</source>
@@ -507,8 +507,8 @@ for staking</source>
         <translation>Выбор монеты</translation>
     </message>
     <message>
-        <source>Select PIV Outputs to Spend</source>
-        <translation>Выберите PIV выходы для расходов</translation>
+        <source>Select CARI Outputs to Spend</source>
+        <translation>Выберите CARI выходы для расходов</translation>
     </message>
     <message>
         <source>Dust:</source>
@@ -535,8 +535,8 @@ for staking</source>
         <translation>Сумма</translation>
     </message>
     <message>
-        <source>0.00 PIV</source>
-        <translation>0.00 PIV </translation>
+        <source>0.00 CARI</source>
+        <translation>0.00 CARI </translation>
     </message>
     <message>
         <source>0</source>
@@ -719,8 +719,8 @@ for staking</source>
         <translation>Этот маркер становится красным если получаемая адресатом сумма меньше, чем %1</translation>
     </message>
     <message>
-        <source>Can vary +/- %1 upiv per input.</source>
-        <translation>Может вариироваться +/- %1 upiv при вводе</translation>
+        <source>Can vary +/- %1 ucari per input.</source>
+        <translation>Может вариироваться +/- %1 ucari при вводе</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -802,17 +802,17 @@ for staking</source>
         <translation>Ошибка при загрузке делегаций: %1</translation>
     </message>
     <message>
-        <source>You can delegate your PIVs, letting a hot node (24/7 online node)
+        <source>You can delegate your CARIs, letting a hot node (24/7 online node)
 stake on your behalf, while you keep the keys securely offline.</source>
-        <translation>Вы можете делегировать свои PIV, позволяя горячему узлу (онлайн-узлу, работаещему 24/7) делать стекинг от вашего имени, в то время как ключи надежно хранятся в автономном режиме.</translation>
+        <translation>Вы можете делегировать свои CARI, позволяя горячему узлу (онлайн-узлу, работаещему 24/7) делать стекинг от вашего имени, в то время как ключи надежно хранятся в автономном режиме.</translation>
     </message>
     <message>
         <source>Enter owner address</source>
         <translation>Введите адрес владельца</translation>
     </message>
     <message>
-        <source>Accept PIV delegation / Delegate PIV</source>
-        <translation>Принять делегацию PIV / Делегировать PIV</translation>
+        <source>Accept CARI delegation / Delegate CARI</source>
+        <translation>Принять делегацию CARI / Делегировать CARI</translation>
     </message>
     <message>
         <source>Cold Staking address</source>
@@ -878,8 +878,8 @@ Do you wish to proceed?</source>
         <translation>Монеты делегированы</translation>
     </message>
     <message>
-        <source>You don't have any PIV to select.</source>
-        <translation>У вас нет PIV.</translation>
+        <source>You don't have any CARI to select.</source>
+        <translation>У вас нет CARI.</translation>
     </message>
     <message>
         <source>Cannot perform operation, wallet locked</source>
@@ -1010,12 +1010,12 @@ address</source>
         <translation>Статистика стекинга</translation>
     </message>
     <message>
-        <source>PIV</source>
-        <translation>PIV</translation>
+        <source>CARI</source>
+        <translation>CARI</translation>
     </message>
     <message>
-        <source>zPIV</source>
-        <translation>zPIV</translation>
+        <source>zCARI</source>
+        <translation>zCARI</translation>
     </message>
     <message>
         <source>Sort by</source>
@@ -1046,8 +1046,8 @@ address</source>
         <translation>Вы можете просмотреть историю вашего аккаунта</translation>
     </message>
     <message>
-        <source>Amount of PIV and zPIV staked.</source>
-        <translation>Сумма добытых PIV и zPIV</translation>
+        <source>Amount of CARI and zCARI staked.</source>
+        <translation>Сумма добытых CARI и zCARI</translation>
     </message>
     <message>
         <source>Please wait until the wallet is fully synced to see your correct balance</source>
@@ -1058,8 +1058,8 @@ address</source>
         <translation>Пока что нет транзакций</translation>
     </message>
     <message>
-        <source>How to get PIV or zPIV</source>
-        <translation>Как получить PIV или zPIV</translation>
+        <source>How to get CARI or zCARI</source>
+        <translation>Как получить CARI или zCARI</translation>
     </message>
     <message>
         <source>You can verify the staking activity in the status bar at the top right of the wallet.
@@ -1154,8 +1154,8 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation>Изменить адрес отправки</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid PIVX address.</source>
-        <translation>Введенный адрес "%1" не является PIVX адресом.</translation>
+        <source>The entered address "%1" is not a valid CARI address.</source>
+        <translation>Введенный адрес "%1" не является CARI адресом.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1207,16 +1207,16 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation>версия</translation>
     </message>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>CARI Core</source>
+        <translation>CARI Core</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
         <translation>(%1-бит)</translation>
     </message>
     <message>
-        <source>About PIVX Core</source>
-        <translation>О PIVX Core</translation>
+        <source>About CARI Core</source>
+        <translation>О CARI Core</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1270,16 +1270,16 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation>Добро пожаловать</translation>
     </message>
     <message>
-        <source>Welcome to PIVX Core.</source>
-        <translation>Добро пожаловать в PIVX Core.</translation>
+        <source>Welcome to CARI Core.</source>
+        <translation>Добро пожаловать в CARI Core.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where PIVX Core will store its data.</source>
-        <translation>Поскольку это первый запуск программы, вы можете выбрать, где будут храниться данные PIVX Core.</translation>
+        <source>As this is the first time the program is launched, you can choose where CARI Core will store its data.</source>
+        <translation>Поскольку это первый запуск программы, вы можете выбрать, где будут храниться данные CARI Core.</translation>
     </message>
     <message>
-        <source>PIVX Core will download and store a copy of the PIVX block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>PIVX Core загрузит и сохранит копию цепочки блоков PIVX. Каталог будет занимать около %1GB и со временем размер будет увеличиваться. Кроме того, в этом каталоге будет храниться кошелек.</translation>
+        <source>CARI Core will download and store a copy of the CARI block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>CARI Core загрузит и сохранит копию цепочки блоков CARI. Каталог будет занимать около %1GB и со временем размер будет увеличиваться. Кроме того, в этом каталоге будет храниться кошелек.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1298,8 +1298,8 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation>ХОРОШО</translation>
     </message>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>CARI Core</source>
+        <translation>CARI Core</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -1414,8 +1414,8 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation>Убедитесь, что у вас есть такое количество монет.</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A transaction of 10,000 PIV will be made&lt;/p&gt;&lt;p&gt;to a new empty address in your wallet.&lt;/p&gt;&lt;p&gt;The Address is labeled under the master node's name.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;На новый пустой адрес в вашем кошельке&lt;/p&gt;&lt;p&gt; будет сделана транзакция в 10 000 PIV. &lt;/p&gt;&lt;p&gt;Адрес отмечен под именем мастерноды.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A transaction of 10,000 CARI will be made&lt;/p&gt;&lt;p&gt;to a new empty address in your wallet.&lt;/p&gt;&lt;p&gt;The Address is labeled under the master node's name.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;На новый пустой адрес в вашем кошельке&lt;/p&gt;&lt;p&gt; будет сделана транзакция в 10 000 CARI. &lt;/p&gt;&lt;p&gt;Адрес отмечен под именем мастерноды.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Address of the node that must always be online running the actual master node.</source>
@@ -1612,7 +1612,7 @@ Please wait few more minutes (masternode collaterals require %1 confirmations).<
 on a remote server to your clipboard.
 
 
-You will only have to paste the data in the pivx.conf file
+You will only have to paste the data in the cari.conf file
 of your remote server and start it, then start the Masternode using
 this controller wallet (select the Masternode in the list and press "start").
 </source>
@@ -1620,7 +1620,7 @@ this controller wallet (select the Masternode in the list and press "start").
 на удаленном сервере в буфер обмена.
 
 
-Вам необходимо только вставить данные в файл pivx.conf
+Вам необходимо только вставить данные в файл cari.conf
 вашего удаленного сервера и запустить его, а затем запустить мастерноду,
 используя этот кошелек контроллера (выберите мастерноду из списка и нажмите «Старт»).
 </translation>
@@ -1656,8 +1656,8 @@ Are you sure?</source>
         <translation>Невозможно создать контроллер Мастерноды, кошелек заблокирован</translation>
     </message>
     <message>
-        <source>Not enough balance to create a masternode, 10,000 PIV required.</source>
-        <translation>Недостаточно баланса для создания мастерноды. Требуется 10 000 PIV.</translation>
+        <source>Not enough balance to create a masternode, 10,000 CARI required.</source>
+        <translation>Недостаточно баланса для создания мастерноды. Требуется 10 000 CARI.</translation>
     </message>
     <message>
         <source>Error creating masternode</source>
@@ -1788,8 +1788,8 @@ Are you sure?</source>
         <translation>Проанализированные данные слишком большие</translation>
     </message>
     <message>
-        <source>Invalid URI, not starting with "pivx" prefix</source>
-        <translation>Неверный URI, не начинается с префикса "pivx"</translation>
+        <source>Invalid URI, not starting with "cari" prefix</source>
+        <translation>Неверный URI, не начинается с префикса "cari"</translation>
     </message>
 </context>
 <context>
@@ -1838,8 +1838,8 @@ Are you sure?</source>
         <translation>Отключив проведение неподтвержденных изменений все изменения о транзакции &lt;br/&gt;не будут использованы пока транзакция не получит хотя бы одно подтверждение.&lt;br/&gt;Также это влияет на расчет вашего баланса.</translation>
     </message>
     <message>
-        <source>Automatically open the PIVX client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Автоматически открыть клиентский порт PIVX через роутер. Ваш роутер должен поддерживать UPnP, а сам сервис должен быть включен.</translation>
+        <source>Automatically open the CARI client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Автоматически открыть клиентский порт CARI через роутер. Ваш роутер должен поддерживать UPnP, а сам сервис должен быть включен.</translation>
     </message>
     <message>
         <source>Accept connections from outside</source>
@@ -1858,12 +1858,12 @@ Are you sure?</source>
         <translation>Эксперт</translation>
     </message>
     <message>
-        <source>Automatically start PIVX after logging in to the system.</source>
-        <translation>Автоматически запускать PIVX после входа в систему.</translation>
+        <source>Automatically start CARI after logging in to the system.</source>
+        <translation>Автоматически запускать CARI после входа в систему.</translation>
     </message>
     <message>
-        <source>&amp;Start PIVX on system login</source>
-        <translation>&amp;Запускать PIVX при входе в систему</translation>
+        <source>&amp;Start CARI on system login</source>
+        <translation>&amp;Запускать CARI при входе в систему</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1890,58 +1890,58 @@ Are you sure?</source>
         <translation>&amp;Сеть</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting PIVX.</source>
-        <translation>Здесь можно выставить язык интерфейса. Изменения вступят в силу после перезапуска PIVX.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting CARI.</source>
+        <translation>Здесь можно выставить язык интерфейса. Изменения вступят в силу после перезапуска CARI.</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/pivx-project/pivx-project-translations</source>
+https://www.transifex.com/cari-project/cari-project-translations</source>
         <translation>Отсутствует ваш язык или заметили незавершенный перевод? Вы можете помочь нам стать лучше:
-https://www.transifex.com/pivx-project/pivx-project-translations</translation>
+https://www.transifex.com/cari-project/cari-project-translations</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Карта порта, использующего &amp;UPnP</translation>
     </message>
     <message>
-        <source>Enable automatic minting of PIV units to zPIV</source>
-        <translation>Невозможно автоматически отчеканить единицы PIV для zPIV</translation>
+        <source>Enable automatic minting of CARI units to zCARI</source>
+        <translation>Невозможно автоматически отчеканить единицы CARI для zCARI</translation>
     </message>
     <message>
-        <source>Enable zPIV Automint</source>
-        <translation>Невозможно авточеканка  zPIV</translation>
+        <source>Enable zCARI Automint</source>
+        <translation>Невозможно авточеканка  zCARI</translation>
     </message>
     <message>
-        <source>Enable automatic zPIV minting from specific addresses</source>
-        <translation>Включить автоматическое чеканку zPIV с определенных адресов</translation>
+        <source>Enable automatic zCARI minting from specific addresses</source>
+        <translation>Включить автоматическое чеканку zCARI с определенных адресов</translation>
     </message>
     <message>
         <source>Enable Automint Addresses</source>
         <translation>Включить адреса с автоматической чеканкой</translation>
     </message>
     <message>
-        <source>Percentage of incoming PIV which get automatically converted to zPIV via Zerocoin Protocol (min: 10%)</source>
-        <translation>Процент приходящих PIV, которые автоматически конвертируются в zPIV благодаря Zerocoin протоколу (min: 10%)</translation>
+        <source>Percentage of incoming CARI which get automatically converted to zCARI via Zerocoin Protocol (min: 10%)</source>
+        <translation>Процент приходящих CARI, которые автоматически конвертируются в zCARI благодаря Zerocoin протоколу (min: 10%)</translation>
     </message>
     <message>
-        <source>Percentage of autominted zPIV</source>
-        <translation>Процент  авточеканненых zPIV</translation>
+        <source>Percentage of autominted zCARI</source>
+        <translation>Процент  авточеканненых zCARI</translation>
     </message>
     <message>
-        <source>Wait with automatic conversion to Zerocoin until enough PIV for this denomination is available</source>
-        <translation>Подождите с автоматическим преобразованием в Zerocoin, пока не будет достаточно PIV для этой номинации.</translation>
+        <source>Wait with automatic conversion to Zerocoin until enough CARI for this denomination is available</source>
+        <translation>Подождите с автоматическим преобразованием в Zerocoin, пока не будет достаточно CARI для этой номинации.</translation>
     </message>
     <message>
-        <source>Preferred Automint zPIV Denomination</source>
-        <translation>Предпочитаемый номинал авточеканной  монеты  zPIV</translation>
+        <source>Preferred Automint zCARI Denomination</source>
+        <translation>Предпочитаемый номинал авточеканной  монеты  zCARI</translation>
     </message>
     <message>
         <source>Stake split threshold:</source>
         <translation>Порог разделения доли:</translation>
     </message>
     <message>
-        <source>Connect to the PIVX network through a SOCKS5 proxy.</source>
-        <translation>Подключиться к сети PIVX через SOCKS5 прокси.</translation>
+        <source>Connect to the CARI network through a SOCKS5 proxy.</source>
+        <translation>Подключиться к сети CARI через SOCKS5 прокси.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -2085,10 +2085,10 @@ https://www.transifex.com/pivx-project/pivx-project-translations</translation>
     </message>
 </context>
 <context>
-    <name>PIVXGUI</name>
+    <name>CARIGUI</name>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>CARI Core</source>
+        <translation>CARI Core</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -2115,8 +2115,8 @@ https://www.transifex.com/pivx-project/pivx-project-translations</translation>
         <translation>Завершить работу</translation>
     </message>
     <message>
-        <source>PIVX Core client</source>
-        <translation>Клиент PIVX Core</translation>
+        <source>CARI Core client</source>
+        <translation>Клиент CARI Core</translation>
     </message>
     <message>
         <source>Error</source>
@@ -2159,8 +2159,8 @@ Address: %4
 </translation>
     </message>
     <message>
-        <source>A fatal error occurred. PIVX can no longer continue safely and will quit.</source>
-        <translation>Произошла фатальная ошибка. PIVX больше не может безопасно продолжать работу и завершит работу.</translation>
+        <source>A fatal error occurred. CARI can no longer continue safely and will quit.</source>
+        <translation>Произошла фатальная ошибка. CARI больше не может безопасно продолжать работу и завершит работу.</translation>
     </message>
 </context>
 <context>
@@ -2186,12 +2186,12 @@ Address: %4
         <translation>Неверный адрес оплаты %1</translation>
     </message>
     <message>
-        <source>Cannot start pivx: click-to-pay handler</source>
-        <translation>Не удалось запустить pivx: обработчик click-to-pay </translation>
+        <source>Cannot start cari: click-to-pay handler</source>
+        <translation>Не удалось запустить cari: обработчик click-to-pay </translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid PIVX address or malformed URI parameters.</source>
-        <translation>URI не интерпретируется! Причиной этому может быть неверный PIVX адрес или неверные параметеры URI.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid CARI address or malformed URI parameters.</source>
+        <translation>URI не интерпретируется! Причиной этому может быть неверный CARI адрес или неверные параметеры URI.</translation>
     </message>
     <message>
         <source>Payment request file cannot be read! This can be caused by an invalid payment request file.</source>
@@ -2304,49 +2304,49 @@ Address: %4
         <translation>Чеканить</translation>
     </message>
     <message>
-        <source>Minting zPIV anonymizes your PIV by removing any
+        <source>Minting zCARI anonymizes your CARI by removing any
 transaction history, making transactions untraceable </source>
-        <translation>Чеканка zPIV анонимизирует ваш PIV, удаляя любую историю транзакций и делая транзакции недоступными для отслеживания.</translation>
+        <translation>Чеканка zCARI анонимизирует ваш CARI, удаляя любую историю транзакций и делая транзакции недоступными для отслеживания.</translation>
     </message>
     <message>
-        <source>Mint new zPIV or convert back to PIV</source>
-        <translation>Чеканить новые zPIV или конвертировать обратно в PIV</translation>
+        <source>Mint new zCARI or convert back to CARI</source>
+        <translation>Чеканить новые zCARI или конвертировать обратно в CARI</translation>
     </message>
     <message>
-        <source>Last zPIV Movements</source>
-        <translation>Последние движения zPIV</translation>
+        <source>Last zCARI Movements</source>
+        <translation>Последние движения zCARI</translation>
     </message>
     <message>
         <source>No transactions yet</source>
         <translation>Пока что нет транзакций</translation>
     </message>
     <message>
-        <source>Mint zPIV</source>
-        <translation>Чеканить zPIV</translation>
+        <source>Mint zCARI</source>
+        <translation>Чеканить zCARI</translation>
     </message>
     <message>
-        <source>Enter amount of PIV to mint into zPIV</source>
-        <translation>Введите количество PIV для чеканки в zPIV</translation>
+        <source>Enter amount of CARI to mint into zCARI</source>
+        <translation>Введите количество CARI для чеканки в zCARI</translation>
     </message>
     <message>
-        <source>Convert back to PIV</source>
-        <translation>Конвертировать обратно в PIV</translation>
+        <source>Convert back to CARI</source>
+        <translation>Конвертировать обратно в CARI</translation>
     </message>
     <message>
-        <source>Enter amount of zPIV to convert back into PIV</source>
-        <translation>Введите количество zPIV для чеканки в PIV </translation>
+        <source>Enter amount of zCARI to convert back into CARI</source>
+        <translation>Введите количество zCARI для чеканки в CARI </translation>
     </message>
     <message>
         <source>Zerocoin</source>
         <translation>Zerocoin </translation>
     </message>
     <message>
-        <source>zPIV is currently undergoing maintenance</source>
-        <translation>zPIV в настоящее время проходит техническое обслуживание</translation>
+        <source>zCARI is currently undergoing maintenance</source>
+        <translation>zCARI в настоящее время проходит техническое обслуживание</translation>
     </message>
     <message>
-        <source>You need to unlock the wallet to be able to %1 zPIV</source>
-        <translation>Вам нужно разблокировать кошелек, чтобы иметь возможность %1 zPIV</translation>
+        <source>You need to unlock the wallet to be able to %1 zCARI</source>
+        <translation>Вам нужно разблокировать кошелек, чтобы иметь возможность %1 zCARI</translation>
     </message>
     <message>
         <source>convert</source>
@@ -2361,16 +2361,16 @@ transaction history, making transactions untraceable </source>
         <translation>Неверное значение</translation>
     </message>
     <message>
-        <source>zPIV minted successfully</source>
-        <translation>zPIV отчеканились успешно</translation>
+        <source>zCARI minted successfully</source>
+        <translation>zCARI отчеканились успешно</translation>
     </message>
     <message>
-        <source>zPIV converted back to PIV</source>
-        <translation>ZPIV конвертированы обратно в PIV</translation>
+        <source>zCARI converted back to CARI</source>
+        <translation>ZCARI конвертированы обратно в CARI</translation>
     </message>
     <message>
-        <source>You don't have any PIV to select.</source>
-        <translation>У вас нет PIV.</translation>
+        <source>You don't have any CARI to select.</source>
+        <translation>У вас нет CARI.</translation>
     </message>
     <message>
         <source>Rescan Mints</source>
@@ -2381,8 +2381,8 @@ transaction history, making transactions untraceable </source>
         <translation>Ваши чеканки zerocoin будут сканироваться из блокчейна с нуля</translation>
     </message>
     <message>
-        <source>Reset Spent zPIV</source>
-        <translation>Сброс потраченных zPIV</translation>
+        <source>Reset Spent zCARI</source>
+        <translation>Сброс потраченных zCARI</translation>
     </message>
     <message>
         <source>Your zerocoin spends are going to be scanned from the blockchain from scratch</source>
@@ -2400,8 +2400,8 @@ transaction history, making transactions untraceable </source>
         <translation>Сумма</translation>
     </message>
     <message>
-        <source>Enter PIVX address (e.g. %1)</source>
-        <translation>Введите адрес PIVX (например, %1)</translation>
+        <source>Enter CARI address (e.g. %1)</source>
+        <translation>Введите адрес CARI (например, %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -2444,8 +2444,8 @@ transaction history, making transactions untraceable </source>
         <translation>%1 мс</translation>
     </message>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>CARI Core</source>
+        <translation>CARI Core</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" does not exist.</source>
@@ -2464,8 +2464,8 @@ transaction history, making transactions untraceable </source>
         <translation>Ошибка чтения файла конфигурации мастерноды: %1</translation>
     </message>
     <message>
-        <source>PIVX Core didn't yet exit safely...</source>
-        <translation>PIVX Core еще не вышел безопасно...</translation>
+        <source>CARI Core didn't yet exit safely...</source>
+        <translation>CARI Core еще не вышел безопасно...</translation>
     </message>
     <message>
         <source>Contact</source>
@@ -2635,8 +2635,8 @@ transaction history, making transactions untraceable </source>
         <translation>Блокчейн</translation>
     </message>
     <message>
-        <source>Open the PIVX debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Открыть протокол отладки PIVX. Это может занять некоторе время, если файл протокола очень большой.</translation>
+        <source>Open the CARI debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Открыть протокол отладки CARI. Это может занять некоторе время, если файл протокола очень большой.</translation>
     </message>
     <message>
         <source>Number of Masternodes</source>
@@ -2779,8 +2779,8 @@ transaction history, making transactions untraceable </source>
         <translation>Пользовательский путь резервного копирования:</translation>
     </message>
     <message>
-        <source>Custom zPIV Backup Path:</source>
-        <translation>Пользовательский путь резервного копирования zPIV:</translation>
+        <source>Custom zCARI Backup Path:</source>
+        <translation>Пользовательский путь резервного копирования zCARI:</translation>
     </message>
     <message>
         <source>Custom Backups Threshold:</source>
@@ -2860,8 +2860,8 @@ transaction history, making transactions untraceable </source>
         <translation>Вывод:</translation>
     </message>
     <message>
-        <source>Welcome to the PIVX RPC console.</source>
-        <translation>Добро пожаловать в окружение PIVX RPC.</translation>
+        <source>Welcome to the CARI RPC console.</source>
+        <translation>Добро пожаловать в окружение CARI RPC.</translation>
     </message>
     <message>
         <source>&amp;Disconnect Node</source>
@@ -3026,8 +3026,8 @@ transaction history, making transactions untraceable </source>
         <translation>Получить</translation>
     </message>
     <message>
-        <source>Scan the QR code or copy the address to receive PIV.</source>
-        <translation>Сканировать QR-код или копировать адрес для получения PIV.</translation>
+        <source>Scan the QR code or copy the address to receive CARI.</source>
+        <translation>Сканировать QR-код или копировать адрес для получения CARI.</translation>
     </message>
     <message>
         <source>No address </source>
@@ -3136,8 +3136,8 @@ transaction history, making transactions untraceable </source>
         <translation>Сумма</translation>
     </message>
     <message>
-        <source>PIV</source>
-        <translation>PIV</translation>
+        <source>CARI</source>
+        <translation>CARI</translation>
     </message>
     <message>
         <source>TextLabel</source>
@@ -3176,8 +3176,8 @@ transaction history, making transactions untraceable </source>
         <translation>Новый запрос на оплату</translation>
     </message>
     <message>
-        <source>Instead of sharing only a PIVX address, you can create a payment request, bundling up more information.</source>
-        <translation>Вместо того, чтобы делиться только адресом PIVX, вы можете создать запрос на оплату, объединив больше информации.</translation>
+        <source>Instead of sharing only a CARI address, you can create a payment request, bundling up more information.</source>
+        <translation>Вместо того, чтобы делиться только адресом CARI, вы можете создать запрос на оплату, объединив больше информации.</translation>
     </message>
     <message>
         <source>Enter a label for the address</source>
@@ -3235,8 +3235,8 @@ transaction history, making transactions untraceable </source>
         <translation>Смена адреса</translation>
     </message>
     <message>
-        <source>The remainder of the value resultant from the inputs minus the outputs value goes to the "change" PIVX address</source>
-        <translation>Остаточная часть значения, полученного от значения входов минус выходов, идет на «изменение» адреса PIVX</translation>
+        <source>The remainder of the value resultant from the inputs minus the outputs value goes to the "change" CARI address</source>
+        <translation>Остаточная часть значения, полученного от значения входов минус выходов, идет на «изменение» адреса CARI</translation>
     </message>
     <message>
         <source>SAVE</source>
@@ -3270,8 +3270,8 @@ transaction history, making transactions untraceable </source>
         <translation>рекомендуемые</translation>
     </message>
     <message>
-        <source>PIV/kilobyte</source>
-        <translation>PIV/килобайт</translation>
+        <source>CARI/kilobyte</source>
+        <translation>CARI/килобайт</translation>
     </message>
     <message>
         <source>0.00 KB</source>
@@ -3340,8 +3340,8 @@ transaction history, making transactions untraceable </source>
         <translation>Отправить</translation>
     </message>
     <message>
-        <source>You can transfer public coins (PIV) or private coins (zPIV)</source>
-        <translation>Вы можете отправить публичные монеты (PIV) или конфиденциальные монеты (zPIV)</translation>
+        <source>You can transfer public coins (CARI) or private coins (zCARI)</source>
+        <translation>Вы можете отправить публичные монеты (CARI) или конфиденциальные монеты (zCARI)</translation>
     </message>
     <message>
         <source>Select coin type to spend</source>
@@ -3372,12 +3372,12 @@ transaction history, making transactions untraceable </source>
         <translation>Общая сумма к отправке</translation>
     </message>
     <message>
-        <source>Send PIV</source>
-        <translation>Отправить PIV</translation>
+        <source>Send CARI</source>
+        <translation>Отправить CARI</translation>
     </message>
     <message>
-        <source>Send zPIV</source>
-        <translation>Отправить zPIV</translation>
+        <source>Send zCARI</source>
+        <translation>Отправить zCARI</translation>
     </message>
     <message>
         <source>Total remaining from the selected UTXO</source>
@@ -3408,8 +3408,8 @@ Do you want to continue?</source>
         <translation>Достигнуто максимальное количество выходов</translation>
     </message>
     <message>
-        <source>PIVX address or contact label</source>
-        <translation>PIVX адрес или метка контакта</translation>
+        <source>CARI address or contact label</source>
+        <translation>CARI адрес или метка контакта</translation>
     </message>
     <message>
         <source>Invalid entry, previous entries must be valid before add a new one</source>
@@ -3452,8 +3452,8 @@ These coins will no longer be cold-staked.</source>
         <translation>Потратить Zerocoin</translation>
     </message>
     <message>
-        <source>zPIV is currently undergoing maintenance.</source>
-        <translation>В настоящее время zPIV проходит техническое обслуживание.</translation>
+        <source>zCARI is currently undergoing maintenance.</source>
+        <translation>В настоящее время zCARI проходит техническое обслуживание.</translation>
     </message>
     <message>
         <source>Coin control mint not found</source>
@@ -3472,12 +3472,12 @@ These coins will no longer be cold-staked.</source>
 %2</translation>
     </message>
     <message>
-        <source>zPIV transaction sent!</source>
-        <translation>Транзакция zPIV отправлена!</translation>
+        <source>zCARI transaction sent!</source>
+        <translation>Транзакция zCARI отправлена!</translation>
     </message>
     <message>
-        <source>Version 1 zPIV require a security level of 100 to successfully spend.</source>
-        <translation>Для версии 1 zPIV требуется уровень безопасности 100, который можно успешно тратить.</translation>
+        <source>Version 1 zCARI require a security level of 100 to successfully spend.</source>
+        <translation>Для версии 1 zCARI требуется уровень безопасности 100, который можно успешно тратить.</translation>
     </message>
     <message>
         <source>Too much inputs (</source>
@@ -3512,12 +3512,12 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>Сбор по выбору %1</translation>
     </message>
     <message>
-        <source>You don't have any PIV to select.</source>
-        <translation>У вас нет PIV.</translation>
+        <source>You don't have any CARI to select.</source>
+        <translation>У вас нет CARI.</translation>
     </message>
     <message>
-        <source>You don't have any zPIV in your balance to select.</source>
-        <translation>На вашем балансе нет zPIV для выбора.</translation>
+        <source>You don't have any zCARI in your balance to select.</source>
+        <translation>На вашем балансе нет zCARI для выбора.</translation>
     </message>
     <message>
         <source>No contacts available, you can go to the contacts screen and add some there!</source>
@@ -3685,8 +3685,8 @@ This option creates a wallet.dat file that can be used to recover your whole bal
         <translation>Расшифровать ключ</translation>
     </message>
     <message>
-        <source>PIVX address</source>
-        <translation>Адрес PIVX</translation>
+        <source>CARI address</source>
+        <translation>Адрес CARI</translation>
     </message>
     <message>
         <source>Enter address</source>
@@ -3818,8 +3818,8 @@ Verify that you have installed a predetermined text editor.</source>
 Убедитесь, что вы установили заранее установленный текстовый редактор.</translation>
     </message>
     <message>
-        <source>Welcome to the PIVX RPC console.</source>
-        <translation>Добро пожаловать в окружение PIVX RPC.</translation>
+        <source>Welcome to the CARI RPC console.</source>
+        <translation>Добро пожаловать в окружение CARI RPC.</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and %1 to clear screen.</source>
@@ -3932,12 +3932,12 @@ Verify that you have installed a predetermined text editor.</source>
         <translation>Экспорт списка адресов</translation>
     </message>
     <message>
-        <source>PIVX_tx_csv_export(*.csv)</source>
-        <translation>PIVX_tx_csv_export(*.csv)</translation>
+        <source>CARI_tx_csv_export(*.csv)</source>
+        <translation>CARI_tx_csv_export(*.csv)</translation>
     </message>
     <message>
-        <source>PIVX_addresses_csv_export(*.csv)</source>
-        <translation>PIVX_addresses_csv_export(*.csv)</translation>
+        <source>CARI_addresses_csv_export(*.csv)</source>
+        <translation>CARI_addresses_csv_export(*.csv)</translation>
     </message>
     <message>
         <source>Please select a folder to export the csv file first.</source>
@@ -4014,34 +4014,34 @@ There was an error trying to save the address list to %1. Please try again.</sou
         <translation>Нажать кнопку</translation>
     </message>
     <message>
-        <source>1) What is PIVX?</source>
-        <translation>1) Что такое PIVX?</translation>
+        <source>1) What is CARI?</source>
+        <translation>1) Что такое CARI?</translation>
     </message>
     <message>
-        <source>2) Why are my PIV unspendable?</source>
-        <translation>2) Почему мои PIV невозможно потратить?</translation>
+        <source>2) Why are my CARI unspendable?</source>
+        <translation>2) Почему мои CARI невозможно потратить?</translation>
     </message>
     <message>
-        <source>3) PIVX privacy? What is Zerocoin (zPIV)?</source>
-        <translation>3) Конфиденциальность PIVX? Что такое Zerocoin (zPIV)?</translation>
+        <source>3) CARI privacy? What is Zerocoin (zCARI)?</source>
+        <translation>3) Конфиденциальность CARI? Что такое Zerocoin (zCARI)?</translation>
     </message>
     <message>
-        <source>4) Why are my zPIV unspendable?</source>
-        <translation>4) Почему мои zPIV невозможно потратить?</translation>
+        <source>4) Why are my zCARI unspendable?</source>
+        <translation>4) Почему мои zCARI невозможно потратить?</translation>
     </message>
     <message>
         <source>5) Why did my wallet convert the balance
-    into zPIV automatically?</source>
+    into zCARI automatically?</source>
         <translation>5) Почему мой кошелек автоматически конвертировал баланс
-в zPIV?</translation>
+в zCARI?</translation>
     </message>
     <message>
-        <source>6) How do I receive PIV/zPIV?</source>
-        <translation>6) Как я могу получить PIV/zPIV?</translation>
+        <source>6) How do I receive CARI/zCARI?</source>
+        <translation>6) Как я могу получить CARI/zCARI?</translation>
     </message>
     <message>
-        <source>7) How do I stake PIV/zPIV?</source>
-        <translation>7) Как запустить стекинг PIV/zPIV?</translation>
+        <source>7) How do I stake CARI/zCARI?</source>
+        <translation>7) Как запустить стекинг CARI/zCARI?</translation>
     </message>
     <message>
         <source>8) Where I should go if I need support?</source>
@@ -4060,33 +4060,33 @@ There was an error trying to save the address list to %1. Please try again.</sou
         <translation>1</translation>
     </message>
     <message>
-        <source>What is PIVX?</source>
-        <translation>Что такое PIVX?</translation>
+        <source>What is CARI?</source>
+        <translation>Что такое CARI?</translation>
     </message>
     <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           PIVX is a form of digital online money using blockchain technology
+                           CARI is a form of digital online money using blockchain technology
                            that can be easily transferred globally, instantly, and with near
-                           zero fees.  PIVX incorporates market leading security &amp;
+                           zero fees.  CARI incorporates market leading security &amp;
                            privacy and is also the first PoS (Proof of Stake) Cryptocurrency
-                           to implement ZeroCoin(zPIV) and Zerocoin staking.
+                           to implement ZeroCoin(zCARI) and Zerocoin staking.
                            &lt;/p&gt;&lt;p align="justify"&gt;
-                           PIVX utilizes a Proof of Stake (PoS) consensus system algorithm,
-                           allowing all owners of PIVX to participate in earning block rewards
+                           CARI utilizes a Proof of Stake (PoS) consensus system algorithm,
+                           allowing all owners of CARI to participate in earning block rewards
                            while securing the network with full node wallets, as well as to
                            run Masternodes to create and vote on proposals.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
         <translation>
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-PIVX - это форма цифровых онлайн-денег, использующая технологию блокчейн,
+CARI - это форма цифровых онлайн-денег, использующая технологию блокчейн,
 которая может быть легко переведена по всему миру, мгновенно и с практически
-нулевой комиссией. PIVX включает в себя лидирующую на рынке защиту и
+нулевой комиссией. CARI включает в себя лидирующую на рынке защиту и
 «конфиденциальность», а также является первой PoS криптовалютой (Proof of Stake),
-в которой реализована система стекинга ZeroCoin (zPIV) и Zerocoin.
+в которой реализована система стекинга ZeroCoin (zCARI) и Zerocoin.
 &lt;/p&gt;&lt;p align="justify"&gt;
-PIVX использует консенсус PoS (Proof of Stake), позволяя всем владельцам PIVX участвовать в заработке вознаграждений
+CARI использует консенсус PoS (Proof of Stake), позволяя всем владельцам CARI участвовать в заработке вознаграждений
 при этом обеспечивая безопасность сети с помощью кошельков с полными узлами, а также позволяет
 запускать мастерноды для создания предложений и голосования по ним.
 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
@@ -4096,25 +4096,25 @@ PIVX использует консенсус PoS (Proof of Stake), позвол�
         <translation>2</translation>
     </message>
     <message>
-        <source>Why are my PIV unspendable?</source>
-        <translation>Почему мои PIV невозможно потратить?</translation>
+        <source>Why are my CARI unspendable?</source>
+        <translation>Почему мои CARI невозможно потратить?</translation>
     </message>
     <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           Newly received PIVX requires 6 confirmations on the network
+                           Newly received CARI requires 6 confirmations on the network
                            to become eligible for spending which can take ~6 minutes.
                            &lt;/p&gt;&lt;p align="justify"&gt;
-                           Your PIVX wallet also needs to be completely synchronized
+                           Your CARI wallet also needs to be completely synchronized
                            to see and spend balances on the network.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
         <translation>
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-Недавно полученным PIVX требуется 6 подтверждений в сети,
+Недавно полученным CARI требуется 6 подтверждений в сети,
 чтобы получить право быть расходуемыми. Это может занять примерно 6 минут.
 &lt;/p&gt;&lt;p align="justify"&gt;
-Ваш кошелек PIVX также должен быть полностью синхронизирован,
+Ваш кошелек CARI также должен быть полностью синхронизирован,
 чтобы видеть баланс и расходовать его в сети.
  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt; </translation>
     </message>
@@ -4123,26 +4123,26 @@ PIVX использует консенсус PoS (Proof of Stake), позвол�
         <translation>3</translation>
     </message>
     <message>
-        <source>PIVX privacy? What is Zerocoin (zPIV)?</source>
-        <translation>Конфиденциальность PIVX? Что такое Zerocoin (zPIV)?</translation>
+        <source>CARI privacy? What is Zerocoin (zCARI)?</source>
+        <translation>Конфиденциальность CARI? Что такое Zerocoin (zCARI)?</translation>
     </message>
     <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           zPIV is an optional privacy-centric method of coin mixing on the
-                           PIVX blockchain. Basically all your transactions cannot be tracked
+                           zCARI is an optional privacy-centric method of coin mixing on the
+                           CARI blockchain. Basically all your transactions cannot be tracked
                            on to any block explorer. You can read more about the technicals in the
-                           &lt;a style='color: #b088ff' href='https://cri.eco/zpiv/'&gt;
-                           "PIVX Zerocoin (zPIV) Technical Paper"&lt;/a&gt;.
+                           &lt;a style='color: #b088ff' href='https://cri.eco/zcari/'&gt;
+                           "CARI Zerocoin (zCARI) Technical Paper"&lt;/a&gt;.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
         <translation>
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-zPIV - это необязательная конфиденциальность, которая возможна при микшировании монет
-в блокчейне PIVX. По сути,ни одна транзакция не может быть отслежена
+zCARI - это необязательная конфиденциальность, которая возможна при микшировании монет
+в блокчейне CARI. По сути,ни одна транзакция не может быть отслежена
 ни в одном из обозревателей блоков. Вы можете прочитать больше о технических характеристиках в
-&lt;a style='color: #b088ff' href='https://cri.eco/zpiv/'&gt;
-"Техническом документе PIVX Zerocoin (zPIV)"&lt;/a&gt;.
+&lt;a style='color: #b088ff' href='https://cri.eco/zcari/'&gt;
+"Техническом документе CARI Zerocoin (zCARI)"&lt;/a&gt;.
  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt; </translation>
     </message>
     <message>
@@ -4150,20 +4150,20 @@ zPIV - это необязательная конфиденциальность,
         <translation>4</translation>
     </message>
     <message>
-        <source>Why are my zPIV unspendable?</source>
-        <translation>Почему мои zPIV невозможно потратить?</translation>
+        <source>Why are my zCARI unspendable?</source>
+        <translation>Почему мои zCARI невозможно потратить?</translation>
     </message>
     <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           After minting, zPIV will require 20 confirmations as well as 1
+                           After minting, zCARI will require 20 confirmations as well as 1
                            additional mint of the same denomination on the network to
                            become eligible for spending.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
         <translation>
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-После чеканки zPIV потребуется 20 подтверждений, а также 1
+После чеканки zCARI потребуется 20 подтверждений, а также 1
 дополнительная чеканка того же номинала в сети,
 чтобы получить право быть расходуемым.
 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt; </translation>
@@ -4173,40 +4173,40 @@ zPIV - это необязательная конфиденциальность,
         <translation>5</translation>
     </message>
     <message>
-        <source>Why did my wallet convert the balance into zPIV automatically?</source>
-        <translation>Почему мой кошелек автоматически конвертировал баланс в zPIV?</translation>
+        <source>Why did my wallet convert the balance into zCARI automatically?</source>
+        <translation>Почему мой кошелек автоматически конвертировал баланс в zCARI?</translation>
     </message>
     <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           By default the PIVX wallet will convert 10% of your entire PIV
-                           balance to zPIV to assist the network. If you do not wish to
-                           stake zPIV or take advantage of the privacy benefit it brings,
-                           you can disable the automatic minting in your PIVX wallet by
-                           going to Settings-&gt;Options and deselecting “Enable zPIV Automint”.
-                           If you are not making use of the PIVX-QT or GUI you can simply open
-                           your pivx.conf file and add &lt;i&gt;enablezeromint=0&lt;/i&gt; Without the quotation
+                           By default the CARI wallet will convert 10% of your entire CARI
+                           balance to zCARI to assist the network. If you do not wish to
+                           stake zCARI or take advantage of the privacy benefit it brings,
+                           you can disable the automatic minting in your CARI wallet by
+                           going to Settings-&gt;Options and deselecting “Enable zCARI Automint”.
+                           If you are not making use of the CARI-QT or GUI you can simply open
+                           your cari.conf file and add &lt;i&gt;enablezeromint=0&lt;/i&gt; Without the quotation
                            marks and restart your wallet to disable automint.&lt;/p&gt;
                            &lt;/p&gt;&lt;p align="justify"&gt;
-                           You can read more about zPIV in the
-                           &lt;a style='color: #b088ff' href='https://cri.eco/zpiv/'&gt; "PIVX Zerocoin (zPIV) Technical Paper"&lt;/a&gt;.
-                           If you would like to keep and stake your zPIV, please read the "How do I stake"
+                           You can read more about zCARI in the
+                           &lt;a style='color: #b088ff' href='https://cri.eco/zcari/'&gt; "CARI Zerocoin (zCARI) Technical Paper"&lt;/a&gt;.
+                           If you would like to keep and stake your zCARI, please read the "How do I stake"
                            section of the FAQ below.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
         <translation>
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-По умолчанию кошелек PIVX преобразует 10% всего вашего баланса PIV
-в zPIV для помощи сети. Если вы не хотите
-запускать стекинг zPIV или пользоваться преимуществами конфиденциальности, которые она приносит,
-вы можете отключить автоматическую чеканку в своем PIVX-кошельке,
-перейдя в «Настройки-&gt; Параметры» и отменив выбор «Включить авточекунку zPIV».
-Если вы не используете PIVX-QT или GUI, вы можете просто открыть
-свой файл pivx.conf и добавить &lt;i&gt;enablezeromint=0&lt;/i&gt; без кавычек и
-перезапустите свой кошелек для отключения  автоматической чеканки. &lt;/p&gt; &lt;/p&gt;&lt;p align="justify"&gt; Вы можете прочитать больше о zPIV в
-&lt;a style='color: #b088ff' href='https://cri.eco/zpiv/'&gt;
- "Технический документ PIVX Zerocoin (zPIV)"&lt;/a&gt;.
-Если вы хотите продолжать стекинг zPIV, ознакомьтесь с разделом" Как осуществить стекинг"
+По умолчанию кошелек CARI преобразует 10% всего вашего баланса CARI
+в zCARI для помощи сети. Если вы не хотите
+запускать стекинг zCARI или пользоваться преимуществами конфиденциальности, которые она приносит,
+вы можете отключить автоматическую чеканку в своем CARI-кошельке,
+перейдя в «Настройки-&gt; Параметры» и отменив выбор «Включить авточекунку zCARI».
+Если вы не используете CARI-QT или GUI, вы можете просто открыть
+свой файл cari.conf и добавить &lt;i&gt;enablezeromint=0&lt;/i&gt; без кавычек и
+перезапустите свой кошелек для отключения  автоматической чеканки. &lt;/p&gt; &lt;/p&gt;&lt;p align="justify"&gt; Вы можете прочитать больше о zCARI в
+&lt;a style='color: #b088ff' href='https://cri.eco/zcari/'&gt;
+ "Технический документ CARI Zerocoin (zCARI)"&lt;/a&gt;.
+Если вы хотите продолжать стекинг zCARI, ознакомьтесь с разделом" Как осуществить стекинг"
 в разделе часто задаваемых вопросов ниже.
  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt; </translation>
     </message>
@@ -4215,24 +4215,24 @@ zPIV - это необязательная конфиденциальность,
         <translation>6</translation>
     </message>
     <message>
-        <source>How do I receive PIV/zPIV?</source>
-        <translation>Как мне получить PIV/zPIV?</translation>
+        <source>How do I receive CARI/zCARI?</source>
+        <translation>Как мне получить CARI/zCARI?</translation>
     </message>
     <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           zPIV can be spent and sent to any PIVX address. The receiver will
-                           receive standard PIVX but the origin of the PIVX is anonymized by the zPIV Protocol.
+                           zCARI can be spent and sent to any CARI address. The receiver will
+                           receive standard CARI but the origin of the CARI is anonymized by the zCARI Protocol.
                            &lt;/p&gt;&lt;p align="justify"&gt;
-                           If you want more zPIV you will need to mint your balance in the “Privacy” tab.
+                           If you want more zCARI you will need to mint your balance in the “Privacy” tab.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
         <translation>
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-zPIV можно потратить и отправить на любой адрес PIVX. Получатель получит
-стандартный PIVX, но оригинальное происхождение PIVX анонимизируется протоколом zPIV.
+zCARI можно потратить и отправить на любой адрес CARI. Получатель получит
+стандартный CARI, но оригинальное происхождение CARI анонимизируется протоколом zCARI.
 &lt;/p&gt;&lt;p align="justify"&gt;
-Если вы хотите больше zPIV, вам нужно будет чеканить свой баланс на вкладке «Конфиденциальность».
+Если вы хотите больше zCARI, вам нужно будет чеканить свой баланс на вкладке «Конфиденциальность».
 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt; </translation>
     </message>
     <message>
@@ -4240,8 +4240,8 @@ zPIV можно потратить и отправить на любой адр�
         <translation>7</translation>
     </message>
     <message>
-        <source>How do I stake PIV/zPIV?</source>
-        <translation>Как мне запустить стекинг PIV/zPIV?</translation>
+        <source>How do I stake CARI/zCARI?</source>
+        <translation>Как мне запустить стекинг CARI/zCARI?</translation>
     </message>
     <message>
         <source>Where should I go if I need support?</source>
@@ -4268,8 +4268,8 @@ zPIV можно потратить и отправить на любой адр�
     <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           A masternode is a computer running a full node PIVX core wallet with a
-                           requirement of 10,000 PIV secured collateral to provide extra services
+                           A masternode is a computer running a full node CARI core wallet with a
+                           requirement of 10,000 CARI secured collateral to provide extra services
                            to the network and in return, receive a portion of the block reward
                            regularly.  These services include:
                            &lt;/p&gt;&lt;p align="justify"&gt;
@@ -4291,17 +4291,17 @@ zPIV можно потратить и отправить на любой адр�
                            Masternode Perks:
                            &lt;/p&gt;&lt;p align="justify"&gt;
                            &lt;ul&gt;
-                           &lt;li&gt;Participate in PIVX Governance&lt;/li&gt;
+                           &lt;li&gt;Participate in CARI Governance&lt;/li&gt;
                            &lt;li&gt;Earn Masternode Rewards&lt;/li&gt;
                            &lt;li&gt;Commodity option for future sale&lt;/li&gt;
-                           &lt;li&gt;Help secure the PIVX network&lt;/li&gt;
+                           &lt;li&gt;Help secure the CARI network&lt;/li&gt;
                            &lt;/ul&gt;
                            &lt;/p&gt;&lt;p align="justify"&gt;
 
                            Requirements:
                            &lt;/p&gt;&lt;p align="justify"&gt;
                            &lt;ul&gt;
-                           &lt;li&gt;10,000 PIV per single Masternode instance&lt;/li&gt;
+                           &lt;li&gt;10,000 CARI per single Masternode instance&lt;/li&gt;
                            &lt;li&gt;Must be stored in a core wallet&lt;/li&gt;
                            &lt;li&gt;Need dedicated IP address&lt;/li&gt;
                            &lt;li&gt;Masternode wallet to remain online&lt;/li&gt;
@@ -4309,7 +4309,7 @@ zPIV можно потратить и отправить на любой адр�
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
         <translation>
-Мастернода - это компьютер, на котором запущен базовый кошелек PIVX с полным узлом и для которого требуется обеспечение в 10000 PIV для обеспечения дополнительных услуг сети и, в свою очередь, регулярного получения части вознаграждения за блок. Эти услуги в себя включают:
+Мастернода - это компьютер, на котором запущен базовый кошелек CARI с полным узлом и для которого требуется обеспечение в 10000 CARI для обеспечения дополнительных услуг сети и, в свою очередь, регулярного получения части вознаграждения за блок. Эти услуги в себя включают:
 
 Мгновенные транзакции (SwiftX)
 Децентрализованное управление (Голосование по предложениям)
@@ -4321,14 +4321,14 @@ zPIV можно потратить и отправить на любой адр�
 
 Привилегии мастерноды:
 
-Участие в управлении PIVX
+Участие в управлении CARI
 Получение вознаграждений за мастерноду
 Товарные опционы для будущей продажи
-Помощь в защите сети PIVX
+Помощь в защите сети CARI
 
 Требования:
 
-10 000 PIV для каждой мастерноды
+10 000 CARI для каждой мастерноды
 Должен храниться в основном кошельке
 Требуется выделенный IP-адрес
 Кошелек мастерноды должен оставаться в сети</translation>
@@ -4449,8 +4449,8 @@ zPIV можно потратить и отправить на любой адр�
         <translation>Невозможно открыть папку резервных копий</translation>
     </message>
     <message>
-        <source>Unable to open pivx.conf with default application</source>
-        <translation>Невозможно открыть pivx.conf с приложением по умолчанию</translation>
+        <source>Unable to open cari.conf with default application</source>
+        <translation>Невозможно открыть cari.conf с приложением по умолчанию</translation>
     </message>
     <message>
         <source>In:</source>
@@ -4508,8 +4508,8 @@ zPIV можно потратить и отправить на любой адр�
         <translation>Количество потоков проверки скрипта</translation>
     </message>
     <message>
-        <source>Start PIVX on system login</source>
-        <translation>Запускать PIVX при входе в систему</translation>
+        <source>Start CARI on system login</source>
+        <translation>Запускать CARI при входе в систему</translation>
     </message>
     <message>
         <source>Minimize to the tray instead of the taskbar</source>
@@ -4596,8 +4596,8 @@ Are you sure?
         <translation>Флажок</translation>
     </message>
     <message>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other PIVX addresses after it matures.</source>
-        <translation>MultiSend позволяет автоматически отправлять до 100% ваших вознаграждений от стекинга или мастернод в список других адресов PIVX после его созревания.</translation>
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other CARI addresses after it matures.</source>
+        <translation>MultiSend позволяет автоматически отправлять до 100% ваших вознаграждений от стекинга или мастернод в список других адресов CARI после его созревания.</translation>
     </message>
     <message>
         <source>Active</source>
@@ -4727,8 +4727,8 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
         <translation>Сообщение</translation>
     </message>
     <message>
-        <source>PIVX address or contact label</source>
-        <translation>PIVX адрес или лейбл контакта</translation>
+        <source>CARI address or contact label</source>
+        <translation>CARI адрес или лейбл контакта</translation>
     </message>
     <message>
         <source>Enter address</source>
@@ -5064,8 +5064,8 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
         <translation>ЧаВо</translation>
     </message>
     <message>
-        <source>About PIVX</source>
-        <translation>О PIVX</translation>
+        <source>About CARI</source>
+        <translation>О CARI</translation>
     </message>
     <message>
         <source>Settings</source>
@@ -5131,8 +5131,8 @@ Are you sure?
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>PIVX Core is shutting down...</source>
-        <translation>PIVX Core выключается...</translation>
+        <source>CARI Core is shutting down...</source>
+        <translation>CARI Core выключается...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -5161,15 +5161,15 @@ Are you sure?
         <translation>Загрузка...</translation>
     </message>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>CARI Core</source>
+        <translation>CARI Core</translation>
     </message>
 </context>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>CARI Core</source>
+        <translation>CARI Core</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -5184,8 +5184,8 @@ Are you sure?
         <translation>Разработчики Dash Core</translation>
     </message>
     <message>
-        <source>The PIVX Core developers</source>
-        <translation>Разработчики PIVX Core</translation>
+        <source>The CARI Core developers</source>
+        <translation>Разработчики CARI Core</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -5563,40 +5563,40 @@ Are you sure?
         <translation>Получен от</translation>
     </message>
     <message>
-        <source>PIV Stake</source>
-        <translation>Доля PIV</translation>
+        <source>CARI Stake</source>
+        <translation>Доля CARI</translation>
     </message>
     <message>
-        <source>zPIV Stake</source>
-        <translation>Доля zPIV</translation>
+        <source>zCARI Stake</source>
+        <translation>Доля zCARI</translation>
     </message>
     <message>
-        <source>PIV Cold Stake</source>
-        <translation>Холодный стекинг PIV</translation>
+        <source>CARI Cold Stake</source>
+        <translation>Холодный стекинг CARI</translation>
     </message>
     <message>
         <source>Stake delegation</source>
         <translation>Делегация стекинга</translation>
     </message>
     <message>
-        <source>Converted PIV to zPIV</source>
-        <translation>Преобразованный PIV в zPIV</translation>
+        <source>Converted CARI to zCARI</source>
+        <translation>Преобразованный CARI в zCARI</translation>
     </message>
     <message>
-        <source>Spent zPIV</source>
-        <translation>потраченный zPIV</translation>
+        <source>Spent zCARI</source>
+        <translation>потраченный zCARI</translation>
     </message>
     <message>
-        <source>Received PIV from zPIV</source>
-        <translation>Полученный PIV от zPIV</translation>
+        <source>Received CARI from zCARI</source>
+        <translation>Полученный CARI от zCARI</translation>
     </message>
     <message>
-        <source>Minted Change as zPIV from zPIV Spend</source>
-        <translation>созданная  замена  zPIV из потраенного zPIV </translation>
+        <source>Minted Change as zCARI from zCARI Spend</source>
+        <translation>созданная  замена  zCARI из потраенного zCARI </translation>
     </message>
     <message>
-        <source>Converted zPIV to PIV</source>
-        <translation>Преобразованный zPIV to PIV</translation>
+        <source>Converted zCARI to CARI</source>
+        <translation>Преобразованный zCARI to CARI</translation>
     </message>
     <message>
         <source>Sent to</source>
@@ -5611,8 +5611,8 @@ Are you sure?
         <translation>Оплата себе</translation>
     </message>
     <message>
-        <source>PIV Stake on behalf of</source>
-        <translation>Стекинг PIV от имени</translation>
+        <source>CARI Stake on behalf of</source>
+        <translation>Стекинг CARI от имени</translation>
     </message>
     <message>
         <source>Stake delegation spent by</source>
@@ -5777,8 +5777,8 @@ Are you sure?
         <translation>18/05/18 </translation>
     </message>
     <message>
-        <source>+0.000585 PIV</source>
-        <translation>+0.000585 PIV</translation>
+        <source>+0.000585 CARI</source>
+        <translation>+0.000585 CARI</translation>
     </message>
 </context>
 <context>
@@ -5788,8 +5788,8 @@ Are you sure?
         <translation>Отправить Монеты</translation>
     </message>
     <message>
-        <source>SwiftX doesn't support sending values that high yet. Transactions are currently limited to %1 PIV.</source>
-        <translation>SwiftX не поддерживает отправку значений, которые еще высоки. В настоящее время транзакции ограничены %1 PIV.</translation>
+        <source>SwiftX doesn't support sending values that high yet. Transactions are currently limited to %1 CARI.</source>
+        <translation>SwiftX не поддерживает отправку значений, которые еще высоки. В настоящее время транзакции ограничены %1 CARI.</translation>
     </message>
 </context>
 <context>
@@ -5832,25 +5832,25 @@ Are you sure?
     </message>
     <message>
         <source>Welcome to
-PIVX Core Wallet</source>
+CARI Core Wallet</source>
         <translation>Добро пожаловать
-в основной кошелек PIVX</translation>
+в основной кошелек CARI</translation>
     </message>
     <message>
-        <source>PIVX is the world’s most innovative Proof of Stake blockchain based technology. Developed by a team of highly experienced developers and cryptographers.</source>
-        <translation>PIVX - самая инновационная в мире технология на основе блокчейна Proof of Stake. Разработана командой опытных разработчиков и криптографов.</translation>
+        <source>CARI is the world’s most innovative Proof of Stake blockchain based technology. Developed by a team of highly experienced developers and cryptographers.</source>
+        <translation>CARI - самая инновационная в мире технология на основе блокчейна Proof of Stake. Разработана командой опытных разработчиков и криптографов.</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;As our manifesto says: Privacy is a non-negotiable basic human right; it grants users the freedom to share their data whenever and with whomever they want - PIVX believes in self sovereignty.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Как говорится в нашем манифесте: конфиденциальность является не подлежащим обсуждению основным правом человека; это дает пользователям свободу делиться своими данными в любое время и с кем угодно, ведь PIVX верит в собственный суверенитет.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;As our manifesto says: Privacy is a non-negotiable basic human right; it grants users the freedom to share their data whenever and with whomever they want - CARI believes in self sovereignty.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Как говорится в нашем манифесте: конфиденциальность является не подлежащим обсуждению основным правом человека; это дает пользователям свободу делиться своими данными в любое время и с кем угодно, ведь CARI верит в собственный суверенитет.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>The masternode network is PIVX's second layer network on top of the blockchain that enables our DAO to provide decentralized governance and a treasury.</source>
-        <translation>Сеть мастернод - это сеть второго уровня PIVX поверх блокчейна, которая позволяет нашему ДАО обеспечивать децентрализованное управление и казначейство.</translation>
+        <source>The masternode network is CARI's second layer network on top of the blockchain that enables our DAO to provide decentralized governance and a treasury.</source>
+        <translation>Сеть мастернод - это сеть второго уровня CARI поверх блокчейна, которая позволяет нашему ДАО обеспечивать децентрализованное управление и казначейство.</translation>
     </message>
     <message>
-        <source>How PIVX respects your privacy?</source>
-        <translation>Как PIVX уважает вашу конфиденциальность?</translation>
+        <source>How CARI respects your privacy?</source>
+        <translation>Как CARI уважает вашу конфиденциальность?</translation>
     </message>
     <message>
         <source>What is a Masternode?</source>
@@ -5862,10 +5862,10 @@ PIVX Core Wallet</source>
     </message>
 </context>
 <context>
-    <name>ZPivControlDialog</name>
+    <name>ZCariControlDialog</name>
     <message>
-        <source>Select zPIV to Spend</source>
-        <translation>Выберите zPIV чтобы потратить</translation>
+        <source>Select zCARI to Spend</source>
+        <translation>Выберите zCARI чтобы потратить</translation>
     </message>
     <message>
         <source>Coin Control</source>
@@ -5876,8 +5876,8 @@ PIVX Core Wallet</source>
         <translation>Нажать кнопку</translation>
     </message>
     <message>
-        <source>zPiv</source>
-        <translation>zPiv</translation>
+        <source>zCari</source>
+        <translation>zCari</translation>
     </message>
     <message>
         <source>0.00 </source>
@@ -5900,12 +5900,12 @@ PIVX Core Wallet</source>
         <translation>Выбрать / Отменить выбор</translation>
     </message>
     <message>
-        <source>Select zPIV Denominations to Spend</source>
-        <translation>Выберите деноминации zPIV для расходов</translation>
+        <source>Select zCARI Denominations to Spend</source>
+        <translation>Выберите деноминации zCARI для расходов</translation>
     </message>
 </context>
 <context>
-    <name>pivx-core</name>
+    <name>cari-core</name>
     <message>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
         <translation>(1 = сохранить tx метаданные, например, владельца учетной записи и информацию о запросе платежа, 2 = удалить tx метаданные)</translation>
@@ -5927,8 +5927,8 @@ PIVX Core Wallet</source>
         <translation>Привяжите к указанному адресу для прослушивания соединений JSON-RPC. Используйте [host]: обозначение порта для IPv6. Эта опция может быть указана несколько раз (по умолчанию: привязка ко всем интерфейсам)</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s. PIVX Core is probably already running.</source>
-        <translation>Не удается получить блокировку в каталоге данных %s. PIVX Core, вероятно, уже запущен.</translation>
+        <source>Cannot obtain a lock on data directory %s. CARI Core is probably already running.</source>
+        <translation>Не удается получить блокировку в каталоге данных %s. CARI Core, вероятно, уже запущен.</translation>
     </message>
     <message>
         <source>Change automatic finalized budget voting behavior. mode=auto: Vote for only exact finalized budget match to my generated budget. (string, default: auto)</source>
@@ -5959,12 +5959,12 @@ PIVX Core Wallet</source>
         <translation>Включить функцию холодного стекинга (0-1, по умолчанию:%u). Отключено, если стекинг = 0</translation>
     </message>
     <message>
-        <source>Enable or disable staking functionality for PIV inputs (0-1, default: %u)</source>
-        <translation>Включение или отключение функций разбивки для входов PIV (0-1, по умолчанию: %u)</translation>
+        <source>Enable or disable staking functionality for CARI inputs (0-1, default: %u)</source>
+        <translation>Включение или отключение функций разбивки для входов CARI (0-1, по умолчанию: %u)</translation>
     </message>
     <message>
-        <source>Enable or disable staking functionality for zPIV inputs (0-1, default: %u)</source>
-        <translation>Включение или отключение функций разбивки для входов zPIV (0-1, по умолчанию: %u)</translation>
+        <source>Enable or disable staking functionality for zCARI inputs (0-1, default: %u)</source>
+        <translation>Включение или отключение функций разбивки для входов zCARI (0-1, по умолчанию: %u)</translation>
     </message>
     <message>
         <source>Enable spork administration functionality with the appropriate private key.</source>
@@ -6003,12 +6003,12 @@ PIVX Core Wallet</source>
         <translation>Выполнить команду, когда лучший блок изменяется (%s в cmd заменяется блочным хэшем)</translation>
     </message>
     <message>
-        <source>Fees (in PIV/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>Тарифы (в PIV / Kb), меньшие, чем это, считаются нулевой комиссией за ретрансляцию (по умолчанию: %s)</translation>
+        <source>Fees (in CARI/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>Тарифы (в CARI / Kb), меньшие, чем это, считаются нулевой комиссией за ретрансляцию (по умолчанию: %s)</translation>
     </message>
     <message>
-        <source>Fees (in PIV/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>Плата (в PIV / Kb) меньше этого считается нулевой комиссией за создание транзакции (по умолчанию: %s)</translation>
+        <source>Fees (in CARI/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>Плата (в CARI / Kb) меньше этого считается нулевой комиссией за создание транзакции (по умолчанию: %s)</translation>
     </message>
     <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>
@@ -6115,8 +6115,8 @@ PIVX Core Wallet</source>
         <translation>Общая длина строки версии сети (%i) превышает максимальную длину (%i). Уменьшите количество или размер uacomments.</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. PIVX Core is probably already running.</source>
-        <translation>Не удалось привязать к %s на этом компьютере. PIVX Core, вероятно, уже запущен.</translation>
+        <source>Unable to bind to %s on this computer. CARI Core is probably already running.</source>
+        <translation>Не удалось привязать к %s на этом компьютере. CARI Core, вероятно, уже запущен.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -6131,8 +6131,8 @@ PIVX Core Wallet</source>
         <translation>Предупреждение: -paytxfee установлен очень высоко! Это комиссия за транзакцию, которую вы заплатите, если вы отправляете транзакцию.</translation>
     </message>
     <message>
-        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong PIVX Core will not work properly.</source>
-        <translation>Внимание: проверьте правильность даты и времени вашего компьютера! Если ваши часы ошибочны, PIVX Core не будет работать должным образом.</translation>
+        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong CARI Core will not work properly.</source>
+        <translation>Внимание: проверьте правильность даты и времени вашего компьютера! Если ваши часы ошибочны, CARI Core не будет работать должным образом.</translation>
     </message>
     <message>
         <source>Warning: The network does not appear to fully agree! Some miners appear to be experiencing issues.</source>
@@ -6247,8 +6247,8 @@ PIVX Core Wallet</source>
         <translation>Copyright (C) 2014-%i Разработчики Dash Core</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The PIVX Core Developers</source>
-        <translation>Copyright (C) 2015-%i Разработчики PIVX Core</translation>
+        <source>Copyright (C) 2015-%i The CARI Core Developers</source>
+        <translation>Copyright (C) 2015-%i Разработчики CARI Core</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>
@@ -6323,8 +6323,8 @@ PIVX Core Wallet</source>
         <translation>Ошибка при загрузке wallet.dat: Кошелек поврежден</translation>
     </message>
     <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of PIVX Core</source>
-        <translation>Ошибка загрузки wallet.dat: Кошелек требует более новой версии PIVX Core</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of CARI Core</source>
+        <translation>Ошибка загрузки wallet.dat: Кошелек требует более новой версии CARI Core</translation>
     </message>
     <message>
         <source>Error opening block database</source>
@@ -6375,8 +6375,8 @@ PIVX Core Wallet</source>
         <translation>Не удалось прочитать блок</translation>
     </message>
     <message>
-        <source>Fee (in PIV/kB) to add to transactions you send (default: %s)</source>
-        <translation>Плата (в PIV / kB) для добавления к транзакциям, которые вы отправляете (по умолчанию: %s)</translation>
+        <source>Fee (in CARI/kB) to add to transactions you send (default: %s)</source>
+        <translation>Плата (в CARI / kB) для добавления к транзакциям, которые вы отправляете (по умолчанию: %s)</translation>
     </message>
     <message>
         <source>Force safe mode (default: %u)</source>
@@ -6415,8 +6415,8 @@ PIVX Core Wallet</source>
         <translation>Информация</translation>
     </message>
     <message>
-        <source>Initialization sanity check failed. PIVX Core is shutting down.</source>
-        <translation>Инициализация проверки работоспособности не удалась. PIVX Core отключается.</translation>
+        <source>Initialization sanity check failed. CARI Core is shutting down.</source>
+        <translation>Инициализация проверки работоспособности не удалась. CARI Core отключается.</translation>
     </message>
     <message>
         <source>Insufficient funds</source>
@@ -6451,12 +6451,12 @@ PIVX Core Wallet</source>
         <translation>Неверный порт обнаружен в файле masternode.conf</translation>
     </message>
     <message>
-        <source>Recalculating PIV supply...</source>
-        <translation>Перерасчет предложения PIV...</translation>
+        <source>Recalculating CARI supply...</source>
+        <translation>Перерасчет предложения CARI...</translation>
     </message>
     <message>
-        <source>Reindex the PIV and zPIV money supply statistics</source>
-        <translation>Reindex статистика денежной массы PIV и zPIV</translation>
+        <source>Reindex the CARI and zCARI money supply statistics</source>
+        <translation>Reindex статистика денежной массы CARI и zCARI</translation>
     </message>
     <message>
         <source>Reindexing zerocoin database...</source>
@@ -6495,8 +6495,8 @@ PIVX Core Wallet</source>
 </translation>
     </message>
     <message>
-        <source>Disable all PIVX specific functionality (Masternodes, Zerocoin, SwiftX, Budgeting) (0-1, default: %u)</source>
-        <translation>Отключите все специфические функции PIVX (Masternodes, Zerocoin, SwiftX, Бюджетирование) (0-1, по умолчанию: %u)</translation>
+        <source>Disable all CARI specific functionality (Masternodes, Zerocoin, SwiftX, Budgeting) (0-1, default: %u)</source>
+        <translation>Отключите все специфические функции CARI (Masternodes, Zerocoin, SwiftX, Бюджетирование) (0-1, по умолчанию: %u)</translation>
     </message>
     <message>
         <source>Enable SwiftX, show confirmations for locked transactions (bool, default: %s)</source>
@@ -6751,8 +6751,8 @@ PIVX Core Wallet</source>
         <translation>Подготовка к повторной синхронизации ...</translation>
     </message>
     <message>
-        <source>Please check that your computer's date and time are correct! If your clock is wrong PIVX Core will not work properly.</source>
-        <translation>Пожалуйста, проверьте правильность даты и времени на вашем компьютере! Если ваши часы не точны, PIVX Core не будет работать должным образом.</translation>
+        <source>Please check that your computer's date and time are correct! If your clock is wrong CARI Core will not work properly.</source>
+        <translation>Пожалуйста, проверьте правильность даты и времени на вашем компьютере! Если ваши часы не точны, CARI Core не будет работать должным образом.</translation>
     </message>
     <message>
         <source>Specify location of debug log file: this can be an absolute path or a path relative to the data directory (default: %s)</source>
@@ -6951,8 +6951,8 @@ PIVX Core Wallet</source>
         <translation>Синхронизация спорков ...</translation>
     </message>
     <message>
-        <source>Syncing zPIV wallet...</source>
-        <translation>Синхронизация zPIV кошелька ...</translation>
+        <source>Syncing zCARI wallet...</source>
+        <translation>Синхронизация zCARI кошелька ...</translation>
     </message>
     <message>
         <source>This help message</source>
@@ -7067,8 +7067,8 @@ PIVX Core Wallet</source>
         <translation>Имя пользователя для соединений JSON-RPC</translation>
     </message>
     <message>
-        <source>Value is below the smallest available denomination (= 1) of zPIV</source>
-        <translation>Значение ниже наименьшего доступного номинала (= 1) zPiv</translation>
+        <source>Value is below the smallest available denomination (= 1) of zCARI</source>
+        <translation>Значение ниже наименьшего доступного номинала (= 1) zCari</translation>
     </message>
     <message>
         <source>Verifying blocks...</source>
@@ -7083,8 +7083,8 @@ PIVX Core Wallet</source>
         <translation>Кошелек %s находится за пределами каталога данных %s</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart PIVX Core to complete</source>
-        <translation>Кошелек необходимо переписать: перезапустите PIVX Core, чтобы завершить</translation>
+        <source>Wallet needed to be rewritten: restart CARI Core to complete</source>
+        <translation>Кошелек необходимо переписать: перезапустите CARI Core, чтобы завершить</translation>
     </message>
     <message>
         <source>Wallet options:</source>

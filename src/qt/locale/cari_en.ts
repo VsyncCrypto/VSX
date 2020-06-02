@@ -4,7 +4,7 @@
 <context>
     <name>AddNewAddressDialog</name>
     <message>
-        <location filename="../pivx/forms/addnewaddressdialog.ui" line="+14"/>
+        <location filename="../cari/forms/addnewaddressdialog.ui" line="+14"/>
         <source>Dialog</source>
         <translation type="unfinished"></translation>
     </message>
@@ -37,7 +37,7 @@
 <context>
     <name>AddNewContactDialog</name>
     <message>
-        <location filename="../pivx/forms/addnewcontactdialog.ui" line="+14"/>
+        <location filename="../cari/forms/addnewcontactdialog.ui" line="+14"/>
         <source>Dialog</source>
         <translation type="unfinished"></translation>
     </message>
@@ -58,7 +58,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pivx/addnewcontactdialog.cpp" line="+20"/>
+        <location filename="../cari/addnewcontactdialog.cpp" line="+20"/>
         <source>Edit Contact</source>
         <translation type="unfinished"></translation>
     </message>
@@ -163,12 +163,12 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your PIVX addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your CARI addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>These are your PIVX addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your CARI addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -210,7 +210,7 @@
 <context>
     <name>AddressLabelRow</name>
     <message>
-        <location filename="../pivx/forms/addresslabelrow.ui" line="+20"/>
+        <location filename="../cari/forms/addresslabelrow.ui" line="+20"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -256,7 +256,7 @@
 <context>
     <name>AddressesWidget</name>
     <message>
-        <location filename="../pivx/forms/addresseswidget.ui" line="+14"/>
+        <location filename="../cari/forms/addresseswidget.ui" line="+14"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -277,7 +277,7 @@
     </message>
     <message>
         <location line="+74"/>
-        <location filename="../pivx/addresseswidget.cpp" line="+119"/>
+        <location filename="../cari/addresseswidget.cpp" line="+119"/>
         <source>Contact name</source>
         <translation type="unfinished"></translation>
     </message>
@@ -292,7 +292,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pivx/addresseswidget.cpp" line="-38"/>
+        <location filename="../cari/addresseswidget.cpp" line="-38"/>
         <source>Contacts</source>
         <translation type="unfinished"></translation>
     </message>
@@ -313,7 +313,7 @@
     </message>
     <message>
         <location line="+4"/>
-        <source>Enter PIVX address</source>
+        <source>Enter CARI address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -470,7 +470,7 @@ for staking</source>
     </message>
     <message>
         <location line="+1"/>
-        <source>LOSE ALL OF YOUR PIV</source>
+        <source>LOSE ALL OF YOUR CARI</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -491,7 +491,7 @@ for staking</source>
     </message>
     <message>
         <location line="+31"/>
-        <source>PIVX will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your PIVs from being stolen by malware infecting your computer.</source>
+        <source>CARI will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your CARIs from being stolen by malware infecting your computer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -575,7 +575,7 @@ for staking</source>
 <context>
     <name>CSRow</name>
     <message>
-        <location filename="../pivx/forms/csrow.ui" line="+14"/>
+        <location filename="../cari/forms/csrow.ui" line="+14"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -586,7 +586,7 @@ for staking</source>
     </message>
     <message>
         <location line="+20"/>
-        <source>0,00 PIV</source>
+        <source>0,00 CARI</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -600,7 +600,7 @@ for staking</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pivx/csrow.cpp" line="+27"/>
+        <location filename="../cari/csrow.cpp" line="+27"/>
         <source>Own delegation</source>
         <translation type="unfinished"></translation>
     </message>
@@ -637,7 +637,7 @@ for staking</source>
     </message>
     <message>
         <location line="+81"/>
-        <source>Select PIV Outputs to Spend</source>
+        <source>Select CARI Outputs to Spend</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -675,7 +675,7 @@ for staking</source>
         <location line="-393"/>
         <location line="+124"/>
         <location line="+461"/>
-        <source>0.00 PIV</source>
+        <source>0.00 CARI</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -912,7 +912,7 @@ for staking</source>
     </message>
     <message>
         <location line="+8"/>
-        <source>Can vary +/- %1 upiv per input.</source>
+        <source>Can vary +/- %1 ucari per input.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -935,7 +935,7 @@ for staking</source>
 <context>
     <name>ColdStakingWidget</name>
     <message>
-        <location filename="../pivx/forms/coldstakingwidget.ui" line="+14"/>
+        <location filename="../cari/forms/coldstakingwidget.ui" line="+14"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -971,7 +971,7 @@ for staking</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pivx/coldstakingwidget.cpp" line="+93"/>
+        <location filename="../cari/coldstakingwidget.cpp" line="+93"/>
         <source>Cold Staking</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1017,7 +1017,7 @@ for staking</source>
     </message>
     <message>
         <location line="-193"/>
-        <source>You can delegate your PIVs, letting a hot node (24/7 online node)
+        <source>You can delegate your CARIs, letting a hot node (24/7 online node)
 stake on your behalf, while you keep the keys securely offline.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1028,7 +1028,7 @@ stake on your behalf, while you keep the keys securely offline.</source>
     </message>
     <message>
         <location line="+6"/>
-        <source>Accept PIV delegation / Delegate PIV</source>
+        <source>Accept CARI delegation / Delegate CARI</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1104,7 +1104,7 @@ Do you wish to proceed?</source>
     </message>
     <message>
         <location line="+30"/>
-        <source>You don&apos;t have any PIV to select.</source>
+        <source>You don&apos;t have any CARI to select.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1207,7 +1207,7 @@ address</source>
 <context>
     <name>ContactDropdownRow</name>
     <message>
-        <location filename="../pivx/forms/contactdropdownrow.ui" line="+20"/>
+        <location filename="../cari/forms/contactdropdownrow.ui" line="+20"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -1225,7 +1225,7 @@ address</source>
 <context>
     <name>DashboardWidget</name>
     <message>
-        <location filename="../pivx/forms/dashboardwidget.ui" line="+14"/>
+        <location filename="../cari/forms/dashboardwidget.ui" line="+14"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -1251,7 +1251,7 @@ address</source>
     </message>
     <message>
         <location line="+93"/>
-        <location filename="../pivx/dashboardwidget.cpp" line="+47"/>
+        <location filename="../cari/dashboardwidget.cpp" line="+47"/>
         <source>Staking Rewards</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1270,12 +1270,12 @@ address</source>
     </message>
     <message>
         <location line="+39"/>
-        <source>PIV</source>
+        <source>CARI</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+42"/>
-        <source>zPIV</source>
+        <source>zCARI</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1309,13 +1309,13 @@ address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pivx/dashboardwidget.cpp" line="+5"/>
+        <location filename="../cari/dashboardwidget.cpp" line="+5"/>
         <source>You can view your account&apos;s history</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>Amount of PIV and zPIV staked.</source>
+        <source>Amount of CARI and zCARI staked.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1330,7 +1330,7 @@ address</source>
     </message>
     <message>
         <location line="+5"/>
-        <source>How to get PIV or zPIV</source>
+        <source>How to get CARI or zCARI</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1376,7 +1376,7 @@ It will start automatically as soon as the wallet has enough confirmations on an
 <context>
     <name>DefaultDialog</name>
     <message>
-        <location filename="../pivx/forms/defaultdialog.ui" line="+14"/>
+        <location filename="../cari/forms/defaultdialog.ui" line="+14"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -1450,7 +1450,7 @@ It will start automatically as soon as the wallet has enough confirmations on an
     </message>
     <message>
         <location line="+67"/>
-        <source>The entered address &quot;%1&quot; is not a valid PIVX address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid CARI address.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1472,7 +1472,7 @@ It will start automatically as soon as the wallet has enough confirmations on an
 <context>
     <name>ExpandableButton</name>
     <message>
-        <location filename="../pivx/forms/expandablebutton.ui" line="+26"/>
+        <location filename="../cari/forms/expandablebutton.ui" line="+26"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -1514,7 +1514,7 @@ It will start automatically as soon as the wallet has enough confirmations on an
     </message>
     <message>
         <location line="+0"/>
-        <source>PIVX Core</source>
+        <source>CARI Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1525,7 +1525,7 @@ It will start automatically as soon as the wallet has enough confirmations on an
     </message>
     <message>
         <location line="+6"/>
-        <source>About PIVX Core</source>
+        <source>About CARI Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1593,17 +1593,17 @@ It will start automatically as soon as the wallet has enough confirmations on an
     </message>
     <message>
         <location line="+90"/>
-        <source>Welcome to PIVX Core.</source>
+        <source>Welcome to CARI Core.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+35"/>
-        <source>As this is the first time the program is launched, you can choose where PIVX Core will store its data.</source>
+        <source>As this is the first time the program is launched, you can choose where CARI Core will store its data.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+18"/>
-        <source>PIVX Core will download and store a copy of the PIVX block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <source>CARI Core will download and store a copy of the CARI block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1628,7 +1628,7 @@ It will start automatically as soon as the wallet has enough confirmations on an
     </message>
     <message>
         <location filename="../intro.cpp" line="+101"/>
-        <source>PIVX Core</source>
+        <source>CARI Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1655,7 +1655,7 @@ It will start automatically as soon as the wallet has enough confirmations on an
 <context>
     <name>LoadingDialog</name>
     <message>
-        <location filename="../pivx/forms/loadingdialog.ui" line="+14"/>
+        <location filename="../cari/forms/loadingdialog.ui" line="+14"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -1666,7 +1666,7 @@ It will start automatically as soon as the wallet has enough confirmations on an
     </message>
     <message>
         <location line="+44"/>
-        <location filename="../pivx/loadingdialog.cpp" line="+43"/>
+        <location filename="../cari/loadingdialog.cpp" line="+43"/>
         <source>Loading</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1679,12 +1679,12 @@ It will start automatically as soon as the wallet has enough confirmations on an
 <context>
     <name>LockUnlock</name>
     <message>
-        <location filename="../pivx/forms/lockunlock.ui" line="+14"/>
+        <location filename="../cari/forms/lockunlock.ui" line="+14"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
     <message>
-        <location filename="../pivx/lockunlock.cpp" line="+26"/>
+        <location filename="../cari/lockunlock.cpp" line="+26"/>
         <source>Unlock Wallet</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1702,7 +1702,7 @@ It will start automatically as soon as the wallet has enough confirmations on an
 <context>
     <name>MNRow</name>
     <message>
-        <location filename="../pivx/forms/mnrow.ui" line="+14"/>
+        <location filename="../cari/forms/mnrow.ui" line="+14"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -1710,7 +1710,7 @@ It will start automatically as soon as the wallet has enough confirmations on an
 <context>
     <name>MasterNodeWizardDialog</name>
     <message>
-        <location filename="../pivx/forms/masternodewizarddialog.ui" line="+14"/>
+        <location filename="../cari/forms/masternodewizarddialog.ui" line="+14"/>
         <source>Dialog</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1751,7 +1751,7 @@ It will start automatically as soon as the wallet has enough confirmations on an
     </message>
     <message>
         <location line="+23"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To create a PIVX Masternode you must dedicate 10,000 PIV (the unit of PIVX) to the network (however, these coins are still yours and will never leave your possession). &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;You can deactivate the node and unlock the coins at any time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To create a CARI Masternode you must dedicate 10,000 CARI (the unit of CARI) to the network (however, these coins are still yours and will never leave your possession). &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;You can deactivate the node and unlock the coins at any time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1776,7 +1776,7 @@ It will start automatically as soon as the wallet has enough confirmations on an
     </message>
     <message>
         <location line="+93"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A transaction of 10,000 PIV will be made&lt;/p&gt;&lt;p&gt;to a new empty address in your wallet.&lt;/p&gt;&lt;p&gt;The Address is labeled under the master node&apos;s name.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A transaction of 10,000 CARI will be made&lt;/p&gt;&lt;p&gt;to a new empty address in your wallet.&lt;/p&gt;&lt;p&gt;The Address is labeled under the master node&apos;s name.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1800,7 +1800,7 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pivx/masternodewizarddialog.cpp" line="+56"/>
+        <location filename="../cari/masternodewizarddialog.cpp" line="+56"/>
         <source>e.g user_masternode</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1873,7 +1873,7 @@ It will start automatically as soon as the wallet has enough confirmations on an
 <context>
     <name>MasterNodesWidget</name>
     <message>
-        <location filename="../pivx/forms/masternodeswidget.ui" line="+14"/>
+        <location filename="../cari/forms/masternodeswidget.ui" line="+14"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -1899,7 +1899,7 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pivx/masternodeswidget.cpp" line="+95"/>
+        <location filename="../cari/masternodeswidget.cpp" line="+95"/>
         <source>Masternodes</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2012,7 +2012,7 @@ Please wait few more minutes (masternode collaterals require %1 confirmations).<
 on a remote server to your clipboard.
 
 
-You will only have to paste the data in the pivx.conf file
+You will only have to paste the data in the cari.conf file
 of your remote server and start it, then start the Masternode using
 this controller wallet (select the Masternode in the list and press &quot;start&quot;).
 </source>
@@ -2053,7 +2053,7 @@ Are you sure?</source>
     </message>
     <message>
         <location line="+5"/>
-        <source>Not enough balance to create a masternode, 10,000 PIV required.</source>
+        <source>Not enough balance to create a masternode, 10,000 CARI required.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2065,7 +2065,7 @@ Are you sure?</source>
 <context>
     <name>MnInfoDialog</name>
     <message>
-        <location filename="../pivx/forms/mninfodialog.ui" line="+20"/>
+        <location filename="../cari/forms/mninfodialog.ui" line="+20"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -2129,7 +2129,7 @@ Are you sure?</source>
 <context>
     <name>MyAddressRow</name>
     <message>
-        <location filename="../pivx/forms/myaddressrow.ui" line="+14"/>
+        <location filename="../cari/forms/myaddressrow.ui" line="+14"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -2152,7 +2152,7 @@ Are you sure?</source>
 <context>
     <name>NavMenuWidget</name>
     <message>
-        <location filename="../pivx/forms/navmenuwidget.ui" line="+14"/>
+        <location filename="../cari/forms/navmenuwidget.ui" line="+14"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -2162,7 +2162,7 @@ Are you sure?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pivx/navmenuwidget.cpp" line="+23"/>
+        <location filename="../cari/navmenuwidget.cpp" line="+23"/>
         <source>v%1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2216,14 +2216,14 @@ Are you sure?</source>
     </message>
     <message>
         <location line="+6"/>
-        <source>Invalid URI, not starting with &quot;pivx&quot; prefix</source>
+        <source>Invalid URI, not starting with &quot;cari&quot; prefix</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>OptionButton</name>
     <message>
-        <location filename="../pivx/forms/optionbutton.ui" line="+14"/>
+        <location filename="../cari/forms/optionbutton.ui" line="+14"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -2278,7 +2278,7 @@ Are you sure?</source>
     </message>
     <message>
         <location line="+33"/>
-        <source>Automatically open the PIVX client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the CARI client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2303,12 +2303,12 @@ Are you sure?</source>
     </message>
     <message>
         <location line="-236"/>
-        <source>Automatically start PIVX after logging in to the system.</source>
+        <source>Automatically start CARI after logging in to the system.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start PIVX on system login</source>
+        <source>&amp;Start CARI on system login</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2343,13 +2343,13 @@ Are you sure?</source>
     </message>
     <message>
         <location line="+192"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting PIVX.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting CARI.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/pivx-project/pivx-project-translations</source>
+https://www.transifex.com/cari-project/cari-project-translations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2359,17 +2359,17 @@ https://www.transifex.com/pivx-project/pivx-project-translations</source>
     </message>
     <message>
         <location line="-187"/>
-        <source>Enable automatic minting of PIV units to zPIV</source>
+        <source>Enable automatic minting of CARI units to zCARI</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Enable zPIV Automint</source>
+        <source>Enable zCARI Automint</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Enable automatic zPIV minting from specific addresses</source>
+        <source>Enable automatic zCARI minting from specific addresses</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2379,23 +2379,23 @@ https://www.transifex.com/pivx-project/pivx-project-translations</source>
     </message>
     <message>
         <location line="+11"/>
-        <source>Percentage of incoming PIV which get automatically converted to zPIV via Zerocoin Protocol (min: 10%)</source>
+        <source>Percentage of incoming CARI which get automatically converted to zCARI via Zerocoin Protocol (min: 10%)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Percentage of autominted zPIV</source>
+        <source>Percentage of autominted zCARI</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+30"/>
         <location line="+16"/>
-        <source>Wait with automatic conversion to Zerocoin until enough PIV for this denomination is available</source>
+        <source>Wait with automatic conversion to Zerocoin until enough CARI for this denomination is available</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-13"/>
-        <source>Preferred Automint zPIV Denomination</source>
+        <source>Preferred Automint zCARI Denomination</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2405,7 +2405,7 @@ https://www.transifex.com/pivx-project/pivx-project-translations</source>
     </message>
     <message>
         <location line="+98"/>
-        <source>Connect to the PIVX network through a SOCKS5 proxy.</source>
+        <source>Connect to the CARI network through a SOCKS5 proxy.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2588,12 +2588,12 @@ https://www.transifex.com/pivx-project/pivx-project-translations</source>
     </message>
 </context>
 <context>
-    <name>PIVXGUI</name>
+    <name>CARIGUI</name>
     <message>
-        <location filename="../pivx/pivxgui.cpp" line="+70"/>
+        <location filename="../cari/carigui.cpp" line="+70"/>
         <location line="+292"/>
         <location line="+68"/>
-        <source>PIVX Core</source>
+        <source>CARI Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2628,7 +2628,7 @@ https://www.transifex.com/pivx-project/pivx-project-translations</source>
     </message>
     <message>
         <location line="+37"/>
-        <source>PIVX Core client</source>
+        <source>CARI Core client</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2680,8 +2680,8 @@ Address: %4
 </translation>
     </message>
     <message>
-        <location filename="../pivx.cpp" line="+518"/>
-        <source>A fatal error occurred. PIVX can no longer continue safely and will quit.</source>
+        <location filename="../cari.cpp" line="+518"/>
+        <source>A fatal error occurred. CARI can no longer continue safely and will quit.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2721,12 +2721,12 @@ Address: %4
     </message>
     <message>
         <location line="-102"/>
-        <source>Cannot start pivx: click-to-pay handler</source>
+        <source>Cannot start cari: click-to-pay handler</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+108"/>
-        <source>URI cannot be parsed! This can be caused by an invalid PIVX address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid CARI address or malformed URI parameters.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2828,7 +2828,7 @@ Address: %4
 <context>
     <name>PrivacyWidget</name>
     <message>
-        <location filename="../pivx/forms/privacywidget.ui" line="+14"/>
+        <location filename="../cari/forms/privacywidget.ui" line="+14"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -2874,7 +2874,7 @@ Address: %4
         <translation type="unfinished">N/A</translation>
     </message>
     <message>
-        <location filename="../pivx/privacywidget.cpp" line="+36"/>
+        <location filename="../cari/privacywidget.cpp" line="+36"/>
         <source>Privacy</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2890,18 +2890,18 @@ Address: %4
     </message>
     <message>
         <location line="+4"/>
-        <source>Minting zPIV anonymizes your PIV by removing any
+        <source>Minting zCARI anonymizes your CARI by removing any
 transaction history, making transactions untraceable </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Mint new zPIV or convert back to PIV</source>
+        <source>Mint new zCARI or convert back to CARI</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+53"/>
-        <source>Last zPIV Movements</source>
+        <source>Last zCARI Movements</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2911,22 +2911,22 @@ transaction history, making transactions untraceable </source>
     </message>
     <message>
         <location line="+87"/>
-        <source>Mint zPIV</source>
+        <source>Mint zCARI</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Enter amount of PIV to mint into zPIV</source>
+        <source>Enter amount of CARI to mint into zCARI</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Convert back to PIV</source>
+        <source>Convert back to CARI</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Enter amount of zPIV to convert back into PIV</source>
+        <source>Enter amount of zCARI to convert back into CARI</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2936,12 +2936,12 @@ transaction history, making transactions untraceable </source>
     </message>
     <message>
         <location line="+0"/>
-        <source>zPIV is currently undergoing maintenance</source>
+        <source>zCARI is currently undergoing maintenance</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>You need to unlock the wallet to be able to %1 zPIV</source>
+        <source>You need to unlock the wallet to be able to %1 zCARI</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2961,17 +2961,17 @@ transaction history, making transactions untraceable </source>
     </message>
     <message>
         <location line="+19"/>
-        <source>zPIV minted successfully</source>
+        <source>zCARI minted successfully</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+19"/>
-        <source>zPIV converted back to PIV</source>
+        <source>zCARI converted back to CARI</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+20"/>
-        <source>You don&apos;t have any PIV to select.</source>
+        <source>You don&apos;t have any CARI to select.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2986,7 +2986,7 @@ transaction history, making transactions untraceable </source>
     </message>
     <message>
         <location line="+9"/>
-        <source>Reset Spent zPIV</source>
+        <source>Reset Spent zCARI</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3009,7 +3009,7 @@ transaction history, making transactions untraceable </source>
     </message>
     <message>
         <location filename="../guiutil.cpp" line="+144"/>
-        <source>Enter PIVX address (e.g. %1)</source>
+        <source>Enter CARI address (e.g. %1)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3064,11 +3064,11 @@ transaction history, making transactions untraceable </source>
         <translation>%1 ms</translation>
     </message>
     <message>
-        <location filename="../pivx.cpp" line="+73"/>
+        <location filename="../cari.cpp" line="+73"/>
         <location line="+7"/>
         <location line="+13"/>
         <location line="+19"/>
-        <source>PIVX Core</source>
+        <source>CARI Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3093,7 +3093,7 @@ transaction history, making transactions untraceable </source>
     </message>
     <message>
         <location line="+63"/>
-        <source>PIVX Core didn&apos;t yet exit safely...</source>
+        <source>CARI Core didn&apos;t yet exit safely...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3103,7 +3103,7 @@ transaction history, making transactions untraceable </source>
     </message>
     <message>
         <location line="+2"/>
-        <location filename="../pivx/qtutils.cpp" line="+136"/>
+        <location filename="../cari/qtutils.cpp" line="+136"/>
         <source>Receiving</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3114,7 +3114,7 @@ transaction history, making transactions untraceable </source>
     </message>
     <message>
         <location line="+2"/>
-        <location filename="../pivx/qtutils.cpp" line="+2"/>
+        <location filename="../cari/qtutils.cpp" line="+2"/>
         <source>Cold Staking</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3134,7 +3134,7 @@ transaction history, making transactions untraceable </source>
         <translation type="unfinished">Unknown</translation>
     </message>
     <message>
-        <location filename="../pivx/qtutils.cpp" line="-3"/>
+        <location filename="../cari/qtutils.cpp" line="-3"/>
         <location line="+21"/>
         <source>All</source>
         <translation type="unfinished">All</translation>
@@ -3361,7 +3361,7 @@ transaction history, making transactions untraceable </source>
     </message>
     <message>
         <location line="+93"/>
-        <source>Open the PIVX debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the CARI debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3543,7 +3543,7 @@ transaction history, making transactions untraceable </source>
     </message>
     <message>
         <location line="+29"/>
-        <source>Custom zPIV Backup Path:</source>
+        <source>Custom zCARI Backup Path:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3643,7 +3643,7 @@ transaction history, making transactions untraceable </source>
     </message>
     <message>
         <location line="-39"/>
-        <source>Welcome to the PIVX RPC console.</source>
+        <source>Welcome to the CARI RPC console.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3790,7 +3790,7 @@ transaction history, making transactions untraceable </source>
 <context>
     <name>ReceiveDialog</name>
     <message>
-        <location filename="../pivx/forms/receivedialog.ui" line="+14"/>
+        <location filename="../cari/forms/receivedialog.ui" line="+14"/>
         <source>Dialog</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3818,7 +3818,7 @@ transaction history, making transactions untraceable </source>
 <context>
     <name>ReceiveWidget</name>
     <message>
-        <location filename="../pivx/forms/receivewidget.ui" line="+20"/>
+        <location filename="../cari/forms/receivewidget.ui" line="+20"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -3832,36 +3832,36 @@ transaction history, making transactions untraceable </source>
     </message>
     <message>
         <location line="+25"/>
-        <location filename="../pivx/receivewidget.cpp" line="+248"/>
+        <location filename="../cari/receivewidget.cpp" line="+248"/>
         <source>No address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+31"/>
-        <location filename="../pivx/receivewidget.cpp" line="-180"/>
+        <location filename="../cari/receivewidget.cpp" line="-180"/>
         <source>Add Label</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
-        <location filename="../pivx/receivewidget.cpp" line="+4"/>
+        <location filename="../cari/receivewidget.cpp" line="+4"/>
         <source>Generate Address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
-        <location filename="../pivx/receivewidget.cpp" line="+4"/>
+        <location filename="../cari/receivewidget.cpp" line="+4"/>
         <source>Copy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pivx/receivewidget.cpp" line="-32"/>
+        <location filename="../cari/receivewidget.cpp" line="-32"/>
         <source>Receive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Scan the QR code or copy the address to receive PIV.</source>
+        <source>Scan the QR code or copy the address to receive CARI.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3978,7 +3978,7 @@ transaction history, making transactions untraceable </source>
 <context>
     <name>RequestDialog</name>
     <message>
-        <location filename="../pivx/forms/requestdialog.ui" line="+14"/>
+        <location filename="../cari/forms/requestdialog.ui" line="+14"/>
         <source>Dialog</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3994,13 +3994,13 @@ transaction history, making transactions untraceable </source>
     </message>
     <message>
         <location line="+43"/>
-        <location filename="../pivx/requestdialog.cpp" line="+42"/>
+        <location filename="../cari/requestdialog.cpp" line="+42"/>
         <source>Amount</source>
         <translation type="unfinished">Amount</translation>
     </message>
     <message>
         <location line="+71"/>
-        <source>PIV</source>
+        <source>CARI</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4035,7 +4035,7 @@ transaction history, making transactions untraceable </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pivx/requestdialog.cpp" line="-6"/>
+        <location filename="../cari/requestdialog.cpp" line="-6"/>
         <source>Label</source>
         <translation type="unfinished">Label</translation>
     </message>
@@ -4051,7 +4051,7 @@ transaction history, making transactions untraceable </source>
     </message>
     <message>
         <location line="+3"/>
-        <source>Instead of sharing only a PIVX address, you can create a payment request, bundling up more information.</source>
+        <source>Instead of sharing only a CARI address, you can create a payment request, bundling up more information.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4093,7 +4093,7 @@ transaction history, making transactions untraceable </source>
 <context>
     <name>SendChangeAddressDialog</name>
     <message>
-        <location filename="../pivx/forms/sendchangeaddressdialog.ui" line="+14"/>
+        <location filename="../cari/forms/sendchangeaddressdialog.ui" line="+14"/>
         <source>Dialog</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4109,7 +4109,7 @@ transaction history, making transactions untraceable </source>
     </message>
     <message>
         <location line="+82"/>
-        <location filename="../pivx/sendchangeaddressdialog.cpp" line="+68"/>
+        <location filename="../cari/sendchangeaddressdialog.cpp" line="+68"/>
         <source>CANCEL</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4119,13 +4119,13 @@ transaction history, making transactions untraceable </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pivx/sendchangeaddressdialog.cpp" line="-42"/>
+        <location filename="../cari/sendchangeaddressdialog.cpp" line="-42"/>
         <source>Custom Change Address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>The remainder of the value resultant from the inputs minus the outputs value goes to the &quot;change&quot; PIVX address</source>
+        <source>The remainder of the value resultant from the inputs minus the outputs value goes to the &quot;change&quot; CARI address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4147,7 +4147,7 @@ transaction history, making transactions untraceable </source>
 <context>
     <name>SendCustomFeeDialog</name>
     <message>
-        <location filename="../pivx/forms/sendcustomfeedialog.ui" line="+14"/>
+        <location filename="../cari/forms/sendcustomfeedialog.ui" line="+14"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -4168,7 +4168,7 @@ transaction history, making transactions untraceable </source>
     </message>
     <message>
         <location line="+82"/>
-        <source>PIV/kilobyte</source>
+        <source>CARI/kilobyte</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4192,7 +4192,7 @@ transaction history, making transactions untraceable </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pivx/sendcustomfeedialog.cpp" line="+28"/>
+        <location filename="../cari/sendcustomfeedialog.cpp" line="+28"/>
         <source>Customize Fee</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4235,7 +4235,7 @@ transaction history, making transactions untraceable </source>
 <context>
     <name>SendMultiRow</name>
     <message>
-        <location filename="../pivx/forms/sendmultirow.ui" line="+26"/>
+        <location filename="../cari/forms/sendmultirow.ui" line="+26"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -4245,7 +4245,7 @@ transaction history, making transactions untraceable </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pivx/sendmultirow.cpp" line="+22"/>
+        <location filename="../cari/sendmultirow.cpp" line="+22"/>
         <source>Enter address</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4258,13 +4258,13 @@ transaction history, making transactions untraceable </source>
 <context>
     <name>SendWidget</name>
     <message>
-        <location filename="../pivx/send.cpp" line="+44"/>
+        <location filename="../cari/send.cpp" line="+44"/>
         <source>Send</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+12"/>
-        <source>You can transfer public coins (PIV) or private coins (zPIV)</source>
+        <source>You can transfer public coins (CARI) or private coins (zCARI)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4304,12 +4304,12 @@ transaction history, making transactions untraceable </source>
     </message>
     <message>
         <location line="+43"/>
-        <source>Send PIV</source>
+        <source>Send CARI</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Send zPIV</source>
+        <source>Send zCARI</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4346,7 +4346,7 @@ Do you want to continue?</source>
     </message>
     <message>
         <location line="-221"/>
-        <source>PIVX address or contact label</source>
+        <source>CARI address or contact label</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4399,7 +4399,7 @@ These coins will no longer be cold-staked.</source>
     </message>
     <message>
         <location line="-38"/>
-        <source>zPIV is currently undergoing maintenance.</source>
+        <source>zCARI is currently undergoing maintenance.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4421,12 +4421,12 @@ These coins will no longer be cold-staked.</source>
     </message>
     <message>
         <location line="+29"/>
-        <source>zPIV transaction sent!</source>
+        <source>zCARI transaction sent!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Version 1 zPIV require a security level of 100 to successfully spend.</source>
+        <source>Version 1 zCARI require a security level of 100 to successfully spend.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4468,12 +4468,12 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="-210"/>
-        <source>You don&apos;t have any PIV to select.</source>
+        <source>You don&apos;t have any CARI to select.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>You don&apos;t have any zPIV in your balance to select.</source>
+        <source>You don&apos;t have any zCARI in your balance to select.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4525,7 +4525,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
 <context>
     <name>SettingsBackupWallet</name>
     <message>
-        <location filename="../pivx/settings/forms/settingsbackupwallet.ui" line="+14"/>
+        <location filename="../cari/settings/forms/settingsbackupwallet.ui" line="+14"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -4539,7 +4539,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pivx/settings/settingsbackupwallet.cpp" line="+26"/>
+        <location filename="../cari/settings/settingsbackupwallet.cpp" line="+26"/>
         <source>Backup Wallet </source>
         <translation type="unfinished"></translation>
     </message>
@@ -4605,7 +4605,7 @@ This option creates a wallet.dat file that can be used to recover your whole bal
 <context>
     <name>SettingsBitToolWidget</name>
     <message>
-        <location filename="../pivx/settings/forms/settingsbittoolwidget.ui" line="+14"/>
+        <location filename="../cari/settings/forms/settingsbittoolwidget.ui" line="+14"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -4633,7 +4633,7 @@ This option creates a wallet.dat file that can be used to recover your whole bal
     </message>
     <message>
         <location line="+63"/>
-        <location filename="../pivx/settings/settingsbittoolwidget.cpp" line="+74"/>
+        <location filename="../cari/settings/settingsbittoolwidget.cpp" line="+74"/>
         <source>Import Address</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4644,7 +4644,7 @@ This option creates a wallet.dat file that can be used to recover your whole bal
         <translation type="unfinished">Clear</translation>
     </message>
     <message>
-        <location filename="../pivx/settings/settingsbittoolwidget.cpp" line="-39"/>
+        <location filename="../cari/settings/settingsbittoolwidget.cpp" line="-39"/>
         <source>BIP38 Tool</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4697,7 +4697,7 @@ This option creates a wallet.dat file that can be used to recover your whole bal
     </message>
     <message>
         <location line="+14"/>
-        <source>PIVX address</source>
+        <source>CARI address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4821,7 +4821,7 @@ This option creates a wallet.dat file that can be used to recover your whole bal
 <context>
     <name>SettingsConsoleWidget</name>
     <message>
-        <location filename="../pivx/settings/forms/settingsconsolewidget.ui" line="+14"/>
+        <location filename="../cari/settings/forms/settingsconsolewidget.ui" line="+14"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -4831,7 +4831,7 @@ This option creates a wallet.dat file that can be used to recover your whole bal
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pivx/settings/settingsconsolewidget.cpp" line="+253"/>
+        <location filename="../cari/settings/settingsconsolewidget.cpp" line="+253"/>
         <source>Console</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4863,7 +4863,7 @@ Verify that you have installed a predetermined text editor.</source>
     </message>
     <message>
         <location line="+144"/>
-        <source>Welcome to the PIVX RPC console.</source>
+        <source>Welcome to the CARI RPC console.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4885,7 +4885,7 @@ Verify that you have installed a predetermined text editor.</source>
 <context>
     <name>SettingsDisplayOptionsWidget</name>
     <message>
-        <location filename="../pivx/settings/forms/settingsdisplayoptionswidget.ui" line="+14"/>
+        <location filename="../cari/settings/forms/settingsdisplayoptionswidget.ui" line="+14"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -4906,7 +4906,7 @@ Verify that you have installed a predetermined text editor.</source>
     </message>
     <message>
         <location line="+91"/>
-        <location filename="../pivx/settings/settingsdisplayoptionswidget.cpp" line="+103"/>
+        <location filename="../cari/settings/settingsdisplayoptionswidget.cpp" line="+103"/>
         <source>Reset to default</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4916,7 +4916,7 @@ Verify that you have installed a predetermined text editor.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pivx/settings/settingsdisplayoptionswidget.cpp" line="-74"/>
+        <location filename="../cari/settings/settingsdisplayoptionswidget.cpp" line="-74"/>
         <source>Display</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4969,7 +4969,7 @@ Verify that you have installed a predetermined text editor.</source>
 <context>
     <name>SettingsExportCSV</name>
     <message>
-        <location filename="../pivx/settings/forms/settingsexportcsv.ui" line="+14"/>
+        <location filename="../cari/settings/forms/settingsexportcsv.ui" line="+14"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -4991,7 +4991,7 @@ Verify that you have installed a predetermined text editor.</source>
     <message>
         <location line="+58"/>
         <location line="+115"/>
-        <location filename="../pivx/settings/settingsexportcsv.cpp" line="+70"/>
+        <location filename="../cari/settings/settingsexportcsv.cpp" line="+70"/>
         <location line="+7"/>
         <source>Select folder...</source>
         <translation type="unfinished"></translation>
@@ -5002,7 +5002,7 @@ Verify that you have installed a predetermined text editor.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pivx/settings/settingsexportcsv.cpp" line="-16"/>
+        <location filename="../cari/settings/settingsexportcsv.cpp" line="-16"/>
         <source>Export CSV</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5013,12 +5013,12 @@ Verify that you have installed a predetermined text editor.</source>
     </message>
     <message>
         <location line="+1"/>
-        <source>PIVX_tx_csv_export(*.csv)</source>
+        <source>CARI_tx_csv_export(*.csv)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>PIVX_addresses_csv_export(*.csv)</source>
+        <source>CARI_addresses_csv_export(*.csv)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5095,7 +5095,7 @@ There was an error trying to save the address list to %1. Please try again.</sou
 <context>
     <name>SettingsFaqWidget</name>
     <message>
-        <location filename="../pivx/settings/forms/settingsfaqwidget.ui" line="+14"/>
+        <location filename="../cari/settings/forms/settingsfaqwidget.ui" line="+14"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -5113,38 +5113,38 @@ There was an error trying to save the address list to %1. Please try again.</sou
     </message>
     <message>
         <location line="-280"/>
-        <source>1) What is PIVX?</source>
+        <source>1) What is CARI?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+31"/>
-        <source>2) Why are my PIV unspendable?</source>
+        <source>2) Why are my CARI unspendable?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+28"/>
-        <source>3) PIVX privacy? What is Zerocoin (zPIV)?</source>
+        <source>3) CARI privacy? What is Zerocoin (zCARI)?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+28"/>
-        <source>4) Why are my zPIV unspendable?</source>
+        <source>4) Why are my zCARI unspendable?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+22"/>
         <source>5) Why did my wallet convert the balance
-    into zPIV automatically?</source>
+    into zCARI automatically?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+23"/>
-        <source>6) How do I receive PIV/zPIV?</source>
+        <source>6) How do I receive CARI/zCARI?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+22"/>
-        <source>7) How do I stake PIV/zPIV?</source>
+        <source>7) How do I stake CARI/zCARI?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5169,21 +5169,21 @@ There was an error trying to save the address list to %1. Please try again.</sou
     </message>
     <message>
         <location line="+18"/>
-        <source>What is PIVX?</source>
+        <source>What is CARI?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+26"/>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;
-                           PIVX is a form of digital online money using blockchain technology
+                           CARI is a form of digital online money using blockchain technology
                            that can be easily transferred globally, instantly, and with near
-                           zero fees.  PIVX incorporates market leading security &amp;
+                           zero fees.  CARI incorporates market leading security &amp;
                            privacy and is also the first PoS (Proof of Stake) Cryptocurrency
-                           to implement ZeroCoin(zPIV) and Zerocoin staking.
+                           to implement ZeroCoin(zCARI) and Zerocoin staking.
                            &lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;
-                           PIVX utilizes a Proof of Stake (PoS) consensus system algorithm,
-                           allowing all owners of PIVX to participate in earning block rewards
+                           CARI utilizes a Proof of Stake (PoS) consensus system algorithm,
+                           allowing all owners of CARI to participate in earning block rewards
                            while securing the network with full node wallets, as well as to
                            run Masternodes to create and vote on proposals.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
@@ -5197,17 +5197,17 @@ There was an error trying to save the address list to %1. Please try again.</sou
     </message>
     <message>
         <location line="+21"/>
-        <source>Why are my PIV unspendable?</source>
+        <source>Why are my CARI unspendable?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+26"/>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;
-                           Newly received PIVX requires 6 confirmations on the network
+                           Newly received CARI requires 6 confirmations on the network
                            to become eligible for spending which can take ~6 minutes.
                            &lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;
-                           Your PIVX wallet also needs to be completely synchronized
+                           Your CARI wallet also needs to be completely synchronized
                            to see and spend balances on the network.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
@@ -5220,18 +5220,18 @@ There was an error trying to save the address list to %1. Please try again.</sou
     </message>
     <message>
         <location line="+18"/>
-        <source>PIVX privacy? What is Zerocoin (zPIV)?</source>
+        <source>CARI privacy? What is Zerocoin (zCARI)?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+26"/>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;
-                           zPIV is an optional privacy-centric method of coin mixing on the
-                           PIVX blockchain. Basically all your transactions cannot be tracked
+                           zCARI is an optional privacy-centric method of coin mixing on the
+                           CARI blockchain. Basically all your transactions cannot be tracked
                            on to any block explorer. You can read more about the technicals in the
-                           &lt;a style=&apos;color: #b088ff&apos; href=&apos;https://cri.eco/zpiv/&apos;&gt;
-                           &quot;PIVX Zerocoin (zPIV) Technical Paper&quot;&lt;/a&gt;.
+                           &lt;a style=&apos;color: #b088ff&apos; href=&apos;https://cri.eco/zcari/&apos;&gt;
+                           &quot;CARI Zerocoin (zCARI) Technical Paper&quot;&lt;/a&gt;.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
         <translation type="unfinished"></translation>
@@ -5243,14 +5243,14 @@ There was an error trying to save the address list to %1. Please try again.</sou
     </message>
     <message>
         <location line="+18"/>
-        <source>Why are my zPIV unspendable?</source>
+        <source>Why are my zCARI unspendable?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+26"/>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;
-                           After minting, zPIV will require 20 confirmations as well as 1
+                           After minting, zCARI will require 20 confirmations as well as 1
                            additional mint of the same denomination on the network to
                            become eligible for spending.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
@@ -5264,25 +5264,25 @@ There was an error trying to save the address list to %1. Please try again.</sou
     </message>
     <message>
         <location line="+18"/>
-        <source>Why did my wallet convert the balance into zPIV automatically?</source>
+        <source>Why did my wallet convert the balance into zCARI automatically?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+26"/>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;
-                           By default the PIVX wallet will convert 10% of your entire PIV
-                           balance to zPIV to assist the network. If you do not wish to
-                           stake zPIV or take advantage of the privacy benefit it brings,
-                           you can disable the automatic minting in your PIVX wallet by
-                           going to Settings-&gt;Options and deselecting “Enable zPIV Automint”.
-                           If you are not making use of the PIVX-QT or GUI you can simply open
-                           your pivx.conf file and add &lt;i&gt;enablezeromint=0&lt;/i&gt; Without the quotation
+                           By default the CARI wallet will convert 10% of your entire CARI
+                           balance to zCARI to assist the network. If you do not wish to
+                           stake zCARI or take advantage of the privacy benefit it brings,
+                           you can disable the automatic minting in your CARI wallet by
+                           going to Settings-&gt;Options and deselecting “Enable zCARI Automint”.
+                           If you are not making use of the CARI-QT or GUI you can simply open
+                           your cari.conf file and add &lt;i&gt;enablezeromint=0&lt;/i&gt; Without the quotation
                            marks and restart your wallet to disable automint.&lt;/p&gt;
                            &lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;
-                           You can read more about zPIV in the
-                           &lt;a style=&apos;color: #b088ff&apos; href=&apos;https://cri.eco/zpiv/&apos;&gt; &quot;PIVX Zerocoin (zPIV) Technical Paper&quot;&lt;/a&gt;.
-                           If you would like to keep and stake your zPIV, please read the &quot;How do I stake&quot;
+                           You can read more about zCARI in the
+                           &lt;a style=&apos;color: #b088ff&apos; href=&apos;https://cri.eco/zcari/&apos;&gt; &quot;CARI Zerocoin (zCARI) Technical Paper&quot;&lt;/a&gt;.
+                           If you would like to keep and stake your zCARI, please read the &quot;How do I stake&quot;
                            section of the FAQ below.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
@@ -5295,17 +5295,17 @@ There was an error trying to save the address list to %1. Please try again.</sou
     </message>
     <message>
         <location line="+21"/>
-        <source>How do I receive PIV/zPIV?</source>
+        <source>How do I receive CARI/zCARI?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+26"/>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;
-                           zPIV can be spent and sent to any PIVX address. The receiver will
-                           receive standard PIVX but the origin of the PIVX is anonymized by the zPIV Protocol.
+                           zCARI can be spent and sent to any CARI address. The receiver will
+                           receive standard CARI but the origin of the CARI is anonymized by the zCARI Protocol.
                            &lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;
-                           If you want more zPIV you will need to mint your balance in the “Privacy” tab.
+                           If you want more zCARI you will need to mint your balance in the “Privacy” tab.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
         <translation type="unfinished"></translation>
@@ -5317,33 +5317,33 @@ There was an error trying to save the address list to %1. Please try again.</sou
     </message>
     <message>
         <location line="+18"/>
-        <source>How do I stake PIV/zPIV?</source>
+        <source>How do I stake CARI/zCARI?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+26"/>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;
-                           To Stake PIVX:
+                           To Stake CARI:
                            &lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;
                            &lt;ol&gt;&lt;li&gt;
                            Make sure your wallet is completely synchronized and you are using the latest release.
                            &lt;li&gt;
-                           You must have a balance of PIVX with a minimum of 600 confirmations.
+                           You must have a balance of CARI with a minimum of 600 confirmations.
                            &lt;li&gt;
                            Your wallet must stay online and be unlocked for staking purposes.
                            &lt;li&gt;
                            Once all those steps are followed staking should be enabled.
                            &lt;li&gt;
-                           You can see the status of staking in the wallet by mousing over the package icon in the row on the top left of the wallet interface. There package will be lit up and will state &quot;Staking Enabled&quot; to indicate it is staking.  Using the command line interface (pivx-cli); the command &lt;i&gt;getstakingstatus&lt;/i&gt; will confirm that staking is active.
+                           You can see the status of staking in the wallet by mousing over the package icon in the row on the top left of the wallet interface. There package will be lit up and will state &quot;Staking Enabled&quot; to indicate it is staking.  Using the command line interface (cari-cli); the command &lt;i&gt;getstakingstatus&lt;/i&gt; will confirm that staking is active.
                            &lt;/li&gt;&lt;/ol&gt;
                            &lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;
-                           To Stake zPIV:
+                           To Stake zCARI:
                            &lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;
                            &lt;ol&gt;&lt;li&gt;
                            Make sure your wallet is completely synchronized and you are using the latest release.
                            &lt;li&gt;
-                           Your newly minted or existing zPIV balance must have a minimum of 200 confirmations.
+                           Your newly minted or existing zCARI balance must have a minimum of 200 confirmations.
                            &lt;li&gt;
                            Your wallet must stay online and be unlocked for anonymization and staking purposes.
                            Staking should now be enabled.
@@ -5369,7 +5369,7 @@ There was an error trying to save the address list to %1. Please try again.</sou
     </message>
     <message>
         <location line="+26"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;A Masternode Controller wallet is where the 10,000 PIV collateral can reside during a Controller-Remote masternode setup. It is a wallet that can activate the remote masternode wallet(s) and allows you to keep your collateral coins offline while the remote masternode remains online. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;A Masternode Controller wallet is where the 10,000 CARI collateral can reside during a Controller-Remote masternode setup. It is a wallet that can activate the remote masternode wallet(s) and allows you to keep your collateral coins offline while the remote masternode remains online. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5385,7 +5385,7 @@ There was an error trying to save the address list to %1. Please try again.</sou
                            &lt;a style=&apos;color: #b088ff&apos; href=&apos;https://discord.gg/m9CwKFp&apos;&gt;
                            #support in our Discord&lt;/a&gt;.
                            If you prefer to submit a ticket, One can be
-                           &lt;a style=&apos;color: #b088ff&apos; href=&apos;https://PIVX.freshdesk.com&apos;&gt;
+                           &lt;a style=&apos;color: #b088ff&apos; href=&apos;https://CARI.freshdesk.com&apos;&gt;
                            our Freshdesk support site&lt;/a&gt;.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
@@ -5400,8 +5400,8 @@ There was an error trying to save the address list to %1. Please try again.</sou
         <location line="+44"/>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;
-                           A masternode is a computer running a full node PIVX core wallet with a
-                           requirement of 10,000 PIV secured collateral to provide extra services
+                           A masternode is a computer running a full node CARI core wallet with a
+                           requirement of 10,000 CARI secured collateral to provide extra services
                            to the network and in return, receive a portion of the block reward
                            regularly.  These services include:
                            &lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;
@@ -5423,17 +5423,17 @@ There was an error trying to save the address list to %1. Please try again.</sou
                            Masternode Perks:
                            &lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;
                            &lt;ul&gt;
-                           &lt;li&gt;Participate in PIVX Governance&lt;/li&gt;
+                           &lt;li&gt;Participate in CARI Governance&lt;/li&gt;
                            &lt;li&gt;Earn Masternode Rewards&lt;/li&gt;
                            &lt;li&gt;Commodity option for future sale&lt;/li&gt;
-                           &lt;li&gt;Help secure the PIVX network&lt;/li&gt;
+                           &lt;li&gt;Help secure the CARI network&lt;/li&gt;
                            &lt;/ul&gt;
                            &lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;
 
                            Requirements:
                            &lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;
                            &lt;ul&gt;
-                           &lt;li&gt;10,000 PIV per single Masternode instance&lt;/li&gt;
+                           &lt;li&gt;10,000 CARI per single Masternode instance&lt;/li&gt;
                            &lt;li&gt;Must be stored in a core wallet&lt;/li&gt;
                            &lt;li&gt;Need dedicated IP address&lt;/li&gt;
                            &lt;li&gt;Masternode wallet to remain online&lt;/li&gt;
@@ -5448,7 +5448,7 @@ There was an error trying to save the address list to %1. Please try again.</sou
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pivx/settings/settingsfaqwidget.cpp" line="+19"/>
+        <location filename="../cari/settings/settingsfaqwidget.cpp" line="+19"/>
         <source>Frequently Asked Questions</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5466,7 +5466,7 @@ There was an error trying to save the address list to %1. Please try again.</sou
 <context>
     <name>SettingsInformationWidget</name>
     <message>
-        <location filename="../pivx/settings/forms/settingsinformationwidget.ui" line="+14"/>
+        <location filename="../cari/settings/forms/settingsinformationwidget.ui" line="+14"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -5561,12 +5561,12 @@ There was an error trying to save the address list to %1. Please try again.</sou
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pivx/settings/settingsinformationwidget.cpp" line="+72"/>
+        <location filename="../cari/settings/settingsinformationwidget.cpp" line="+72"/>
         <source>Main</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pivx/settings/forms/settingsinformationwidget.ui" line="-587"/>
+        <location filename="../cari/settings/forms/settingsinformationwidget.ui" line="-587"/>
         <source>Wallet Conf</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5576,7 +5576,7 @@ There was an error trying to save the address list to %1. Please try again.</sou
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pivx/settings/settingsinformationwidget.cpp" line="+22"/>
+        <location filename="../cari/settings/settingsinformationwidget.cpp" line="+22"/>
         <source>No information</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5587,7 +5587,7 @@ There was an error trying to save the address list to %1. Please try again.</sou
     </message>
     <message>
         <location line="+4"/>
-        <source>Unable to open pivx.conf with default application</source>
+        <source>Unable to open cari.conf with default application</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5604,7 +5604,7 @@ There was an error trying to save the address list to %1. Please try again.</sou
 <context>
     <name>SettingsMainOptionsWidget</name>
     <message>
-        <location filename="../pivx/settings/forms/settingsmainoptionswidget.ui" line="+14"/>
+        <location filename="../cari/settings/forms/settingsmainoptionswidget.ui" line="+14"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -5634,7 +5634,7 @@ There was an error trying to save the address list to %1. Please try again.</sou
     </message>
     <message>
         <location line="+40"/>
-        <location filename="../pivx/settings/settingsmainoptionswidget.cpp" line="+81"/>
+        <location filename="../cari/settings/settingsmainoptionswidget.cpp" line="+81"/>
         <source>Reset to default</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5645,12 +5645,12 @@ There was an error trying to save the address list to %1. Please try again.</sou
     </message>
     <message>
         <location line="+38"/>
-        <location filename="../pivx/settings/settingsmainoptionswidget.cpp" line="-1"/>
+        <location filename="../cari/settings/settingsmainoptionswidget.cpp" line="-1"/>
         <source>SAVE</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pivx/settings/settingsmainoptionswidget.cpp" line="-31"/>
+        <location filename="../cari/settings/settingsmainoptionswidget.cpp" line="-31"/>
         <source>Main</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5666,7 +5666,7 @@ There was an error trying to save the address list to %1. Please try again.</sou
     </message>
     <message>
         <location line="+4"/>
-        <source>Start PIVX on system login</source>
+        <source>Start CARI on system login</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5701,7 +5701,7 @@ Are you sure?
 <context>
     <name>SettingsMultisendDialog</name>
     <message>
-        <location filename="../pivx/settings/forms/settingsmultisenddialog.ui" line="+14"/>
+        <location filename="../cari/settings/forms/settingsmultisenddialog.ui" line="+14"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -5728,7 +5728,7 @@ Are you sure?
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pivx/settings/settingsmultisenddialog.cpp" line="+24"/>
+        <location filename="../cari/settings/settingsmultisenddialog.cpp" line="+24"/>
         <source>New recipient for multisend</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5751,7 +5751,7 @@ Are you sure?
 <context>
     <name>SettingsMultisendWidget</name>
     <message>
-        <location filename="../pivx/settings/forms/settingsmultisendwidget.ui" line="+14"/>
+        <location filename="../cari/settings/forms/settingsmultisendwidget.ui" line="+14"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -5773,8 +5773,8 @@ Are you sure?
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pivx/settings/settingsmultisendwidget.cpp" line="+164"/>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other PIVX addresses after it matures.</source>
+        <location filename="../cari/settings/settingsmultisendwidget.cpp" line="+164"/>
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other CARI addresses after it matures.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5893,7 +5893,7 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
 <context>
     <name>SettingsSignMessageWidgets</name>
     <message>
-        <location filename="../pivx/settings/forms/settingssignmessagewidgets.ui" line="+14"/>
+        <location filename="../cari/settings/forms/settingssignmessagewidgets.ui" line="+14"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -5913,7 +5913,7 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
         <translation type="unfinished">Clear</translation>
     </message>
     <message>
-        <location filename="../pivx/settings/settingssignmessagewidgets.cpp" line="+35"/>
+        <location filename="../cari/settings/settingssignmessagewidgets.cpp" line="+35"/>
         <source>Sign/Verify Message</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5939,7 +5939,7 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
     </message>
     <message>
         <location line="-19"/>
-        <source>PIVX address or contact label</source>
+        <source>CARI address or contact label</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6059,7 +6059,7 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
 <context>
     <name>SettingsWalletOptionsWidget</name>
     <message>
-        <location filename="../pivx/settings/forms/settingswalletoptionswidget.ui" line="+14"/>
+        <location filename="../cari/settings/forms/settingswalletoptionswidget.ui" line="+14"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -6088,7 +6088,7 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
     </message>
     <message>
         <location line="+139"/>
-        <location filename="../pivx/settings/settingswalletoptionswidget.cpp" line="+69"/>
+        <location filename="../cari/settings/settingswalletoptionswidget.cpp" line="+69"/>
         <source>Reset to default</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6098,7 +6098,7 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pivx/settings/settingswalletoptionswidget.cpp" line="-43"/>
+        <location filename="../cari/settings/settingswalletoptionswidget.cpp" line="-43"/>
         <source>Wallet</source>
         <translation type="unfinished">Wallet</translation>
     </message>
@@ -6171,7 +6171,7 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
 <context>
     <name>SettingsWalletRepairWidget</name>
     <message>
-        <location filename="../pivx/settings/forms/settingswalletrepairwidget.ui" line="+14"/>
+        <location filename="../cari/settings/forms/settingswalletrepairwidget.ui" line="+14"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -6189,7 +6189,7 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pivx/settings/settingswalletrepairwidget.cpp" line="+22"/>
+        <location filename="../cari/settings/settingswalletrepairwidget.cpp" line="+22"/>
         <source>Wallet Repair</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6297,7 +6297,7 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
 <context>
     <name>SettingsWidget</name>
     <message>
-        <location filename="../pivx/settings/forms/settingswidget.ui" line="+14"/>
+        <location filename="../cari/settings/forms/settingswidget.ui" line="+14"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -6384,7 +6384,7 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
     </message>
     <message>
         <location line="+31"/>
-        <source>About PIVX</source>
+        <source>About CARI</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6393,7 +6393,7 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pivx/settings/settingswidget.cpp" line="+220"/>
+        <location filename="../cari/settings/settingswidget.cpp" line="+220"/>
         <source>Confirm options reset</source>
         <translation type="unfinished">Confirm options reset</translation>
     </message>
@@ -6461,7 +6461,7 @@ Are you sure?
     <name>ShutdownWindow</name>
     <message>
         <location filename="../utilitydialog.cpp" line="+71"/>
-        <source>PIVX Core is shutting down...</source>
+        <source>CARI Core is shutting down...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6473,7 +6473,7 @@ Are you sure?
 <context>
     <name>SnackBar</name>
     <message>
-        <location filename="../pivx/forms/snackbar.ui" line="+26"/>
+        <location filename="../cari/forms/snackbar.ui" line="+26"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -6486,7 +6486,7 @@ Are you sure?
 <context>
     <name>Splash</name>
     <message>
-        <location filename="../pivx/forms/splash.ui" line="+26"/>
+        <location filename="../cari/forms/splash.ui" line="+26"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -6496,8 +6496,8 @@ Are you sure?
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pivx/splash.cpp" line="+29"/>
-        <source>PIVX Core</source>
+        <location filename="../cari/splash.cpp" line="+29"/>
+        <source>CARI Core</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6505,7 +6505,7 @@ Are you sure?
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+36"/>
-        <source>PIVX Core</source>
+        <source>CARI Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6525,7 +6525,7 @@ Are you sure?
     </message>
     <message>
         <location line="+1"/>
-        <source>The PIVX Core developers</source>
+        <source>The CARI Core developers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6537,7 +6537,7 @@ Are you sure?
 <context>
     <name>TooltipMenu</name>
     <message>
-        <location filename="../pivx/forms/tooltipmenu.ui" line="+26"/>
+        <location filename="../cari/forms/tooltipmenu.ui" line="+26"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -6565,14 +6565,14 @@ Are you sure?
 <context>
     <name>TopBar</name>
     <message>
-        <location filename="../pivx/forms/topbar.ui" line="+26"/>
+        <location filename="../cari/forms/topbar.ui" line="+26"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
     <message>
         <location line="+378"/>
         <location line="+121"/>
-        <location filename="../pivx/topbar.cpp" line="+634"/>
+        <location filename="../cari/topbar.cpp" line="+634"/>
         <source>Available</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6589,7 +6589,7 @@ Are you sure?
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pivx/topbar.cpp" line="-362"/>
+        <location filename="../cari/topbar.cpp" line="-362"/>
         <source>Wallet Unlocked for staking</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7105,17 +7105,17 @@ backup will be created.
     </message>
     <message>
         <location line="+7"/>
-        <source>PIV Stake</source>
+        <source>CARI Stake</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>zPIV Stake</source>
+        <source>zCARI Stake</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>PIV Cold Stake</source>
+        <source>CARI Cold Stake</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7125,27 +7125,27 @@ backup will be created.
     </message>
     <message>
         <location line="+7"/>
-        <source>Converted PIV to zPIV</source>
+        <source>Converted CARI to zCARI</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Spent zPIV</source>
+        <source>Spent zCARI</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Received PIV from zPIV</source>
+        <source>Received CARI from zCARI</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Minted Change as zPIV from zPIV Spend</source>
+        <source>Minted Change as zCARI from zCARI Spend</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Converted zPIV to PIV</source>
+        <source>Converted zCARI to CARI</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7165,7 +7165,7 @@ backup will be created.
     </message>
     <message>
         <location line="+8"/>
-        <source>PIV Stake on behalf of</source>
+        <source>CARI Stake on behalf of</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7232,13 +7232,13 @@ backup will be created.
 <context>
     <name>TxDetailDialog</name>
     <message>
-        <location filename="../pivx/forms/sendconfirmdialog.ui" line="+26"/>
+        <location filename="../cari/forms/sendconfirmdialog.ui" line="+26"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
     <message>
         <location line="+90"/>
-        <location filename="../pivx/sendconfirmdialog.cpp" line="+73"/>
+        <location filename="../cari/sendconfirmdialog.cpp" line="+73"/>
         <source>Transaction Details</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7333,7 +7333,7 @@ backup will be created.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pivx/sendconfirmdialog.cpp" line="-21"/>
+        <location filename="../cari/sendconfirmdialog.cpp" line="-21"/>
         <source>Confirm Your Transaction</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7356,7 +7356,7 @@ backup will be created.
 <context>
     <name>TxRow</name>
     <message>
-        <location filename="../pivx/forms/txrow.ui" line="+20"/>
+        <location filename="../cari/forms/txrow.ui" line="+20"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>
@@ -7372,7 +7372,7 @@ backup will be created.
     </message>
     <message>
         <location line="+15"/>
-        <source>+0.000585 PIV</source>
+        <source>+0.000585 CARI</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7388,14 +7388,14 @@ backup will be created.
     <message>
         <location line="-27"/>
         <location line="+18"/>
-        <source>SwiftX doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 PIV.</source>
+        <source>SwiftX doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 CARI.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>WelcomeContentWidget</name>
     <message>
-        <location filename="../pivx/forms/welcomecontentwidget.ui" line="+244"/>
+        <location filename="../cari/forms/welcomecontentwidget.ui" line="+244"/>
         <source>1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7442,27 +7442,27 @@ backup will be created.
     <message>
         <location line="+89"/>
         <source>Welcome to
-PIVX Core Wallet</source>
+CARI Core Wallet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+27"/>
-        <source>PIVX is the world’s most innovative Proof of Stake blockchain based technology. Developed by a team of highly experienced developers and cryptographers.</source>
+        <source>CARI is the world’s most innovative Proof of Stake blockchain based technology. Developed by a team of highly experienced developers and cryptographers.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+93"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;As our manifesto says: Privacy is a non-negotiable basic human right; it grants users the freedom to share their data whenever and with whomever they want - PIVX believes in self sovereignty.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;As our manifesto says: Privacy is a non-negotiable basic human right; it grants users the freedom to share their data whenever and with whomever they want - CARI believes in self sovereignty.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+83"/>
-        <source>The masternode network is PIVX&apos;s second layer network on top of the blockchain that enables our DAO to provide decentralized governance and a treasury.</source>
+        <source>The masternode network is CARI&apos;s second layer network on top of the blockchain that enables our DAO to provide decentralized governance and a treasury.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-103"/>
-        <source>How PIVX respects your privacy?</source>
+        <source>How CARI respects your privacy?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7471,16 +7471,16 @@ PIVX Core Wallet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pivx/welcomecontentwidget.cpp" line="+178"/>
+        <location filename="../cari/welcomecontentwidget.cpp" line="+178"/>
         <source>default</source>
         <translation type="unfinished">default</translation>
     </message>
 </context>
 <context>
-    <name>ZPivControlDialog</name>
+    <name>ZCariControlDialog</name>
     <message>
-        <location filename="../forms/zpivcontroldialog.ui" line="+20"/>
-        <source>Select zPIV to Spend</source>
+        <location filename="../forms/zcaricontroldialog.ui" line="+20"/>
+        <source>Select zCARI to Spend</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7495,7 +7495,7 @@ PIVX Core Wallet</source>
     </message>
     <message>
         <location line="+26"/>
-        <source>zPiv</source>
+        <source>zCari</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7524,15 +7524,15 @@ PIVX Core Wallet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../zpivcontroldialog.cpp" line="+38"/>
-        <source>Select zPIV Denominations to Spend</source>
+        <location filename="../zcaricontroldialog.cpp" line="+38"/>
+        <source>Select zCARI Denominations to Spend</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
-    <name>pivx-core</name>
+    <name>cari-core</name>
     <message>
-        <location filename="../pivxstrings.cpp" line="+15"/>
+        <location filename="../caristrings.cpp" line="+15"/>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
         <translation type="unfinished">(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</translation>
     </message>
@@ -7558,7 +7558,7 @@ PIVX Core Wallet</source>
     </message>
     <message>
         <location line="+4"/>
-        <source>Cannot obtain a lock on data directory %s. PIVX Core is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. CARI Core is probably already running.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7598,12 +7598,12 @@ PIVX Core Wallet</source>
     </message>
     <message>
         <location line="+2"/>
-        <source>Enable or disable staking functionality for PIV inputs (0-1, default: %u)</source>
+        <source>Enable or disable staking functionality for CARI inputs (0-1, default: %u)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Enable or disable staking functionality for zPIV inputs (0-1, default: %u)</source>
+        <source>Enable or disable staking functionality for zCARI inputs (0-1, default: %u)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7653,12 +7653,12 @@ PIVX Core Wallet</source>
     </message>
     <message>
         <location line="+8"/>
-        <source>Fees (in PIV/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <source>Fees (in CARI/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Fees (in PIV/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <source>Fees (in CARI/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7793,7 +7793,7 @@ PIVX Core Wallet</source>
     </message>
     <message>
         <location line="+3"/>
-        <source>Unable to bind to %s on this computer. PIVX Core is probably already running.</source>
+        <source>Unable to bind to %s on this computer. CARI Core is probably already running.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7813,7 +7813,7 @@ PIVX Core Wallet</source>
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong PIVX Core will not work properly.</source>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong CARI Core will not work properly.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7958,7 +7958,7 @@ PIVX Core Wallet</source>
     </message>
     <message>
         <location line="+1"/>
-        <source>Copyright (C) 2015-%i The PIVX Core Developers</source>
+        <source>Copyright (C) 2015-%i The CARI Core Developers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8053,7 +8053,7 @@ PIVX Core Wallet</source>
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of PIVX Core</source>
+        <source>Error loading wallet.dat: Wallet requires newer version of CARI Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8118,7 +8118,7 @@ PIVX Core Wallet</source>
     </message>
     <message>
         <location line="+4"/>
-        <source>Fee (in PIV/kB) to add to transactions you send (default: %s)</source>
+        <source>Fee (in CARI/kB) to add to transactions you send (default: %s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8168,7 +8168,7 @@ PIVX Core Wallet</source>
     </message>
     <message>
         <location line="+1"/>
-        <source>Initialization sanity check failed. PIVX Core is shutting down.</source>
+        <source>Initialization sanity check failed. CARI Core is shutting down.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8213,12 +8213,12 @@ PIVX Core Wallet</source>
     </message>
     <message>
         <location line="+43"/>
-        <source>Recalculating PIV supply...</source>
+        <source>Recalculating CARI supply...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Reindex the PIV and zPIV money supply statistics</source>
+        <source>Reindex the CARI and zCARI money supply statistics</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8265,7 +8265,7 @@ PIVX Core Wallet</source>
     </message>
     <message>
         <location line="+36"/>
-        <source>Disable all PIVX specific functionality (Masternodes, Zerocoin, SwiftX, Budgeting) (0-1, default: %u)</source>
+        <source>Disable all CARI specific functionality (Masternodes, Zerocoin, SwiftX, Budgeting) (0-1, default: %u)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8590,7 +8590,7 @@ PIVX Core Wallet</source>
     </message>
     <message>
         <location line="-213"/>
-        <source>Please check that your computer&apos;s date and time are correct! If your clock is wrong PIVX Core will not work properly.</source>
+        <source>Please check that your computer&apos;s date and time are correct! If your clock is wrong CARI Core will not work properly.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8840,7 +8840,7 @@ PIVX Core Wallet</source>
     </message>
     <message>
         <location line="+1"/>
-        <source>Syncing zPIV wallet...</source>
+        <source>Syncing zCARI wallet...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8985,7 +8985,7 @@ PIVX Core Wallet</source>
     </message>
     <message>
         <location line="+1"/>
-        <source>Value is below the smallest available denomination (= 1) of zPIV</source>
+        <source>Value is below the smallest available denomination (= 1) of zCARI</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -9005,7 +9005,7 @@ PIVX Core Wallet</source>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart PIVX Core to complete</source>
+        <source>Wallet needed to be rewritten: restart CARI Core to complete</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -9082,7 +9082,7 @@ PIVX Core Wallet</source>
 <context>
     <name>send</name>
     <message>
-        <location filename="../pivx/forms/send.ui" line="+14"/>
+        <location filename="../cari/forms/send.ui" line="+14"/>
         <source>Form</source>
         <translation type="unfinished">Form</translation>
     </message>

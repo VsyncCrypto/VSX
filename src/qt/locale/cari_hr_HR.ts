@@ -130,12 +130,12 @@
         <translation>Adrese za primanje</translation>
     </message>
     <message>
-        <source>These are your PIVX addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>To su vaše PIVX adrese za slanje plaćanja. Uvijek provjerite iznos i adresu primatelja prije slanja novca.</translation>
+        <source>These are your CARI addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>To su vaše CARI adrese za slanje plaćanja. Uvijek provjerite iznos i adresu primatelja prije slanja novca.</translation>
     </message>
     <message>
-        <source>These are your PIVX addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>To su vaše PIVX adrese za primanje uplata. Preporuča se upotreba nove adrese primatelja za svaku transakciju.</translation>
+        <source>These are your CARI addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>To su vaše CARI adrese za primanje uplata. Preporuča se upotreba nove adrese primatelja za svaku transakciju.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -251,8 +251,8 @@
         <translation>npr. Ivan Ivić</translation>
     </message>
     <message>
-        <source>Enter PIVX address</source>
-        <translation>Unesite PIVX adresu</translation>
+        <source>Enter CARI address</source>
+        <translation>Unesite CARI adresu</translation>
     </message>
     <message>
         <source>SAVE</source>
@@ -380,8 +380,8 @@ za staking</translation>
         <translation>Ako napravite enkripciju Vašeg novčanika i izgubite lozinku, tada ćete</translation>
     </message>
     <message>
-        <source>LOSE ALL OF YOUR PIV</source>
-        <translation>IZGUBITI SVE VAŠE PIV-ove</translation>
+        <source>LOSE ALL OF YOUR CARI</source>
+        <translation>IZGUBITI SVE VAŠE CARI-ove</translation>
     </message>
     <message>
         <source>ENCRYPT</source>
@@ -396,8 +396,8 @@ za staking</translation>
         <translation>UPOZORENJE: Caps Lock tipka je uključena!</translation>
     </message>
     <message>
-        <source>PIVX will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your PIVs from being stolen by malware infecting your computer.</source>
-        <translation>PIVX će se sada zatvoriti kako bi se dovršio proces šifriranja. Ne zaboravite da šifriranje Vašeg novčanika ne može u potpunosti zaštititi vaše PIV od krađje zlonamjernog softvera koji zarazi vaše računalo.</translation>
+        <source>CARI will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your CARIs from being stolen by malware infecting your computer.</source>
+        <translation>CARI će se sada zatvoriti kako bi se dovršio proces šifriranja. Ne zaboravite da šifriranje Vašeg novčanika ne može u potpunosti zaštititi vaše CARI od krađje zlonamjernog softvera koji zarazi vaše računalo.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -466,8 +466,8 @@ za staking</translation>
         <translation>Ušteđjevina</translation>
     </message>
     <message>
-        <source>0,00 PIV</source>
-        <translation>0,00 PIV</translation>
+        <source>0,00 CARI</source>
+        <translation>0,00 CARI</translation>
     </message>
     <message>
         <source>address</source>
@@ -508,8 +508,8 @@ za staking</translation>
         <translation>Odabir novčića</translation>
     </message>
     <message>
-        <source>Select PIV Outputs to Spend</source>
-        <translation>Odaberi PIV za potrošiti</translation>
+        <source>Select CARI Outputs to Spend</source>
+        <translation>Odaberi CARI za potrošiti</translation>
     </message>
     <message>
         <source>Dust:</source>
@@ -536,8 +536,8 @@ za staking</translation>
         <translation>Iznos</translation>
     </message>
     <message>
-        <source>0.00 PIV</source>
-        <translation>0.00 PIV</translation>
+        <source>0.00 CARI</source>
+        <translation>0.00 CARI</translation>
     </message>
     <message>
         <source>0</source>
@@ -720,8 +720,8 @@ za staking</translation>
         <translation>Ova oznaka postaje crvena ako neki primatelj prima iznos manji od %1.</translation>
     </message>
     <message>
-        <source>Can vary +/- %1 upiv per input.</source>
-        <translation>Može varirati +/- %1 upiv po unosu.</translation>
+        <source>Can vary +/- %1 ucari per input.</source>
+        <translation>Može varirati +/- %1 ucari po unosu.</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -803,17 +803,17 @@ za staking</translation>
         <translation>Greška pri učitavanju delegacija: %1</translation>
     </message>
     <message>
-        <source>You can delegate your PIVs, letting a hot node (24/7 online node)
+        <source>You can delegate your CARIs, letting a hot node (24/7 online node)
 stake on your behalf, while you keep the keys securely offline.</source>
-        <translation>Možete delegirati svoje PIV-ove, dopuštajući hot node-u (24/7 online node) da stake-a za Vas, dok su Vaši ključevi offline na sigurnom.</translation>
+        <translation>Možete delegirati svoje CARI-ove, dopuštajući hot node-u (24/7 online node) da stake-a za Vas, dok su Vaši ključevi offline na sigurnom.</translation>
     </message>
     <message>
         <source>Enter owner address</source>
         <translation>Unesi adresu vlasnika</translation>
     </message>
     <message>
-        <source>Accept PIV delegation / Delegate PIV</source>
-        <translation>Prihvati PIV delegaciju / Delegiraj PIV</translation>
+        <source>Accept CARI delegation / Delegate CARI</source>
+        <translation>Prihvati CARI delegaciju / Delegiraj CARI</translation>
     </message>
     <message>
         <source>Cold Staking address</source>
@@ -879,8 +879,8 @@ Potrošnja ovih novčića morat će se obaviti iz novčanika ili uredjaja koji s
         <translation>Novčići delegirani</translation>
     </message>
     <message>
-        <source>You don't have any PIV to select.</source>
-        <translation>Nemate PIV-a za odabrati</translation>
+        <source>You don't have any CARI to select.</source>
+        <translation>Nemate CARI-a za odabrati</translation>
     </message>
     <message>
         <source>Cannot perform operation, wallet locked</source>
@@ -1011,12 +1011,12 @@ vlasnika</translation>
         <translation>Statistika stakinga</translation>
     </message>
     <message>
-        <source>PIV</source>
-        <translation>PIV</translation>
+        <source>CARI</source>
+        <translation>CARI</translation>
     </message>
     <message>
-        <source>zPIV</source>
-        <translation>zPIV</translation>
+        <source>zCARI</source>
+        <translation>zCARI</translation>
     </message>
     <message>
         <source>Sort by</source>
@@ -1047,8 +1047,8 @@ vlasnika</translation>
         <translation>Možete pregledati povijest računa</translation>
     </message>
     <message>
-        <source>Amount of PIV and zPIV staked.</source>
-        <translation>Iznos PIV i zPIV koji se stakea.</translation>
+        <source>Amount of CARI and zCARI staked.</source>
+        <translation>Iznos CARI i zCARI koji se stakea.</translation>
     </message>
     <message>
         <source>Please wait until the wallet is fully synced to see your correct balance</source>
@@ -1059,8 +1059,8 @@ vlasnika</translation>
         <translation>Nema još transakcija</translation>
     </message>
     <message>
-        <source>How to get PIV or zPIV</source>
-        <translation>Kako nabaviti PIV ili zPIV</translation>
+        <source>How to get CARI or zCARI</source>
+        <translation>Kako nabaviti CARI ili zCARI</translation>
     </message>
     <message>
         <source>You can verify the staking activity in the status bar at the top right of the wallet.
@@ -1155,8 +1155,8 @@ Automatski će se pokrenuti čim novčanik dobije dovoljno potvrda o neiskorišt
         <translation>Uredi adresu pošiljatelja</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid PIVX address.</source>
-        <translation>Unesena adresa "%1" nije ispravna PIVX adresa.</translation>
+        <source>The entered address "%1" is not a valid CARI address.</source>
+        <translation>Unesena adresa "%1" nije ispravna CARI adresa.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1208,16 +1208,16 @@ Automatski će se pokrenuti čim novčanik dobije dovoljno potvrda o neiskorišt
         <translation>verzija</translation>
     </message>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>CARI Core</source>
+        <translation>CARI Core</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
         <translation>(%1-bit)</translation>
     </message>
     <message>
-        <source>About PIVX Core</source>
-        <translation>O PIVX Core-u</translation>
+        <source>About CARI Core</source>
+        <translation>O CARI Core-u</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1271,16 +1271,16 @@ Automatski će se pokrenuti čim novčanik dobije dovoljno potvrda o neiskorišt
         <translation>Dobrodošli</translation>
     </message>
     <message>
-        <source>Welcome to PIVX Core.</source>
-        <translation>Dobrodošli u PIVX Core.</translation>
+        <source>Welcome to CARI Core.</source>
+        <translation>Dobrodošli u CARI Core.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where PIVX Core will store its data.</source>
-        <translation>Budući da je prvi put pokrenut program, možete odabrati gdje će PIVX Core pohraniti svoje podatke.</translation>
+        <source>As this is the first time the program is launched, you can choose where CARI Core will store its data.</source>
+        <translation>Budući da je prvi put pokrenut program, možete odabrati gdje će CARI Core pohraniti svoje podatke.</translation>
     </message>
     <message>
-        <source>PIVX Core will download and store a copy of the PIVX block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>PIVX Core preuzima i pohranjuje kopiju PIVX blok-lanca. Barem će %1GB podataka biti pohranjeno u ovom direktoriju i to će s vremenom rasti. Novčanik će također biti pohranjena u ovom direktoriju.</translation>
+        <source>CARI Core will download and store a copy of the CARI block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>CARI Core preuzima i pohranjuje kopiju CARI blok-lanca. Barem će %1GB podataka biti pohranjeno u ovom direktoriju i to će s vremenom rasti. Novčanik će također biti pohranjena u ovom direktoriju.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1299,8 +1299,8 @@ Automatski će se pokrenuti čim novčanik dobije dovoljno potvrda o neiskorišt
         <translation>OK</translation>
     </message>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>CARI Core</source>
+        <translation>CARI Core</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -1399,8 +1399,8 @@ Automatski će se pokrenuti čim novčanik dobije dovoljno potvrda o neiskorišt
         <translation>Stvori novi Masternode Controller</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To create a PIVX Masternode you must dedicate 10,000 PIV (the unit of PIVX) to the network (however, these coins are still yours and will never leave your possession). &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;You can deactivate the node and unlock the coins at any time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Da biste stvoriti PIVX Masternode, morate odvojiti 10,000 PIV (jedinica PIVX-a) prema mreži (međjutim, ti novčići su i dalje vaši i nikad neće napustiti vaše vlasništvo). &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt; Možete isključiti node i otključati novčiće u bilo kojem trenutku.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To create a CARI Masternode you must dedicate 10,000 CARI (the unit of CARI) to the network (however, these coins are still yours and will never leave your possession). &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;You can deactivate the node and unlock the coins at any time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Da biste stvoriti CARI Masternode, morate odvojiti 10,000 CARI (jedinica CARI-a) prema mreži (međjutim, ti novčići su i dalje vaši i nikad neće napustiti vaše vlasništvo). &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt; Možete isključiti node i otključati novčiće u bilo kojem trenutku.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Set Masternode Name</source>
@@ -1419,8 +1419,8 @@ Automatski će se pokrenuti čim novčanik dobije dovoljno potvrda o neiskorišt
         <translation>Obavezno imajte tu količinu novčića.</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A transaction of 10,000 PIV will be made&lt;/p&gt;&lt;p&gt;to a new empty address in your wallet.&lt;/p&gt;&lt;p&gt;The Address is labeled under the master node's name.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Transakcija od 10,000 PIV će biti napravljena&lt;/p&gt;&lt;p&gt;u novu praznu adresu u Vašem novčaniku.&lt;/p&gt;&lt;p&gt;Adresa je označena pod imenom Masternode-a.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A transaction of 10,000 CARI will be made&lt;/p&gt;&lt;p&gt;to a new empty address in your wallet.&lt;/p&gt;&lt;p&gt;The Address is labeled under the master node's name.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Transakcija od 10,000 CARI će biti napravljena&lt;/p&gt;&lt;p&gt;u novu praznu adresu u Vašem novčaniku.&lt;/p&gt;&lt;p&gt;Adresa je označena pod imenom Masternode-a.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Address of the node that must always be online running the actual master node.</source>
@@ -1618,7 +1618,7 @@ Molimo pričekajte nekoliko minuta (zalog za Masternode zahtjeva %1 potvrda).</t
 on a remote server to your clipboard.
 
 
-You will only have to paste the data in the pivx.conf file
+You will only have to paste the data in the cari.conf file
 of your remote server and start it, then start the Masternode using
 this controller wallet (select the Masternode in the list and press "start").
 </source>
@@ -1626,7 +1626,7 @@ this controller wallet (select the Masternode in the list and press "start").
 na udaljenom poslužitelju u medjuspremnik.
 
 
-Podatke ćete morati zalijepiti u datoteku pivx.conf
+Podatke ćete morati zalijepiti u datoteku cari.conf
 na udaljenom poslužitelju i pokrenuti ga, a zatim pokrenite Masternode
 koristeći ovaj controller novčanik (na popisu odaberite Masternode i pritisnite "start").
 </translation>
@@ -1662,8 +1662,8 @@ Jeste li sigurni?</translation>
         <translation>Ne može se kreirati Masternode controller, novčanik je zaključan</translation>
     </message>
     <message>
-        <source>Not enough balance to create a masternode, 10,000 PIV required.</source>
-        <translation>Nema dovoljno novčića za stvaranje Masternodea, potrebno je 10000 PIV.</translation>
+        <source>Not enough balance to create a masternode, 10,000 CARI required.</source>
+        <translation>Nema dovoljno novčića za stvaranje Masternodea, potrebno je 10000 CARI.</translation>
     </message>
     <message>
         <source>Error creating masternode</source>
@@ -1794,8 +1794,8 @@ Jeste li sigurni?</translation>
         <translation>Parsirani podaci preveliki</translation>
     </message>
     <message>
-        <source>Invalid URI, not starting with "pivx" prefix</source>
-        <translation>Nevažeći URI, ne počinje "pivx" prefiksom</translation>
+        <source>Invalid URI, not starting with "cari" prefix</source>
+        <translation>Nevažeći URI, ne počinje "cari" prefiksom</translation>
     </message>
 </context>
 <context>
@@ -1844,8 +1844,8 @@ Jeste li sigurni?</translation>
         <translation>Ako onemogućite potrošnju nepotvrđjenog ostatka, ostatak od transakcije &lt;br/&gt;ne može se koristiti dok ta transakcija nema barem jednu potvrdu. &lt;br/&gt;Ovo takođjer utječe na izračun vašeg salda.</translation>
     </message>
     <message>
-        <source>Automatically open the PIVX client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatski otvorite PIVX klijentski ulaz na ruteru. To funkcionira samo kada vaš ruter podržava UPnP i omogućen je.</translation>
+        <source>Automatically open the CARI client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatski otvorite CARI klijentski ulaz na ruteru. To funkcionira samo kada vaš ruter podržava UPnP i omogućen je.</translation>
     </message>
     <message>
         <source>Accept connections from outside</source>
@@ -1864,12 +1864,12 @@ Jeste li sigurni?</translation>
         <translation>Stručnjak</translation>
     </message>
     <message>
-        <source>Automatically start PIVX after logging in to the system.</source>
-        <translation>Automatski pokrenite PIVX nakon prijave u sustav.</translation>
+        <source>Automatically start CARI after logging in to the system.</source>
+        <translation>Automatski pokrenite CARI nakon prijave u sustav.</translation>
     </message>
     <message>
-        <source>&amp;Start PIVX on system login</source>
-        <translation>&amp;Pokrenite PIVX pri pokretanju sustava</translation>
+        <source>&amp;Start CARI on system login</source>
+        <translation>&amp;Pokrenite CARI pri pokretanju sustava</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1896,58 +1896,58 @@ Jeste li sigurni?</translation>
         <translation>&amp;Mreža</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting PIVX.</source>
-        <translation>Jezik korisničkog sučelja možete postaviti ovdje. Postavke će stupiti na snagu nakon ponovnog pokretanja PIVX novčanika.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting CARI.</source>
+        <translation>Jezik korisničkog sučelja možete postaviti ovdje. Postavke će stupiti na snagu nakon ponovnog pokretanja CARI novčanika.</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/pivx-project/pivx-project-translations</source>
+https://www.transifex.com/cari-project/cari-project-translations</source>
         <translation>Jezik nedostaje ili prijevod nije potpun? Pomozite s prijevodom ovdje:
-https://www.transifex.com/pivx-project/pivx-project-translations</translation>
+https://www.transifex.com/cari-project/cari-project-translations</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Mapiranje porta koristeći &amp;UPnP</translation>
     </message>
     <message>
-        <source>Enable automatic minting of PIV units to zPIV</source>
-        <translation>Omogući automatsko stvaranje PIV jedinica na zPIV</translation>
+        <source>Enable automatic minting of CARI units to zCARI</source>
+        <translation>Omogući automatsko stvaranje CARI jedinica na zCARI</translation>
     </message>
     <message>
-        <source>Enable zPIV Automint</source>
-        <translation>Omogući automatsko stvaranje zPIV-a</translation>
+        <source>Enable zCARI Automint</source>
+        <translation>Omogući automatsko stvaranje zCARI-a</translation>
     </message>
     <message>
-        <source>Enable automatic zPIV minting from specific addresses</source>
-        <translation>Omogući automatsko stvaranje zPIV-a s određjenih adresa</translation>
+        <source>Enable automatic zCARI minting from specific addresses</source>
+        <translation>Omogući automatsko stvaranje zCARI-a s određjenih adresa</translation>
     </message>
     <message>
         <source>Enable Automint Addresses</source>
         <translation>Omogući Automint adrese</translation>
     </message>
     <message>
-        <source>Percentage of incoming PIV which get automatically converted to zPIV via Zerocoin Protocol (min: 10%)</source>
-        <translation>Postotak dolaznih PIV koji se automatski pretvara u zPIV putem Zerocoin Protokola (min: 10%)</translation>
+        <source>Percentage of incoming CARI which get automatically converted to zCARI via Zerocoin Protocol (min: 10%)</source>
+        <translation>Postotak dolaznih CARI koji se automatski pretvara u zCARI putem Zerocoin Protokola (min: 10%)</translation>
     </message>
     <message>
-        <source>Percentage of autominted zPIV</source>
-        <translation>Postotak automatski stvorenog zPIV-a</translation>
+        <source>Percentage of autominted zCARI</source>
+        <translation>Postotak automatski stvorenog zCARI-a</translation>
     </message>
     <message>
-        <source>Wait with automatic conversion to Zerocoin until enough PIV for this denomination is available</source>
-        <translation>Pričekajte s automatskom pretvorbom u Zerocoin dok ne bude dostupno dovoljno PIV-a za ovu denominaciju</translation>
+        <source>Wait with automatic conversion to Zerocoin until enough CARI for this denomination is available</source>
+        <translation>Pričekajte s automatskom pretvorbom u Zerocoin dok ne bude dostupno dovoljno CARI-a za ovu denominaciju</translation>
     </message>
     <message>
-        <source>Preferred Automint zPIV Denomination</source>
-        <translation>Preferirana denominacija za automatsko stvaranje zPIV-a</translation>
+        <source>Preferred Automint zCARI Denomination</source>
+        <translation>Preferirana denominacija za automatsko stvaranje zCARI-a</translation>
     </message>
     <message>
         <source>Stake split threshold:</source>
         <translation>Prag razdvajanja Stake-a:</translation>
     </message>
     <message>
-        <source>Connect to the PIVX network through a SOCKS5 proxy.</source>
-        <translation>Povežite se s PIVX mrežom putem SOCKS5 proxy poslužitelja.</translation>
+        <source>Connect to the CARI network through a SOCKS5 proxy.</source>
+        <translation>Povežite se s CARI mrežom putem SOCKS5 proxy poslužitelja.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -2091,10 +2091,10 @@ https://www.transifex.com/pivx-project/pivx-project-translations</translation>
     </message>
 </context>
 <context>
-    <name>PIVXGUI</name>
+    <name>CARIGUI</name>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>CARI Core</source>
+        <translation>CARI Core</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -2121,8 +2121,8 @@ https://www.transifex.com/pivx-project/pivx-project-translations</translation>
         <translation>Napusti aplikaciju</translation>
     </message>
     <message>
-        <source>PIVX Core client</source>
-        <translation>PIVIX Core Klijent</translation>
+        <source>CARI Core client</source>
+        <translation>CARIIX Core Klijent</translation>
     </message>
     <message>
         <source>Error</source>
@@ -2165,8 +2165,8 @@ Adresa: %4
 </translation>
     </message>
     <message>
-        <source>A fatal error occurred. PIVX can no longer continue safely and will quit.</source>
-        <translation>Dogodila se fatalna pogreška. PIVX ne može sigurno nastaviti i izaći će.</translation>
+        <source>A fatal error occurred. CARI can no longer continue safely and will quit.</source>
+        <translation>Dogodila se fatalna pogreška. CARI ne može sigurno nastaviti i izaći će.</translation>
     </message>
 </context>
 <context>
@@ -2192,12 +2192,12 @@ Adresa: %4
         <translation>Nevažeća adresa za plaćanje %1</translation>
     </message>
     <message>
-        <source>Cannot start pivx: click-to-pay handler</source>
-        <translation>Ne može se pokrenuti pivx: clik-to-pay handler</translation>
+        <source>Cannot start cari: click-to-pay handler</source>
+        <translation>Ne može se pokrenuti cari: clik-to-pay handler</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid PIVX address or malformed URI parameters.</source>
-        <translation>URI se ne može analizirati! To može biti uzrokovana nevažećom PIVX adresom ili nepravilnim URI parametrima.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid CARI address or malformed URI parameters.</source>
+        <translation>URI se ne može analizirati! To može biti uzrokovana nevažećom CARI adresom ili nepravilnim URI parametrima.</translation>
     </message>
     <message>
         <source>Payment request file cannot be read! This can be caused by an invalid payment request file.</source>
@@ -2310,50 +2310,50 @@ Adresa: %4
         <translation>Stvori</translation>
     </message>
     <message>
-        <source>Minting zPIV anonymizes your PIV by removing any
+        <source>Minting zCARI anonymizes your CARI by removing any
 transaction history, making transactions untraceable </source>
-        <translation>Stvaranje zPIV-a anonimizira Vaš PIV brišući cijelu
+        <translation>Stvaranje zCARI-a anonimizira Vaš CARI brišući cijelu
 povijest transakcija, čineći transakcije nepratljivima</translation>
     </message>
     <message>
-        <source>Mint new zPIV or convert back to PIV</source>
-        <translation>Stvori novi zPIV ili pretvori natrag u PIV</translation>
+        <source>Mint new zCARI or convert back to CARI</source>
+        <translation>Stvori novi zCARI ili pretvori natrag u CARI</translation>
     </message>
     <message>
-        <source>Last zPIV Movements</source>
-        <translation>Posljednja zPIV kretanja</translation>
+        <source>Last zCARI Movements</source>
+        <translation>Posljednja zCARI kretanja</translation>
     </message>
     <message>
         <source>No transactions yet</source>
         <translation>Nema još transakcija</translation>
     </message>
     <message>
-        <source>Mint zPIV</source>
-        <translation>Stvori zPIV</translation>
+        <source>Mint zCARI</source>
+        <translation>Stvori zCARI</translation>
     </message>
     <message>
-        <source>Enter amount of PIV to mint into zPIV</source>
-        <translation>Unesite iznos PIV-a za pretvorbu u zPIV</translation>
+        <source>Enter amount of CARI to mint into zCARI</source>
+        <translation>Unesite iznos CARI-a za pretvorbu u zCARI</translation>
     </message>
     <message>
-        <source>Convert back to PIV</source>
-        <translation>Pretvori natrag u PIV</translation>
+        <source>Convert back to CARI</source>
+        <translation>Pretvori natrag u CARI</translation>
     </message>
     <message>
-        <source>Enter amount of zPIV to convert back into PIV</source>
-        <translation>Upišite iznos zPIV za konverziju natrag u PIV</translation>
+        <source>Enter amount of zCARI to convert back into CARI</source>
+        <translation>Upišite iznos zCARI za konverziju natrag u CARI</translation>
     </message>
     <message>
         <source>Zerocoin</source>
         <translation>Zerocoin</translation>
     </message>
     <message>
-        <source>zPIV is currently undergoing maintenance</source>
-        <translation>zPIV se trenutno održava</translation>
+        <source>zCARI is currently undergoing maintenance</source>
+        <translation>zCARI se trenutno održava</translation>
     </message>
     <message>
-        <source>You need to unlock the wallet to be able to %1 zPIV</source>
-        <translation>Morate otključati novčanik kako biste mogli %1 zPIV</translation>
+        <source>You need to unlock the wallet to be able to %1 zCARI</source>
+        <translation>Morate otključati novčanik kako biste mogli %1 zCARI</translation>
     </message>
     <message>
         <source>convert</source>
@@ -2368,16 +2368,16 @@ povijest transakcija, čineći transakcije nepratljivima</translation>
         <translation>Nevažeća vrijednost</translation>
     </message>
     <message>
-        <source>zPIV minted successfully</source>
-        <translation>zPIV uspješno stvoren</translation>
+        <source>zCARI minted successfully</source>
+        <translation>zCARI uspješno stvoren</translation>
     </message>
     <message>
-        <source>zPIV converted back to PIV</source>
-        <translation>zPIV pretvoren natrag u PIV</translation>
+        <source>zCARI converted back to CARI</source>
+        <translation>zCARI pretvoren natrag u CARI</translation>
     </message>
     <message>
-        <source>You don't have any PIV to select.</source>
-        <translation>Nemate PIV-a za odabrati</translation>
+        <source>You don't have any CARI to select.</source>
+        <translation>Nemate CARI-a za odabrati</translation>
     </message>
     <message>
         <source>Rescan Mints</source>
@@ -2388,8 +2388,8 @@ povijest transakcija, čineći transakcije nepratljivima</translation>
         <translation>Vaši zerocoin novčići skenirat će se iz blockchaina od samog početka</translation>
     </message>
     <message>
-        <source>Reset Spent zPIV</source>
-        <translation>Resetiraj potrošeni zPIV</translation>
+        <source>Reset Spent zCARI</source>
+        <translation>Resetiraj potrošeni zCARI</translation>
     </message>
     <message>
         <source>Your zerocoin spends are going to be scanned from the blockchain from scratch</source>
@@ -2407,8 +2407,8 @@ povijest transakcija, čineći transakcije nepratljivima</translation>
         <translation>Iznos</translation>
     </message>
     <message>
-        <source>Enter PIVX address (e.g. %1)</source>
-        <translation>Upišite PIVX adresu (npr. %1)</translation>
+        <source>Enter CARI address (e.g. %1)</source>
+        <translation>Upišite CARI adresu (npr. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -2451,8 +2451,8 @@ povijest transakcija, čineći transakcije nepratljivima</translation>
         <translation>%1 ms</translation>
     </message>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>CARI Core</source>
+        <translation>CARI Core</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" does not exist.</source>
@@ -2471,8 +2471,8 @@ povijest transakcija, čineći transakcije nepratljivima</translation>
         <translation>Greška pri čitanju masternode konfiguracijske datoteke: %1</translation>
     </message>
     <message>
-        <source>PIVX Core didn't yet exit safely...</source>
-        <translation>PIVX Core nije ugašen sigurno...</translation>
+        <source>CARI Core didn't yet exit safely...</source>
+        <translation>CARI Core nije ugašen sigurno...</translation>
     </message>
     <message>
         <source>Contact</source>
@@ -2658,8 +2658,8 @@ povijest transakcija, čineći transakcije nepratljivima</translation>
         <translation>Block chain</translation>
     </message>
     <message>
-        <source>Open the PIVX debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Otvorite PIVX debug log datoteku iz aktualnog direktorija podataka. To može potrajati nekoliko sekundi za velike datoteke zapisnika.</translation>
+        <source>Open the CARI debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Otvorite CARI debug log datoteku iz aktualnog direktorija podataka. To može potrajati nekoliko sekundi za velike datoteke zapisnika.</translation>
     </message>
     <message>
         <source>Number of Masternodes</source>
@@ -2802,8 +2802,8 @@ povijest transakcija, čineći transakcije nepratljivima</translation>
         <translation>Put prilagođenog sigurnosnog kopiranja:</translation>
     </message>
     <message>
-        <source>Custom zPIV Backup Path:</source>
-        <translation>Prilagođeni put zPIV sigurnosne kopije:</translation>
+        <source>Custom zCARI Backup Path:</source>
+        <translation>Prilagođeni put zCARI sigurnosne kopije:</translation>
     </message>
     <message>
         <source>Custom Backups Threshold:</source>
@@ -2882,8 +2882,8 @@ povijest transakcija, čineći transakcije nepratljivima</translation>
         <translation>Iz:</translation>
     </message>
     <message>
-        <source>Welcome to the PIVX RPC console.</source>
-        <translation>Dobrodošli na PIVX RPC konzolu.</translation>
+        <source>Welcome to the CARI RPC console.</source>
+        <translation>Dobrodošli na CARI RPC konzolu.</translation>
     </message>
     <message>
         <source>&amp;Disconnect Node</source>
@@ -3048,8 +3048,8 @@ povijest transakcija, čineći transakcije nepratljivima</translation>
         <translation>Primi</translation>
     </message>
     <message>
-        <source>Scan the QR code or copy the address to receive PIV.</source>
-        <translation>Skenirajte QR kod ili kopirajte adresu da biste primili PIV.</translation>
+        <source>Scan the QR code or copy the address to receive CARI.</source>
+        <translation>Skenirajte QR kod ili kopirajte adresu da biste primili CARI.</translation>
     </message>
     <message>
         <source>No address </source>
@@ -3158,8 +3158,8 @@ povijest transakcija, čineći transakcije nepratljivima</translation>
         <translation>Iznos</translation>
     </message>
     <message>
-        <source>PIV</source>
-        <translation>PIV</translation>
+        <source>CARI</source>
+        <translation>CARI</translation>
     </message>
     <message>
         <source>TextLabel</source>
@@ -3198,8 +3198,8 @@ povijest transakcija, čineći transakcije nepratljivima</translation>
         <translation>Novi zahtjev za plaćanje</translation>
     </message>
     <message>
-        <source>Instead of sharing only a PIVX address, you can create a payment request, bundling up more information.</source>
-        <translation>Umjesto da dijelite samo PIVX adresu, možete stvoriti zahtjev za plaćanje i povezivati više informacija.</translation>
+        <source>Instead of sharing only a CARI address, you can create a payment request, bundling up more information.</source>
+        <translation>Umjesto da dijelite samo CARI adresu, možete stvoriti zahtjev za plaćanje i povezivati više informacija.</translation>
     </message>
     <message>
         <source>Enter a label for the address</source>
@@ -3257,8 +3257,8 @@ povijest transakcija, čineći transakcije nepratljivima</translation>
         <translation>Prilagođjena adresa za ostatak</translation>
     </message>
     <message>
-        <source>The remainder of the value resultant from the inputs minus the outputs value goes to the "change" PIVX address</source>
-        <translation>Ostatak vrijednosti koja proizlazi iz ulaza umanjen za izlaznu vrijednost ide na PIVX adresu za "ostatak"</translation>
+        <source>The remainder of the value resultant from the inputs minus the outputs value goes to the "change" CARI address</source>
+        <translation>Ostatak vrijednosti koja proizlazi iz ulaza umanjen za izlaznu vrijednost ide na CARI adresu za "ostatak"</translation>
     </message>
     <message>
         <source>SAVE</source>
@@ -3292,8 +3292,8 @@ povijest transakcija, čineći transakcije nepratljivima</translation>
         <translation>Preporučeno</translation>
     </message>
     <message>
-        <source>PIV/kilobyte</source>
-        <translation>PIV/kilobajt</translation>
+        <source>CARI/kilobyte</source>
+        <translation>CARI/kilobajt</translation>
     </message>
     <message>
         <source>0.00 KB</source>
@@ -3362,8 +3362,8 @@ povijest transakcija, čineći transakcije nepratljivima</translation>
         <translation>Pošalji</translation>
     </message>
     <message>
-        <source>You can transfer public coins (PIV) or private coins (zPIV)</source>
-        <translation>Mogućnost prijenosa javnih novčića (PIV) ili anonimnih novčića (zPIV)</translation>
+        <source>You can transfer public coins (CARI) or private coins (zCARI)</source>
+        <translation>Mogućnost prijenosa javnih novčića (CARI) ili anonimnih novčića (zCARI)</translation>
     </message>
     <message>
         <source>Select coin type to spend</source>
@@ -3394,12 +3394,12 @@ povijest transakcija, čineći transakcije nepratljivima</translation>
         <translation>Ukupno za slanje</translation>
     </message>
     <message>
-        <source>Send PIV</source>
-        <translation>Pošalji PIV</translation>
+        <source>Send CARI</source>
+        <translation>Pošalji CARI</translation>
     </message>
     <message>
-        <source>Send zPIV</source>
-        <translation>Pošalji zPIV</translation>
+        <source>Send zCARI</source>
+        <translation>Pošalji zCARI</translation>
     </message>
     <message>
         <source>Total remaining from the selected UTXO</source>
@@ -3430,8 +3430,8 @@ Do you want to continue?</source>
         <translation>Maksimalni iznos rezultata dosegnut</translation>
     </message>
     <message>
-        <source>PIVX address or contact label</source>
-        <translation>PIVX adresa ili naziv kontakta</translation>
+        <source>CARI address or contact label</source>
+        <translation>CARI adresa ili naziv kontakta</translation>
     </message>
     <message>
         <source>Invalid entry, previous entries must be valid before add a new one</source>
@@ -3474,8 +3474,8 @@ Ovi novčići više neće biti cold-stakeani.</translation>
         <translation>Potroši Zerocoin</translation>
     </message>
     <message>
-        <source>zPIV is currently undergoing maintenance.</source>
-        <translation>Radovi u tijeku na zPIV.</translation>
+        <source>zCARI is currently undergoing maintenance.</source>
+        <translation>Radovi u tijeku na zCARI.</translation>
     </message>
     <message>
         <source>Coin control mint not found</source>
@@ -3494,12 +3494,12 @@ Ovi novčići više neće biti cold-stakeani.</translation>
 %2</translation>
     </message>
     <message>
-        <source>zPIV transaction sent!</source>
-        <translation>zPIV transakcija poslana!</translation>
+        <source>zCARI transaction sent!</source>
+        <translation>zCARI transakcija poslana!</translation>
     </message>
     <message>
-        <source>Version 1 zPIV require a security level of 100 to successfully spend.</source>
-        <translation>Verzija 1 zPIV zahtjeva sigurnosnu razinu 100 da se uspješno utroši.</translation>
+        <source>Version 1 zCARI require a security level of 100 to successfully spend.</source>
+        <translation>Verzija 1 zCARI zahtjeva sigurnosnu razinu 100 da se uspješno utroši.</translation>
     </message>
     <message>
         <source>Too much inputs (</source>
@@ -3534,12 +3534,12 @@ Ili mintaj više vrijedne denominacije (tako da je potrebno manje ulaza) ili sma
         <translation>Prilagođjena naknada %1</translation>
     </message>
     <message>
-        <source>You don't have any PIV to select.</source>
-        <translation>Nemate PIV-a za odabrati</translation>
+        <source>You don't have any CARI to select.</source>
+        <translation>Nemate CARI-a za odabrati</translation>
     </message>
     <message>
-        <source>You don't have any zPIV in your balance to select.</source>
-        <translation>Nemate zPIV u svom saldu za odabir.</translation>
+        <source>You don't have any zCARI in your balance to select.</source>
+        <translation>Nemate zCARI u svom saldu za odabir.</translation>
     </message>
     <message>
         <source>No contacts available, you can go to the contacts screen and add some there!</source>
@@ -3708,8 +3708,8 @@ Ova opcija stvara datoteku wallet.dat koja se može koristiti za oporavak cijelo
         <translation>DEŠIFRIRAJ KLJUČ</translation>
     </message>
     <message>
-        <source>PIVX address</source>
-        <translation>PIVX adresa</translation>
+        <source>CARI address</source>
+        <translation>CARI adresa</translation>
     </message>
     <message>
         <source>Enter address</source>
@@ -3841,8 +3841,8 @@ Verify that you have installed a predetermined text editor.</source>
 Provjerite jeste li instalirali unaprijed određjeni uređjivač teksta.</translation>
     </message>
     <message>
-        <source>Welcome to the PIVX RPC console.</source>
-        <translation>Dobrodošli na PIVX RPC konzolu.</translation>
+        <source>Welcome to the CARI RPC console.</source>
+        <translation>Dobrodošli na CARI RPC konzolu.</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and %1 to clear screen.</source>
@@ -3955,12 +3955,12 @@ Provjerite jeste li instalirali unaprijed određjeni uređjivač teksta.</transl
         <translation>Izvezi popis adresa</translation>
     </message>
     <message>
-        <source>PIVX_tx_csv_export(*.csv)</source>
-        <translation>PIVX_transakcije_csv_izvoz(*.csv)</translation>
+        <source>CARI_tx_csv_export(*.csv)</source>
+        <translation>CARI_transakcije_csv_izvoz(*.csv)</translation>
     </message>
     <message>
-        <source>PIVX_addresses_csv_export(*.csv)</source>
-        <translation>PIVX_adrese_csv_izvoz(*.csv)</translation>
+        <source>CARI_addresses_csv_export(*.csv)</source>
+        <translation>CARI_adrese_csv_izvoz(*.csv)</translation>
     </message>
     <message>
         <source>Please select a folder to export the csv file first.</source>
@@ -4038,34 +4038,34 @@ Došlo je do greške prilikom spremanja popisa adresa u %1. Molimo pokušajte po
         <translation>TipkaZaPritisak</translation>
     </message>
     <message>
-        <source>1) What is PIVX?</source>
-        <translation>1) Što je PIVX?</translation>
+        <source>1) What is CARI?</source>
+        <translation>1) Što je CARI?</translation>
     </message>
     <message>
-        <source>2) Why are my PIV unspendable?</source>
-        <translation>2) Zašto se moji PIV ne mogu potrošiti?</translation>
+        <source>2) Why are my CARI unspendable?</source>
+        <translation>2) Zašto se moji CARI ne mogu potrošiti?</translation>
     </message>
     <message>
-        <source>3) PIVX privacy? What is Zerocoin (zPIV)?</source>
-        <translation>3) PIVX privatnost? Što je Zerocoin (zPIV)?</translation>
+        <source>3) CARI privacy? What is Zerocoin (zCARI)?</source>
+        <translation>3) CARI privatnost? Što je Zerocoin (zCARI)?</translation>
     </message>
     <message>
-        <source>4) Why are my zPIV unspendable?</source>
-        <translation>4) Zašto se moji zPIV ne mogu potrošiti?</translation>
+        <source>4) Why are my zCARI unspendable?</source>
+        <translation>4) Zašto se moji zCARI ne mogu potrošiti?</translation>
     </message>
     <message>
         <source>5) Why did my wallet convert the balance
-    into zPIV automatically?</source>
+    into zCARI automatically?</source>
         <translation>5) Zašto je moj novčanik pretvorio saldo
-u zPIV automatski?</translation>
+u zCARI automatski?</translation>
     </message>
     <message>
-        <source>6) How do I receive PIV/zPIV?</source>
-        <translation>6) Kako mogu primiti PIV/zPIV?</translation>
+        <source>6) How do I receive CARI/zCARI?</source>
+        <translation>6) Kako mogu primiti CARI/zCARI?</translation>
     </message>
     <message>
-        <source>7) How do I stake PIV/zPIV?</source>
-        <translation>7) Kako stakeam PIV/zPIV?</translation>
+        <source>7) How do I stake CARI/zCARI?</source>
+        <translation>7) Kako stakeam CARI/zCARI?</translation>
     </message>
     <message>
         <source>8) Where I should go if I need support?</source>
@@ -4084,34 +4084,34 @@ u zPIV automatski?</translation>
         <translation>1</translation>
     </message>
     <message>
-        <source>What is PIVX?</source>
-        <translation>Što je PIVX?</translation>
+        <source>What is CARI?</source>
+        <translation>Što je CARI?</translation>
     </message>
     <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           PIVX is a form of digital online money using blockchain technology
+                           CARI is a form of digital online money using blockchain technology
                            that can be easily transferred globally, instantly, and with near
-                           zero fees.  PIVX incorporates market leading security &amp;
+                           zero fees.  CARI incorporates market leading security &amp;
                            privacy and is also the first PoS (Proof of Stake) Cryptocurrency
-                           to implement ZeroCoin(zPIV) and Zerocoin staking.
+                           to implement ZeroCoin(zCARI) and Zerocoin staking.
                            &lt;/p&gt;&lt;p align="justify"&gt;
-                           PIVX utilizes a Proof of Stake (PoS) consensus system algorithm,
-                           allowing all owners of PIVX to participate in earning block rewards
+                           CARI utilizes a Proof of Stake (PoS) consensus system algorithm,
+                           allowing all owners of CARI to participate in earning block rewards
                            while securing the network with full node wallets, as well as to
                            run Masternodes to create and vote on proposals.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
         <translation>
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-PIVX je oblik digitalnog online novca koji koristi blockchain tehnologiju
+CARI je oblik digitalnog online novca koji koristi blockchain tehnologiju
 koji se lako može slati i primati globalno, trenutno, i gotovo bez naknade.
-PIVX uključuje vodeću sigurnost  i privatnost na tržištu
+CARI uključuje vodeću sigurnost  i privatnost na tržištu
 i takođjer je prva PoS (Proof of Stake) kriptovaluta
-koja je implementirala ZeroCoin (zPIV) i Zerocoin staking.
+koja je implementirala ZeroCoin (zCARI) i Zerocoin staking.
 &lt;/p&gt;&lt;p align="justify"&gt;
-PIVX koristi algoritam konsenzusa Proof of Stake (PoS),
-omogućujući svim vlasnicima PIVX-a sudjelovanje u zarađi blokovih nagrada
+CARI koristi algoritam konsenzusa Proof of Stake (PoS),
+omogućujući svim vlasnicima CARI-a sudjelovanje u zarađi blokovih nagrada
 dok osiguravaju mrežu full node novčanicima, kao i
 vodjenje Masternode-ova za stvaranje i glasanje o prijedlozima.
 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
@@ -4122,25 +4122,25 @@ vodjenje Masternode-ova za stvaranje i glasanje o prijedlozima.
         <translation>2</translation>
     </message>
     <message>
-        <source>Why are my PIV unspendable?</source>
-        <translation>Zašto se moji PIV ne mogu potrošiti?</translation>
+        <source>Why are my CARI unspendable?</source>
+        <translation>Zašto se moji CARI ne mogu potrošiti?</translation>
     </message>
     <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           Newly received PIVX requires 6 confirmations on the network
+                           Newly received CARI requires 6 confirmations on the network
                            to become eligible for spending which can take ~6 minutes.
                            &lt;/p&gt;&lt;p align="justify"&gt;
-                           Your PIVX wallet also needs to be completely synchronized
+                           Your CARI wallet also needs to be completely synchronized
                            to see and spend balances on the network.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
         <translation>
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-Novoprimljeni PIVX zahtjeva 6 potvrda na mreži
+Novoprimljeni CARI zahtjeva 6 potvrda na mreži
 da bi se mogao potrošiti što može potrajati ~6 minuta.
 &lt;/p&gt;&lt;p align="justify"&gt;
-Vaš PIVX novčanik takođjer treba biti u potpunosti sinkroniziran
+Vaš CARI novčanik takođjer treba biti u potpunosti sinkroniziran
 da biste vidjeli i mogli potrošiti sredstva na mreži.
 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
 </translation>
@@ -4150,25 +4150,25 @@ da biste vidjeli i mogli potrošiti sredstva na mreži.
         <translation>3</translation>
     </message>
     <message>
-        <source>PIVX privacy? What is Zerocoin (zPIV)?</source>
-        <translation>PIVX privatnost? Što je Zerocoin (zPIV)?</translation>
+        <source>CARI privacy? What is Zerocoin (zCARI)?</source>
+        <translation>CARI privatnost? Što je Zerocoin (zCARI)?</translation>
     </message>
     <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           zPIV is an optional privacy-centric method of coin mixing on the
-                           PIVX blockchain. Basically all your transactions cannot be tracked
+                           zCARI is an optional privacy-centric method of coin mixing on the
+                           CARI blockchain. Basically all your transactions cannot be tracked
                            on to any block explorer. You can read more about the technicals in the
-                           &lt;a style='color: #b088ff' href='https://cri.eco/zpiv/'&gt;
-                           "PIVX Zerocoin (zPIV) Technical Paper"&lt;/a&gt;.
+                           &lt;a style='color: #b088ff' href='https://cri.eco/zcari/'&gt;
+                           "CARI Zerocoin (zCARI) Technical Paper"&lt;/a&gt;.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
         <translation>
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-zPIV je opcionalna metoda miješanja novčića usmjerena na privatnost
-na PIVX blockchainu. Sve transakcije ne mogu biti praćene na bilo kojem block exploreru. Više o tehničkim detaljima možete pročitati na
-&lt;a style='color: #b088ff' href='https://cri.eco/zpiv/'&gt;
-"PIVX Zerocoin (zPIV) Technical Paper"&lt;/a&gt;.
+zCARI je opcionalna metoda miješanja novčića usmjerena na privatnost
+na CARI blockchainu. Sve transakcije ne mogu biti praćene na bilo kojem block exploreru. Više o tehničkim detaljima možete pročitati na
+&lt;a style='color: #b088ff' href='https://cri.eco/zcari/'&gt;
+"CARI Zerocoin (zCARI) Technical Paper"&lt;/a&gt;.
 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
 </translation>
     </message>
@@ -4177,20 +4177,20 @@ na PIVX blockchainu. Sve transakcije ne mogu biti praćene na bilo kojem block e
         <translation>4</translation>
     </message>
     <message>
-        <source>Why are my zPIV unspendable?</source>
-        <translation>Zašto se moji zPIV ne mogu potrošiti?</translation>
+        <source>Why are my zCARI unspendable?</source>
+        <translation>Zašto se moji zCARI ne mogu potrošiti?</translation>
     </message>
     <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           After minting, zPIV will require 20 confirmations as well as 1
+                           After minting, zCARI will require 20 confirmations as well as 1
                            additional mint of the same denomination on the network to
                            become eligible for spending.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
         <translation>
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-Nakon stvaranja, zPIV će zahtjevati 20 potvrda kao i 1
+Nakon stvaranja, zCARI će zahtjevati 20 potvrda kao i 1
 dodatno stvaranje iste denominacije na mreži
 da bi se mogli potrošiti.
 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
@@ -4201,39 +4201,39 @@ da bi se mogli potrošiti.
         <translation>5</translation>
     </message>
     <message>
-        <source>Why did my wallet convert the balance into zPIV automatically?</source>
-        <translation>Zašto je moj novčanik automatski pretvorio saldo u zPIV?</translation>
+        <source>Why did my wallet convert the balance into zCARI automatically?</source>
+        <translation>Zašto je moj novčanik automatski pretvorio saldo u zCARI?</translation>
     </message>
     <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           By default the PIVX wallet will convert 10% of your entire PIV
-                           balance to zPIV to assist the network. If you do not wish to
-                           stake zPIV or take advantage of the privacy benefit it brings,
-                           you can disable the automatic minting in your PIVX wallet by
-                           going to Settings-&gt;Options and deselecting “Enable zPIV Automint”.
-                           If you are not making use of the PIVX-QT or GUI you can simply open
-                           your pivx.conf file and add &lt;i&gt;enablezeromint=0&lt;/i&gt; Without the quotation
+                           By default the CARI wallet will convert 10% of your entire CARI
+                           balance to zCARI to assist the network. If you do not wish to
+                           stake zCARI or take advantage of the privacy benefit it brings,
+                           you can disable the automatic minting in your CARI wallet by
+                           going to Settings-&gt;Options and deselecting “Enable zCARI Automint”.
+                           If you are not making use of the CARI-QT or GUI you can simply open
+                           your cari.conf file and add &lt;i&gt;enablezeromint=0&lt;/i&gt; Without the quotation
                            marks and restart your wallet to disable automint.&lt;/p&gt;
                            &lt;/p&gt;&lt;p align="justify"&gt;
-                           You can read more about zPIV in the
-                           &lt;a style='color: #b088ff' href='https://cri.eco/zpiv/'&gt; "PIVX Zerocoin (zPIV) Technical Paper"&lt;/a&gt;.
-                           If you would like to keep and stake your zPIV, please read the "How do I stake"
+                           You can read more about zCARI in the
+                           &lt;a style='color: #b088ff' href='https://cri.eco/zcari/'&gt; "CARI Zerocoin (zCARI) Technical Paper"&lt;/a&gt;.
+                           If you would like to keep and stake your zCARI, please read the "How do I stake"
                            section of the FAQ below.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
         <translation>
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-Prema početno zadanom PIVX novčanik će pretvoriti 10% vaših PIV sredstava u zPIV da pomognu mreži. Ako ne želite stake-ati zPIV ili iskoristiti prednosti privatnosti koje donosi,
-možete onemogućiti autoamtsko stvaranje u vašem PIVX novčaniku tako da
-odete u Postavke -&gt; Mogućnosti i odznačite "Omogući automatsko stvaranje zPIV-a".
-Ako ne koristite PIVX-QT ili grafičko sučelje, jednostavno možete otvoriti
-vašu pivx.conf datoteku i dodati &lt;i&gt;enablezeromint=0&lt;/i&gt; bez navodnika
+Prema početno zadanom CARI novčanik će pretvoriti 10% vaših CARI sredstava u zCARI da pomognu mreži. Ako ne želite stake-ati zCARI ili iskoristiti prednosti privatnosti koje donosi,
+možete onemogućiti autoamtsko stvaranje u vašem CARI novčaniku tako da
+odete u Postavke -&gt; Mogućnosti i odznačite "Omogući automatsko stvaranje zCARI-a".
+Ako ne koristite CARI-QT ili grafičko sučelje, jednostavno možete otvoriti
+vašu cari.conf datoteku i dodati &lt;i&gt;enablezeromint=0&lt;/i&gt; bez navodnika
 i ponovno pokrenuti novčanik da biste onemogućili automatsko stvaranje.&lt;/p&gt;
 &lt;/p&gt;&lt;p align="justify"&gt;
-Više o zPIV-u možete pročitati u
-&lt;a style='color: #b088ff' href='https://cri.eco/zpiv/'&gt;"PIVX Zerocoin (zPIV) Technical Paper"&lt;/a&gt;.
-Ako želite zadržati i stake-ati vaš zPIV, molimo pročitajte "Kako mogu stake-ati"
+Više o zCARI-u možete pročitati u
+&lt;a style='color: #b088ff' href='https://cri.eco/zcari/'&gt;"CARI Zerocoin (zCARI) Technical Paper"&lt;/a&gt;.
+Ako želite zadržati i stake-ati vaš zCARI, molimo pročitajte "Kako mogu stake-ati"
 odjeljak u najčešće postavljenim pitanjima ispod.
 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -4242,24 +4242,24 @@ odjeljak u najčešće postavljenim pitanjima ispod.
         <translation>6</translation>
     </message>
     <message>
-        <source>How do I receive PIV/zPIV?</source>
-        <translation>Kako mogu primiti PIV/zPIV?</translation>
+        <source>How do I receive CARI/zCARI?</source>
+        <translation>Kako mogu primiti CARI/zCARI?</translation>
     </message>
     <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           zPIV can be spent and sent to any PIVX address. The receiver will
-                           receive standard PIVX but the origin of the PIVX is anonymized by the zPIV Protocol.
+                           zCARI can be spent and sent to any CARI address. The receiver will
+                           receive standard CARI but the origin of the CARI is anonymized by the zCARI Protocol.
                            &lt;/p&gt;&lt;p align="justify"&gt;
-                           If you want more zPIV you will need to mint your balance in the “Privacy” tab.
+                           If you want more zCARI you will need to mint your balance in the “Privacy” tab.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
         <translation>
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-zPIV se može trošiti i slati na bilo koju PIVX adresu. Primatelj će
-primiti standardni PIVX, ali podrijetlo PIVX-a je postalo anonimno zPIV Protokolom.
+zCARI se može trošiti i slati na bilo koju CARI adresu. Primatelj će
+primiti standardni CARI, ali podrijetlo CARI-a je postalo anonimno zCARI Protokolom.
 &lt;/p&gt;&lt;p align="justify"&gt;
-Ako želite više zPIV-a, morat ćete stvoriti svoj saldo u kartici "Privatnost" .
+Ako želite više zCARI-a, morat ćete stvoriti svoj saldo u kartici "Privatnost" .
 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
 </translation>
     </message>
@@ -4268,32 +4268,32 @@ Ako želite više zPIV-a, morat ćete stvoriti svoj saldo u kartici "Privatnost"
         <translation>7</translation>
     </message>
     <message>
-        <source>How do I stake PIV/zPIV?</source>
-        <translation>Kako stakeam PIV/zPIV?</translation>
+        <source>How do I stake CARI/zCARI?</source>
+        <translation>Kako stakeam CARI/zCARI?</translation>
     </message>
     <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           To Stake PIVX:
+                           To Stake CARI:
                            &lt;/p&gt;&lt;p align="justify"&gt;
                            &lt;ol&gt;&lt;li&gt;
                            Make sure your wallet is completely synchronized and you are using the latest release.
                            &lt;li&gt;
-                           You must have a balance of PIVX with a minimum of 600 confirmations.
+                           You must have a balance of CARI with a minimum of 600 confirmations.
                            &lt;li&gt;
                            Your wallet must stay online and be unlocked for staking purposes.
                            &lt;li&gt;
                            Once all those steps are followed staking should be enabled.
                            &lt;li&gt;
-                           You can see the status of staking in the wallet by mousing over the package icon in the row on the top left of the wallet interface. There package will be lit up and will state "Staking Enabled" to indicate it is staking.  Using the command line interface (pivx-cli); the command &lt;i&gt;getstakingstatus&lt;/i&gt; will confirm that staking is active.
+                           You can see the status of staking in the wallet by mousing over the package icon in the row on the top left of the wallet interface. There package will be lit up and will state "Staking Enabled" to indicate it is staking.  Using the command line interface (cari-cli); the command &lt;i&gt;getstakingstatus&lt;/i&gt; will confirm that staking is active.
                            &lt;/li&gt;&lt;/ol&gt;
                            &lt;/p&gt;&lt;p align="justify"&gt;
-                           To Stake zPIV:
+                           To Stake zCARI:
                            &lt;/p&gt;&lt;p align="justify"&gt;
                            &lt;ol&gt;&lt;li&gt;
                            Make sure your wallet is completely synchronized and you are using the latest release.
                            &lt;li&gt;
-                           Your newly minted or existing zPIV balance must have a minimum of 200 confirmations.
+                           Your newly minted or existing zCARI balance must have a minimum of 200 confirmations.
                            &lt;li&gt;
                            Your wallet must stay online and be unlocked for anonymization and staking purposes.
                            Staking should now be enabled.
@@ -4302,25 +4302,25 @@ Ako želite više zPIV-a, morat ćete stvoriti svoj saldo u kartici "Privatnost"
                          </source>
         <translation>
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-Da biste stake-ali PIVX:
+Da biste stake-ali CARI:
 &lt;/p&gt;&lt;p align="justify"&gt;
 &lt;ol&gt;&lt;li&gt;
 Provjerite da je vaš wallet u potpunosti sinkroniziran i koristite li najnoviju verziju.
 &lt;li&gt;
-Saldo PIVX-a mora imati najmanje 600 potvrda.
+Saldo CARI-a mora imati najmanje 600 potvrda.
 &lt;li&gt;
 Vaš novčanik mora ostati online i biti otključan za staking.
 &lt;li&gt;
 Kada su svi navedeni koraci napravljeni, tada će staking biti omogućen.
 &lt;li&gt;
-Status stakinga možete vidjeti u vašem novčaniku prelaskom miša preko Staking ikone u gornjem desnom kutu. Ikona će zasvjetliti i ispisati "Staking omogućen" i potvrditi staking. Koristeći sučelje naredbene linije (pivx-cli); naredba &lt;i&gt;getstakingstatus&lt;/i&gt;će potvrditi da je staking aktivan.
+Status stakinga možete vidjeti u vašem novčaniku prelaskom miša preko Staking ikone u gornjem desnom kutu. Ikona će zasvjetliti i ispisati "Staking omogućen" i potvrditi staking. Koristeći sučelje naredbene linije (cari-cli); naredba &lt;i&gt;getstakingstatus&lt;/i&gt;će potvrditi da je staking aktivan.
 &lt;/li&gt;&lt;/ol&gt;
 &lt;/p&gt;&lt;p align="justify"&gt;
-Da biste stake-ali zPIV:&lt;/p&gt;&lt;p align="justify"&gt;
+Da biste stake-ali zCARI:&lt;/p&gt;&lt;p align="justify"&gt;
 &lt;ol&gt;&lt;li&gt;
 Provjerite da je vaš wallet u potpunosti sinkroniziran i koristite li najnoviju verziju.
 &lt;li&gt;
-Vaši novostvoreni ili postojeći zPIV saldo mora imati najmanje 200 potvrda.
+Vaši novostvoreni ili postojeći zCARI saldo mora imati najmanje 200 potvrda.
 &lt;li&gt;
 Vaš novčanik mora ostati online i biti otključan za staking.
 Sada bi staking trebao biti omogućen.
@@ -4341,8 +4341,8 @@ Sada bi staking trebao biti omogućen.
         <translation>Što je Masternode Controller?</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;A Masternode Controller wallet is where the 10,000 PIV collateral can reside during a Controller-Remote masternode setup. It is a wallet that can activate the remote masternode wallet(s) and allows you to keep your collateral coins offline while the remote masternode remains online. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;Masternode Controller novčanik je mjesto gdje zalog od 10,000 PIV može stajati tijekom Controller-Remote podešavanja masternode-a. To je novčanik koji može aktivirati Remote masternode novčanik(e) i omogućiti Vam držanje zaloga novčića offline dok Remote masternode novčanik ostaje online.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;A Masternode Controller wallet is where the 10,000 CARI collateral can reside during a Controller-Remote masternode setup. It is a wallet that can activate the remote masternode wallet(s) and allows you to keep your collateral coins offline while the remote masternode remains online. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;Masternode Controller novčanik je mjesto gdje zalog od 10,000 CARI može stajati tijekom Controller-Remote podešavanja masternode-a. To je novčanik koji može aktivirati Remote masternode novčanik(e) i omogućiti Vam držanje zaloga novčića offline dok Remote masternode novčanik ostaje online.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>8</source>
@@ -4355,7 +4355,7 @@ Sada bi staking trebao biti omogućen.
                            &lt;a style='color: #b088ff' href='https://discord.gg/m9CwKFp'&gt;
                            #support in our Discord&lt;/a&gt;.
                            If you prefer to submit a ticket, One can be
-                           &lt;a style='color: #b088ff' href='https://PIVX.freshdesk.com'&gt;
+                           &lt;a style='color: #b088ff' href='https://CARI.freshdesk.com'&gt;
                            our Freshdesk support site&lt;/a&gt;.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
@@ -4365,7 +4365,7 @@ Imamo korisničku podršku u većini naših službenih chat grupa, na primjer
 &lt;a style='color: #b088ff' href='https://discord.gg/m9CwKFp'&gt;
 #support na Discordu&lt;/a&gt;.
 Možete i podnijeti zahtjev, a to možete
-&lt;a style='color: #b088ff' href='https://PIVX.freshdesk.com'&gt;
+&lt;a style='color: #b088ff' href='https://CARI.freshdesk.com'&gt;
 na našoj Freshdesk stranici za podršku&lt;/a&gt;.
 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
 </translation>
@@ -4377,8 +4377,8 @@ na našoj Freshdesk stranici za podršku&lt;/a&gt;.
     <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           A masternode is a computer running a full node PIVX core wallet with a
-                           requirement of 10,000 PIV secured collateral to provide extra services
+                           A masternode is a computer running a full node CARI core wallet with a
+                           requirement of 10,000 CARI secured collateral to provide extra services
                            to the network and in return, receive a portion of the block reward
                            regularly.  These services include:
                            &lt;/p&gt;&lt;p align="justify"&gt;
@@ -4400,17 +4400,17 @@ na našoj Freshdesk stranici za podršku&lt;/a&gt;.
                            Masternode Perks:
                            &lt;/p&gt;&lt;p align="justify"&gt;
                            &lt;ul&gt;
-                           &lt;li&gt;Participate in PIVX Governance&lt;/li&gt;
+                           &lt;li&gt;Participate in CARI Governance&lt;/li&gt;
                            &lt;li&gt;Earn Masternode Rewards&lt;/li&gt;
                            &lt;li&gt;Commodity option for future sale&lt;/li&gt;
-                           &lt;li&gt;Help secure the PIVX network&lt;/li&gt;
+                           &lt;li&gt;Help secure the CARI network&lt;/li&gt;
                            &lt;/ul&gt;
                            &lt;/p&gt;&lt;p align="justify"&gt;
 
                            Requirements:
                            &lt;/p&gt;&lt;p align="justify"&gt;
                            &lt;ul&gt;
-                           &lt;li&gt;10,000 PIV per single Masternode instance&lt;/li&gt;
+                           &lt;li&gt;10,000 CARI per single Masternode instance&lt;/li&gt;
                            &lt;li&gt;Must be stored in a core wallet&lt;/li&gt;
                            &lt;li&gt;Need dedicated IP address&lt;/li&gt;
                            &lt;li&gt;Masternode wallet to remain online&lt;/li&gt;
@@ -4419,8 +4419,8 @@ na našoj Freshdesk stranici za podršku&lt;/a&gt;.
                          </source>
         <translation>
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-Masternode je računalo koje pokreće full node PIVX Core novčanik sa
-zahtjevanih 10,000 PIV-a osiguranog zaloga da pruži dodatne usluge
+Masternode je računalo koje pokreće full node CARI Core novčanik sa
+zahtjevanih 10,000 CARI-a osiguranog zaloga da pruži dodatne usluge
 mreži, i zauzvrat redovito primi dio nagrade blokova.
 Te usluge uključuju:
 &lt;/p&gt;&lt;p align="justify"&gt;
@@ -4442,17 +4442,17 @@ vlasnicima masternode-ova umanjeno za troškove održavanja.
 Povlastice masternode-ova:
 &lt;/p&gt;&lt;p align="justify"&gt;
 &lt;ul&gt;
-&lt;li&gt;Sudjelovanje u upravljanju PIVX-a&lt;/li&gt;
+&lt;li&gt;Sudjelovanje u upravljanju CARI-a&lt;/li&gt;
 &lt;li&gt;Zaradjivanje Masternode nagrada&lt;/li&gt;
 &lt;li&gt;Robna opcija za buduću prodaju&lt;/li&gt;
-&lt;li&gt;Pomaže u osiguravanju PIVX mreže&lt;/li&gt;
+&lt;li&gt;Pomaže u osiguravanju CARI mreže&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/p&gt;&lt;p align="justify"&gt;
 
 Zahtjevi:
 &lt;/p&gt;&lt;p align="justify"&gt;
 &lt;ul&gt;
-&lt;li&gt;10,000 PIV po svakom Masternode-u&lt;/li&gt;
+&lt;li&gt;10,000 CARI po svakom Masternode-u&lt;/li&gt;
 &lt;li&gt;Mora biti pohranjem u Core novčaniku&lt;/li&gt;
 &lt;li&gt;Mora biti jedinstvena IP adresa&lt;/li&gt;
 &lt;li&gt;Masternode novčanik treba ostati online&lt;/li&gt;
@@ -4576,8 +4576,8 @@ Zahtjevi:
         <translation>Ne može se otvoriti mapa sigurnosne kopije</translation>
     </message>
     <message>
-        <source>Unable to open pivx.conf with default application</source>
-        <translation>Nije moguće otvoriti pivx.conf sa zadanom aplikacijom</translation>
+        <source>Unable to open cari.conf with default application</source>
+        <translation>Nije moguće otvoriti cari.conf sa zadanom aplikacijom</translation>
     </message>
     <message>
         <source>In:</source>
@@ -4635,8 +4635,8 @@ Zahtjevi:
         <translation>Number of script verification threads</translation>
     </message>
     <message>
-        <source>Start PIVX on system login</source>
-        <translation>Pokrenite PIVX pri pokretanju računala</translation>
+        <source>Start CARI on system login</source>
+        <translation>Pokrenite CARI pri pokretanju računala</translation>
     </message>
     <message>
         <source>Minimize to the tray instead of the taskbar</source>
@@ -4723,8 +4723,8 @@ Jeste li sigurni?
         <translation>PotvrdniOkvir</translation>
     </message>
     <message>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other PIVX addresses after it matures.</source>
-        <translation>MultiSend vam omogućuje da automatski pošaljete do 100% svog uloga ili nagrade masternode na popis drugih PIVX adresa nakon što sazriju.</translation>
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other CARI addresses after it matures.</source>
+        <translation>MultiSend vam omogućuje da automatski pošaljete do 100% svog uloga ili nagrade masternode na popis drugih CARI adresa nakon što sazriju.</translation>
     </message>
     <message>
         <source>Active</source>
@@ -4854,8 +4854,8 @@ Označite jedan ili oba polja za potvrdu da biste poslali staking i/ili masterno
         <translation>Poruka</translation>
     </message>
     <message>
-        <source>PIVX address or contact label</source>
-        <translation>PIVX adresa ili naziv kontakta</translation>
+        <source>CARI address or contact label</source>
+        <translation>CARI adresa ili naziv kontakta</translation>
     </message>
     <message>
         <source>Enter address</source>
@@ -5191,8 +5191,8 @@ Označite jedan ili oba polja za potvrdu da biste poslali staking i/ili masterno
         <translation>Najčešće postavljena pitanja</translation>
     </message>
     <message>
-        <source>About PIVX</source>
-        <translation>O PIVX-u</translation>
+        <source>About CARI</source>
+        <translation>O CARI-u</translation>
     </message>
     <message>
         <source>Settings</source>
@@ -5258,8 +5258,8 @@ Jeste li sigurni?
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>PIVX Core is shutting down...</source>
-        <translation>PIVX Core se zatvara...</translation>
+        <source>CARI Core is shutting down...</source>
+        <translation>CARI Core se zatvara...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -5288,15 +5288,15 @@ Jeste li sigurni?
         <translation>Učitavanje...</translation>
     </message>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>CARI Core</source>
+        <translation>CARI Core</translation>
     </message>
 </context>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>CARI Core</source>
+        <translation>CARI Core</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -5311,8 +5311,8 @@ Jeste li sigurni?
         <translation>Dash Core programeri</translation>
     </message>
     <message>
-        <source>The PIVX Core developers</source>
-        <translation>PIVX Core programeri</translation>
+        <source>The CARI Core developers</source>
+        <translation>CARI Core programeri</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -5746,40 +5746,40 @@ se nova sigurnosna kopija.
         <translation>Zaprimljeno s</translation>
     </message>
     <message>
-        <source>PIV Stake</source>
-        <translation>PIV Stake</translation>
+        <source>CARI Stake</source>
+        <translation>CARI Stake</translation>
     </message>
     <message>
-        <source>zPIV Stake</source>
-        <translation>zPIV Stake</translation>
+        <source>zCARI Stake</source>
+        <translation>zCARI Stake</translation>
     </message>
     <message>
-        <source>PIV Cold Stake</source>
-        <translation>PIV Cold Stake</translation>
+        <source>CARI Cold Stake</source>
+        <translation>CARI Cold Stake</translation>
     </message>
     <message>
         <source>Stake delegation</source>
         <translation>Stake delegacija</translation>
     </message>
     <message>
-        <source>Converted PIV to zPIV</source>
-        <translation>Pretvoreni PIV u zPIV</translation>
+        <source>Converted CARI to zCARI</source>
+        <translation>Pretvoreni CARI u zCARI</translation>
     </message>
     <message>
-        <source>Spent zPIV</source>
-        <translation>Potrošeni zPIV</translation>
+        <source>Spent zCARI</source>
+        <translation>Potrošeni zCARI</translation>
     </message>
     <message>
-        <source>Received PIV from zPIV</source>
-        <translation>Primljeni PIV od zPIV</translation>
+        <source>Received CARI from zCARI</source>
+        <translation>Primljeni CARI od zCARI</translation>
     </message>
     <message>
-        <source>Minted Change as zPIV from zPIV Spend</source>
-        <translation>Mintana razlika zPIV od zPIV Utroška</translation>
+        <source>Minted Change as zCARI from zCARI Spend</source>
+        <translation>Mintana razlika zCARI od zCARI Utroška</translation>
     </message>
     <message>
-        <source>Converted zPIV to PIV</source>
-        <translation>Pretvoreni zPIV u PIV</translation>
+        <source>Converted zCARI to CARI</source>
+        <translation>Pretvoreni zCARI u CARI</translation>
     </message>
     <message>
         <source>Sent to</source>
@@ -5794,8 +5794,8 @@ se nova sigurnosna kopija.
         <translation>Plaćanje sebi</translation>
     </message>
     <message>
-        <source>PIV Stake on behalf of</source>
-        <translation>PIV Stake u korist</translation>
+        <source>CARI Stake on behalf of</source>
+        <translation>CARI Stake u korist</translation>
     </message>
     <message>
         <source>Stake delegation spent by</source>
@@ -5960,8 +5960,8 @@ se nova sigurnosna kopija.
         <translation>18/05/18</translation>
     </message>
     <message>
-        <source>+0.000585 PIV</source>
-        <translation>+0.000585 PIV</translation>
+        <source>+0.000585 CARI</source>
+        <translation>+0.000585 CARI</translation>
     </message>
 </context>
 <context>
@@ -5971,8 +5971,8 @@ se nova sigurnosna kopija.
         <translation>Šalji novčiće</translation>
     </message>
     <message>
-        <source>SwiftX doesn't support sending values that high yet. Transactions are currently limited to %1 PIV.</source>
-        <translation>SwiftX ne podržava slanje visokih vrijednosti. Transakcije su trenutačno ograničene na %1 PIV.</translation>
+        <source>SwiftX doesn't support sending values that high yet. Transactions are currently limited to %1 CARI.</source>
+        <translation>SwiftX ne podržava slanje visokih vrijednosti. Transakcije su trenutačno ograničene na %1 CARI.</translation>
     </message>
 </context>
 <context>
@@ -6015,25 +6015,25 @@ se nova sigurnosna kopija.
     </message>
     <message>
         <source>Welcome to
-PIVX Core Wallet</source>
+CARI Core Wallet</source>
         <translation>Dobrodošli u
-PIVX temeljni novčanik</translation>
+CARI temeljni novčanik</translation>
     </message>
     <message>
-        <source>PIVX is the world’s most innovative Proof of Stake blockchain based technology. Developed by a team of highly experienced developers and cryptographers.</source>
-        <translation>PIVX je najinovativnija blockchain tehnologija na svijetu bazirana na Proof of Stake tehnologiji. Razvijena je od strane vrlo iskusnih programera i kriptografa.</translation>
+        <source>CARI is the world’s most innovative Proof of Stake blockchain based technology. Developed by a team of highly experienced developers and cryptographers.</source>
+        <translation>CARI je najinovativnija blockchain tehnologija na svijetu bazirana na Proof of Stake tehnologiji. Razvijena je od strane vrlo iskusnih programera i kriptografa.</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;As our manifesto says: Privacy is a non-negotiable basic human right; it grants users the freedom to share their data whenever and with whomever they want - PIVX believes in self sovereignty.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kao što kaže naš manifest: Privatnost je temeljno ljudsko pravo o kojemu se ne pregovara; korisnicima daje slobodu dijeljenja svojih podataka kad god i s kim god žele - PIVX vjeruje u suverenitet.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;As our manifesto says: Privacy is a non-negotiable basic human right; it grants users the freedom to share their data whenever and with whomever they want - CARI believes in self sovereignty.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kao što kaže naš manifest: Privatnost je temeljno ljudsko pravo o kojemu se ne pregovara; korisnicima daje slobodu dijeljenja svojih podataka kad god i s kim god žele - CARI vjeruje u suverenitet.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>The masternode network is PIVX's second layer network on top of the blockchain that enables our DAO to provide decentralized governance and a treasury.</source>
-        <translation>Masternode mreža je mreža drugog sloja PIVX-a na vrhu blockchaina koja omogućuje našem DAO-u pružanje decentraliziranog upravljanja i riznice.</translation>
+        <source>The masternode network is CARI's second layer network on top of the blockchain that enables our DAO to provide decentralized governance and a treasury.</source>
+        <translation>Masternode mreža je mreža drugog sloja CARI-a na vrhu blockchaina koja omogućuje našem DAO-u pružanje decentraliziranog upravljanja i riznice.</translation>
     </message>
     <message>
-        <source>How PIVX respects your privacy?</source>
-        <translation>Kako PIVX poštuje Vašu privatnost?</translation>
+        <source>How CARI respects your privacy?</source>
+        <translation>Kako CARI poštuje Vašu privatnost?</translation>
     </message>
     <message>
         <source>What is a Masternode?</source>
@@ -6045,10 +6045,10 @@ PIVX temeljni novčanik</translation>
     </message>
 </context>
 <context>
-    <name>ZPivControlDialog</name>
+    <name>ZCariControlDialog</name>
     <message>
-        <source>Select zPIV to Spend</source>
-        <translation>Odabrani zPIV za utrošiti</translation>
+        <source>Select zCARI to Spend</source>
+        <translation>Odabrani zCARI za utrošiti</translation>
     </message>
     <message>
         <source>Coin Control</source>
@@ -6059,8 +6059,8 @@ PIVX temeljni novčanik</translation>
         <translation>TipkaZaPritisak</translation>
     </message>
     <message>
-        <source>zPiv</source>
-        <translation>zPiv</translation>
+        <source>zCari</source>
+        <translation>zCari</translation>
     </message>
     <message>
         <source>0.00 </source>
@@ -6083,12 +6083,12 @@ PIVX temeljni novčanik</translation>
         <translation>Odaberite/poništi odabir za Sve</translation>
     </message>
     <message>
-        <source>Select zPIV Denominations to Spend</source>
-        <translation>Odaberite zPIV denominacije za potrošnju</translation>
+        <source>Select zCARI Denominations to Spend</source>
+        <translation>Odaberite zCARI denominacije za potrošnju</translation>
     </message>
 </context>
 <context>
-    <name>pivx-core</name>
+    <name>cari-core</name>
     <message>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
         <translation>(1 = zadržite metapodatke tx, npr. Vlasnika računa i podatke o zahtjevu za plaćanje, 2 = odbaci meta podataka tx)</translation>
@@ -6110,8 +6110,8 @@ PIVX temeljni novčanik</translation>
         <translation>Pridržavajte se na navedenu adresu da biste slušali veze JSON-RPC. Koristite [host]: port notation za IPv6. Ova se opcija može odrediti više puta (zadano: vezati se na sva sučelja)</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s. PIVX Core is probably already running.</source>
-        <translation>Nije moguće dobiti zaključavanje na direktoriju podataka %s. PIVX Core vjerojatno već radi.</translation>
+        <source>Cannot obtain a lock on data directory %s. CARI Core is probably already running.</source>
+        <translation>Nije moguće dobiti zaključavanje na direktoriju podataka %s. CARI Core vjerojatno već radi.</translation>
     </message>
     <message>
         <source>Change automatic finalized budget voting behavior. mode=auto: Vote for only exact finalized budget match to my generated budget. (string, default: auto)</source>
@@ -6142,12 +6142,12 @@ PIVX temeljni novčanik</translation>
         <translation>Omogući cold staking funkcionalnost (0-1, zadano: %u). Onemogućeno ako je staking=0</translation>
     </message>
     <message>
-        <source>Enable or disable staking functionality for PIV inputs (0-1, default: %u)</source>
-        <translation>Omogući ili onemogući staking funkcionalnosti za PIV unose (0-1, default: %u)</translation>
+        <source>Enable or disable staking functionality for CARI inputs (0-1, default: %u)</source>
+        <translation>Omogući ili onemogući staking funkcionalnosti za CARI unose (0-1, default: %u)</translation>
     </message>
     <message>
-        <source>Enable or disable staking functionality for zPIV inputs (0-1, default: %u)</source>
-        <translation>Omogući ili onemogući staking funkcionalnosti za zPIV unose (0-1, default: %u)</translation>
+        <source>Enable or disable staking functionality for zCARI inputs (0-1, default: %u)</source>
+        <translation>Omogući ili onemogući staking funkcionalnosti za zCARI unose (0-1, default: %u)</translation>
     </message>
     <message>
         <source>Enable spork administration functionality with the appropriate private key.</source>
@@ -6186,12 +6186,12 @@ PIVX temeljni novčanik</translation>
         <translation>Izvrši naredbu kada se promijeni najbolji blok (%s u cmd zamjenjuje se blokovskim raspršivanjem)</translation>
     </message>
     <message>
-        <source>Fees (in PIV/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>Naknade (u PIV / Kb) manje od toga smatraju se nulom naknadom za prosljeđivanje (zadano: %s)</translation>
+        <source>Fees (in CARI/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>Naknade (u CARI / Kb) manje od toga smatraju se nulom naknadom za prosljeđivanje (zadano: %s)</translation>
     </message>
     <message>
-        <source>Fees (in PIV/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>Naknade (u PIV / Kb) manje od toga smatraju se nulom naknadom za izradu transakcija (zadano: %s)</translation>
+        <source>Fees (in CARI/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>Naknade (u CARI / Kb) manje od toga smatraju se nulom naknadom za izradu transakcija (zadano: %s)</translation>
     </message>
     <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>
@@ -6298,8 +6298,8 @@ PIVX temeljni novčanik</translation>
         <translation>Ukupna duljina teksta mrežne verzije (%i) prelazi maksimalnu duljinu (%i). Smanjite broj ili veličinu uacommentsa.</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. PIVX Core is probably already running.</source>
-        <translation>Nije moguće vezati se na %s na ovom računalu. PIVX Core vjerojatno već radi.</translation>
+        <source>Unable to bind to %s on this computer. CARI Core is probably already running.</source>
+        <translation>Nije moguće vezati se na %s na ovom računalu. CARI Core vjerojatno već radi.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -6314,8 +6314,8 @@ PIVX temeljni novčanik</translation>
         <translation>Upozorenje: -paytxfee je vrlo visoka! To je transakcijska naknada koju ćete platiti ako šaljete transakciju.</translation>
     </message>
     <message>
-        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong PIVX Core will not work properly.</source>
-        <translation>Upozorenje: Provjerite jesu li datum i vrijeme vašeg računala točni! Ako je vaš sat pogrešan, PIVX Core neće raditi ispravno.</translation>
+        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong CARI Core will not work properly.</source>
+        <translation>Upozorenje: Provjerite jesu li datum i vrijeme vašeg računala točni! Ako je vaš sat pogrešan, CARI Core neće raditi ispravno.</translation>
     </message>
     <message>
         <source>Warning: The network does not appear to fully agree! Some miners appear to be experiencing issues.</source>
@@ -6430,8 +6430,8 @@ PIVX temeljni novčanik</translation>
         <translation>Autorska prava (C) 2014-%i The Dash Core Developers</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The PIVX Core Developers</source>
-        <translation>Autorska prava (C) 2015-%i The PIVX Core Developers</translation>
+        <source>Copyright (C) 2015-%i The CARI Core Developers</source>
+        <translation>Autorska prava (C) 2015-%i The CARI Core Developers</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>
@@ -6507,8 +6507,8 @@ PIVX temeljni novčanik</translation>
         <translation>Pogreška pri učitavanju wallet.dat: Novčanik oštećen</translation>
     </message>
     <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of PIVX Core</source>
-        <translation>Pogreška prilikom učitavanja wallet.dat: Novčanik zahtijeva noviju verziju PIVX jezgre</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of CARI Core</source>
+        <translation>Pogreška prilikom učitavanja wallet.dat: Novčanik zahtijeva noviju verziju CARI jezgre</translation>
     </message>
     <message>
         <source>Error opening block database</source>
@@ -6559,8 +6559,8 @@ PIVX temeljni novčanik</translation>
         <translation>Greška čitanja bloka</translation>
     </message>
     <message>
-        <source>Fee (in PIV/kB) to add to transactions you send (default: %s)</source>
-        <translation>Naknada (u PIV / kB) za dodavanje transakcija koje šaljete (zadano: %s)</translation>
+        <source>Fee (in CARI/kB) to add to transactions you send (default: %s)</source>
+        <translation>Naknada (u CARI / kB) za dodavanje transakcija koje šaljete (zadano: %s)</translation>
     </message>
     <message>
         <source>Force safe mode (default: %u)</source>
@@ -6599,8 +6599,8 @@ PIVX temeljni novčanik</translation>
         <translation>Informacije</translation>
     </message>
     <message>
-        <source>Initialization sanity check failed. PIVX Core is shutting down.</source>
-        <translation>Provjera ispravnosti inicijalizacije nije uspjela. PIVX Core se zatvara.</translation>
+        <source>Initialization sanity check failed. CARI Core is shutting down.</source>
+        <translation>Provjera ispravnosti inicijalizacije nije uspjela. CARI Core se zatvara.</translation>
     </message>
     <message>
         <source>Insufficient funds</source>
@@ -6635,12 +6635,12 @@ PIVX temeljni novčanik</translation>
         <translation>Nevažeći port otkriven u masternode.conf</translation>
     </message>
     <message>
-        <source>Recalculating PIV supply...</source>
-        <translation>Preračunavanje PIV-a u optjecaju...</translation>
+        <source>Recalculating CARI supply...</source>
+        <translation>Preračunavanje CARI-a u optjecaju...</translation>
     </message>
     <message>
-        <source>Reindex the PIV and zPIV money supply statistics</source>
-        <translation>Ponovno indeksirati statistiku PIV i zPIV ponude novca</translation>
+        <source>Reindex the CARI and zCARI money supply statistics</source>
+        <translation>Ponovno indeksirati statistiku CARI i zCARI ponude novca</translation>
     </message>
     <message>
         <source>Reindexing zerocoin database...</source>
@@ -6679,8 +6679,8 @@ PIVX temeljni novčanik</translation>
 </translation>
     </message>
     <message>
-        <source>Disable all PIVX specific functionality (Masternodes, Zerocoin, SwiftX, Budgeting) (0-1, default: %u)</source>
-        <translation>Onemogući sve specifične funkcije PIVX (Masternodes, Zerocoin, SwiftX, Budgeting) (0-1, zadano: %u)</translation>
+        <source>Disable all CARI specific functionality (Masternodes, Zerocoin, SwiftX, Budgeting) (0-1, default: %u)</source>
+        <translation>Onemogući sve specifične funkcije CARI (Masternodes, Zerocoin, SwiftX, Budgeting) (0-1, zadano: %u)</translation>
     </message>
     <message>
         <source>Enable SwiftX, show confirmations for locked transactions (bool, default: %s)</source>
@@ -6939,8 +6939,8 @@ PIVX temeljni novčanik</translation>
         <translation>Priprema za resinkronizaciju...</translation>
     </message>
     <message>
-        <source>Please check that your computer's date and time are correct! If your clock is wrong PIVX Core will not work properly.</source>
-        <translation>Provjerite jesu li datum i vrijeme vašeg računala točni! Ako je vaš sat pogrešan, PIVX Core neće raditi ispravno.</translation>
+        <source>Please check that your computer's date and time are correct! If your clock is wrong CARI Core will not work properly.</source>
+        <translation>Provjerite jesu li datum i vrijeme vašeg računala točni! Ako je vaš sat pogrešan, CARI Core neće raditi ispravno.</translation>
     </message>
     <message>
         <source>Specify location of debug log file: this can be an absolute path or a path relative to the data directory (default: %s)</source>
@@ -7139,8 +7139,8 @@ PIVX temeljni novčanik</translation>
         <translation>Sinkronizacija sporkova...</translation>
     </message>
     <message>
-        <source>Syncing zPIV wallet...</source>
-        <translation>Sinkronizacija zPIV novčanika...</translation>
+        <source>Syncing zCARI wallet...</source>
+        <translation>Sinkronizacija zCARI novčanika...</translation>
     </message>
     <message>
         <source>This help message</source>
@@ -7255,8 +7255,8 @@ PIVX temeljni novčanik</translation>
         <translation>Korisničko ime za JSON-RPC veze</translation>
     </message>
     <message>
-        <source>Value is below the smallest available denomination (= 1) of zPIV</source>
-        <translation>Vrijednost je niža od najmanje dostupne denominacije (= 1) zPIV-a</translation>
+        <source>Value is below the smallest available denomination (= 1) of zCARI</source>
+        <translation>Vrijednost je niža od najmanje dostupne denominacije (= 1) zCARI-a</translation>
     </message>
     <message>
         <source>Verifying blocks...</source>
@@ -7271,8 +7271,8 @@ PIVX temeljni novčanik</translation>
         <translation>Novčanik %s nalazi se izvan direktorija podataka %s</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart PIVX Core to complete</source>
-        <translation>Potrebno je prepisati novčanik: ponovo pokrenite PIVX Core</translation>
+        <source>Wallet needed to be rewritten: restart CARI Core to complete</source>
+        <translation>Potrebno je prepisati novčanik: ponovo pokrenite CARI Core</translation>
     </message>
     <message>
         <source>Wallet options:</source>
