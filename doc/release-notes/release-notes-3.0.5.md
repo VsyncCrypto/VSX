@@ -1,4 +1,4 @@
-PIVX Core version 3.0.5 is now available from:
+CARI Core version 3.0.5 is now available from:
 
   <https://github.com/Carbon-Reduction-Initiative/CARI/releases>
 
@@ -13,7 +13,7 @@ Please report bugs using the issue tracker at github:
 Mandatory Update
 ==============
 
-PIVX Core v3.0.5 is a mandatory update for all users. This release contains various updates/fixes pertaining to the zPIV protocol, supply tracking, block transmission and relaying, as well as usability and quality-of-life updates to the GUI. Users are required to update before block `908000` which is when the accumulators will be refactored. Shortly after that block, zPIV transactions will be enabled. **When zPIV is enabled, autominting will also be enabled.** If you would like to disable automatic conversion of 10% of your PIV balance to zPIV, then you will need to add `enablezeromint=0` to your `pivx.conf` file. For information about where to find your pivx.conf you can visit this link from [PIVX Support](https://pivx.freshdesk.com/support/solutions/articles/30000004664-where-are-my-wallet-dat-blockchain-and-configuration-conf-files-located-).
+CARI Core v3.0.5 is a mandatory update for all users. This release contains various updates/fixes pertaining to the zCARI protocol, supply tracking, block transmission and relaying, as well as usability and quality-of-life updates to the GUI. Users are required to update before block `908000` which is when the accumulators will be refactored. Shortly after that block, zCARI transactions will be enabled. **When zCARI is enabled, autominting will also be enabled.** If you would like to disable automatic conversion of 10% of your CARI balance to zCARI, then you will need to add `enablezeromint=0` to your `cari.conf` file. For information about where to find your cari.conf you can visit this link from [CARI Support](https://cari.freshdesk.com/support/solutions/articles/30000004664-where-are-my-wallet-dat-blockchain-and-configuration-conf-files-located-).
 
 Users will have a grace period to update their clients before versions prior to this release are no longer allowed to connect to this (and future) version(s).
 
@@ -21,13 +21,13 @@ Users will have a grace period to update their clients before versions prior to 
 How to Upgrade
 ==============
 
-If you are running an older version, shut it down. Wait until it has completely shut down (which might take a few minutes for older versions), then run the installer (on Windows) or just copy over /Applications/PIVX-Qt (on Mac) or pivxd/pivx-qt (on Linux).
+If you are running an older version, shut it down. Wait until it has completely shut down (which might take a few minutes for older versions), then run the installer (on Windows) or just copy over /Applications/CARI-Qt (on Mac) or carid/cari-qt (on Linux).
 
 
 Compatibility
 ==============
 
-PIVX Core is extensively tested on multiple operating systems using
+CARI Core is extensively tested on multiple operating systems using
 the Linux kernel, macOS 10.8+, and Windows Vista and later.
 
 Microsoft ended support for Windows XP on [April 8th, 2014](https://www.microsoft.com/en-us/WindowsForBusiness/end-of-xp-support),
@@ -35,7 +35,7 @@ No attempt is made to prevent installing or running the software on Windows XP, 
 can still do so at your own risk but be aware that there are known instabilities and issues.
 Please do not report issues about Windows XP to the issue tracker.
 
-PIVX Core should also work on most other Unix-like systems but is not
+CARI Core should also work on most other Unix-like systems but is not
 frequently tested on them.
 
 ### :exclamation::exclamation::exclamation: MacOS 10.13 High Sierra :exclamation::exclamation::exclamation:
@@ -48,23 +48,23 @@ Notable Changes
 
 Accumulator Code Refactor
 ---------------------
-The zPIV accumulator code has undergone a major refactor. Accumulators are one of the most essential components of the zerocoin protocol, and also one of the most computationally expensive parts of the protocol. This refactoring speeds up syncing and spending of zPIV by over 5x. The new code also allows for spending of zPIV with only 2 required mints occurring on the network after your mint has been added, whereas before 3 were required. This refactor allows for lighter resource load and a smoother user experience.
+The zCARI accumulator code has undergone a major refactor. Accumulators are one of the most essential components of the zerocoin protocol, and also one of the most computationally expensive parts of the protocol. This refactoring speeds up syncing and spending of zCARI by over 5x. The new code also allows for spending of zCARI with only 2 required mints occurring on the network after your mint has been added, whereas before 3 were required. This refactor allows for lighter resource load and a smoother user experience.
 
 libzerocoin Exploit Fix
 ---------------------
-zPIV relies on a 3rd party library called libzerocoin. All currencies that utilize the zerocoin protocol use libzerocoin, and many of those currencies have been exposed to an exploit which allowed for the creation of multiple zero-knowledge spending proofs for one single zerocoin mint. The PIVX developers were able properly identify the exploit, track down any fraudulent spending proofs, link the fraudulent spending proofs with their one valid proof that they were mutated from, and remove any mints from the accumulators that were derived from the invalid spends. 
+zCARI relies on a 3rd party library called libzerocoin. All currencies that utilize the zerocoin protocol use libzerocoin, and many of those currencies have been exposed to an exploit which allowed for the creation of multiple zero-knowledge spending proofs for one single zerocoin mint. The CARI developers were able properly identify the exploit, track down any fraudulent spending proofs, link the fraudulent spending proofs with their one valid proof that they were mutated from, and remove any mints from the accumulators that were derived from the invalid spends. 
 
-zPIV Maintenance Mode Spork
+zCARI Maintenance Mode Spork
 ---------------------
-Handling the above noted libzerocoin exploit required the PIVX team to immediately release a patched wallet to as many users as possible which rejected bad spends and also disabled all zPIV transactions in general. The process of releasing a patched wallet in such a small time frame is frustrating and difficult for all members of the PIVX team and especially users of PIVX. The PIVX developers have added a new spork which allows for zPIV transacting to be turned on/off without having to release a patched wallet. This will allow much smoother operation if any problems occur in the future, and should also allow exchanges and 3rd party services to continue to operate even if zPIV is in maintenance mode.
+Handling the above noted libzerocoin exploit required the CARI team to immediately release a patched wallet to as many users as possible which rejected bad spends and also disabled all zCARI transactions in general. The process of releasing a patched wallet in such a small time frame is frustrating and difficult for all members of the CARI team and especially users of CARI. The CARI developers have added a new spork which allows for zCARI transacting to be turned on/off without having to release a patched wallet. This will allow much smoother operation if any problems occur in the future, and should also allow exchanges and 3rd party services to continue to operate even if zCARI is in maintenance mode.
 
 Money Supply Indexing
 ---------------------
-The exploit in libzerocoin threw off some of the wallet's internal money supply calculations for both the zPIV supply and the PIV supply. User's wallet's will automatically recalculate the supply on block `908001`. User's also have the ability to recalculate supply using the startup flag `reindexmoneysupply`.
+The exploit in libzerocoin threw off some of the wallet's internal money supply calculations for both the zCARI supply and the CARI supply. User's wallet's will automatically recalculate the supply on block `908001`. User's also have the ability to recalculate supply using the startup flag `reindexmoneysupply`.
 
-More Extensive Tracking of zPIV Supply Through RPC
+More Extensive Tracking of zCARI Supply Through RPC
 ---------------------
-More information has been added to the `getinfo` and `getblock` RPC calls, which now display the total zPIV supply as well as the balance for each zPIV accumulator.
+More information has been added to the `getinfo` and `getblock` RPC calls, which now display the total zCARI supply as well as the balance for each zCARI accumulator.
 
 Multisig GUI
 ---------------------
@@ -85,7 +85,7 @@ git merge commit are mentioned.
 
 ### Wallet
 - #308 `bd8a982` [Minting] Clear mempool after invalid block from miner (presstab)
-- #316 `ed192cf` [Minting] Better filtering of zPiv serials in miner. (presstab)
+- #316 `ed192cf` [Minting] Better filtering of zCari serials in miner. (presstab)
 
 ### GUI
 - #278 `46f4960` [QT] Multisignature GUI (rejectedpromise)
@@ -108,4 +108,4 @@ Thanks to everyone who directly contributed to this release:
 - presstab
 - rejectedpromise
 
-As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/pivx-project-translations/).
+As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/cari-project-translations/).
