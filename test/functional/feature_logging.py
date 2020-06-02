@@ -8,9 +8,9 @@
 
 import os
 
-from test_framework.test_framework import PivxTestFramework
+from test_framework.test_framework import CariTestFramework
 
-class LoggingTest(PivxTestFramework):
+class LoggingTest(CariTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
         self.setup_clean_chain = True

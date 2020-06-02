@@ -4,10 +4,10 @@
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test RPC commands for BIP38 encrypting and decrypting addresses."""
 
-from test_framework.test_framework import PivxTestFramework
+from test_framework.test_framework import CariTestFramework
 from test_framework.util import assert_equal
 
-class Bip38Test(PivxTestFramework):
+class Bip38Test(CariTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 2

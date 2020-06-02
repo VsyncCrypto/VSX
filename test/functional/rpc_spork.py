@@ -6,11 +6,11 @@
 
 from time import sleep
 
-from test_framework.test_framework import PivxTestFramework
+from test_framework.test_framework import CariTestFramework
 from test_framework.util import set_node_times, assert_equal
 
 
-class PIVX_RPCSporkTest(PivxTestFramework):
+class CARI_RPCSporkTest(CariTestFramework):
 
     def set_test_params(self):
         self.setup_clean_chain = True
@@ -70,5 +70,5 @@ class PIVX_RPCSporkTest(PivxTestFramework):
 
 
 if __name__ == '__main__':
-    PIVX_RPCSporkTest().main()
+    CARI_RPCSporkTest().main()
 
