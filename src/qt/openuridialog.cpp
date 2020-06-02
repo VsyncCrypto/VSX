@@ -7,7 +7,7 @@
 
 #include "guiutil.h"
 #include "walletmodel.h"
-#include "qt/pivx/qtutils.h"
+#include "qt/cari/qtutils.h"
 
 #include <QUrl>
 #include <QFile>
@@ -17,7 +17,7 @@ OpenURIDialog::OpenURIDialog(QWidget* parent) : QDialog(parent, Qt::WindowSystem
 {
     ui->setupUi(this);
     this->setStyleSheet(parent->styleSheet());
-    ui->uriEdit->setPlaceholderText("pivx:");
+    ui->uriEdit->setPlaceholderText("cari:");
 
     ui->labelSubtitle->setText("URI");
     setCssProperty(ui->labelSubtitle, "text-title2-dialog");
@@ -79,8 +79,8 @@ void OpenURIDialog::on_selectFileButton_clicked()
         }
 
         QString str = QString::fromStdString(std::string(r.constData(), r.length()));
-        if (!str.startsWith("pivx")) {
-            inform(tr("Invalid URI, not starting with \"pivx\" prefix"));
+        if (!str.startsWith("cari")) {
+            inform(tr("Invalid URI, not starting with \"cari\" prefix"));
         }
         ui->uriEdit->setText(str);
     }

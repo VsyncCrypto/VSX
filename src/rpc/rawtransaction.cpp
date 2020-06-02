@@ -12,7 +12,7 @@
 #include "main.h"
 #include "net.h"
 #include "primitives/transaction.h"
-#include "zpiv/deterministicmint.h"
+#include "zcari/deterministicmint.h"
 #include "rpc/server.h"
 #include "script/script.h"
 #include "script/script_error.h"
@@ -21,7 +21,7 @@
 #include "swifttx.h"
 #include "uint256.h"
 #include "utilmoneystr.h"
-#include "zpivchain.h"
+#include "zcarichain.h"
 #ifdef ENABLE_WALLET
 #include "wallet/wallet.h"
 #endif
@@ -134,7 +134,7 @@ UniValue getrawtransaction(const UniValue& params, bool fHelp)
             "         \"reqSigs\" : n,            (numeric) The required sigs\n"
             "         \"type\" : \"pubkeyhash\",  (string) The type, eg 'pubkeyhash'\n"
             "         \"addresses\" : [           (json array of string)\n"
-            "           \"pivxaddress\"        (string) pivx address\n"
+            "           \"cariaddress\"        (string) cari address\n"
             "           ,...\n"
             "         ]\n"
             "       }\n"
@@ -218,9 +218,9 @@ UniValue listunspent(const UniValue& params, bool fHelp)
             "\nArguments:\n"
             "1. minconf          (numeric, optional, default=1) The minimum confirmations to filter\n"
             "2. maxconf          (numeric, optional, default=9999999) The maximum confirmations to filter\n"
-            "3. \"addresses\"    (string) A json array of pivx addresses to filter\n"
+            "3. \"addresses\"    (string) A json array of cari addresses to filter\n"
             "    [\n"
-            "      \"address\"   (string) pivx address\n"
+            "      \"address\"   (string) cari address\n"
             "      ,...\n"
             "    ]\n"
             "4. watchonlyconfig  (numeric, optional, default=1) 1 = list regular unspent transactions, 2 = list only watchonly transactions,  3 = list all unspent transactions (including watchonly)\n"
@@ -230,7 +230,7 @@ UniValue listunspent(const UniValue& params, bool fHelp)
             "  {\n"
             "    \"txid\" : \"txid\",        (string) the transaction id\n"
             "    \"vout\" : n,               (numeric) the vout value\n"
-            "    \"address\" : \"address\",  (string) the pivx address\n"
+            "    \"address\" : \"address\",  (string) the cari address\n"
             "    \"account\" : \"account\",  (string) DEPRECATED. The associated account, or \"\" for the default account\n"
             "    \"scriptPubKey\" : \"key\", (string) the script key\n"
             "    \"redeemScript\" : \"key\", (string) the redeemscript key\n"
@@ -261,7 +261,7 @@ UniValue listunspent(const UniValue& params, bool fHelp)
             const UniValue& input = inputs[inx];
             CTxDestination dest = DecodeDestination(input.get_str());
             if (!IsValidDestination(dest))
-                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid PIVX address: ") + input.get_str());
+                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid CARI address: ") + input.get_str());
             if (destinations.count(dest))
                 throw JSONRPCError(RPC_INVALID_PARAMETER, std::string("Invalid parameter, duplicated address: ") + input.get_str());
             destinations.insert(dest);
@@ -354,7 +354,7 @@ UniValue createrawtransaction(const UniValue& params, bool fHelp)
             "     ]\n"
             "2. \"addresses\"           (string, required) a json object with addresses as keys and amounts as values\n"
             "    {\n"
-            "      \"address\": x.xxx   (numeric, required) The key is the pivx address, the value is the pivx amount\n"
+            "      \"address\": x.xxx   (numeric, required) The key is the cari address, the value is the cari amount\n"
             "      ,...\n"
             "    }\n"
             "3. locktime                (numeric, optional, default=0) Raw locktime. Non-0 value also locktime-activates inputs\n"
@@ -417,7 +417,7 @@ UniValue createrawtransaction(const UniValue& params, bool fHelp)
     for (const std::string& name_ : addrList) {
         CTxDestination address = DecodeDestination(name_);
         if (!IsValidDestination(address))
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid PIVX address: ")+name_);
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid CARI address: ")+name_);
 
         if (setAddress.count(address))
             throw JSONRPCError(RPC_INVALID_PARAMETER, std::string("Invalid parameter, duplicated address: ")+name_);
@@ -471,7 +471,7 @@ UniValue decoderawtransaction(const UniValue& params, bool fHelp)
             "         \"reqSigs\" : n,            (numeric) The required sigs\n"
             "         \"type\" : \"pubkeyhash\",  (string) The type, eg 'pubkeyhash'\n"
             "         \"addresses\" : [           (json array of string)\n"
-            "           \"12tvKAXCxZjSmdNbao16dKXC8tRWfcF5oc\"   (string) pivx address\n"
+            "           \"12tvKAXCxZjSmdNbao16dKXC8tRWfcF5oc\"   (string) cari address\n"
             "           ,...\n"
             "         ]\n"
             "       }\n"
@@ -514,7 +514,7 @@ UniValue decodescript(const UniValue& params, bool fHelp)
             "  \"type\":\"type\", (string) The output type\n"
             "  \"reqSigs\": n,    (numeric) The required signatures\n"
             "  \"addresses\": [   (json array of string)\n"
-            "     \"address\"     (string) pivx address\n"
+            "     \"address\"     (string) cari address\n"
             "     ,...\n"
             "  ],\n"
             "  \"p2sh\",\"address\" (string) script address\n"
@@ -931,7 +931,7 @@ UniValue createrawzerocoinspend(const UniValue& params, bool fHelp)
     if (fHelp || params.size() < 1 || params.size() > 3)
         throw std::runtime_error(
             "createrawzerocoinspend mint_input ( \"address\" )\n"
-            "\nCreates raw zPIV public spend.\n" +
+            "\nCreates raw zCARI public spend.\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nArguments:\n"
@@ -957,7 +957,7 @@ UniValue createrawzerocoinspend(const UniValue& params, bool fHelp)
     if (address_str != "") {
         dest = DecodeDestination(address_str);
         if(!IsValidDestination(dest))
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid PIVX address");
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid CARI address");
     }
 
     assert(pwalletMain != NULL);

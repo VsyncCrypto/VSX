@@ -3,9 +3,9 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#define BOOST_TEST_MODULE Pivx Test Suite
+#define BOOST_TEST_MODULE Cari Test Suite
 
-#include "test_pivx.h"
+#include "test_cari.h"
 
 #include "main.h"
 #include "random.h"
@@ -38,7 +38,7 @@ BasicTestingSetup::~BasicTestingSetup()
 TestingSetup::TestingSetup()
 {
         ClearDatadirCache();
-        pathTemp = GetTempPath() / strprintf("test_pivx_%lu_%i", (unsigned long)GetTime(), (int)(InsecureRandRange(100000)));
+        pathTemp = GetTempPath() / strprintf("test_cari_%lu_%i", (unsigned long)GetTime(), (int)(InsecureRandRange(100000)));
         boost::filesystem::create_directories(pathTemp);
         mapArgs["-datadir"] = pathTemp.string();
         pblocktree = new CBlockTreeDB(1 << 20, true);

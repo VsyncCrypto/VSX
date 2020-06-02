@@ -11,10 +11,10 @@
 #include "guiconstants.h"
 #include "guiutil.h"
 #include "walletmodel.h"
-#include "qt/pivx/qtutils.h"
-#include "qt/pivx/loadingdialog.h"
-#include "qt/pivx/defaultdialog.h"
-#include "qt/pivx/pivxgui.h"
+#include "qt/cari/qtutils.h"
+#include "qt/cari/loadingdialog.h"
+#include "qt/cari/defaultdialog.h"
+#include "qt/cari/carigui.h"
 #include <QDebug>
 
 #include <QKeyEvent>
@@ -190,7 +190,7 @@ void AskPassphraseDialog::accept()
         );
         if (ret) {
             newpassCache = newpass1;
-            PIVXGUI* window = static_cast<PIVXGUI*>(parentWidget());
+            CARIGUI* window = static_cast<CARIGUI*>(parentWidget());
             LoadingDialog *dialog = new LoadingDialog(window);
             dialog->execute(this, 1);
             openDialogWithOpaqueBackgroundFullScreen(dialog, window);
@@ -310,7 +310,7 @@ bool AskPassphraseDialog::eventFilter(QObject* object, QEvent* event)
 
 bool AskPassphraseDialog::openStandardDialog(QString title, QString body, QString okBtn, QString cancelBtn)
 {
-    PIVXGUI* gui = static_cast<PIVXGUI*>(parentWidget());
+    CARIGUI* gui = static_cast<CARIGUI*>(parentWidget());
     DefaultDialog *confirmDialog = new DefaultDialog(gui);
     confirmDialog->setText(title, body, okBtn, cancelBtn);
     confirmDialog->adjustSize();
@@ -343,13 +343,13 @@ void AskPassphraseDialog::updateWarningsLabel()
 void AskPassphraseDialog::warningMessage()
 {
     hide();
-    static_cast<PIVXGUI*>(parentWidget())->showHide(true);
+    static_cast<CARIGUI*>(parentWidget())->showHide(true);
     openStandardDialog(
             tr("Wallet encrypted"),
             "<qt>" +
-            tr("PIVX will close now to finish the encryption process. "
+            tr("CARI will close now to finish the encryption process. "
                "Remember that encrypting your wallet cannot fully protect "
-               "your PIVs from being stolen by malware infecting your computer.") +
+               "your CARIs from being stolen by malware infecting your computer.") +
             "<br><br><b>" +
             tr("IMPORTANT: Any previous backups you have made of your wallet file "
                "should be replaced with the newly generated, encrypted wallet file. "

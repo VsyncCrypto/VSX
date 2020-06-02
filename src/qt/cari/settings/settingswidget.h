@@ -6,20 +6,20 @@
 #define SETTINGSWIDGET_H
 
 #include <QWidget>
-#include "qt/pivx/pwidget.h"
-#include "qt/pivx/settings/settingsbackupwallet.h"
-#include "qt/pivx/settings/settingsexportcsv.h"
-#include "qt/pivx/settings/settingsbittoolwidget.h"
-#include "qt/pivx/settings/settingssignmessagewidgets.h"
-#include "qt/pivx/settings/settingswalletrepairwidget.h"
-#include "qt/pivx/settings/settingswalletoptionswidget.h"
-#include "qt/pivx/settings/settingsmainoptionswidget.h"
-#include "qt/pivx/settings/settingsdisplayoptionswidget.h"
-#include "qt/pivx/settings/settingsmultisendwidget.h"
-#include "qt/pivx/settings/settingsinformationwidget.h"
-#include "qt/pivx/settings/settingsconsolewidget.h"
+#include "qt/cari/pwidget.h"
+#include "qt/cari/settings/settingsbackupwallet.h"
+#include "qt/cari/settings/settingsexportcsv.h"
+#include "qt/cari/settings/settingsbittoolwidget.h"
+#include "qt/cari/settings/settingssignmessagewidgets.h"
+#include "qt/cari/settings/settingswalletrepairwidget.h"
+#include "qt/cari/settings/settingswalletoptionswidget.h"
+#include "qt/cari/settings/settingsmainoptionswidget.h"
+#include "qt/cari/settings/settingsdisplayoptionswidget.h"
+#include "qt/cari/settings/settingsmultisendwidget.h"
+#include "qt/cari/settings/settingsinformationwidget.h"
+#include "qt/cari/settings/settingsconsolewidget.h"
 
-class PIVXGUI;
+class CARIGUI;
 
 QT_BEGIN_NAMESPACE
 class QDataWidgetMapper;
@@ -34,7 +34,7 @@ class SettingsWidget : public PWidget
     Q_OBJECT
 
 public:
-    explicit SettingsWidget(PIVXGUI* parent);
+    explicit SettingsWidget(CARIGUI* parent);
     ~SettingsWidget();
 
     void loadClientModel() override;

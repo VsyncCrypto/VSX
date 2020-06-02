@@ -78,7 +78,7 @@
             <item alignment="Qt::AlignTop">
              <widget class="QLabel" name="labelSubtitle1">
               <property name="text">
-               <string>Scan the QR code or copy the address to receive PIV</string>
+               <string>Scan the QR code or copy the address to receive CARI</string>
               </property>
              </widget>
             </item>
@@ -458,7 +458,7 @@
   <customwidget>
    <class>OptionButton</class>
    <extends>QWidget</extends>
-   <header>qt/pivx/optionbutton.h</header>
+   <header>qt/cari/optionbutton.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

@@ -2,11 +2,11 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "qt/pivx/requestdialog.h"
-#include "qt/pivx/forms/ui_requestdialog.h"
+#include "qt/cari/requestdialog.h"
+#include "qt/cari/forms/ui_requestdialog.h"
 #include <QListView>
 
-#include "qt/pivx/qtutils.h"
+#include "qt/cari/qtutils.h"
 #include "guiutil.h"
 #include "amount.h"
 #include "pairresult.h"

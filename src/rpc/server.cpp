@@ -269,11 +269,11 @@ UniValue stop(const UniValue& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw std::runtime_error(
             "stop\n"
-            "\nStop PIVX server.");
+            "\nStop CARI server.");
     // Event loop will exit after current HTTP requests have been handled, so
     // this reply will get back to the client.
     StartShutdown();
-    return "PIVX server stopping";
+    return "CARI server stopping";
 }
 
 
@@ -362,34 +362,34 @@ static const CRPCCommand vRPCCommands[] =
         { "hidden",             "waitforblock",           &waitforblock,           true,  true,  false  },
         { "hidden",             "waitforblockheight",     &waitforblockheight,     true,  true,  false  },
 
-        /* PIVX features */
-        {"pivx", "listmasternodes", &listmasternodes, true, true, false},
-        {"pivx", "getmasternodecount", &getmasternodecount, true, true, false},
-        {"pivx", "masternodeconnect", &masternodeconnect, true, true, false},
-        {"pivx", "createmasternodebroadcast", &createmasternodebroadcast, true, true, false},
-        {"pivx", "decodemasternodebroadcast", &decodemasternodebroadcast, true, true, false},
-        {"pivx", "relaymasternodebroadcast", &relaymasternodebroadcast, true, true, false},
-        {"pivx", "masternodecurrent", &masternodecurrent, true, true, false},
-        {"pivx", "masternodedebug", &masternodedebug, true, true, false},
-        {"pivx", "startmasternode", &startmasternode, true, true, false},
-        {"pivx", "createmasternodekey", &createmasternodekey, true, true, false},
-        {"pivx", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
-        {"pivx", "listmasternodeconf", &listmasternodeconf, true, true, false},
-        {"pivx", "getmasternodestatus", &getmasternodestatus, true, true, false},
-        {"pivx", "getmasternodewinners", &getmasternodewinners, true, true, false},
-        {"pivx", "getmasternodescores", &getmasternodescores, true, true, false},
-        {"pivx", "preparebudget", &preparebudget, true, true, false},
-        {"pivx", "submitbudget", &submitbudget, true, true, false},
-        {"pivx", "mnbudgetvote", &mnbudgetvote, true, true, false},
-        {"pivx", "getbudgetvotes", &getbudgetvotes, true, true, false},
-        {"pivx", "getnextsuperblock", &getnextsuperblock, true, true, false},
-        {"pivx", "getbudgetprojection", &getbudgetprojection, true, true, false},
-        {"pivx", "getbudgetinfo", &getbudgetinfo, true, true, false},
-        {"pivx", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
-        {"pivx", "mnfinalbudget", &mnfinalbudget, true, true, false},
-        {"pivx", "checkbudgets", &checkbudgets, true, true, false},
-        {"pivx", "mnsync", &mnsync, true, true, false},
-        {"pivx", "spork", &spork, true, true, false},
+        /* CARI features */
+        {"cari", "listmasternodes", &listmasternodes, true, true, false},
+        {"cari", "getmasternodecount", &getmasternodecount, true, true, false},
+        {"cari", "masternodeconnect", &masternodeconnect, true, true, false},
+        {"cari", "createmasternodebroadcast", &createmasternodebroadcast, true, true, false},
+        {"cari", "decodemasternodebroadcast", &decodemasternodebroadcast, true, true, false},
+        {"cari", "relaymasternodebroadcast", &relaymasternodebroadcast, true, true, false},
+        {"cari", "masternodecurrent", &masternodecurrent, true, true, false},
+        {"cari", "masternodedebug", &masternodedebug, true, true, false},
+        {"cari", "startmasternode", &startmasternode, true, true, false},
+        {"cari", "createmasternodekey", &createmasternodekey, true, true, false},
+        {"cari", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
+        {"cari", "listmasternodeconf", &listmasternodeconf, true, true, false},
+        {"cari", "getmasternodestatus", &getmasternodestatus, true, true, false},
+        {"cari", "getmasternodewinners", &getmasternodewinners, true, true, false},
+        {"cari", "getmasternodescores", &getmasternodescores, true, true, false},
+        {"cari", "preparebudget", &preparebudget, true, true, false},
+        {"cari", "submitbudget", &submitbudget, true, true, false},
+        {"cari", "mnbudgetvote", &mnbudgetvote, true, true, false},
+        {"cari", "getbudgetvotes", &getbudgetvotes, true, true, false},
+        {"cari", "getnextsuperblock", &getnextsuperblock, true, true, false},
+        {"cari", "getbudgetprojection", &getbudgetprojection, true, true, false},
+        {"cari", "getbudgetinfo", &getbudgetinfo, true, true, false},
+        {"cari", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
+        {"cari", "mnfinalbudget", &mnfinalbudget, true, true, false},
+        {"cari", "checkbudgets", &checkbudgets, true, true, false},
+        {"cari", "mnsync", &mnsync, true, true, false},
+        {"cari", "spork", &spork, true, true, false},
 
 #ifdef ENABLE_WALLET
         /* Wallet */
@@ -471,11 +471,11 @@ static const CRPCCommand vRPCCommands[] =
         {"zerocoin", "exportzerocoins", &exportzerocoins, false, false, true},
         {"zerocoin", "reconsiderzerocoins", &reconsiderzerocoins, false, false, true},
         {"zerocoin", "getspentzerocoinamount", &getspentzerocoinamount, false, false, false},
-        {"zerocoin", "getzpivseed", &getzpivseed, false, false, true},
-        {"zerocoin", "setzpivseed", &setzpivseed, false, false, true},
+        {"zerocoin", "getzcariseed", &getzcariseed, false, false, true},
+        {"zerocoin", "setzcariseed", &setzcariseed, false, false, true},
         {"zerocoin", "generatemintlist", &generatemintlist, false, false, true},
-        {"zerocoin", "searchdzpiv", &searchdzpiv, false, false, true},
-        {"zerocoin", "dzpivstate", &dzpivstate, false, false, true},
+        {"zerocoin", "searchdzcari", &searchdzcari, false, false, true},
+        {"zerocoin", "dzcaristate", &dzcaristate, false, false, true},
 
 #endif // ENABLE_WALLET
 };
@@ -639,7 +639,7 @@ std::vector<std::string> CRPCTable::listCommands() const
 
 std::string HelpExampleCli(std::string methodname, std::string args)
 {
-    return "> pivx-cli " + methodname + " " + args + "\n";
+    return "> cari-cli " + methodname + " " + args + "\n";
 }
 
 std::string HelpExampleRpc(std::string methodname, std::string args)

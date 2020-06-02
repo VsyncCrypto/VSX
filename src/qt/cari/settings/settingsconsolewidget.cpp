@@ -2,10 +2,10 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "qt/pivx/settings/settingsconsolewidget.h"
-#include "qt/pivx/settings/forms/ui_settingsconsolewidget.h"
+#include "qt/cari/settings/settingsconsolewidget.h"
+#include "qt/cari/settings/forms/ui_settingsconsolewidget.h"
 #include "QGraphicsDropShadowEffect"
-#include "qt/pivx/qtutils.h"
+#include "qt/cari/qtutils.h"
 
 #include "clientmodel.h"
 #include "guiutil.h"
@@ -36,7 +36,7 @@
 #include <QTime>
 #include <QTimer>
 #include <QStringList>
-#include "qt/pivx/qtutils.h"
+#include "qt/cari/qtutils.h"
 #include "utilitydialog.h"
 
 const int CONSOLE_HISTORY = 50;
@@ -96,7 +96,7 @@ public:
     }
 };
 
-#include "qt/pivx/settings/moc_settingsconsolewidget.cpp"
+#include "qt/cari/settings/moc_settingsconsolewidget.cpp"
 
 /**
  * Split shell command line into a list of arguments. Aims to emulate \c bash and friends.
@@ -237,7 +237,7 @@ void RPCExecutor::requestCommand(const QString& command)
     }
 }
 
-SettingsConsoleWidget::SettingsConsoleWidget(PIVXGUI* _window, QWidget *parent) :
+SettingsConsoleWidget::SettingsConsoleWidget(CARIGUI* _window, QWidget *parent) :
     PWidget(_window,parent),
     ui(new Ui::SettingsConsoleWidget)
 {
@@ -416,7 +416,7 @@ void SettingsConsoleWidget::clear(bool clearHistory)
     QString clsKey = "Ctrl-L";
 #endif
 
-    message(CMD_REPLY, (tr("Welcome to the PIVX RPC console.") + "<br>" +
+    message(CMD_REPLY, (tr("Welcome to the CARI RPC console.") + "<br>" +
                         tr("Use up and down arrows to navigate history, and %1 to clear screen.").arg("<b>"+clsKey+"</b>") + "<br>" +
                         tr("Type <b>help</b> for an overview of available commands.") +
                         "<br><span class=\"secwarning\"><br>" +

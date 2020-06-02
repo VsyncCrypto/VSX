@@ -2,16 +2,16 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "qt/pivx/sendcustomfeedialog.h"
-#include "qt/pivx/forms/ui_sendcustomfeedialog.h"
-#include "qt/pivx/qtutils.h"
+#include "qt/cari/sendcustomfeedialog.h"
+#include "qt/cari/forms/ui_sendcustomfeedialog.h"
+#include "qt/cari/qtutils.h"
 #include "walletmodel.h"
 #include "optionsmodel.h"
 #include "guiutil.h"
 #include <QListView>
 #include <QComboBox>
 
-SendCustomFeeDialog::SendCustomFeeDialog(PIVXGUI* parent, WalletModel* model) :
+SendCustomFeeDialog::SendCustomFeeDialog(CARIGUI* parent, WalletModel* model) :
     FocusedDialog(parent),
     ui(new Ui::SendCustomFeeDialog),
     walletModel(model)
@@ -54,7 +54,7 @@ SendCustomFeeDialog::SendCustomFeeDialog(PIVXGUI* parent, WalletModel* model) :
     connect(ui->comboBoxRecommended, static_cast<void (QComboBox::*)(const QString &)>(&QComboBox::currentIndexChanged),
         this, &SendCustomFeeDialog::updateFee);
     if (parent)
-        connect(parent, &PIVXGUI::themeChanged, this, &SendCustomFeeDialog::onChangeTheme);
+        connect(parent, &CARIGUI::themeChanged, this, &SendCustomFeeDialog::onChangeTheme);
     ui->checkBoxRecommended->setChecked(true);
 }
 

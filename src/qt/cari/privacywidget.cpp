@@ -2,11 +2,11 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "qt/pivx/privacywidget.h"
-#include "qt/pivx/forms/ui_privacywidget.h"
-#include "qt/pivx/qtutils.h"
+#include "qt/cari/privacywidget.h"
+#include "qt/cari/forms/ui_privacywidget.h"
+#include "qt/cari/qtutils.h"
 #include "guiutil.h"
-#include "qt/pivx/txviewholder.h"
+#include "qt/cari/txviewholder.h"
 #include "walletmodel.h"
 #include "optionsmodel.h"
 #include "coincontroldialog.h"
@@ -15,7 +15,7 @@
 #define DECORATION_SIZE 65
 #define NUM_ITEMS 3
 
-PrivacyWidget::PrivacyWidget(PIVXGUI* parent) :
+PrivacyWidget::PrivacyWidget(CARIGUI* parent) :
     PWidget(parent),
     ui(new Ui::PrivacyWidget)
 {
@@ -70,24 +70,24 @@ PrivacyWidget::PrivacyWidget(PIVXGUI* parent) :
     // Buttons
     setCssBtnPrimary(ui->pushButtonSave);
 
-    // Only Convert to PIV enabled.
+    // Only Convert to CARI enabled.
     ui->containerViewPrivacyChecks->setVisible(false);
     onMintSelected(false);
 
-    ui->btnTotalzPIV->setTitleClassAndText("btn-title-grey", tr("Total 0 zPIV"));
-    ui->btnTotalzPIV->setSubTitleClassAndText("text-subtitle", tr("Show denominations of zPIV owned."));
-    ui->btnTotalzPIV->setRightIconClass("ic-arrow");
+    ui->btnTotalzCARI->setTitleClassAndText("btn-title-grey", tr("Total 0 zCARI"));
+    ui->btnTotalzCARI->setSubTitleClassAndText("text-subtitle", tr("Show denominations of zCARI owned."));
+    ui->btnTotalzCARI->setRightIconClass("ic-arrow");
 
     ui->btnCoinControl->setTitleClassAndText("btn-title-grey", tr("Coin Control"));
-    ui->btnCoinControl->setSubTitleClassAndText("text-subtitle", tr("Select PIV outputs to mint into zPIV."));
+    ui->btnCoinControl->setSubTitleClassAndText("text-subtitle", tr("Select CARI outputs to mint into zCARI."));
 
     ui->btnRescanMints->setTitleClassAndText("btn-title-grey", tr("Rescan Mints"));
     ui->btnRescanMints->setSubTitleClassAndText("text-subtitle", tr("Find mints in the blockchain."));
 
-    ui->btnResetZerocoin->setTitleClassAndText("btn-title-grey", tr("Reset Spent zPIV"));
+    ui->btnResetZerocoin->setTitleClassAndText("btn-title-grey", tr("Reset Spent zCARI"));
     ui->btnResetZerocoin->setSubTitleClassAndText("text-subtitle", tr("Reset zerocoin database."));
 
-    connect(ui->btnTotalzPIV, &OptionButton::clicked, this, &PrivacyWidget::onTotalZpivClicked);
+    connect(ui->btnTotalzCARI, &OptionButton::clicked, this, &PrivacyWidget::onTotalZcariClicked);
     connect(ui->btnCoinControl, &OptionButton::clicked, this, &PrivacyWidget::onCoinControlClicked);
     connect(ui->btnRescanMints, &OptionButton::clicked, this, &PrivacyWidget::onRescanMintsClicked);
     connect(ui->btnResetZerocoin, &OptionButton::clicked, this, &PrivacyWidget::onResetZeroClicked);
@@ -151,13 +151,13 @@ void PrivacyWidget::onMintSelected(bool isMint)
 {
     QString btnText;
     if (isMint) {
-        btnText = tr("Mint zPIV");
+        btnText = tr("Mint zCARI");
         ui->btnCoinControl->setVisible(true);
-        ui->labelSubtitleAmount->setText(tr("Enter amount of PIV to mint into zPIV"));
+        ui->labelSubtitleAmount->setText(tr("Enter amount of CARI to mint into zCARI"));
     } else {
-        btnText = tr("Convert back to PIV");
+        btnText = tr("Convert back to CARI");
         ui->btnCoinControl->setVisible(false);
-        ui->labelSubtitleAmount->setText(tr("Enter amount of zPIV to convert back into PIV"));
+        ui->labelSubtitleAmount->setText(tr("Enter amount of zCARI to convert back into CARI"));
     }
     ui->pushButtonSave->setText(btnText);
 }
@@ -178,15 +178,15 @@ void PrivacyWidget::showList()
     ui->listView->setVisible(true);
 }
 
-void PrivacyWidget::onTotalZpivClicked()
+void PrivacyWidget::onTotalZcariClicked()
 {
     bool isVisible = ui->layoutDenom->isVisible();
     if (!isVisible) {
         ui->layoutDenom->setVisible(true);
-        ui->btnTotalzPIV->setRightIconClass("btn-dropdown", true);
+        ui->btnTotalzCARI->setRightIconClass("btn-dropdown", true);
     } else {
         ui->layoutDenom->setVisible(false);
-        ui->btnTotalzPIV->setRightIconClass("ic-arrow", true);
+        ui->btnTotalzCARI->setRightIconClass("ic-arrow", true);
     }
 }
 
@@ -196,7 +196,7 @@ void PrivacyWidget::onSendClicked()
         return;
 
     if (sporkManager.IsSporkActive(SPORK_16_ZEROCOIN_MAINTENANCE_MODE)) {
-        warn(tr("Zerocoin"), tr("zPIV is currently undergoing maintenance"));
+        warn(tr("Zerocoin"), tr("zCARI is currently undergoing maintenance"));
         return;
     }
 
@@ -205,7 +205,7 @@ void PrivacyWidget::onSendClicked()
 
     WalletModel::UnlockContext ctx(walletModel->requestUnlock());
     if (!ctx.isValid()) {
-        inform(tr("You need to unlock the wallet to be able to %1 zPIV").arg(isConvert ? tr("convert") : tr("mint")));
+        inform(tr("You need to unlock the wallet to be able to %1 zCARI").arg(isConvert ? tr("convert") : tr("mint")));
         return;
     }
 
@@ -237,7 +237,7 @@ void PrivacyWidget::mint(CAmount value)
         inform(tr(strError.data()));
     } else {
         // Mint succeed
-        inform(tr("zPIV minted successfully"));
+        inform(tr("zCARI minted successfully"));
         // clear
         ui->lineEditAmount->clear();
     }
@@ -248,7 +248,7 @@ void PrivacyWidget::spend(CAmount value)
     CZerocoinSpendReceipt receipt;
     std::vector<CZerocoinMint> selectedMints;
 
-    if (!walletModel->convertBackZpiv(
+    if (!walletModel->convertBackZcari(
             value,
             selectedMints,
             receipt
@@ -256,7 +256,7 @@ void PrivacyWidget::spend(CAmount value)
         inform(receipt.GetStatusMessage().data());
     } else {
         // Spend succeed
-        inform(tr("zPIV converted back to PIV"));
+        inform(tr("zCARI converted back to CARI"));
         // clear
         ui->lineEditAmount->clear();
     }
@@ -276,7 +276,7 @@ void PrivacyWidget::onCoinControlClicked()
             coinControlDialog->exec();
             ui->btnCoinControl->setActive(CoinControlDialog::coinControl->HasSelected());
         } else {
-            inform(tr("You don't have any PIV to select."));
+            inform(tr("You don't have any CARI to select."));
         }
     }
 }
@@ -293,7 +293,7 @@ void PrivacyWidget::onRescanMintsClicked()
 
 void PrivacyWidget::onResetZeroClicked()
 {
-    if (ask(tr("Reset Spent zPIV"),
+    if (ask(tr("Reset Spent zCARI"),
         tr("Your zerocoin spends are going to be scanned from the blockchain from scratch"))
     ) {
         std::string strResetMintResult = walletModel->resetSpentZerocoin();
@@ -355,7 +355,7 @@ void PrivacyWidget::updateDenomsSupply()
 
         strDenomStats = strUnconfirmed + QString::number(mapDenomBalances.at(denom)) + " x " +
                         QString::number(nCoins) + " = <b>" +
-                        QString::number(nSumPerCoin) + " zPIV </b>";
+                        QString::number(nSumPerCoin) + " zCARI </b>";
 
         switch (nCoins) {
             case libzerocoin::CoinDenomination::ZQ_ONE:
@@ -389,7 +389,7 @@ void PrivacyWidget::updateDenomsSupply()
     }
 
     CAmount matureZerocoinBalance = walletModel->getZerocoinBalance() - walletModel->getUnconfirmedZerocoinBalance() - walletModel->getImmatureZerocoinBalance();
-    ui->btnTotalzPIV->setTitleText(tr("Total %1").arg(GUIUtil::formatBalance(matureZerocoinBalance, nDisplayUnit, true)));
+    ui->btnTotalzCARI->setTitleText(tr("Total %1").arg(GUIUtil::formatBalance(matureZerocoinBalance, nDisplayUnit, true)));
 }
 
 void PrivacyWidget::changeTheme(bool isLightTheme, QString& theme)

@@ -8,7 +8,7 @@
 #include <QDialog>
 #include <QResizeEvent>
 
-class PIVXGUI;
+class CARIGUI;
 
 namespace Ui {
 class SnackBar;
@@ -19,7 +19,7 @@ class SnackBar : public QDialog
     Q_OBJECT
 
 public:
-    explicit SnackBar(PIVXGUI* _window = nullptr, QWidget *parent = nullptr);
+    explicit SnackBar(CARIGUI* _window = nullptr, QWidget *parent = nullptr);
     ~SnackBar();
 
     virtual void showEvent(QShowEvent *event) override;
@@ -30,7 +30,7 @@ private Q_SLOTS:
     void windowResizeEvent(QResizeEvent* event);
 private:
     Ui::SnackBar *ui;
-    PIVXGUI* window = nullptr;
+    CARIGUI* window = nullptr;
     int timeout;
     // timeout based on message length, always between 2 (default) and 10 seconds.
     static const int MIN_TIMEOUT = 2000;          // < 40 chars

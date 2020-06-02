@@ -10,7 +10,7 @@
 #include "guiutil.h"
 
 #include "util.h"
-#include "qt/pivx/qtutils.h"
+#include "qt/cari/qtutils.h"
 
 #include <boost/filesystem.hpp>
 
@@ -199,7 +199,7 @@ bool Intro::pickDataDirectory()
                 TryCreateDirectory(GUIUtil::qstringToBoostPath(dataDir));
                 break;
             } catch (const fs::filesystem_error& e) {
-                QMessageBox::critical(0, tr("PIVX Core"),
+                QMessageBox::critical(0, tr("CARI Core"),
                     tr("Error: Specified data directory \"%1\" cannot be created.").arg(dataDir));
                 // fall through, back to choosing screen
             }
@@ -209,8 +209,8 @@ bool Intro::pickDataDirectory()
     }
 
     /* Only override -datadir if different from the default, to make it possible to
-     * override -datadir in the pivx.conf file in the default data directory
-     * (to be consistent with pivxd behavior)
+     * override -datadir in the cari.conf file in the default data directory
+     * (to be consistent with carid behavior)
      */
 
     if (dataDir != getDefaultDataDirectory())

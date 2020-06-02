@@ -5,11 +5,11 @@
 #ifndef TOOLTIPMENU_H
 #define TOOLTIPMENU_H
 
-#include "qt/pivx/pwidget.h"
+#include "qt/cari/pwidget.h"
 #include <QWidget>
 #include <QModelIndex>
 
-class PIVXGUI;
+class CARIGUI;
 class WalletModel;
 
 namespace Ui {
@@ -25,7 +25,7 @@ class TooltipMenu : public PWidget
     Q_OBJECT
 
 public:
-    explicit TooltipMenu(PIVXGUI* _window, QWidget *parent = nullptr);
+    explicit TooltipMenu(CARIGUI* _window, QWidget *parent = nullptr);
     ~TooltipMenu() override;
 
     void setIndex(const QModelIndex &index);

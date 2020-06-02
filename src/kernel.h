@@ -5,8 +5,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef PIVX_KERNEL_H
-#define PIVX_KERNEL_H
+#ifndef CARI_KERNEL_H
+#define CARI_KERNEL_H
 
 #include "main.h"
 #include "stakeinput.h"
@@ -75,4 +75,4 @@ bool CheckProofOfStake(const CBlock& block, std::string& strError, const CBlockI
  */
 bool GetStakeKernelHash(uint256& hashRet, const CBlock& block, const CBlockIndex* pindexPrev = nullptr);
 
-#endif // PIVX_KERNEL_H
+#endif // CARI_KERNEL_H

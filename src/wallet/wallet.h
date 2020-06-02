@@ -20,7 +20,7 @@
 #include "pairresult.h"
 #include "primitives/block.h"
 #include "primitives/transaction.h"
-#include "zpiv/zerocoin.h"
+#include "zcari/zerocoin.h"
 #include "guiinterface.h"
 #include "util.h"
 #include "util/memory.h"
@@ -28,9 +28,9 @@
 #include "wallet/wallet_ismine.h"
 #include "wallet/scriptpubkeyman.h"
 #include "wallet/walletdb.h"
-#include "zpiv/zpivmodule.h"
-#include "zpiv/zpivwallet.h"
-#include "zpiv/zpivtracker.h"
+#include "zcari/zcarimodule.h"
+#include "zcari/zcariwallet.h"
+#include "zcari/zcaritracker.h"
 
 #include <algorithm>
 #include <map>
@@ -82,7 +82,7 @@ enum WalletFeature {
     FEATURE_WALLETCRYPT = 40000, // wallet encryption
     FEATURE_COMPRPUBKEY = 60000, // compressed public keys
 
-    FEATURE_PRE_PIVX = 61000, // inherited version..
+    FEATURE_PRE_CARI = 61000, // inherited version..
 
     // The following features were implemented in BTC but not in our wallet, we can simply skip them.
     // FEATURE_HD = 130000,  Hierarchical key derivation after BIP32 (HD Wallet)
@@ -99,25 +99,25 @@ enum AvailableCoinsType {
     STAKEABLE_COINS = 6                             // UTXO's that are valid for staking
 };
 
-// Possible states for zPIV send
+// Possible states for zCARI send
 enum ZerocoinSpendStatus {
-    ZPIV_SPEND_OKAY = 0,                            // No error
-    ZPIV_SPEND_ERROR = 1,                           // Unspecified class of errors, more details are (hopefully) in the returning text
-    ZPIV_WALLET_LOCKED = 2,                         // Wallet was locked
-    ZPIV_COMMIT_FAILED = 3,                         // Commit failed, reset status
-    ZPIV_ERASE_SPENDS_FAILED = 4,                   // Erasing spends during reset failed
-    ZPIV_ERASE_NEW_MINTS_FAILED = 5,                // Erasing new mints during reset failed
-    ZPIV_TRX_FUNDS_PROBLEMS = 6,                    // Everything related to available funds
-    ZPIV_TRX_CREATE = 7,                            // Everything related to create the transaction
-    ZPIV_TRX_CHANGE = 8,                            // Everything related to transaction change
-    ZPIV_TXMINT_GENERAL = 9,                        // General errors in MintsToInputVectorPublicSpend
-    ZPIV_INVALID_COIN = 10,                         // Selected mint coin is not valid
-    ZPIV_FAILED_ACCUMULATOR_INITIALIZATION = 11,    // Failed to initialize witness
-    ZPIV_INVALID_WITNESS = 12,                      // Spend coin transaction did not verify
-    ZPIV_BAD_SERIALIZATION = 13,                    // Transaction verification failed
-    ZPIV_SPENT_USED_ZPIV = 14,                      // Coin has already been spend
-    ZPIV_TX_TOO_LARGE = 15,                         // The transaction is larger than the max tx size
-    ZPIV_SPEND_V1_SEC_LEVEL                         // Spend is V1 and security level is not set to 100
+    ZCARI_SPEND_OKAY = 0,                            // No error
+    ZCARI_SPEND_ERROR = 1,                           // Unspecified class of errors, more details are (hopefully) in the returning text
+    ZCARI_WALLET_LOCKED = 2,                         // Wallet was locked
+    ZCARI_COMMIT_FAILED = 3,                         // Commit failed, reset status
+    ZCARI_ERASE_SPENDS_FAILED = 4,                   // Erasing spends during reset failed
+    ZCARI_ERASE_NEW_MINTS_FAILED = 5,                // Erasing new mints during reset failed
+    ZCARI_TRX_FUNDS_PROBLEMS = 6,                    // Everything related to available funds
+    ZCARI_TRX_CREATE = 7,                            // Everything related to create the transaction
+    ZCARI_TRX_CHANGE = 8,                            // Everything related to transaction change
+    ZCARI_TXMINT_GENERAL = 9,                        // General errors in MintsToInputVectorPublicSpend
+    ZCARI_INVALID_COIN = 10,                         // Selected mint coin is not valid
+    ZCARI_FAILED_ACCUMULATOR_INITIALIZATION = 11,    // Failed to initialize witness
+    ZCARI_INVALID_WITNESS = 12,                      // Spend coin transaction did not verify
+    ZCARI_BAD_SERIALIZATION = 13,                    // Transaction verification failed
+    ZCARI_SPENT_USED_ZCARI = 14,                      // Coin has already been spend
+    ZCARI_TX_TOO_LARGE = 15,                         // The transaction is larger than the max tx size
+    ZCARI_SPEND_V1_SEC_LEVEL                         // Spend is V1 and security level is not set to 100
 };
 
 struct CompactTallyItem {
@@ -293,7 +293,7 @@ public:
     // Staker status (last hashed block and time)
     CStakerStatus* pStakerStatus = nullptr;
 
-    // User-defined fee PIV/kb
+    // User-defined fee CARI/kb
     bool fUseCustomFee;
     CAmount nCustomFee;
 
@@ -362,7 +362,7 @@ public:
 
     std::map<CBitcoinAddress, std::vector<COutput> > AvailableCoinsByAddress(bool fConfirmed = true, CAmount maxCoinValue = 0);
 
-    /// Get 10000 PIV output and keys which can be used for the Masternode
+    /// Get 10000 CARI output and keys which can be used for the Masternode
     bool GetMasternodeVinAndKeys(CTxIn& txinRet, CPubKey& pubKeyRet, CKey& keyRet, std::string strTxHash = "", std::string strOutputIndex = "");
     /// Extract txin information and keys from output
     bool GetVinAndKeysFromOutput(COutput out, CTxIn& txinRet, CPubKey& pubKeyRet, CKey& keyRet, bool fColdStake = false);
@@ -582,7 +582,7 @@ public:
     //- ZC Mints (Only for regtest)
     std::string MintZerocoin(CAmount nValue, CWalletTx& wtxNew, std::vector<CDeterministicMint>& vDMints, const CCoinControl* coinControl = NULL);
     std::string MintZerocoinFromOutPoint(CAmount nValue, CWalletTx& wtxNew, std::vector<CDeterministicMint>& vDMints, const std::vector<COutPoint> vOutpts);
-    bool CreateZPIVOutPut(libzerocoin::CoinDenomination denomination, CTxOut& outMint, CDeterministicMint& dMint);
+    bool CreateZCARIOutPut(libzerocoin::CoinDenomination denomination, CTxOut& outMint, CDeterministicMint& dMint);
     bool CreateZerocoinMintTransaction(const CAmount nValue,
             CMutableTransaction& txNew,
             std::vector<CDeterministicMint>& vDMints,
@@ -609,11 +609,11 @@ public:
     CAmount GetImmatureZerocoinBalance() const;
     std::map<libzerocoin::CoinDenomination, CAmount> GetMyZerocoinDistribution() const;
 
-    // zPIV wallet
-    CzPIVWallet* zwalletMain{nullptr};
-    std::unique_ptr<CzPIVTracker> zpivTracker{nullptr};
-    void setZWallet(CzPIVWallet* zwallet);
-    CzPIVWallet* getZWallet();
+    // zCARI wallet
+    CzCARIWallet* zwalletMain{nullptr};
+    std::unique_ptr<CzCARITracker> zcariTracker{nullptr};
+    void setZWallet(CzCARIWallet* zwallet);
+    CzCARIWallet* getZWallet();
     bool IsMyZerocoinSpend(const CBigNum& bnSerial) const;
     bool IsMyMint(const CBigNum& bnValue) const;
     std::string ResetMintZerocoin();
@@ -627,8 +627,8 @@ public:
     bool UpdateMint(const CBigNum& bnValue, const int& nHeight, const uint256& txid, const libzerocoin::CoinDenomination& denom);
     // Zerocoin entry changed. (called with lock cs_wallet held)
     boost::signals2::signal<void(CWallet* wallet, const std::string& pubCoin, const std::string& isUsed, ChangeType status)> NotifyZerocoinChanged;
-    // zPIV reset
-    boost::signals2::signal<void()> NotifyzPIVReset;
+    // zCARI reset
+    boost::signals2::signal<void()> NotifyzCARIReset;
 
     /* Wallets parameter interaction */
     static bool ParameterInteraction();

@@ -81,7 +81,7 @@
             <item>
              <widget class="QLabel" name="labelSubtitle1">
               <property name="text">
-               <string>You can transfer public coins (PIV) or private coins (zPIV)</string>
+               <string>You can transfer public coins (CARI) or private coins (zCARI)</string>
               </property>
              </widget>
             </item>
@@ -147,7 +147,7 @@
                   <enum>Qt::NoFocus</enum>
                  </property>
                  <property name="text">
-                  <string>PIV</string>
+                  <string>CARI</string>
                  </property>
                  <property name="checkable">
                   <bool>true</bool>
@@ -175,7 +175,7 @@
                   <enum>Qt::NoFocus</enum>
                  </property>
                  <property name="text">
-                  <string>zPIV</string>
+                  <string>zCARI</string>
                  </property>
                  <property name="checkable">
                   <bool>true</bool>
@@ -244,7 +244,7 @@
              <string notr="true">margin-left:8px;</string>
             </property>
             <property name="text">
-             <string>PIVX address or contact label</string>
+             <string>CARI address or contact label</string>
             </property>
            </widget>
           </item>
@@ -567,7 +567,7 @@
                      <item>
                       <widget class="QLabel" name="labelAmountSend">
                        <property name="text">
-                        <string notr="true">0.00 PIV</string>
+                        <string notr="true">0.00 CARI</string>
                        </property>
                       </widget>
                      </item>
@@ -813,7 +813,7 @@
   <customwidget>
    <class>OptionButton</class>
    <extends>QWidget</extends>
-   <header>qt/pivx/optionbutton.h</header>
+   <header>qt/cari/optionbutton.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

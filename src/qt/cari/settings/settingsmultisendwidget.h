@@ -7,10 +7,10 @@
 
 #include <QWidget>
 #include <QAbstractTableModel>
-#include "qt/pivx/pwidget.h"
-#include "qt/pivx/furabstractlistitemdelegate.h"
+#include "qt/cari/pwidget.h"
+#include "qt/cari/furabstractlistitemdelegate.h"
 
-class PIVXGUI;
+class CARIGUI;
 
 namespace Ui {
 class SettingsMultisendWidget;

@@ -57,7 +57,7 @@ UniValue getinfo(const UniValue& params, bool fHelp)
             "  \"version\": xxxxx,             (numeric) the server version\n"
             "  \"protocolversion\": xxxxx,     (numeric) the protocol version\n"
             "  \"walletversion\": xxxxx,       (numeric) the wallet version\n"
-            "  \"balance\": xxxxxxx,           (numeric) the total pivx balance of the wallet (excluding zerocoins)\n"
+            "  \"balance\": xxxxxxx,           (numeric) the total cari balance of the wallet (excluding zerocoins)\n"
             "  \"zerocoinbalance\": xxxxxxx,   (numeric) the total zerocoin balance of the wallet\n"
             "  \"staking status\": true|false, (boolean) if the wallet is staking or not\n"
             "  \"blocks\": xxxxxx,             (numeric) the current number of blocks processed in the server\n"
@@ -67,23 +67,23 @@ UniValue getinfo(const UniValue& params, bool fHelp)
             "  \"difficulty\": xxxxxx,         (numeric) the current difficulty\n"
             "  \"testnet\": true|false,        (boolean) if the server is using testnet or not\n"
             "  \"moneysupply\" : \"supply\"    (numeric) The money supply when this block was added to the blockchain\n"
-            "  \"zPIVsupply\" :\n"
+            "  \"zCARIsupply\" :\n"
             "  {\n"
-            "     \"1\" : n,            (numeric) supply of 1 zPIV denomination\n"
-            "     \"5\" : n,            (numeric) supply of 5 zPIV denomination\n"
-            "     \"10\" : n,           (numeric) supply of 10 zPIV denomination\n"
-            "     \"50\" : n,           (numeric) supply of 50 zPIV denomination\n"
-            "     \"100\" : n,          (numeric) supply of 100 zPIV denomination\n"
-            "     \"500\" : n,          (numeric) supply of 500 zPIV denomination\n"
-            "     \"1000\" : n,         (numeric) supply of 1000 zPIV denomination\n"
-            "     \"5000\" : n,         (numeric) supply of 5000 zPIV denomination\n"
-            "     \"total\" : n,        (numeric) The total supply of all zPIV denominations\n"
+            "     \"1\" : n,            (numeric) supply of 1 zCARI denomination\n"
+            "     \"5\" : n,            (numeric) supply of 5 zCARI denomination\n"
+            "     \"10\" : n,           (numeric) supply of 10 zCARI denomination\n"
+            "     \"50\" : n,           (numeric) supply of 50 zCARI denomination\n"
+            "     \"100\" : n,          (numeric) supply of 100 zCARI denomination\n"
+            "     \"500\" : n,          (numeric) supply of 500 zCARI denomination\n"
+            "     \"1000\" : n,         (numeric) supply of 1000 zCARI denomination\n"
+            "     \"5000\" : n,         (numeric) supply of 5000 zCARI denomination\n"
+            "     \"total\" : n,        (numeric) The total supply of all zCARI denominations\n"
             "  }\n"
             "  \"keypoololdest\": xxxxxx,      (numeric) the timestamp (seconds since GMT epoch) of the oldest pre-generated key in the key pool\n"
             "  \"keypoolsize\": xxxx,          (numeric) how many new keys are pre-generated\n"
             "  \"unlocked_until\": ttt,        (numeric) the timestamp in seconds since epoch (midnight Jan 1 1970 GMT) that the wallet is unlocked for transfers, or 0 if the wallet is locked\n"
-            "  \"paytxfee\": x.xxxx,           (numeric) the transaction fee set in pivx/kb\n"
-            "  \"relayfee\": x.xxxx,           (numeric) minimum relay fee for non-free transactions in pivx/kb\n"
+            "  \"paytxfee\": x.xxxx,           (numeric) the transaction fee set in cari/kb\n"
+            "  \"relayfee\": x.xxxx,           (numeric) minimum relay fee for non-free transactions in cari/kb\n"
             "  \"errors\": \"...\"             (string) any error messages\n"
             "}\n"
 
@@ -145,15 +145,15 @@ UniValue getinfo(const UniValue& params, bool fHelp)
     }
 
     obj.push_back(Pair("moneysupply",ValueFromAmount(nMoneySupply)));
-    UniValue zpivObj(UniValue::VOBJ);
+    UniValue zcariObj(UniValue::VOBJ);
     for (auto denom : libzerocoin::zerocoinDenomList) {
         if (mapZerocoinSupply.empty())
-            zpivObj.push_back(Pair(std::to_string(denom), ValueFromAmount(0)));
+            zcariObj.push_back(Pair(std::to_string(denom), ValueFromAmount(0)));
         else
-            zpivObj.push_back(Pair(std::to_string(denom), ValueFromAmount(mapZerocoinSupply.at(denom) * (denom*COIN))));
+            zcariObj.push_back(Pair(std::to_string(denom), ValueFromAmount(mapZerocoinSupply.at(denom) * (denom*COIN))));
     }
-    zpivObj.push_back(Pair("total", ValueFromAmount(GetZerocoinSupply())));
-    obj.push_back(Pair("zPIVsupply", zpivObj));
+    zcariObj.push_back(Pair("total", ValueFromAmount(GetZerocoinSupply())));
+    obj.push_back(Pair("zCARIsupply", zcariObj));
 
 #ifdef ENABLE_WALLET
     if (pwalletMain) {
@@ -353,19 +353,19 @@ UniValue validateaddress(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 1)
         throw std::runtime_error(
-            "validateaddress \"pivxaddress\"\n"
-            "\nReturn information about the given pivx address.\n"
+            "validateaddress \"cariaddress\"\n"
+            "\nReturn information about the given cari address.\n"
 
             "\nArguments:\n"
-            "1. \"pivxaddress\"     (string, required) The pivx address to validate\n"
+            "1. \"cariaddress\"     (string, required) The cari address to validate\n"
 
             "\nResult:\n"
             "{\n"
             "  \"isvalid\" : true|false,         (boolean) If the address is valid or not. If not, this is the only property returned.\n"
-            "  \"address\" : \"pivxaddress\",    (string) The pivx address validated\n"
+            "  \"address\" : \"cariaddress\",    (string) The cari address validated\n"
             "  \"scriptPubKey\" : \"hex\",       (string) The hex encoded scriptPubKey generated by the address\n"
             "  \"ismine\" : true|false,          (boolean) If the address is yours or not\n"
-            "  \"isstaking\" : true|false,       (boolean) If the address is a staking address for PIVX cold staking\n"
+            "  \"isstaking\" : true|false,       (boolean) If the address is a staking address for CARI cold staking\n"
             "  \"iswatchonly\" : true|false,     (boolean) If the address is watchonly\n"
             "  \"isscript\" : true|false,        (boolean) If the key is a script\n"
             "  \"hex\" : \"hex\",                (string, optional) The redeemscript for the P2SH address\n"
@@ -432,7 +432,7 @@ CScript _createmultisig_redeemScript(const UniValue& params)
     for (unsigned int i = 0; i < keys.size(); i++) {
         const std::string& ks = keys[i].get_str();
 #ifdef ENABLE_WALLET
-        // Case 1: PIVX address and we have full public key:
+        // Case 1: CARI address and we have full public key:
         CTxDestination dest = DecodeDestination(ks);
         if (pwalletMain && IsValidDestination(dest)) {
             const CKeyID* keyID = boost::get<CKeyID>(&dest);
@@ -480,9 +480,9 @@ UniValue createmultisig(const UniValue& params, bool fHelp)
 
             "\nArguments:\n"
             "1. nrequired      (numeric, required) The number of required signatures out of the n keys or addresses.\n"
-            "2. \"keys\"       (string, required) A json array of keys which are pivx addresses or hex-encoded public keys\n"
+            "2. \"keys\"       (string, required) A json array of keys which are cari addresses or hex-encoded public keys\n"
             "     [\n"
-            "       \"key\"    (string) pivx address or hex-encoded public key\n"
+            "       \"key\"    (string) cari address or hex-encoded public key\n"
             "       ,...\n"
             "     ]\n"
 
@@ -513,11 +513,11 @@ UniValue verifymessage(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 3)
         throw std::runtime_error(
-            "verifymessage \"pivxaddress\" \"signature\" \"message\"\n"
+            "verifymessage \"cariaddress\" \"signature\" \"message\"\n"
             "\nVerify a signed message\n"
 
             "\nArguments:\n"
-            "1. \"pivxaddress\"  (string, required) The pivx address to use for the signature.\n"
+            "1. \"cariaddress\"  (string, required) The cari address to use for the signature.\n"
             "2. \"signature\"       (string, required) The signature provided by the signer in base 64 encoding (see signmessage).\n"
             "3. \"message\"         (string, required) The message that was signed.\n"
 
@@ -670,13 +670,13 @@ UniValue getstakingstatus(const UniValue& params, bool fHelp)
             "\nResult:\n"
             "{\n"
             "  \"staking_status\": true|false,      (boolean) whether the wallet is staking or not\n"
-            "  \"staking_enabled\": true|false,     (boolean) whether staking is enabled/disabled in pivx.conf\n"
-            "  \"coldstaking_enabled\": true|false, (boolean) whether cold-staking is enabled/disabled in pivx.conf\n"
+            "  \"staking_enabled\": true|false,     (boolean) whether staking is enabled/disabled in cari.conf\n"
+            "  \"coldstaking_enabled\": true|false, (boolean) whether cold-staking is enabled/disabled in cari.conf\n"
             "  \"haveconnections\": true|false,     (boolean) whether network connections are present\n"
             "  \"mnsync\": true|false,              (boolean) whether the required masternode/spork data is synced\n"
             "  \"walletunlocked\": true|false,      (boolean) whether the wallet is unlocked\n"
             "  \"stakeablecoins\": n                (numeric) number of stakeable UTXOs\n"
-            "  \"stakingbalance\": d                (numeric) PIV value of the stakeable coins (minus reserve balance, if any)\n"
+            "  \"stakingbalance\": d                (numeric) CARI value of the stakeable coins (minus reserve balance, if any)\n"
             "  \"stakesplitthreshold\": d           (numeric) value of the current threshold for stake split\n"
             "  \"lastattempt_age\": n               (numeric) seconds since last stake attempt\n"
             "  \"lastattempt_depth\": n             (numeric) depth of the block on top of which the last stake attempt was made\n"

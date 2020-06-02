@@ -5,14 +5,14 @@
 #ifndef REQUESTDIALOG_H
 #define REQUESTDIALOG_H
 
-#include "qt/pivx/focuseddialog.h"
-#include "qt/pivx/snackbar.h"
+#include "qt/cari/focuseddialog.h"
+#include "qt/cari/snackbar.h"
 #include "walletmodel.h"
 
 #include <QPixmap>
 
 class WalletModel;
-class PIVXGUI;
+class CARIGUI;
 
 namespace Ui {
 class RequestDialog;

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef PIVX_TEST_TEST_PIVX_H
-#define PIVX_TEST_TEST_PIVX_H
+#ifndef CARI_TEST_TEST_CARI_H
+#define CARI_TEST_TEST_CARI_H
 
 #include "txdb.h"
 

@@ -6,8 +6,8 @@
 #define SENDCONFIRMDIALOG_H
 
 #include "walletmodeltransaction.h"
-#include "qt/pivx/focuseddialog.h"
-#include "qt/pivx/snackbar.h"
+#include "qt/cari/focuseddialog.h"
+#include "qt/cari/snackbar.h"
 
 class WalletModelTransaction;
 class WalletModel;

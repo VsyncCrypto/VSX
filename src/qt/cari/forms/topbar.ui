@@ -108,7 +108,7 @@
              <number>0</number>
             </property>
             <item alignment="Qt::AlignTop">
-             <widget class="QLabel" name="labelAmountTopPiv">
+             <widget class="QLabel" name="labelAmountTopCari">
               <property name="minimumSize">
                <size>
                 <width>0</width>
@@ -119,7 +119,7 @@
                <string notr="true">padding:0px;margin:0px;</string>
               </property>
               <property name="text">
-               <string notr="true">480.0685 PIV</string>
+               <string notr="true">480.0685 CARI</string>
               </property>
              </widget>
             </item>
@@ -180,7 +180,7 @@ border:none;</string>
              </spacer>
             </item>
             <item alignment="Qt::AlignTop">
-             <widget class="QLabel" name="labelAmountTopzPiv">
+             <widget class="QLabel" name="labelAmountTopzCari">
               <property name="minimumSize">
                <size>
                 <width>0</width>
@@ -188,7 +188,7 @@ border:none;</string>
                </size>
               </property>
               <property name="text">
-               <string notr="true">1,000 zPIV</string>
+               <string notr="true">1,000 zCARI</string>
               </property>
              </widget>
             </item>
@@ -406,9 +406,9 @@ border:none;</string>
                 </widget>
                </item>
                <item>
-                <widget class="QLabel" name="labelAmountPiv">
+                <widget class="QLabel" name="labelAmountCari">
                  <property name="text">
-                  <string notr="true">480.0685 PIV</string>
+                  <string notr="true">480.0685 CARI</string>
                  </property>
                 </widget>
                </item>
@@ -429,9 +429,9 @@ border:none;</string>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLabel" name="labelPendingPiv">
+                  <widget class="QLabel" name="labelPendingCari">
                    <property name="text">
-                    <string notr="true">6.943 PIV</string>
+                    <string notr="true">6.943 CARI</string>
                    </property>
                   </widget>
                  </item>
@@ -463,9 +463,9 @@ border:none;</string>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLabel" name="labelImmaturePiv">
+                  <widget class="QLabel" name="labelImmatureCari">
                    <property name="text">
-                    <string notr="true">10 PIV</string>
+                    <string notr="true">10 CARI</string>
                    </property>
                   </widget>
                  </item>
@@ -520,16 +520,16 @@ border:none;</string>
               <item>
                <layout class="QVBoxLayout" name="verticalLayout">
                 <item>
-                 <widget class="QLabel" name="labelTitleAvailablezPiv">
+                 <widget class="QLabel" name="labelTitleAvailablezCari">
                   <property name="text">
                    <string>Available</string>
                   </property>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="labelAvailablezPiv">
+                 <widget class="QLabel" name="labelAvailablezCari">
                   <property name="text">
-                   <string notr="true">1,000 zPIV</string>
+                   <string notr="true">1,000 zCARI</string>
                   </property>
                  </widget>
                 </item>
@@ -543,16 +543,16 @@ border:none;</string>
                 <item>
                  <layout class="QVBoxLayout" name="verticalLayout_5">
                   <item>
-                   <widget class="QLabel" name="labelTitlePendingzPiv">
+                   <widget class="QLabel" name="labelTitlePendingzCari">
                     <property name="text">
                      <string>Pending</string>
                     </property>
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLabel" name="labelPendingzPiv">
+                   <widget class="QLabel" name="labelPendingzCari">
                     <property name="text">
-                     <string notr="true">60 zPIV</string>
+                     <string notr="true">60 zCARI</string>
                     </property>
                    </widget>
                   </item>
@@ -577,16 +577,16 @@ border:none;</string>
                 <item>
                  <layout class="QVBoxLayout" name="verticalLayout_6">
                   <item>
-                   <widget class="QLabel" name="labelTitleImmaturezPiv">
+                   <widget class="QLabel" name="labelTitleImmaturezCari">
                     <property name="text">
                      <string>Immature</string>
                     </property>
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLabel" name="labelImmaturezPiv">
+                   <widget class="QLabel" name="labelImmaturezCari">
                     <property name="text">
-                     <string notr="true">10 zPIV</string>
+                     <string notr="true">10 zCARI</string>
                     </property>
                    </widget>
                   </item>
@@ -729,13 +729,13 @@ border:none;</string>
   <customwidget>
    <class>ExpandableButton</class>
    <extends>QWidget</extends>
-   <header>qt/pivx/expandablebutton.h</header>
+   <header>qt/cari/expandablebutton.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>
    <class>PFBorderImage</class>
    <extends>QFrame</extends>
-   <header>qt/pivx/pfborderimage.h</header>
+   <header>qt/cari/pfborderimage.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

@@ -7,7 +7,7 @@
 
 #include "random.h"
 #include "util.h"
-#include "test/test_pivx.h"
+#include "test/test_cari.h"
 
 #include <set>
 

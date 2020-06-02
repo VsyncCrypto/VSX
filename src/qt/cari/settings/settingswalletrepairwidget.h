@@ -6,7 +6,7 @@
 #define SETTINGSWALLETREPAIRWIDGET_H
 
 #include <QWidget>
-#include "qt/pivx/pwidget.h"
+#include "qt/cari/pwidget.h"
 
 namespace Ui {
 class SettingsWalletRepairWidget;
@@ -17,7 +17,7 @@ class SettingsWalletRepairWidget : public PWidget
     Q_OBJECT
 
 public:
-    explicit SettingsWalletRepairWidget(PIVXGUI* _window, QWidget *parent = nullptr);
+    explicit SettingsWalletRepairWidget(CARIGUI* _window, QWidget *parent = nullptr);
     ~SettingsWalletRepairWidget();
 
     /** Build parameter list for restart */

@@ -5,7 +5,7 @@
 #ifndef QTUTILS_H
 #define QTUTILS_H
 
-#include "qt/pivx/pivxgui.h"
+#include "qt/cari/carigui.h"
 
 #include <QAbstractAnimation>
 #include <QColor>
@@ -33,11 +33,11 @@ const QString RESYNC("-resync");
 extern Qt::Modifier SHORT_KEY;
 
 bool openDialog(QDialog* widget, QWidget* gui);
-void closeDialog(QDialog* widget, PIVXGUI* gui);
+void closeDialog(QDialog* widget, CARIGUI* gui);
 void openDialogFullScreen(QWidget* parent, QWidget* dialog);
-bool openDialogWithOpaqueBackgroundY(QDialog* widget, PIVXGUI* gui, double posX = 3, int posY = 5);
-bool openDialogWithOpaqueBackground(QDialog* widget, PIVXGUI* gui, double posX = 3);
-bool openDialogWithOpaqueBackgroundFullScreen(QDialog* widget, PIVXGUI* gui);
+bool openDialogWithOpaqueBackgroundY(QDialog* widget, CARIGUI* gui, double posX = 3, int posY = 5);
+bool openDialogWithOpaqueBackground(QDialog* widget, CARIGUI* gui, double posX = 3);
+bool openDialogWithOpaqueBackgroundFullScreen(QDialog* widget, CARIGUI* gui);
 
 //
 QPixmap encodeToQr(QString str, QString& errorStr, QColor qrColor = Qt::black);

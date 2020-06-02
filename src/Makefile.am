@@ -67,15 +67,15 @@ TESTS =
 BENCHMARKS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += pivxd
+  bin_PROGRAMS += carid
 endif
 
 if BUILD_BITCOIN_UTILS
-  bin_PROGRAMS += pivx-cli pivx-tx
+  bin_PROGRAMS += cari-cli cari-tx
 endif
 
 .PHONY: FORCE check-symbols check-security
-# pivx core #
+# cari core #
 BITCOIN_CORE_H = \
   activemasternode.h \
   addrman.h \
@@ -197,14 +197,14 @@ BITCOIN_CORE_H = \
   wallet/wallet.h \
   wallet/wallet_ismine.h \
   wallet/walletdb.h \
-  zpivchain.h \
-  zpiv/deterministicmint.h \
-  zpiv/mintpool.h \
-  zpiv/zerocoin.h \
-  zpiv/zpivtracker.h \
-  zpiv/zpivwallet.h \
-  zpiv/zpivmodule.h \
-  zpiv/zpos.h \
+  zcarichain.h \
+  zcari/deterministicmint.h \
+  zcari/mintpool.h \
+  zcari/zerocoin.h \
+  zcari/zcaritracker.h \
+  zcari/zcariwallet.h \
+  zcari/zcarimodule.h \
+  zcari/zpos.h \
   zmq/zmqabstractnotifier.h \
   zmq/zmqconfig.h \
   zmq/zmqnotificationinterface.h \
@@ -216,7 +216,7 @@ obj/build.h: FORCE
 	  "$(abs_top_srcdir)"
 libbitcoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
-# server: shared between pivxd and pivx-qt
+# server: shared between carid and cari-qt
 libbitcoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
 libbitcoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_server_a_SOURCES = \
@@ -253,7 +253,7 @@ libbitcoin_server_a_SOURCES = \
   txdb.cpp \
   txmempool.cpp \
   validationinterface.cpp \
-  zpivchain.cpp \
+  zcarichain.cpp \
   $(BITCOIN_CORE_H)
 
 if ENABLE_ZMQ
@@ -265,7 +265,7 @@ libbitcoin_zmq_a_SOURCES = \
   zmq/zmqpublishnotifier.cpp
 endif
 
-# wallet: shared between pivxd and pivx-qt, but only linked
+# wallet: shared between carid and cari-qt, but only linked
 # when wallet enabled
 libbitcoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
@@ -295,14 +295,14 @@ libbitcoin_wallet_a_SOURCES = \
   wallet/wallet_ismine.cpp \
   wallet/wallet_zerocoin.cpp \
   wallet/walletdb.cpp \
-  zpiv/deterministicmint.cpp \
-  zpiv/zerocoin.cpp \
-  zpiv/mintpool.cpp \
-  zpiv/zpivwallet.cpp \
-  zpiv/zpivtracker.cpp \
+  zcari/deterministicmint.cpp \
+  zcari/zerocoin.cpp \
+  zcari/mintpool.cpp \
+  zcari/zcariwallet.cpp \
+  zcari/zcaritracker.cpp \
   stakeinput.cpp \
-  zpiv/zpivmodule.cpp \
-  zpiv/zpos.cpp \
+  zcari/zcarimodule.cpp \
+  zcari/zpos.cpp \
   $(BITCOIN_CORE_H)
 
 # crypto primitives library
@@ -375,7 +375,7 @@ if USE_NUM_OPENSSL
   libzerocoin_libbitcoin_zerocoin_a_SOURCES += libzerocoin/bignum_openssl.cpp
 endif
 
-# common: shared between pivxd, and pivx-qt and non-server tools
+# common: shared between carid, and cari-qt and non-server tools
 libbitcoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_common_a_SOURCES = \
@@ -388,9 +388,9 @@ libbitcoin_common_a_SOURCES = \
   compressor.cpp \
   consensus/merkle.cpp \
   primitives/block.cpp \
-  zpiv/deterministicmint.cpp \
+  zcari/deterministicmint.cpp \
   primitives/transaction.cpp \
-  zpiv/zerocoin.cpp \
+  zcari/zerocoin.cpp \
   core_read.cpp \
   core_write.cpp \
   hash.cpp \
@@ -442,7 +442,7 @@ libbitcoin_util_a_SOURCES += compat/glibc_compat.cpp
 AM_LDFLAGS += $(COMPAT_LDFLAGS)
 endif
 
-# cli: shared between pivx-cli and pivx-qt
+# cli: shared between cari-cli and cari-qt
 libbitcoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_cli_a_SOURCES = \
@@ -452,16 +452,16 @@ libbitcoin_cli_a_SOURCES = \
 nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
-# pivxd binary #
-pivxd_SOURCES = pivxd.cpp
-pivxd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-pivxd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-pivxd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# carid binary #
+carid_SOURCES = carid.cpp
+carid_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+carid_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+carid_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-pivxd_SOURCES += pivxd-res.rc
+carid_SOURCES += carid-res.rc
 endif
-pivxd_LDADD = \
+carid_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_WALLET) \
   $(LIBBITCOIN_COMMON) \
@@ -475,38 +475,38 @@ pivxd_LDADD = \
   $(LIBMEMENV) \
   $(LIBSECP256K1)
 
-pivxd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
+carid_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
 
-# pivx-cli binary #
-pivx_cli_SOURCES = pivx-cli.cpp
-pivx_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-pivx_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-pivx_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# cari-cli binary #
+cari_cli_SOURCES = cari-cli.cpp
+cari_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+cari_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+cari_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-pivx_cli_SOURCES += pivx-cli-res.rc
+cari_cli_SOURCES += cari-cli-res.rc
 endif
 
-pivx_cli_LDADD = \
+cari_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_CRYPTO)
 
-pivx_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
+cari_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
-# pivx-tx binary #
-pivx_tx_SOURCES = pivx-tx.cpp
-pivx_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-pivx_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-pivx_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# cari-tx binary #
+cari_tx_SOURCES = cari-tx.cpp
+cari_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+cari_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+cari_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-pivx_tx_SOURCES += pivx-tx-res.rc
+cari_tx_SOURCES += cari-tx-res.rc
 endif
 
-pivx_tx_LDADD = \
+cari_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_ZEROCOIN) \
@@ -514,7 +514,7 @@ pivx_tx_LDADD = \
   $(LIBBITCOIN_CRYPTO) \
   $(LIBSECP256K1)
 
-pivx_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
+cari_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
 
 # bitcoinconsensus library #
@@ -566,7 +566,7 @@ CLEANFILES += univalue/*.gcda univalue/*.gcno
 CLEANFILES += wallet/*.gcda wallet/*.gcno
 CLEANFILES += wallet/test/*.gcda wallet/test/*.gcno
 CLEANFILES += zmq/*.gcda zmq/*.gcno
-CLEANFILES += zpiv/*.gcda zpiv/*.gcno
+CLEANFILES += zcari/*.gcda zcari/*.gcno
 CLEANFILES += obj/build.h
 
 CTAES_DIST =  crypto/ctaes/bench.c
@@ -578,12 +578,12 @@ CTAES_DIST += crypto/ctaes/test.c
 EXTRA_DIST = $(CTAES_DIST)
 
 
-config/pivx-config.h: config/stamp-h1
+config/cari-config.h: config/stamp-h1
 	@$(MAKE) -C $(top_builddir) $(subdir)/$(@)
-config/stamp-h1: $(top_srcdir)/$(subdir)/config/pivx-config.h.in $(top_builddir)/config.status
+config/stamp-h1: $(top_srcdir)/$(subdir)/config/cari-config.h.in $(top_builddir)/config.status
 	$(AM_V_at)$(MAKE) -C $(top_builddir) $(subdir)/$(@)
-$(top_srcdir)/$(subdir)/config/pivx-config.h.in:  $(am__configure_deps)
-	$(AM_V_at)$(MAKE) -C $(top_srcdir) $(subdir)/config/pivx-config.h.in
+$(top_srcdir)/$(subdir)/config/cari-config.h.in:  $(am__configure_deps)
+	$(AM_V_at)$(MAKE) -C $(top_srcdir) $(subdir)/config/cari-config.h.in
 
 clean-local:
 	-$(MAKE) -C secp256k1 clean

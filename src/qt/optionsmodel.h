@@ -15,7 +15,7 @@ QT_BEGIN_NAMESPACE
 class QNetworkProxy;
 QT_END_NAMESPACE
 
-/** Interface from Qt to configuration data structure for PIVX client.
+/** Interface from Qt to configuration data structure for CARI client.
    To Qt, the options are presented as a list with the different options
    laid out vertically.
    This can be changed to a tree once the settings become sufficiently
@@ -52,7 +52,7 @@ public:
         HideCharts,          // bool
         HideZeroBalances,    // bool
         HideOrphans,    // bool
-        AnonymizePivxAmount, //int
+        AnonymizeCariAmount, //int
         ShowMasternodesTab,  // bool
         Listen,              // bool
         StakeSplitThreshold,    // CAmount (LongLong)
@@ -133,7 +133,7 @@ Q_SIGNALS:
     void zeromintAddressesChanged(bool);
     void zeromintPercentageChanged(int);
     void preferredDenomChanged(int);
-    void anonymizePivxAmountChanged(int);
+    void anonymizeCariAmountChanged(int);
     void coinControlFeaturesChanged(bool);
     void showHideColdStakingScreen(bool);
     void hideChartsChanged(bool);

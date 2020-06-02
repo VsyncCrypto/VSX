@@ -6,8 +6,8 @@
 #define SETTINGSBITTOOLWIDGET_H
 
 #include <QWidget>
-#include "qt/pivx/pwidget.h"
-#include "qt/pivx/contactsdropdown.h"
+#include "qt/cari/pwidget.h"
+#include "qt/cari/contactsdropdown.h"
 #include "key.h"
 
 namespace Ui {
@@ -19,7 +19,7 @@ class SettingsBitToolWidget : public PWidget
     Q_OBJECT
 
 public:
-    explicit SettingsBitToolWidget(PIVXGUI* _window, QWidget *parent = nullptr);
+    explicit SettingsBitToolWidget(CARIGUI* _window, QWidget *parent = nullptr);
     ~SettingsBitToolWidget();
 protected:
     void resizeEvent(QResizeEvent *event) override;

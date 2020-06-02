@@ -7,7 +7,7 @@
 
 #include <QWidget>
 #include <QDataWidgetMapper>
-#include "qt/pivx/pwidget.h"
+#include "qt/cari/pwidget.h"
 namespace Ui {
 class SettingsWalletOptionsWidget;
 }
@@ -17,7 +17,7 @@ class SettingsWalletOptionsWidget : public PWidget
     Q_OBJECT
 
 public:
-    explicit SettingsWalletOptionsWidget(PIVXGUI* _window, QWidget *parent = nullptr);
+    explicit SettingsWalletOptionsWidget(CARIGUI* _window, QWidget *parent = nullptr);
     ~SettingsWalletOptionsWidget();
 
     void setMapper(QDataWidgetMapper *mapper);

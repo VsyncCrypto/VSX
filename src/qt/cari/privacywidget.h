@@ -5,9 +5,9 @@
 #ifndef PRIVACYWIDGET_H
 #define PRIVACYWIDGET_H
 
-#include "qt/pivx/pwidget.h"
-#include "qt/pivx/furabstractlistitemdelegate.h"
-#include "qt/pivx/txviewholder.h"
+#include "qt/cari/pwidget.h"
+#include "qt/cari/furabstractlistitemdelegate.h"
+#include "qt/cari/txviewholder.h"
 #include "transactiontablemodel.h"
 #include "transactionfilterproxy.h"
 #include "coincontroldialog.h"
@@ -15,7 +15,7 @@
 #include <QLabel>
 #include <QWidget>
 
-class PIVXGUI;
+class CARIGUI;
 class WalletModel;
 
 namespace Ui {
@@ -31,7 +31,7 @@ class PrivacyWidget : public PWidget
     Q_OBJECT
 
 public:
-    explicit PrivacyWidget(PIVXGUI* parent);
+    explicit PrivacyWidget(CARIGUI* parent);
     ~PrivacyWidget();
 
     void loadWalletModel() override;
@@ -40,7 +40,7 @@ private Q_SLOTS:
     void onCoinControlClicked();
     void onRescanMintsClicked();
     void onResetZeroClicked();
-    void onTotalZpivClicked();
+    void onTotalZcariClicked();
     void updateDisplayUnit();
     void showList();
     void onSendClicked();

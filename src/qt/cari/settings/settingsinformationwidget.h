@@ -6,7 +6,7 @@
 #define SETTINGSINFORMATIONWIDGET_H
 
 #include <QWidget>
-#include "qt/pivx/pwidget.h"
+#include "qt/cari/pwidget.h"
 #include "rpcconsole.h"
 
 namespace Ui {
@@ -18,7 +18,7 @@ class SettingsInformationWidget : public PWidget
     Q_OBJECT
 
 public:
-    explicit SettingsInformationWidget(PIVXGUI* _window, QWidget *parent = nullptr);
+    explicit SettingsInformationWidget(CARIGUI* _window, QWidget *parent = nullptr);
     ~SettingsInformationWidget();
 
     void loadClientModel() override;

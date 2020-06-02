@@ -10,8 +10,8 @@
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between pivx-cli and pivxd)
- * of a given instance of the Pivx system.
+ * CBaseChainParams defines the base parameters (shared between cari-cli and carid)
+ * of a given instance of the Cari system.
  */
 class CBaseChainParams
 {

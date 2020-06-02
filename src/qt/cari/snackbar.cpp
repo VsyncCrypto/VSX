@@ -2,13 +2,13 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "qt/pivx/snackbar.h"
-#include "qt/pivx/forms/ui_snackbar.h"
-#include "qt/pivx/qtutils.h"
+#include "qt/cari/snackbar.h"
+#include "qt/cari/forms/ui_snackbar.h"
+#include "qt/cari/qtutils.h"
 #include <QTimer>
 
 
-SnackBar::SnackBar(PIVXGUI* _window, QWidget *parent) :
+SnackBar::SnackBar(CARIGUI* _window, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::SnackBar),
     window(_window),
@@ -23,7 +23,7 @@ SnackBar::SnackBar(PIVXGUI* _window, QWidget *parent) :
 
     connect(ui->pushButton, &QPushButton::clicked, this, &SnackBar::close);
     if (window)
-        connect(window, &PIVXGUI::windowResizeEvent, this, &SnackBar::windowResizeEvent);
+        connect(window, &CARIGUI::windowResizeEvent, this, &SnackBar::windowResizeEvent);
     else {
         ui->horizontalLayout->setContentsMargins(0,0,0,0);
         ui->label->setStyleSheet("font-size: 15px; color:white;");

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "qt/pivx/txviewholder.h"
-#include "qt/pivx/qtutils.h"
+#include "qt/cari/txviewholder.h"
+#include "qt/cari/qtutils.h"
 #include "transactiontablemodel.h"
 #include <QModelIndex>
 
@@ -30,8 +30,8 @@ void TxViewHolder::init(QWidget* holder,const QModelIndex &index, bool isHovered
     int type = rIndex.data(TransactionTableModel::TypeRole).toInt();
 
     if (type != TransactionRecord::ZerocoinMint &&
-            type !=  TransactionRecord::ZerocoinSpend_Change_zPiv &&
-            type !=  TransactionRecord::StakeZPIV &&
+            type !=  TransactionRecord::ZerocoinSpend_Change_zCari &&
+            type !=  TransactionRecord::StakeZCARI &&
             type != TransactionRecord::Other) {
         QString address = rIndex.data(Qt::DisplayRole).toString();
         if (address.length() > 20) {

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "qt/pivx/defaultdialog.h"
-#include "qt/pivx/forms/ui_defaultdialog.h"
+#include "qt/cari/defaultdialog.h"
+#include "qt/cari/forms/ui_defaultdialog.h"
 #include "guiutil.h"
 
 DefaultDialog::DefaultDialog(QWidget *parent) :

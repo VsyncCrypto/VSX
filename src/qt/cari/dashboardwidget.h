@@ -5,11 +5,11 @@
 #ifndef DASHBOARDWIDGET_H
 #define DASHBOARDWIDGET_H
 
-#include "qt/pivx/pwidget.h"
-#include "qt/pivx/furabstractlistitemdelegate.h"
-#include "qt/pivx/furlistrow.h"
+#include "qt/cari/pwidget.h"
+#include "qt/cari/furabstractlistitemdelegate.h"
+#include "qt/cari/furlistrow.h"
 #include "transactiontablemodel.h"
-#include "qt/pivx/txviewholder.h"
+#include "qt/cari/txviewholder.h"
 #include "transactionfilterproxy.h"
 
 #include <atomic>
@@ -19,7 +19,7 @@
 #include <QMap>
 
 #if defined(HAVE_CONFIG_H)
-#include "config/pivx-config.h" /* for USE_QTCHARTS */
+#include "config/cari-config.h" /* for USE_QTCHARTS */
 #endif
 
 #ifdef USE_QTCHARTS
@@ -37,7 +37,7 @@ using namespace QtCharts;
 
 #endif
 
-class PIVXGUI;
+class CARIGUI;
 class WalletModel;
 
 namespace Ui {
@@ -80,10 +80,10 @@ public:
 
     QMap<int, std::pair<qint64, qint64>> amountsByCache;
     qreal maxValue = 0;
-    qint64 totalPiv = 0;
-    qint64 totalZpiv = 0;
-    QList<qreal> valuesPiv;
-    QList<qreal> valueszPiv;
+    qint64 totalCari = 0;
+    qint64 totalZcari = 0;
+    QList<qreal> valuesCari;
+    QList<qreal> valueszCari;
     QStringList xLabels;
 };
 
@@ -96,7 +96,7 @@ class DashboardWidget : public PWidget
     Q_OBJECT
 
 public:
-    explicit DashboardWidget(PIVXGUI* _window);
+    explicit DashboardWidget(CARIGUI* _window);
     ~DashboardWidget();
 
     void loadWalletModel() override;
@@ -163,7 +163,7 @@ private:
     int yearFilter = 0;
     int monthFilter = 0;
     int dayStart = 1;
-    bool hasZpivStakes = false;
+    bool hasZcariStakes = false;
 
     ChartData* chartData = nullptr;
     bool hasStakes = false;

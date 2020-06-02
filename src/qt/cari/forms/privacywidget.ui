@@ -86,7 +86,7 @@
                  </size>
                 </property>
                 <property name="text">
-                 <string>Minting zPIV anonymizes your PIV by removing any
+                 <string>Minting zCARI anonymizes your CARI by removing any
 transaction history, making transactions untraceable</string>
                 </property>
                </widget>
@@ -210,7 +210,7 @@ transaction history, making transactions untraceable</string>
                <item alignment="Qt::AlignTop">
                 <widget class="QLabel" name="labelSubtitle2">
                  <property name="text">
-                  <string>Mint new zPIV or convert back to PIV</string>
+                  <string>Mint new zCARI or convert back to CARI</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -284,7 +284,7 @@ transaction history, making transactions untraceable</string>
                    <number>8</number>
                   </property>
                   <property name="placeholderText">
-                   <string notr="true">0.00 PIV</string>
+                   <string notr="true">0.00 CARI</string>
                   </property>
                  </widget>
                 </item>
@@ -352,7 +352,7 @@ transaction history, making transactions untraceable</string>
           <item>
            <widget class="QLabel" name="labelListHistory">
             <property name="text">
-             <string>Last zPIV Movements</string>
+             <string>Last zCARI Movements</string>
             </property>
            </widget>
           </item>
@@ -562,7 +562,7 @@ transaction history, making transactions untraceable</string>
        </widget>
       </item>
       <item>
-       <widget class="OptionButton" name="btnTotalzPIV" native="true">
+       <widget class="OptionButton" name="btnTotalzCARI" native="true">
         <property name="minimumSize">
          <size>
           <width>0</width>
@@ -606,7 +606,7 @@ transaction history, making transactions untraceable</string>
              <item>
               <widget class="QLabel" name="labelValueDenom1">
                <property name="text">
-                <string notr="true">0x1 = 0 zPIV</string>
+                <string notr="true">0x1 = 0 zCARI</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -627,7 +627,7 @@ transaction history, making transactions untraceable</string>
              <item>
               <widget class="QLabel" name="labelValueDenom5">
                <property name="text">
-                <string notr="true">0x5 = 0 zPIV</string>
+                <string notr="true">0x5 = 0 zCARI</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -648,7 +648,7 @@ transaction history, making transactions untraceable</string>
              <item>
               <widget class="QLabel" name="labelValueDenom10">
                <property name="text">
-                <string notr="true">0x10 = 0 zPIV</string>
+                <string notr="true">0x10 = 0 zCARI</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -669,7 +669,7 @@ transaction history, making transactions untraceable</string>
              <item>
               <widget class="QLabel" name="labelValueDenom50">
                <property name="text">
-                <string notr="true">0x50 = 0 zPIV</string>
+                <string notr="true">0x50 = 0 zCARI</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -690,7 +690,7 @@ transaction history, making transactions untraceable</string>
              <item>
               <widget class="QLabel" name="labelValueDenom100">
                <property name="text">
-                <string notr="true">0x100 = 0 zPIV</string>
+                <string notr="true">0x100 = 0 zCARI</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -711,7 +711,7 @@ transaction history, making transactions untraceable</string>
              <item>
               <widget class="QLabel" name="labelValueDenom500">
                <property name="text">
-                <string notr="true">0x500 = 0 zPIV</string>
+                <string notr="true">0x500 = 0 zCARI</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -732,7 +732,7 @@ transaction history, making transactions untraceable</string>
              <item>
               <widget class="QLabel" name="labelValueDenom1000">
                <property name="text">
-                <string notr="true">0x1000 = 0 zPIV</string>
+                <string notr="true">0x1000 = 0 zCARI</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -753,7 +753,7 @@ transaction history, making transactions untraceable</string>
              <item>
               <widget class="QLabel" name="labelValueDenom5000">
                <property name="text">
-                <string notr="true">0x5000 = 0 zPIV</string>
+                <string notr="true">0x5000 = 0 zCARI</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -789,7 +789,7 @@ transaction history, making transactions untraceable</string>
   <customwidget>
    <class>OptionButton</class>
    <extends>QWidget</extends>
-   <header>qt/pivx/optionbutton.h</header>
+   <header>qt/cari/optionbutton.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

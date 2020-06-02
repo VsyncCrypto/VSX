@@ -2,7 +2,7 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "qt/pivx/focuseddialog.h"
+#include "qt/cari/focuseddialog.h"
 #include <QKeyEvent>
 
 FocusedDialog::FocusedDialog(QWidget *parent) :

@@ -2,12 +2,12 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "qt/pivx/topbar.h"
-#include "qt/pivx/forms/ui_topbar.h"
-#include "qt/pivx/lockunlock.h"
-#include "qt/pivx/qtutils.h"
-#include "qt/pivx/receivedialog.h"
-#include "qt/pivx/loadingdialog.h"
+#include "qt/cari/topbar.h"
+#include "qt/cari/forms/ui_topbar.h"
+#include "qt/cari/lockunlock.h"
+#include "qt/cari/qtutils.h"
+#include "qt/cari/receivedialog.h"
+#include "qt/cari/loadingdialog.h"
 #include "askpassphrasedialog.h"
 
 #include "bitcoinunits.h"
@@ -27,7 +27,7 @@
 
 #define REQUEST_UPGRADE_WALLET 1
 
-TopBar::TopBar(PIVXGUI* _mainWindow, QWidget *parent) :
+TopBar::TopBar(CARIGUI* _mainWindow, QWidget *parent) :
     PWidget(_mainWindow, parent),
     ui(new Ui::TopBar)
 {
@@ -44,7 +44,7 @@ TopBar::TopBar(PIVXGUI* _mainWindow, QWidget *parent) :
     ui->containerTop->setProperty("cssClass", "container-top");
 #endif
 
-    std::initializer_list<QWidget*> lblTitles = {ui->labelTitle1, ui->labelTitleAvailablezPiv, ui->labelTitle3, ui->labelTitle4, ui->labelTitlePendingzPiv, ui->labelTitleImmaturezPiv};
+    std::initializer_list<QWidget*> lblTitles = {ui->labelTitle1, ui->labelTitleAvailablezCari, ui->labelTitle3, ui->labelTitle4, ui->labelTitlePendingzCari, ui->labelTitleImmaturezCari};
     setCssProperty(lblTitles, "text-title-topbar");
     QFont font;
     font.setWeight(QFont::Light);
@@ -52,9 +52,9 @@ TopBar::TopBar(PIVXGUI* _mainWindow, QWidget *parent) :
 
     // Amount information top
     ui->widgetTopAmount->setVisible(false);
-    setCssProperty({ui->labelAmountTopPiv, ui->labelAmountTopzPiv}, "amount-small-topbar");
-    setCssProperty({ui->labelAmountPiv, ui->labelAvailablezPiv}, "amount-topbar");
-    setCssProperty({ui->labelPendingPiv, ui->labelPendingzPiv, ui->labelImmaturePiv, ui->labelImmaturezPiv}, "amount-small-topbar");
+    setCssProperty({ui->labelAmountTopCari, ui->labelAmountTopzCari}, "amount-small-topbar");
+    setCssProperty({ui->labelAmountCari, ui->labelAvailablezCari}, "amount-topbar");
+    setCssProperty({ui->labelPendingCari, ui->labelPendingzCari, ui->labelImmatureCari, ui->labelImmaturezCari}, "amount-small-topbar");
 
     // Progress Sync
     progressBar = new QProgressBar(ui->layoutSync);
@@ -549,7 +549,7 @@ void TopBar::loadWalletModel()
     connect(walletModel, &WalletModel::encryptionStatusChanged, this, &TopBar::refreshStatus);
     // Ask for passphrase if needed
     connect(walletModel, &WalletModel::requireUnlock, this, &TopBar::unlockWallet);
-    // update the display unit, to not use the default ("PIVX")
+    // update the display unit, to not use the default ("CARI")
     updateDisplayUnit();
 
     refreshStatus();
@@ -633,38 +633,38 @@ void TopBar::updateBalances(const CAmount& balance, const CAmount& unconfirmedBa
     }
     ui->labelTitle1->setText(nLockedBalance > 0 ? tr("Available (Locked included)") : tr("Available"));
 
-    // PIV Total
-    CAmount pivAvailableBalance = balance;
-    // zPIV Balance
+    // CARI Total
+    CAmount cariAvailableBalance = balance;
+    // zCARI Balance
     CAmount matureZerocoinBalance = zerocoinBalance - unconfirmedZerocoinBalance - immatureZerocoinBalance;
 
     // Set
-    QString totalPiv = GUIUtil::formatBalance(pivAvailableBalance, nDisplayUnit);
-    QString totalzPiv = GUIUtil::formatBalance(matureZerocoinBalance, nDisplayUnit, true);
+    QString totalCari = GUIUtil::formatBalance(cariAvailableBalance, nDisplayUnit);
+    QString totalzCari = GUIUtil::formatBalance(matureZerocoinBalance, nDisplayUnit, true);
 
-    // PIV
+    // CARI
     // Top
-    ui->labelAmountTopPiv->setText(totalPiv);
+    ui->labelAmountTopCari->setText(totalCari);
     // Expanded
-    ui->labelAmountPiv->setText(totalPiv);
-    ui->labelPendingPiv->setText(GUIUtil::formatBalance(unconfirmedBalance, nDisplayUnit));
-    ui->labelImmaturePiv->setText(GUIUtil::formatBalance(immatureBalance, nDisplayUnit));
+    ui->labelAmountCari->setText(totalCari);
+    ui->labelPendingCari->setText(GUIUtil::formatBalance(unconfirmedBalance, nDisplayUnit));
+    ui->labelImmatureCari->setText(GUIUtil::formatBalance(immatureBalance, nDisplayUnit));
 
-    // Update display state and/or values for zPIV balances as necessary
+    // Update display state and/or values for zCARI balances as necessary
     bool fHaveZerocoins = zerocoinBalance > 0;
 
-    // Set visibility of zPIV label titles/values
+    // Set visibility of zCARI label titles/values
     ui->typeSpacerTop->setVisible(fHaveZerocoins);
     ui->typeSpacerExpanded->setVisible(fHaveZerocoins);
-    ui->labelAmountTopzPiv->setVisible(fHaveZerocoins);
+    ui->labelAmountTopzCari->setVisible(fHaveZerocoins);
     ui->zerocoinBalances->setVisible(fHaveZerocoins);
 
     // Top
-    ui->labelAmountTopzPiv->setText(totalzPiv);
+    ui->labelAmountTopzCari->setText(totalzCari);
     // Expanded
-    ui->labelAvailablezPiv->setText(totalzPiv);
-    ui->labelPendingzPiv->setText(GUIUtil::formatBalance(unconfirmedZerocoinBalance, nDisplayUnit, true));
-    ui->labelImmaturezPiv->setText(GUIUtil::formatBalance(immatureZerocoinBalance, nDisplayUnit, true));
+    ui->labelAvailablezCari->setText(totalzCari);
+    ui->labelPendingzCari->setText(GUIUtil::formatBalance(unconfirmedZerocoinBalance, nDisplayUnit, true));
+    ui->labelImmaturezCari->setText(GUIUtil::formatBalance(immatureZerocoinBalance, nDisplayUnit, true));
 }
 
 void TopBar::resizeEvent(QResizeEvent *event)

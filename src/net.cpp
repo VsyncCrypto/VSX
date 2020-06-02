@@ -6,7 +6,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/pivx-config.h"
+#include "config/cari-config.h"
 #endif
 
 #include "net.h"
@@ -716,7 +716,7 @@ void CNode::copyStats(CNodeStats& stats)
         nPingUsecWait = GetTimeMicros() - nPingUsecStart;
     }
 
-    // Raw ping time is in microseconds, but show it to user as whole seconds (PIVX users should be well used to small numbers with many decimal places by now :)
+    // Raw ping time is in microseconds, but show it to user as whole seconds (CARI users should be well used to small numbers with many decimal places by now :)
     stats.dPingTime = (((double)nPingUsecTime) / 1e6);
     stats.dPingWait = (((double)nPingUsecWait) / 1e6);
 
@@ -874,7 +874,7 @@ void CheckOffsetDisconnectedPeers(const CNetAddr& ip)
         setOffsetDisconnectedPeers.clear();
         // Trigger the warning
         std::string strWarn1 = _("Peers are being disconnected due time differences.");
-        std::string strWarn2 = _("Please check that your computer's date and time are correct! If your clock is wrong PIVX Core will not work properly.");
+        std::string strWarn2 = _("Please check that your computer's date and time are correct! If your clock is wrong CARI Core will not work properly.");
 
         LogPrintf("*** Warning: %s %s\n", strWarn1, strWarn2);
 
@@ -1212,7 +1212,7 @@ void ThreadMapPort()
             }
         }
 
-        std::string strDesc = "PIVX " + FormatFullVersion();
+        std::string strDesc = "CARI " + FormatFullVersion();
 
         try {
             while (true) {
@@ -1705,7 +1705,7 @@ bool BindListenPort(const CService& addrBind, std::string& strError, bool fWhite
     if (::bind(hListenSocket, (struct sockaddr*)&sockaddr, len) == SOCKET_ERROR) {
         int nErr = WSAGetLastError();
         if (nErr == WSAEADDRINUSE)
-            strError = strprintf(_("Unable to bind to %s on this computer. PIVX Core is probably already running."), addrBind.ToString());
+            strError = strprintf(_("Unable to bind to %s on this computer. CARI Core is probably already running."), addrBind.ToString());
         else
             strError = strprintf(_("Unable to bind to %s on this computer (bind returned error %s)"), addrBind.ToString(), NetworkErrorString(nErr));
         LogPrintf("%s\n", strError);

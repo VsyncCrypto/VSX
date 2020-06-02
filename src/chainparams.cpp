@@ -130,7 +130,7 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("0x1b2ef6e2f28be914103a277377ae7729dcd125dfeb8bf97bd5964ba72b6dc39b"));
 
         consensus.fPowAllowMinDifficultyBlocks = false;
-        consensus.powLimit   = ~UINT256_ZERO >> 20;   // PIVX starting difficulty is 1 / 2^12
+        consensus.powLimit   = ~UINT256_ZERO >> 20;   // CARI starting difficulty is 1 / 2^12
         consensus.posLimitV1 = ~UINT256_ZERO >> 24;
         consensus.posLimitV2 = ~UINT256_ZERO >> 20;
         consensus.nBudgetCycleBlocks = 43200;       // approx. 1 every 30 days
@@ -173,8 +173,8 @@ public:
         consensus.height_ZC_RecalcAccumulators = 908000;
 
         // validation by-pass
-        consensus.nPivxBadBlockTime = 1471401614;    // Skip nBit validation of Block 259201 per PR #915
-        consensus.nPivxBadBlockBits = 0x1c056dac;    // Skip nBit validation of Block 259201 per PR #915
+        consensus.nCariBadBlockTime = 1471401614;    // Skip nBit validation of Block 259201 per PR #915
+        consensus.nCariBadBlockBits = 0x1c056dac;    // Skip nBit validation of Block 259201 per PR #915
 
         // Zerocoin-related params
         consensus.ZC_Modulus = "25195908475657893494027183240048398571429282126204032027777137836043662020707595556264018525880784"
@@ -203,8 +203,8 @@ public:
         nDefaultPort = 51472;
 
         // Note that of those with the service bits flag, most only support a subset of possible options
-        vSeeds.push_back(CDNSSeedData("fuzzbawls.pw", "pivx.seed.fuzzbawls.pw", true));     // Primary DNS Seeder from Fuzzbawls
-        vSeeds.push_back(CDNSSeedData("fuzzbawls.pw", "pivx.seed2.fuzzbawls.pw", true));    // Secondary DNS Seeder from Fuzzbawls
+        vSeeds.push_back(CDNSSeedData("fuzzbawls.pw", "cari.seed.fuzzbawls.pw", true));     // Primary DNS Seeder from Fuzzbawls
+        vSeeds.push_back(CDNSSeedData("fuzzbawls.pw", "cari.seed2.fuzzbawls.pw", true));    // Secondary DNS Seeder from Fuzzbawls
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 30);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 13);
@@ -243,7 +243,7 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("0x1b2ef6e2f28be914103a277377ae7729dcd125dfeb8bf97bd5964ba72b6dc39b"));
 
         consensus.fPowAllowMinDifficultyBlocks = true;
-        consensus.powLimit   = ~UINT256_ZERO >> 20;   // PIVX starting difficulty is 1 / 2^12
+        consensus.powLimit   = ~UINT256_ZERO >> 20;   // CARI starting difficulty is 1 / 2^12
         consensus.posLimitV1 = ~UINT256_ZERO >> 24;
         consensus.posLimitV2 = ~UINT256_ZERO >> 20;
         consensus.nBudgetCycleBlocks = 144;         // approx 10 cycles per day
@@ -286,8 +286,8 @@ public:
         consensus.height_ZC_RecalcAccumulators = 999999999;
 
         // validation by-pass
-        consensus.nPivxBadBlockTime = 1489001494; // Skip nBit validation of Block 201 per PR #915
-        consensus.nPivxBadBlockBits = 0x1e0a20bd; // Skip nBit validation of Block 201 per PR #915
+        consensus.nCariBadBlockTime = 1489001494; // Skip nBit validation of Block 201 per PR #915
+        consensus.nCariBadBlockBits = 0x1e0a20bd; // Skip nBit validation of Block 201 per PR #915
 
         // Zerocoin-related params
         consensus.ZC_Modulus = "25195908475657893494027183240048398571429282126204032027777137836043662020707595556264018525880784"
@@ -319,18 +319,18 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.push_back(CDNSSeedData("fuzzbawls.pw", "pivx-testnet.seed.fuzzbawls.pw", true));
-        vSeeds.push_back(CDNSSeedData("fuzzbawls.pw", "pivx-testnet.seed2.fuzzbawls.pw", true));
+        vSeeds.push_back(CDNSSeedData("fuzzbawls.pw", "cari-testnet.seed.fuzzbawls.pw", true));
+        vSeeds.push_back(CDNSSeedData("fuzzbawls.pw", "cari-testnet.seed2.fuzzbawls.pw", true));
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 139); // Testnet pivx addresses start with 'x' or 'y'
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 19);  // Testnet pivx script addresses start with '8' or '9'
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 139); // Testnet cari addresses start with 'x' or 'y'
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 19);  // Testnet cari script addresses start with '8' or '9'
         base58Prefixes[STAKING_ADDRESS] = std::vector<unsigned char>(1, 73);     // starting with 'W'
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 239);     // Testnet private keys start with '9' or 'c' (Bitcoin defaults)
-        // Testnet pivx BIP32 pubkeys start with 'DRKV'
+        // Testnet cari BIP32 pubkeys start with 'DRKV'
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x3a)(0x80)(0x61)(0xa0).convert_to_container<std::vector<unsigned char> >();
-        // Testnet pivx BIP32 prvkeys start with 'DRKP'
+        // Testnet cari BIP32 prvkeys start with 'DRKP'
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x3a)(0x80)(0x58)(0x37).convert_to_container<std::vector<unsigned char> >();
-        // Testnet pivx BIP44 coin type is '1' (All coin's testnet default)
+        // Testnet cari BIP44 coin type is '1' (All coin's testnet default)
         base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x00)(0x01).convert_to_container<std::vector<unsigned char> >();
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_test, pnSeed6_test + ARRAYLEN(pnSeed6_test));
@@ -360,7 +360,7 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("0x1b2ef6e2f28be914103a277377ae7729dcd125dfeb8bf97bd5964ba72b6dc39b"));
 
         consensus.fPowAllowMinDifficultyBlocks = true;
-        consensus.powLimit   = ~UINT256_ZERO >> 20;   // PIVX starting difficulty is 1 / 2^12
+        consensus.powLimit   = ~UINT256_ZERO >> 20;   // CARI starting difficulty is 1 / 2^12
         consensus.posLimitV1 = ~UINT256_ZERO >> 24;
         consensus.posLimitV2 = ~UINT256_ZERO >> 20;
         consensus.nBudgetCycleBlocks = 144;         // approx 10 cycles per day

@@ -8,18 +8,18 @@
 #include <QWidget>
 #include <QPushButton>
 
-#include "qt/pivx/pwidget.h"
-#include "qt/pivx/contactsdropdown.h"
-#include "qt/pivx/sendmultirow.h"
-#include "qt/pivx/sendcustomfeedialog.h"
+#include "qt/cari/pwidget.h"
+#include "qt/cari/contactsdropdown.h"
+#include "qt/cari/sendmultirow.h"
+#include "qt/cari/sendcustomfeedialog.h"
 #include "walletmodel.h"
 #include "coincontroldialog.h"
-#include "zpivcontroldialog.h"
-#include "qt/pivx/tooltipmenu.h"
+#include "zcaricontroldialog.h"
+#include "qt/cari/tooltipmenu.h"
 
 static const int MAX_SEND_POPUP_ENTRIES = 8;
 
-class PIVXGUI;
+class CARIGUI;
 class ClientModel;
 class WalletModel;
 class WalletModelTransaction;
@@ -34,7 +34,7 @@ class SendWidget : public PWidget
     Q_OBJECT
 
 public:
-    explicit SendWidget(PIVXGUI* parent);
+    explicit SendWidget(CARIGUI* parent);
     ~SendWidget();
 
     void addEntry();
@@ -60,7 +60,7 @@ protected:
     void showEvent(QShowEvent *event) override;
 
 private Q_SLOTS:
-    void onPIVSelected(bool _isPIV);
+    void onCARISelected(bool _isCARI);
     void onSendClicked();
     void onContactsClicked(SendMultiRow* entry);
     void onMenuClicked(SendMultiRow* entry);
@@ -93,12 +93,12 @@ private:
     // Current focus entry
     SendMultiRow* focusedEntry = nullptr;
 
-    bool isPIV = true;
+    bool isCARI = true;
     void resizeMenu();
     QString recipientsToString(QList<SendCoinsRecipient> recipients);
     SendMultiRow* createEntry();
     bool send(QList<SendCoinsRecipient> recipients);
-    bool sendZpiv(QList<SendCoinsRecipient> recipients);
+    bool sendZcari(QList<SendCoinsRecipient> recipients);
     void setFocusOnLastEntry();
     void showHideCheckBoxDelegations();
     void updateEntryLabels(QList<SendCoinsRecipient> recipients);

@@ -2,16 +2,16 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "qt/pivx/addresseswidget.h"
-#include "qt/pivx/forms/ui_addresseswidget.h"
-#include "qt/pivx/addresslabelrow.h"
-#include "qt/pivx/addnewaddressdialog.h"
-#include "qt/pivx/tooltipmenu.h"
+#include "qt/cari/addresseswidget.h"
+#include "qt/cari/forms/ui_addresseswidget.h"
+#include "qt/cari/addresslabelrow.h"
+#include "qt/cari/addnewaddressdialog.h"
+#include "qt/cari/tooltipmenu.h"
 
-#include "qt/pivx/addnewcontactdialog.h"
-#include "qt/pivx/pivxgui.h"
+#include "qt/cari/addnewcontactdialog.h"
+#include "qt/cari/carigui.h"
 #include "guiutil.h"
-#include "qt/pivx/qtutils.h"
+#include "qt/cari/qtutils.h"
 #include "walletmodel.h"
 
 #include <QModelIndex>
@@ -58,7 +58,7 @@ public:
 };
 
 
-AddressesWidget::AddressesWidget(PIVXGUI* parent) :
+AddressesWidget::AddressesWidget(CARIGUI* parent) :
     PWidget(parent),
     ui(new Ui::AddressesWidget)
 {
@@ -188,8 +188,8 @@ void AddressesWidget::onStoreContactClicked()
         }
 
         bool isStakingAddress = false;
-        CTxDestination pivAdd = DecodeDestination(address.toUtf8().constData(), isStakingAddress);
-        if (walletModel->isMine(pivAdd)) {
+        CTxDestination cariAdd = DecodeDestination(address.toUtf8().constData(), isStakingAddress);
+        if (walletModel->isMine(cariAdd)) {
             setCssEditLine(ui->lineEditAddress, false, true);
             inform(tr("Cannot store your own address as contact"));
             return;
@@ -202,7 +202,7 @@ void AddressesWidget::onStoreContactClicked()
             return;
         }
 
-        if (walletModel->updateAddressBookLabels(pivAdd, label.toUtf8().constData(),
+        if (walletModel->updateAddressBookLabels(cariAdd, label.toUtf8().constData(),
                 isStakingAddress ? AddressBook::AddressBookPurpose::COLD_STAKING_SEND : AddressBook::AddressBookPurpose::SEND)
                 ) {
             ui->lineEditAddress->setText("");

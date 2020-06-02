@@ -7,12 +7,12 @@
 #define BITCOIN_QT_ASKPASSPHRASEDIALOG_H
 
 #include <QDialog>
-#include "qt/pivx/prunnable.h"
+#include "qt/cari/prunnable.h"
 #include "allocators.h"
 #include <QCheckBox>
 
 class WalletModel;
-class PIVXGUI;
+class CARIGUI;
 
 namespace Ui
 {
@@ -43,9 +43,9 @@ public:
         Encrypt,        /** Encrypt unencrypted wallet */
         ToggleLock,     /** Toggle wallet lock state */
         ChangePass,     /** Change passphrase */
-        Send_PIV,       /** Send PIV */
-        Send_zPIV,      /** Send zPIV */
-        Mint_zPIV,      /** Mint zPIV */
+        Send_CARI,       /** Send CARI */
+        Send_zCARI,      /** Send zCARI */
+        Mint_zCARI,      /** Mint zCARI */
         BIP_38,         /** BIP38 menu */
         Multi_Sig,      /** Multi-Signature dialog */
         Sign_Message,   /** Sign/verify message dialog */

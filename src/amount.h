@@ -14,14 +14,14 @@
 
 extern const std::string CURRENCY_UNIT;
 
-/** Amount in PIV (Can be negative) */
+/** Amount in CARI (Can be negative) */
 typedef int64_t CAmount;
 
 static const CAmount COIN = 100000000;
 static const CAmount CENT = 1000000;
 
 /**
- * Fee rate in PIV per kilobyte: CAmount / kB
+ * Fee rate in CARI per kilobyte: CAmount / kB
  */
 class CFeeRate
 {

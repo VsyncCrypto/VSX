@@ -2,19 +2,19 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "qt/pivx/settings/settingsmainoptionswidget.h"
-#include "qt/pivx/settings/forms/ui_settingsmainoptionswidget.h"
+#include "qt/cari/settings/settingsmainoptionswidget.h"
+#include "qt/cari/settings/forms/ui_settingsmainoptionswidget.h"
 #include "QListView"
 
 #if defined(HAVE_CONFIG_H)
-#include "config/pivx-config.h"
+#include "config/cari-config.h"
 #endif
 
 #include "bitcoinunits.h"
 #include "guiutil.h"
 #include "optionsmodel.h"
 #include "clientmodel.h"
-#include "qt/pivx/qtutils.h"
+#include "qt/cari/qtutils.h"
 
 #include "main.h" // for MAX_SCRIPTCHECK_THREADS
 #include "netbase.h"
@@ -32,7 +32,7 @@
 #include <QTimer>
 
 
-SettingsMainOptionsWidget::SettingsMainOptionsWidget(PIVXGUI* _window, QWidget *parent) :
+SettingsMainOptionsWidget::SettingsMainOptionsWidget(CARIGUI* _window, QWidget *parent) :
     PWidget(_window, parent),
     ui(new Ui::SettingsMainOptionsWidget)
 {
@@ -54,7 +54,7 @@ SettingsMainOptionsWidget::SettingsMainOptionsWidget(PIVXGUI* _window, QWidget *
     setCssProperty({ui->labelTitleSizeDb, ui->labelTitleThreads}, "text-main-settings");
 
     // Switch
-    ui->pushSwitchStart->setText(tr("Start PIVX on system login"));
+    ui->pushSwitchStart->setText(tr("Start CARI on system login"));
     ui->pushSwitchStart->setProperty("cssClass", "btn-switch");
 
     // Combobox

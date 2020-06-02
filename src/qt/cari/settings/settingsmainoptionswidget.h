@@ -5,7 +5,7 @@
 #ifndef SETTINGSMAINOPTIONSWIDGET_H
 #define SETTINGSMAINOPTIONSWIDGET_H
 
-#include "qt/pivx/pwidget.h"
+#include "qt/cari/pwidget.h"
 
 #include <QWidget>
 
@@ -22,7 +22,7 @@ class SettingsMainOptionsWidget : public PWidget
     Q_OBJECT
 
 public:
-    explicit SettingsMainOptionsWidget(PIVXGUI* _window, QWidget *parent = nullptr);
+    explicit SettingsMainOptionsWidget(CARIGUI* _window, QWidget *parent = nullptr);
     ~SettingsMainOptionsWidget();
 
     void setMapper(QDataWidgetMapper *mapper);

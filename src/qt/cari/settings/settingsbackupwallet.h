@@ -6,7 +6,7 @@
 #define SETTINGSBACKUPWALLET_H
 
 #include <QWidget>
-#include "qt/pivx/pwidget.h"
+#include "qt/cari/pwidget.h"
 
 namespace Ui {
 class SettingsBackupWallet;
@@ -17,7 +17,7 @@ class SettingsBackupWallet : public PWidget
     Q_OBJECT
 
 public:
-    explicit SettingsBackupWallet(PIVXGUI* _window, QWidget *parent = nullptr);
+    explicit SettingsBackupWallet(CARIGUI* _window, QWidget *parent = nullptr);
     ~SettingsBackupWallet();
 
 private Q_SLOTS:

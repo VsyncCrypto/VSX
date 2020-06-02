@@ -2,14 +2,14 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "qt/pivx/settings/settingswalletoptionswidget.h"
-#include "qt/pivx/settings/forms/ui_settingswalletoptionswidget.h"
+#include "qt/cari/settings/settingswalletoptionswidget.h"
+#include "qt/cari/settings/forms/ui_settingswalletoptionswidget.h"
 #include <QListView>
 #include "optionsmodel.h"
 #include "clientmodel.h"
-#include "qt/pivx/qtutils.h"
+#include "qt/cari/qtutils.h"
 
-SettingsWalletOptionsWidget::SettingsWalletOptionsWidget(PIVXGUI* _window, QWidget *parent) :
+SettingsWalletOptionsWidget::SettingsWalletOptionsWidget(CARIGUI* _window, QWidget *parent) :
     PWidget(_window, parent),
     ui(new Ui::SettingsWalletOptionsWidget)
 {

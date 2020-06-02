@@ -6,13 +6,13 @@
 #define TOPBAR_H
 
 #include <QWidget>
-#include "qt/pivx/pwidget.h"
-#include "qt/pivx/lockunlock.h"
+#include "qt/cari/pwidget.h"
+#include "qt/cari/lockunlock.h"
 #include "amount.h"
 #include <QTimer>
 #include <QProgressBar>
 
-class PIVXGUI;
+class CARIGUI;
 class WalletModel;
 class ClientModel;
 
@@ -25,7 +25,7 @@ class TopBar : public PWidget
     Q_OBJECT
 
 public:
-    explicit TopBar(PIVXGUI* _mainWindow, QWidget *parent = nullptr);
+    explicit TopBar(CARIGUI* _mainWindow, QWidget *parent = nullptr);
     ~TopBar();
 
     void showTop();

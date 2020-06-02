@@ -380,7 +380,7 @@ and vote on the treasury system receiving a periodic reward.</string>
   <customwidget>
    <class>OptionButton</class>
    <extends>QWidget</extends>
-   <header>qt/pivx/optionbutton.h</header>
+   <header>qt/cari/optionbutton.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

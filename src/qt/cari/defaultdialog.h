@@ -5,7 +5,7 @@
 #ifndef DEFAULTDIALOG_H
 #define DEFAULTDIALOG_H
 
-#include "qt/pivx/focuseddialog.h"
+#include "qt/cari/focuseddialog.h"
 
 namespace Ui {
 class DefaultDialog;

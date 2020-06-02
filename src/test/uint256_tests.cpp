@@ -12,7 +12,7 @@
 #include "uint256.h"
 #include <string>
 #include "version.h"
-#include "test/test_pivx.h"
+#include "test/test_cari.h"
 
 BOOST_FIXTURE_TEST_SUITE(uint256_tests, BasicTestingSetup)
 

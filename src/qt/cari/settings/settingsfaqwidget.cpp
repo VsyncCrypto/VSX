@@ -2,13 +2,13 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "qt/pivx/settings/settingsfaqwidget.h"
-#include "qt/pivx/settings/forms/ui_settingsfaqwidget.h"
+#include "qt/cari/settings/settingsfaqwidget.h"
+#include "qt/cari/settings/forms/ui_settingsfaqwidget.h"
 #include <QScrollBar>
 #include <QMetaObject>
-#include "qt/pivx/qtutils.h"
+#include "qt/cari/qtutils.h"
 
-SettingsFaqWidget::SettingsFaqWidget(PIVXGUI *parent) :
+SettingsFaqWidget::SettingsFaqWidget(CARIGUI *parent) :
     QDialog(parent),
     ui(new Ui::SettingsFaqWidget)
 {
@@ -104,7 +104,7 @@ SettingsFaqWidget::SettingsFaqWidget(PIVXGUI *parent) :
     connect(ui->pushButtonFaq10, &QPushButton::clicked, this, &SettingsFaqWidget::onFaq10Clicked);
 
     if (parent)
-        connect(parent, &PIVXGUI::windowResizeEvent, this, &SettingsFaqWidget::windowResizeEvent);
+        connect(parent, &CARIGUI::windowResizeEvent, this, &SettingsFaqWidget::windowResizeEvent);
 }
 
 void SettingsFaqWidget::showEvent(QShowEvent *event)

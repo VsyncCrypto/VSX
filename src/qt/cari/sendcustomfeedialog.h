@@ -6,10 +6,10 @@
 #define SENDCUSTOMFEEDIALOG_H
 
 #include "amount.h"
-#include "qt/pivx/focuseddialog.h"
-#include "qt/pivx/snackbar.h"
+#include "qt/cari/focuseddialog.h"
+#include "qt/cari/snackbar.h"
 
-class PIVXGUI;
+class CARIGUI;
 class WalletModel;
 
 namespace Ui {
@@ -21,7 +21,7 @@ class SendCustomFeeDialog : public FocusedDialog
     Q_OBJECT
 
 public:
-    explicit SendCustomFeeDialog(PIVXGUI* parent, WalletModel* model);
+    explicit SendCustomFeeDialog(CARIGUI* parent, WalletModel* model);
     ~SendCustomFeeDialog();
 
     void showEvent(QShowEvent* event) override;
