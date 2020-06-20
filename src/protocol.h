@@ -12,7 +12,7 @@
 #ifndef BITCOIN_PROTOCOL_H
 #define BITCOIN_PROTOCOL_H
 
-#include "netbase.h"
+#include "netaddress.h"
 #include "serialize.h"
 #include "uint256.h"
 #include "version.h"
@@ -253,6 +253,10 @@ extern const char* MNWINNER;
  * The getmnwinners message is used to request winning masternode data from connected peers
  */
 extern const char* GETMNWINNERS;
+/**
+* The dseg message is used to request the Masternode list or an specific entry
+*/
+extern const char* GETMNLIST;
 /**
  * The budgetproposal message is used to broadcast or relay budget proposal metadata to connected peers
  */

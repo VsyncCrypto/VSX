@@ -177,9 +177,6 @@ public:
     void decryptKey(const std::vector<unsigned char>& crypted, const std::string& slt, const std::string& pwd, CKey& key);
     void emitBalanceChanged(); // Force update of UI-elements even when no values have changed
 
-    // return minted zCARI
-    bool getMint(const uint256& hashSerial, CZerocoinMint& mint);
-
     // Check address for validity
     bool validateAddress(const QString& address);
     // Check address for validity and type (whether cold staking address or not)
@@ -203,29 +200,6 @@ public:
 
     // Send coins to a list of recipients
     SendCoinsReturn sendCoins(WalletModelTransaction& transaction);
-    // Mint zCARI
-    bool mintCoins(CAmount value, CCoinControl* coinControl, std::string &strError);
-
-    bool createZcariSpend(
-            CWalletTx &wtxNew,
-            std::vector<CZerocoinMint> &vMintsSelected,
-            CZerocoinSpendReceipt &receipt,
-            std::list<std::pair<CTxDestination, CAmount>> outputs,
-            std::string changeAddress = ""
-    );
-
-    bool sendZcari(
-            std::vector<CZerocoinMint> &vMintsSelected,
-            CZerocoinSpendReceipt &receipt,
-            std::list<std::pair<CTxDestination, CAmount>> outputs,
-            std::string changeAddress = ""
-    );
-
-    bool convertBackZcari(
-            CAmount value,
-            std::vector<CZerocoinMint> &vMintsSelected,
-            CZerocoinSpendReceipt &receipt
-    );
 
     // Wallet encryption
     bool setWalletEncrypted(bool encrypted, const SecureString& passphrase);
@@ -289,6 +263,7 @@ public:
     bool isMine(const QString& addressStr);
     bool isUsed(CBitcoinAddress address);
     void getOutputs(const std::vector<COutPoint>& vOutpoints, std::vector<COutput>& vOutputs);
+    bool getMNCollateralCandidate(COutPoint& outPoint);
     bool isSpent(const COutPoint& outpoint) const;
     void listCoins(std::map<QString, std::vector<COutput> >& mapCoins) const;
 
@@ -297,19 +272,13 @@ public:
     void unlockCoin(COutPoint& output);
     void listLockedCoins(std::vector<COutPoint>& vOutpts);
 
-    void listZerocoinMints(std::set<CMintMeta>& setMints, bool fUnusedOnly = false, bool fMaturedOnly = false, bool fUpdateStatus = false, bool fWrongSeed = false);
-
     std::string GetUniqueWalletBackupName();
     void loadReceiveRequests(std::vector<std::string>& vReceiveRequests);
     bool saveReceiveRequest(const std::string& sAddress, const int64_t nId, const std::string& sRequest);
 
-    std::string resetMintZerocoin();
-    std::string resetSpentZerocoin();
-
 private:
     CWallet* wallet;
     bool fHaveWatchOnly;
-    bool fHaveMultiSig;
     bool fForceCheckBalanceChanged;
 
     // Wallet has an options model for wallet-specific options
@@ -370,9 +339,6 @@ Q_SIGNALS:
     // Watch-only address added
     void notifyWatchonlyChanged(bool fHaveWatchonly);
 
-    // MultiSig address added
-    void notifyMultiSigChanged(bool fHaveMultiSig);
-
     // Receive tab address may have changed
     void notifyReceiveAddressChanged();
 
@@ -383,12 +349,8 @@ public Q_SLOTS:
     void updateTransaction();
     /* New, updated or removed address book entry */
     void updateAddressBook(const QString& address, const QString& label, bool isMine, const QString& purpose, int status);
-    /* Zerocoin update */
-    void updateAddressBook(const QString &pubCoin, const QString &isUsed, int status);
     /* Watch-only added */
     void updateWatchOnlyFlag(bool fHaveWatchonly);
-    /* MultiSig added */
-    void updateMultiSigFlag(bool fHaveMultiSig);
     /* Current, immature or unconfirmed balance might have changed - emit 'balanceChanged' if so */
     void pollBalanceChanged();
     /* Update address book labels in the database */

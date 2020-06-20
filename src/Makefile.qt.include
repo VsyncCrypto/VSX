@@ -19,7 +19,6 @@ QT_FORMS_UI = \
   qt/forms/optionsdialog.ui \
   qt/forms/rpcconsole.ui \
   qt/cari/forms/loadingdialog.ui \
-  qt/forms/zcaricontroldialog.ui \
   qt/cari/forms/snackbar.ui \
   qt/cari/forms/navmenuwidget.ui \
   qt/cari/forms/lockunlock.ui \
@@ -50,7 +49,6 @@ QT_FORMS_UI = \
   qt/cari/forms/tooltipmenu.ui \
   qt/cari/forms/addresseswidget.ui \
   qt/cari/forms/defaultdialog.ui \
-  qt/cari/forms/privacywidget.ui \
   qt/cari/forms/coldstakingwidget.ui \
   qt/cari/settings/forms/settingsbackupwallet.ui \
   qt/cari/settings/forms/settingsexportcsv.ui \
@@ -75,7 +73,6 @@ QT_MOC_CPP = \
   qt/moc_askpassphrasedialog.cpp \
   qt/moc_bantablemodel.cpp \
   qt/moc_bitcoinaddressvalidator.cpp \
-  qt/moc_bitcoinamountfield.cpp \
   qt/cari/moc_carigui.cpp \
   qt/moc_bitcoinunits.cpp \
   qt/moc_clientmodel.cpp \
@@ -105,7 +102,6 @@ QT_MOC_CPP = \
   qt/moc_utilitydialog.cpp \
   qt/moc_walletmodel.cpp \
   qt/cari/moc_loadingdialog.cpp \
-  qt/moc_zcaricontroldialog.cpp \
   qt/cari/moc_pwidget.cpp \
   qt/cari/moc_focuseddialog.cpp \
   qt/cari/moc_snackbar.cpp \
@@ -143,7 +139,6 @@ QT_MOC_CPP = \
   qt/cari/moc_tooltipmenu.cpp \
   qt/cari/moc_addresseswidget.cpp \
   qt/cari/moc_defaultdialog.cpp \
-  qt/cari/moc_privacywidget.cpp \
   qt/cari/moc_coldstakingwidget.cpp \
   qt/cari/settings/moc_settingsbackupwallet.cpp \
   qt/cari/settings/moc_settingsexportcsv.cpp \
@@ -168,7 +163,6 @@ BITCOIN_MM = \
 
 QT_MOC = \
   qt/cari.moc \
-  qt/bitcoinamountfield.moc \
   qt/intro.moc \
   qt/rpcconsole.moc \
   qt/cari/settings/moc_settingsconsolewidget.cpp
@@ -188,7 +182,6 @@ BITCOIN_QT_H = \
   qt/askpassphrasedialog.h \
   qt/bantablemodel.h \
   qt/bitcoinaddressvalidator.h \
-  qt/bitcoinamountfield.h \
   qt/cari/carigui.h \
   qt/bitcoinunits.h \
   qt/clientmodel.h \
@@ -227,7 +220,6 @@ BITCOIN_QT_H = \
   qt/cari/pfborderimage.h \
   qt/cari/loadingdialog.h \
   qt/winshutdownmonitor.h \
-  qt/zcaricontroldialog.h \
   qt/cari/pwidget.h \
   qt/cari/focuseddialog.h \
   qt/cari/guitransactionsutils.h \
@@ -270,7 +262,6 @@ BITCOIN_QT_H = \
   qt/cari/tooltipmenu.h \
   qt/cari/addresseswidget.h \
   qt/cari/defaultdialog.h \
-  qt/cari/privacywidget.h \
   qt/cari/coldstakingwidget.h \
   qt/cari/settings/settingsbackupwallet.h \
   qt/cari/settings/settingsexportcsv.h \
@@ -513,7 +504,6 @@ RES_ICONS = \
 BITCOIN_QT_BASE_CPP = \
   qt/bantablemodel.cpp \
   qt/bitcoinaddressvalidator.cpp \
-  qt/bitcoinamountfield.cpp \
   qt/cari/carigui.cpp \
   qt/bitcoinunits.cpp \
   qt/clientmodel.cpp \
@@ -553,7 +543,6 @@ BITCOIN_QT_WALLET_CPP = \
   qt/walletmodel.cpp \
   qt/walletmodeltransaction.cpp \
   qt/cari/loadingdialog.cpp \
-  qt/zcaricontroldialog.cpp \
   qt/cari/pwidget.cpp \
   qt/cari/focuseddialog.cpp \
   qt/cari/guitransactionsutils.cpp \
@@ -595,7 +584,6 @@ BITCOIN_QT_WALLET_CPP = \
   qt/cari/tooltipmenu.cpp \
   qt/cari/addresseswidget.cpp \
   qt/cari/defaultdialog.cpp \
-  qt/cari/privacywidget.cpp \
   qt/cari/coldstakingwidget.cpp \
   qt/cari/settings/settingsbackupwallet.cpp \
   qt/cari/settings/settingsexportcsv.cpp \

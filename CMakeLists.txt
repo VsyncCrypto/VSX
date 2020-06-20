@@ -301,6 +301,7 @@ set(SERVER_SOURCES
         ./src/miner.cpp
         ./src/net.cpp
         ./src/noui.cpp
+        ./src/policy/fees.cpp
         ./src/pow.cpp
         ./src/rest.cpp
         ./src/rpc/blockchain.cpp
@@ -460,6 +461,8 @@ set(COMMON_SOURCES
         ./src/amount.cpp
         ./src/base58.cpp
         ./src/bip38.cpp
+        ./src/consensus/params.cpp
+        ./src/consensus/upgrades.cpp
         ./src/chainparams.cpp
         ./src/coins.cpp
         ./src/key_io.cpp
@@ -477,6 +480,7 @@ set(COMMON_SOURCES
         ./src/invalid.cpp
         ./src/key.cpp
         ./src/keystore.cpp
+        ./src/netaddress.cpp
         ./src/netbase.cpp
         ./src/protocol.cpp
         ./src/pubkey.cpp
@@ -505,6 +509,7 @@ set(UTIL_SOURCES
         ./src/compat/glibcxx_sanity.cpp
         ./src/chainparamsbase.cpp
         ./src/clientversion.cpp
+        ./src/fs.cpp
         ./src/logging.cpp
         ./src/random.cpp
         ./src/rpc/protocol.cpp

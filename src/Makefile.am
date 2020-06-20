@@ -106,6 +106,7 @@ BITCOIN_CORE_H = \
   consensus/tx_verify.h \
   consensus/zerocoin_verify.h \
   consensus/params.h \
+  consensus/upgrades.h \
   primitives/block.h \
   primitives/transaction.h \
   core_io.h \
@@ -114,6 +115,7 @@ BITCOIN_CORE_H = \
   addressbook.h \
   denomination_functions.h \
   wallet/db.h \
+  fs.h \
   hash.h \
   httprpc.h \
   httpserver.h \
@@ -142,9 +144,12 @@ BITCOIN_CORE_H = \
   messagesigner.h \
   miner.h \
   mruset.h \
-  netbase.h \
   net.h \
+  netaddress.h \
+  netbase.h \
   noui.h \
+  policy/fees.h \
+  optional.h \
   pow.h \
   prevector.h \
   protocol.h \
@@ -225,6 +230,7 @@ libbitcoin_server_a_SOURCES = \
   blocksignature.cpp \
   chain.cpp \
   checkpoints.cpp \
+  consensus/params.cpp \
   consensus/tx_verify.cpp \
   consensus/zerocoin_verify.cpp \
   httprpc.cpp \
@@ -236,6 +242,7 @@ libbitcoin_server_a_SOURCES = \
   miner.cpp \
   net.cpp \
   noui.cpp \
+  policy/fees.cpp \
   pow.cpp \
   rest.cpp \
   rpc/blockchain.cpp \
@@ -384,6 +391,7 @@ libbitcoin_common_a_SOURCES = \
   base58.cpp \
   bip38.cpp \
   chainparams.cpp \
+  consensus/upgrades.cpp \
   coins.cpp \
   compressor.cpp \
   consensus/merkle.cpp \
@@ -397,6 +405,7 @@ libbitcoin_common_a_SOURCES = \
   invalid.cpp \
   key.cpp \
   keystore.cpp \
+  netaddress.cpp \
   netbase.cpp \
   protocol.cpp \
   pubkey.cpp \
@@ -423,6 +432,7 @@ libbitcoin_util_a_SOURCES = \
   compat/glibc_sanity.cpp \
   compat/glibcxx_sanity.cpp \
   compat/strnlen.cpp \
+  fs.cpp \
   logging.cpp \
   random.cpp \
   rpc/protocol.cpp \
@@ -619,6 +629,10 @@ endif
 
 if ENABLE_TESTS
 include Makefile.test.include
+endif
+
+if ENABLE_BENCH
+include Makefile.bench.include
 endif
 
 if ENABLE_QT

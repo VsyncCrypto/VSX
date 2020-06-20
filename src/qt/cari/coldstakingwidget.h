@@ -72,6 +72,7 @@ private Q_SLOTS:
     void clearAll();
     void onLabelClicked();
     void onMyStakingAddressesClicked();
+    void onOwnerAddressChanged();
     void onDelegationsRefreshed();
     void onSortChanged(int idx);
     void onSortOrderChanged(int idx);
@@ -121,6 +122,7 @@ private:
     void onLabelClicked(QString dialogTitle, const QModelIndex &index, const bool& isMyColdStakingAddresses);
     void updateStakingTotalLabel();
     void sortAddresses();
+    void setCoinControlPayAmounts();
 };
 
 #endif // COLDSTAKINGWIDGET_H

@@ -12,7 +12,6 @@
 #include "init.h"
 #include "key_io.h"
 #include "net.h"
-#include "netbase.h"
 #include "rpc/server.h"
 #include "timedata.h"
 #include "util.h"
@@ -997,7 +996,7 @@ UniValue rawdelegatestake(const UniValue& params, bool fHelp)
             "  ],\n"
             "  \"vout\" : [              (array of json objects)\n"
             "     {\n"
-            "       \"value\" : x.xxx,            (numeric) The value in btc\n"
+            "       \"value\" : x.xxx,            (numeric) The value in CARI\n"
             "       \"n\" : n,                    (numeric) index\n"
             "       \"scriptPubKey\" : {          (json object)\n"
             "         \"asm\" : \"asm\",          (string) the asm\n"
@@ -3035,7 +3034,8 @@ UniValue setstakesplitthreshold(const UniValue& params, bool fHelp)
 
             "\nArguments:\n"
             "1. value                   (numeric, required) Threshold value (in CARI).\n"
-            "                                               Set to 0 to disable stake-splitting\n"
+            "                                     Set to 0 to disable stake-splitting\n"
+            "                                     If > 0, it must be >= " + FormatMoney(CWallet::minStakeSplitThreshold) + "\n"
 
             "\nResult:\n"
             "{\n"
@@ -3046,9 +3046,12 @@ UniValue setstakesplitthreshold(const UniValue& params, bool fHelp)
             "\nExamples:\n" +
             HelpExampleCli("setstakesplitthreshold", "500.12") + HelpExampleRpc("setstakesplitthreshold", "500.12"));
 
-    EnsureWalletIsUnlocked();
-
     CAmount nStakeSplitThreshold = AmountFromValue(params[0]);
+    if (nStakeSplitThreshold > 0 && nStakeSplitThreshold < CWallet::minStakeSplitThreshold)
+        throw JSONRPCError(RPC_INVALID_PARAMETER, strprintf(_("The threshold value cannot be less than %s"),
+                FormatMoney(CWallet::minStakeSplitThreshold)));
+
+    EnsureWalletIsUnlocked();
 
     CWalletDB walletdb(pwalletMain->strWalletFile);
     LOCK(pwalletMain->cs_wallet);

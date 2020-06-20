@@ -20,7 +20,6 @@
 #include "qt/cari/send.h"
 #include "qt/cari/receivewidget.h"
 #include "qt/cari/addresseswidget.h"
-#include "qt/cari/privacywidget.h"
 #include "qt/cari/coldstakingwidget.h"
 #include "qt/cari/masternodeswidget.h"
 #include "qt/cari/snackbar.h"
@@ -66,7 +65,6 @@ public Q_SLOTS:
     void goToSend();
     void goToReceive();
     void goToAddresses();
-    void goToPrivacy();
     void goToMasterNodes();
     void goToColdStaking();
     void goToSettings();
@@ -130,7 +128,6 @@ private:
     SendWidget *sendWidget = nullptr;
     ReceiveWidget *receiveWidget = nullptr;
     AddressesWidget *addressesWidget = nullptr;
-    PrivacyWidget *privacyWidget = nullptr;
     MasterNodesWidget *masterNodesWidget = nullptr;
     ColdStakingWidget *coldStakingWidget = nullptr;
     SettingsWidget* settingsWidget = nullptr;

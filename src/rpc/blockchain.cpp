@@ -8,6 +8,7 @@
 #include "base58.h"
 #include "checkpoints.h"
 #include "clientversion.h"
+#include "consensus/upgrades.h"
 #include "kernel.h"
 #include "main.h"
 #include "rpc/server.h"
@@ -15,6 +16,7 @@
 #include "txdb.h"
 #include "util.h"
 #include "utilmoneystr.h"
+#include "utilstrencodings.h"
 #include "wallet/wallet.h"
 #include "zcari/zcarimodule.h"
 #include "zcarichain.h"
@@ -348,9 +350,8 @@ UniValue mempoolToJSON(bool fVerbose = false)
     if (fVerbose) {
         LOCK(mempool.cs);
         UniValue o(UniValue::VOBJ);
-        for (const PAIRTYPE(uint256, CTxMemPoolEntry) & entry : mempool.mapTx) {
-            const uint256& hash = entry.first;
-            const CTxMemPoolEntry& e = entry.second;
+        for (const CTxMemPoolEntry& e : mempool.mapTx) {
+            const uint256& hash = e.GetTx().GetHash();
             UniValue info(UniValue::VOBJ);
             info.push_back(Pair("size", (int)e.GetTxSize()));
             info.push_back(Pair("fee", ValueFromAmount(e.GetFee())));
@@ -358,6 +359,9 @@ UniValue mempoolToJSON(bool fVerbose = false)
             info.push_back(Pair("height", (int)e.GetHeight()));
             info.push_back(Pair("startingpriority", e.GetPriority(e.GetHeight())));
             info.push_back(Pair("currentpriority", e.GetPriority(chainActive.Height())));
+            info.push_back(Pair("descendantcount", e.GetCountWithDescendants()));
+            info.push_back(Pair("descendantsize", e.GetSizeWithDescendants()));
+            info.push_back(Pair("descendantfees", e.GetFeesWithDescendants()));
             const CTransaction& tx = e.GetTx();
             std::set<std::string> setDepends;
             for (const CTxIn& txin : tx.vin) {
@@ -411,6 +415,9 @@ UniValue getrawmempool(const UniValue& params, bool fHelp)
             "    \"height\" : n,           (numeric) block height when transaction entered pool\n"
             "    \"startingpriority\" : n, (numeric) priority when transaction entered pool\n"
             "    \"currentpriority\" : n,  (numeric) transaction priority now\n"
+            "    \"descendantcount\" : n,  (numeric) number of in-mempool descendant transactions (including this one)\n"
+            "    \"descendantsize\" : n,   (numeric) size of in-mempool descendants (including this one)\n"
+            "    \"descendantfees\" : n,   (numeric) fees of in-mempool descendants (including this one)\n"
             "    \"depends\" : [           (array) unconfirmed transactions used as inputs for this transaction\n"
             "        \"transactionid\",    (string) parent transaction id\n"
             "       ... ]\n"
@@ -632,7 +639,7 @@ UniValue gettxout(const UniValue& params, bool fHelp)
             "{\n"
             "  \"bestblock\" : \"hash\",    (string) the block hash\n"
             "  \"confirmations\" : n,       (numeric) The number of confirmations\n"
-            "  \"value\" : x.xxx,           (numeric) The transaction value in btc\n"
+            "  \"value\" : x.xxx,           (numeric) The transaction value in CARI\n"
             "  \"scriptPubKey\" : {         (json object)\n"
             "     \"asm\" : \"code\",       (string) \n"
             "     \"hex\" : \"hex\",        (string) \n"
@@ -764,6 +771,36 @@ static UniValue SoftForkDesc(const std::string &name, int version, CBlockIndex* 
     return rv;
 }
 
+static UniValue NetworkUpgradeDesc(const Consensus::Params& consensusParams, Consensus::UpgradeIndex idx, int height)
+{
+    UniValue rv(UniValue::VOBJ);
+    auto upgrade = NetworkUpgradeInfo[idx];
+    rv.push_back(Pair("activationheight", consensusParams.vUpgrades[idx].nActivationHeight));
+    switch (NetworkUpgradeState(height, consensusParams, idx)) {
+        case UPGRADE_DISABLED: rv.push_back(Pair("status", "disabled")); break;
+        case UPGRADE_PENDING: rv.push_back(Pair("status", "pending")); break;
+        case UPGRADE_ACTIVE: rv.push_back(Pair("status", "active")); break;
+    }
+    rv.push_back(Pair("info", upgrade.strInfo));
+    return rv;
+}
+
+void NetworkUpgradeDescPushBack(
+        UniValue& networkUpgrades,
+        const Consensus::Params& consensusParams,
+        Consensus::UpgradeIndex idx,
+        int height)
+{
+    // Network upgrades with an activation height of NO_ACTIVATION_HEIGHT are
+    // hidden. This is used when network upgrade implementations are merged
+    // without specifying the activation height.
+    if (consensusParams.vUpgrades[idx].nActivationHeight != Consensus::NetworkUpgrade::NO_ACTIVATION_HEIGHT) {
+        networkUpgrades.push_back(Pair(
+                NetworkUpgradeInfo[idx].strName,
+                NetworkUpgradeDesc(consensusParams, idx, height)));
+    }
+}
+
 UniValue getblockchaininfo(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 0)
@@ -788,13 +825,21 @@ UniValue getblockchaininfo(const UniValue& params, bool fHelp)
             "           \"status\": xx,       (boolean) true if threshold reached\n"
             "        },\n"
             "     }, ...\n"
-            "  ]\n"
+            "  ],\n"
+            "  \"upgrades\": {                (object) status of network upgrades\n"
+            "     \"name\" : {                (string) name of upgrade\n"
+            "        \"activationheight\": xxxxxx,  (numeric) block height of activation\n"
+            "        \"status\": \"xxxx\",      (string) status of upgrade\n"
+            "        \"info\": \"xxxx\",        (string) additional information about upgrade\n"
+            "     }, ...\n"
             "}\n"
 
             "\nExamples:\n" +
             HelpExampleCli("getblockchaininfo", "") + HelpExampleRpc("getblockchaininfo", ""));
 
     LOCK(cs_main);
+
+    const Consensus::Params& consensusParams = Params().GetConsensus();
 
     UniValue obj(UniValue::VOBJ);
     obj.push_back(Pair("chain", Params().NetworkIDString()));
@@ -808,6 +853,12 @@ UniValue getblockchaininfo(const UniValue& params, bool fHelp)
     UniValue softforks(UniValue::VARR);
     softforks.push_back(SoftForkDesc("bip65", 5, tip));
     obj.push_back(Pair("softforks",             softforks));
+    UniValue upgrades(UniValue::VOBJ);
+    for (int i = Consensus::UPGRADE_PURPLE_FENIX; i < (int) Consensus::MAX_NETWORK_UPGRADES; i++) {
+        NetworkUpgradeDescPushBack(upgrades, consensusParams, Consensus::UpgradeIndex(i), tip->nHeight);
+    }
+    obj.push_back(Pair("upgrades", upgrades));
+
     return obj;
 }
 
@@ -959,7 +1010,7 @@ UniValue mempoolInfoToJSON()
     UniValue ret(UniValue::VOBJ);
     ret.push_back(Pair("size", (int64_t) mempool.size()));
     ret.push_back(Pair("bytes", (int64_t) mempool.GetTotalTxSize()));
-    //ret.push_back(Pair("usage", (int64_t) mempool.DynamicMemoryUsage()));
+    ret.push_back(Pair("usage", (int64_t) mempool.DynamicMemoryUsage()));
 
     return ret;
 }
@@ -975,6 +1026,7 @@ UniValue getmempoolinfo(const UniValue& params, bool fHelp)
             "{\n"
             "  \"size\": xxxxx                (numeric) Current tx count\n"
             "  \"bytes\": xxxxx               (numeric) Sum of all tx sizes\n"
+            "  \"usage\": xxxxx               (numeric) Total memory usage for the mempool\n"
             "}\n"
 
             "\nExamples:\n" +

@@ -8,6 +8,7 @@
 #include "rpc/server.h"
 
 #include "base58.h"
+#include "fs.h"
 #include "init.h"
 #include "main.h"
 #include "random.h"
@@ -21,7 +22,6 @@
 #endif // ENABLE_WALLET
 
 #include <boost/bind.hpp>
-#include <boost/filesystem.hpp>
 #include <boost/iostreams/concepts.hpp>
 #include <boost/iostreams/stream.hpp>
 #include <boost/shared_ptr.hpp>
@@ -51,22 +51,22 @@ static struct CRPCSignals
     boost::signals2::signal<void (const CRPCCommand&)> PostCommand;
 } g_rpcSignals;
 
-void RPCServer::OnStarted(boost::function<void ()> slot)
+void RPCServer::OnStarted(std::function<void ()> slot)
 {
     g_rpcSignals.Started.connect(slot);
 }
 
-void RPCServer::OnStopped(boost::function<void ()> slot)
+void RPCServer::OnStopped(std::function<void ()> slot)
 {
     g_rpcSignals.Stopped.connect(slot);
 }
 
-void RPCServer::OnPreCommand(boost::function<void (const CRPCCommand&)> slot)
+void RPCServer::OnPreCommand(std::function<void (const CRPCCommand&)> slot)
 {
     g_rpcSignals.PreCommand.connect(boost::bind(slot, _1));
 }
 
-void RPCServer::OnPostCommand(boost::function<void (const CRPCCommand&)> slot)
+void RPCServer::OnPostCommand(std::function<void (const CRPCCommand&)> slot)
 {
     g_rpcSignals.PostCommand.connect(boost::bind(slot, _1));
 }
@@ -358,14 +358,13 @@ static const CRPCCommand vRPCCommands[] =
         {"hidden", "invalidateblock", &invalidateblock, true, true, false},
         {"hidden", "reconsiderblock", &reconsiderblock, true, true, false},
         {"hidden", "setmocktime", &setmocktime, true, false, false},
-        { "hidden",             "waitfornewblock",        &waitfornewblock,        true,  true,  false  },
-        { "hidden",             "waitforblock",           &waitforblock,           true,  true,  false  },
-        { "hidden",             "waitforblockheight",     &waitforblockheight,     true,  true,  false  },
+        {"hidden", "waitfornewblock", &waitfornewblock, true, true, false},
+        {"hidden", "waitforblock", &waitforblock, true, true, false},
+        {"hidden", "waitforblockheight",&waitforblockheight, true, true, false},
 
         /* CARI features */
         {"cari", "listmasternodes", &listmasternodes, true, true, false},
         {"cari", "getmasternodecount", &getmasternodecount, true, true, false},
-        {"cari", "masternodeconnect", &masternodeconnect, true, true, false},
         {"cari", "createmasternodebroadcast", &createmasternodebroadcast, true, true, false},
         {"cari", "decodemasternodebroadcast", &decodemasternodebroadcast, true, true, false},
         {"cari", "relaymasternodebroadcast", &relaymasternodebroadcast, true, true, false},
@@ -666,7 +665,7 @@ void RPCUnsetTimerInterface(RPCTimerInterface *iface)
         timerInterface = NULL;
 }
 
-void RPCRunLater(const std::string& name, boost::function<void(void)> func, int64_t nSeconds)
+void RPCRunLater(const std::string& name, std::function<void(void)> func, int64_t nSeconds)
 {
     if (!timerInterface)
         throw JSONRPCError(RPC_INTERNAL_ERROR, "No timer handler registered for RPC");

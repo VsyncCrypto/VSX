@@ -44,7 +44,7 @@ TopBar::TopBar(CARIGUI* _mainWindow, QWidget *parent) :
     ui->containerTop->setProperty("cssClass", "container-top");
 #endif
 
-    std::initializer_list<QWidget*> lblTitles = {ui->labelTitle1, ui->labelTitleAvailablezCari, ui->labelTitle3, ui->labelTitle4, ui->labelTitlePendingzCari, ui->labelTitleImmaturezCari};
+    std::initializer_list<QWidget*> lblTitles = {ui->labelTitle1, ui->labelTitle3, ui->labelTitle4};
     setCssProperty(lblTitles, "text-title-topbar");
     QFont font;
     font.setWeight(QFont::Light);
@@ -52,9 +52,9 @@ TopBar::TopBar(CARIGUI* _mainWindow, QWidget *parent) :
 
     // Amount information top
     ui->widgetTopAmount->setVisible(false);
-    setCssProperty({ui->labelAmountTopCari, ui->labelAmountTopzCari}, "amount-small-topbar");
-    setCssProperty({ui->labelAmountCari, ui->labelAvailablezCari}, "amount-topbar");
-    setCssProperty({ui->labelPendingCari, ui->labelPendingzCari, ui->labelImmatureCari, ui->labelImmaturezCari}, "amount-small-topbar");
+    setCssProperty({ui->labelAmountTopCari}, "amount-small-topbar");
+    setCssProperty({ui->labelAmountCari}, "amount-topbar");
+    setCssProperty({ui->labelPendingCari, ui->labelImmatureCari}, "amount-small-topbar");
 
     // Progress Sync
     progressBar = new QProgressBar(ui->layoutSync);
@@ -634,13 +634,7 @@ void TopBar::updateBalances(const CAmount& balance, const CAmount& unconfirmedBa
     ui->labelTitle1->setText(nLockedBalance > 0 ? tr("Available (Locked included)") : tr("Available"));
 
     // CARI Total
-    CAmount cariAvailableBalance = balance;
-    // zCARI Balance
-    CAmount matureZerocoinBalance = zerocoinBalance - unconfirmedZerocoinBalance - immatureZerocoinBalance;
-
-    // Set
-    QString totalCari = GUIUtil::formatBalance(cariAvailableBalance, nDisplayUnit);
-    QString totalzCari = GUIUtil::formatBalance(matureZerocoinBalance, nDisplayUnit, true);
+    QString totalCari = GUIUtil::formatBalance(balance, nDisplayUnit);
 
     // CARI
     // Top
@@ -649,22 +643,6 @@ void TopBar::updateBalances(const CAmount& balance, const CAmount& unconfirmedBa
     ui->labelAmountCari->setText(totalCari);
     ui->labelPendingCari->setText(GUIUtil::formatBalance(unconfirmedBalance, nDisplayUnit));
     ui->labelImmatureCari->setText(GUIUtil::formatBalance(immatureBalance, nDisplayUnit));
-
-    // Update display state and/or values for zCARI balances as necessary
-    bool fHaveZerocoins = zerocoinBalance > 0;
-
-    // Set visibility of zCARI label titles/values
-    ui->typeSpacerTop->setVisible(fHaveZerocoins);
-    ui->typeSpacerExpanded->setVisible(fHaveZerocoins);
-    ui->labelAmountTopzCari->setVisible(fHaveZerocoins);
-    ui->zerocoinBalances->setVisible(fHaveZerocoins);
-
-    // Top
-    ui->labelAmountTopzCari->setText(totalzCari);
-    // Expanded
-    ui->labelAvailablezCari->setText(totalzCari);
-    ui->labelPendingzCari->setText(GUIUtil::formatBalance(unconfirmedZerocoinBalance, nDisplayUnit, true));
-    ui->labelImmaturezCari->setText(GUIUtil::formatBalance(immatureZerocoinBalance, nDisplayUnit, true));
 }
 
 void TopBar::resizeEvent(QResizeEvent *event)

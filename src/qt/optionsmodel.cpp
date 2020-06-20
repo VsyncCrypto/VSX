@@ -17,6 +17,7 @@
 #include "init.h"
 #include "main.h"
 #include "net.h"
+#include "netbase.h"
 #include "txdb.h" // for -dbcache defaults
 #include "util.h"
 
@@ -47,6 +48,7 @@ void OptionsModel::Init()
 
     // Ensure restart flag is unset on client startup
     setRestartRequired(false);
+    setSSTChanged(false);
 
     // These are Qt-only settings:
 
@@ -269,7 +271,7 @@ QVariant OptionsModel::data(const QModelIndex& index, int role) const
         case fUseCustomFee:
             return QVariant((pwalletMain) ? pwalletMain->fUseCustomFee : false);
         case nCustomFee:
-            return QVariant(static_cast<qlonglong>((pwalletMain) ? pwalletMain->nCustomFee : CWallet::minTxFee.GetFeePerK()));
+            return QVariant(static_cast<qlonglong>((pwalletMain) ? pwalletMain->nCustomFee : CWallet::GetRequiredFee(1000)));
 #endif
         case DisplayUnit:
             return nDisplayUnit;
@@ -379,6 +381,7 @@ bool OptionsModel::setData(const QModelIndex& index, const QVariant& value, int 
         case StakeSplitThreshold:
             // Write double as qlonglong/CAmount
             setStakeSplitThreshold(static_cast<CAmount>(value.toDouble() * COIN));
+            setSSTChanged(true);
             break;
         case DisplayUnit:
             setDisplayUnit(value);
@@ -485,6 +488,23 @@ void OptionsModel::setStakeSplitThreshold(const CAmount nStakeSplitThreshold)
     }
 }
 
+/* returns default minimum value for stake split threshold as doulbe */
+double OptionsModel::getSSTMinimum() const
+{
+    return static_cast<double>(CWallet::minStakeSplitThreshold / COIN);
+}
+
+/* Verify that StakeSplitThreshold's value is either 0 or above the min. Else reset */
+bool OptionsModel::isSSTValid()
+{
+    if (pwalletMain && pwalletMain->nStakeSplitThreshold &&
+            pwalletMain->nStakeSplitThreshold < CWallet::minStakeSplitThreshold) {
+        setStakeSplitThreshold(CWallet::minStakeSplitThreshold);
+        return false;
+    }
+    return true;
+}
+
 /* Update Custom Fee value in wallet */
 void OptionsModel::setUseCustomFee(bool fUse)
 {
@@ -541,3 +561,14 @@ bool OptionsModel::isRestartRequired()
     return settings.value("fRestartRequired", false).toBool();
 }
 
+void OptionsModel::setSSTChanged(bool fChanged)
+{
+    QSettings settings;
+    return settings.setValue("fSSTChanged", fChanged);
+}
+
+bool OptionsModel::isSSTChanged()
+{
+    QSettings settings;
+    return settings.value("fSSTChanged", false).toBool();
+}
