@@ -1,17 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
-    <title>Artboard</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="ic-copy" transform="translate(2.000000, 2.000000)">
-            <g id="Group_8993" transform="translate(3.000000, 2.000000)" fill="#5C4B7D" fill-rule="nonzero">
-                <polygon id="Path_18959" points="2.5 13 0.5 13 0.5 0 10.5 0 10.5 2 2.5 2"></polygon>
-            </g>
-            <polygon id="Rectangle_4640" points="0 0 20 0 20 20 0 20"></polygon>
-            <g id="Group_8994" transform="translate(6.000000, 5.000000)" fill="#5C4B7D" fill-rule="nonzero">
-                <path d="M10.5,13 L0.5,13 L0.5,0 L10.5,0 L10.5,13 Z M2.5,11 L8.5,11 L8.5,2 L2.5,2 L2.5,11 Z" id="Path_18960"></path>
-            </g>
-        </g>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#4F7D4B;}
+	.st1{fill:none;}
+</style>
+<desc>Created with Sketch.</desc>
+<g id="Artboard">
+	<g id="ic-copy" transform="translate(2.000000, 2.000000)">
+		<g id="Group_8993" transform="translate(3.000000, 2.000000)">
+			<polygon id="Path_18959" class="st0" points="2.5,13 0.5,13 0.5,0 10.5,0 10.5,2 2.5,2 			"/>
+		</g>
+		<polygon id="Rectangle_4640" class="st1" points="0,0 20,0 20,20 0,20 		"/>
+		<g id="Group_8994" transform="translate(6.000000, 5.000000)">
+			<path id="Path_18960" class="st0" d="M10.5,13h-10V0h10V13z M2.5,11h6V2h-6V11z"/>
+		</g>
+	</g>
+</g>
 </svg>

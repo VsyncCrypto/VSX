@@ -1,17 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="40px" viewBox="0 0 24 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
-    <title>Receive off</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Receive-off" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="ic-receive-on" transform="translate(-1.000000, 11.000000)">
-            <polygon id="Rectangle_4413" points="0 0 26 0 26 26 0 26"></polygon>
-            <g id="Group_8987" transform="translate(2.000000, 2.000000)" fill="#B088FF">
-                <g id="Group_8986">
-                    <polygon id="Path_18953" points="18.178 10.734 16.822 9.265 12 13.716 12 0 10 0 10 13.716 5.178 9.266 3.822 10.734 11 17.361"></polygon>
-                    <polygon id="Path_18954" points="20 15 20 20 2 20 2 15 0 15 0 22 22 22 22 15"></polygon>
-                </g>
-            </g>
-        </g>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 40" style="enable-background:new 0 0 24 40;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#92FF88;}
+</style>
+<desc>Created with Sketch.</desc>
+<g id="Receive-off">
+	<g id="ic-receive-on" transform="translate(-1.000000, 11.000000)">
+		<polygon id="Rectangle_4413" class="st0" points="0,0 26,0 26,26 0,26 		"/>
+		<g id="Group_8987" transform="translate(2.000000, 2.000000)">
+			<g id="Group_8986">
+				<polygon id="Path_18953" class="st1" points="18.2,10.7 16.8,9.3 12,13.7 12,0 10,0 10,13.7 5.2,9.3 3.8,10.7 11,17.4 				"/>
+				<polygon id="Path_18954" class="st1" points="20,15 20,20 2,20 2,15 0,15 0,22 22,22 22,15 				"/>
+			</g>
+		</g>
+	</g>
+</g>
 </svg>

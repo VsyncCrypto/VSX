@@ -1,24 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" id="ic_error_connection" width="24" height="24" viewBox="0 0 24 24" shape-rendering="geometricPrecision">
-    <defs>
-        <style type="text/css">
-            .cls-1{fill:#7c7687}.cls-2{fill:none}
-        </style>
-    </defs>
-    <g id="Group_8828" data-name="Group 8828">
-        <circle id="Ellipse_601" cx="2" cy="2" r="2" class="cls-1" data-name="Ellipse 601" transform="translate(10 16)"/>
-        <g id="Group_8825" data-name="Group 8825">
-            <path id="Path_18883" d="M10 4.15a14.966 14.966 0 0 0-8.079 3.763l1.346 1.48A12.969 12.969 0 0 1 10 6.168z" class="cls-1" data-name="Path 18883"/>
-            <path id="Path_18884" d="M14 4.15v2.018a12.969 12.969 0 0 1 6.733 3.225l1.346-1.48A14.966 14.966 0 0 0 14 4.15z" class="cls-1" data-name="Path 18884"/>
-        </g>
-        <g id="Group_8826" data-name="Group 8826">
-            <path id="Path_18885" d="M10 8.185a11.008 11.008 0 0 0-5.392 2.684l1.346 1.48A9 9 0 0 1 10 10.236z" class="cls-1" data-name="Path 18885"/>
-            <path id="Path_18886" d="M14 8.185v2.051a9 9 0 0 1 4.046 2.113l1.346-1.48A11.008 11.008 0 0 0 14 8.185z" class="cls-1" data-name="Path 18886"/>
-        </g>
-        <g id="Group_8827" data-name="Group 8827">
-            <path id="Path_18887" d="M10 12.3a6.992 6.992 0 0 0-2.7 1.529l1.346 1.479A4.724 4.724 0 0 1 10 14.46z" class="cls-1" data-name="Path 18887"/>
-            <path id="Path_18888" d="M14 12.3v2.162a4.727 4.727 0 0 1 1.358.846l1.342-1.482A6.992 6.992 0 0 0 14 12.3z" class="cls-1" data-name="Path 18888"/>
-        </g>
-        <path id="Path_18889" d="M11 3v11.147a5.236 5.236 0 0 1 2 0V3z" class="cls-1" data-name="Path 18889"/>
-    </g>
-    <path id="Rectangle_4409" d="M0 0h24v24H0z" class="cls-2" data-name="Rectangle 4409"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="ic_error_connection" shape-rendering="geometricPrecision"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
+	 style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#778776;}
+	.st1{fill:none;}
+</style>
+<g id="Group_8828">
+	<circle id="Ellipse_601" class="st0" cx="12" cy="18" r="2"/>
+	<g id="Group_8825">
+		<path id="Path_18883" class="st0" d="M10,4.2C7,4.6,4.2,5.9,1.9,7.9l1.3,1.5C5.1,7.7,7.5,6.6,10,6.2V4.2z"/>
+		<path id="Path_18884" class="st0" d="M14,4.2v2c2.5,0.4,4.9,1.5,6.7,3.2l1.3-1.5C19.8,5.9,17,4.6,14,4.2z"/>
+	</g>
+	<g id="Group_8826">
+		<path id="Path_18885" class="st0" d="M10,8.2c-2,0.4-3.9,1.3-5.4,2.7L6,12.3c1.1-1,2.5-1.8,4-2.1V8.2z"/>
+		<path id="Path_18886" class="st0" d="M14,8.2v2.1c1.5,0.3,2.9,1.1,4,2.1l1.3-1.5C17.9,9.5,16,8.6,14,8.2z"/>
+	</g>
+	<g id="Group_8827">
+		<path id="Path_18887" class="st0" d="M10,12.3c-1,0.3-1.9,0.8-2.7,1.5l1.3,1.5C9,15,9.5,14.7,10,14.5V12.3z"/>
+		<path id="Path_18888" class="st0" d="M14,12.3v2.2c0.5,0.2,1,0.5,1.4,0.8l1.3-1.5C15.9,13.1,15,12.6,14,12.3z"/>
+	</g>
+	<path id="Path_18889" class="st0" d="M11,3v11.1c0.7-0.1,1.3-0.1,2,0V3H11z"/>
+</g>
+<path id="Rectangle_4409" class="st1" d="M0,0h24v24H0V0z"/>
 </svg>
