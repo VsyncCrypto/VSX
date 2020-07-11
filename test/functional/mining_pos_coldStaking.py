@@ -129,7 +129,7 @@ class CARI_ColdStakingTest(CariTestFramework):
         # Check that SPORK 17 is disabled
         assert (not self.isColdStakingEnforced())
         self.log.info("Creating a stake-delegation tx before cold staking enforcement...")
-        assert_raises_rpc_error(-4, "The transaction was rejected!",
+        assert_raises_rpc_error(-4, "Failed to accept tx in the memory pool (reason: cold-stake-inactive (code 16))\nTransaction canceled.",
                                 self.nodes[0].delegatestake, staker_address, INPUT_VALUE, owner_address, False, False, True)
         self.log.info("Good. Cold Staking NOT ACTIVE yet.")
 
@@ -187,9 +187,12 @@ class CARI_ColdStakingTest(CariTestFramework):
         txhash = self.spendUTXOwithNode(u, 0)
         assert(txhash != None)
         self.log.info("Good. Owner was able to spend - tx: %s" % str(txhash))
-
+        sync_mempools(self.nodes)
         self.mocktime = self.generate_pos(2, self.mocktime)
         sync_blocks(self.nodes)
+        # check tx
+        self.check_tx_in_chain(0, txhash)
+        self.check_tx_in_chain(1, txhash)
         # check balances after spend.
         self.expected_balance -= float(u["amount"])
         self.checkBalances()
@@ -332,6 +335,7 @@ class CARI_ColdStakingTest(CariTestFramework):
         txhash = self.spendUTXOsWithNode(delegated_utxos, 0)
         assert(txhash != None)
         self.log.info("Good. Owner was able to void the stake delegations - tx: %s" % str(txhash))
+        sync_mempools(self.nodes)
         self.mocktime = self.generate_pos(2, self.mocktime)
         sync_blocks(self.nodes)
 
@@ -341,9 +345,12 @@ class CARI_ColdStakingTest(CariTestFramework):
         txhash = self.spendUTXOsWithNode([final_spend], 0)
         assert(txhash != None)
         self.log.info("Good. Owner was able to void a stake delegation (with SPORK 17 disabled) - tx: %s" % str(txhash))
+        sync_mempools(self.nodes)
         self.mocktime = self.generate_pos(2, self.mocktime)
         sync_blocks(self.nodes)
-
+        # check tx
+        self.check_tx_in_chain(0, txhash)
+        self.check_tx_in_chain(1, txhash)
         # check balances after big spend.
         self.expected_balance = 0
         self.checkBalances()
@@ -375,8 +382,12 @@ class CARI_ColdStakingTest(CariTestFramework):
         txhash = self.spendUTXOsWithNode(delegated_utxos, 0)
         assert (txhash != None)
         self.log.info("Good. Owner was able to spend the cold staked coins - tx: %s" % str(txhash))
+        sync_mempools(self.nodes)
         self.mocktime = self.generate_pos(2, self.mocktime)
         sync_blocks(self.nodes)
+        # check tx
+        self.check_tx_in_chain(0, txhash)
+        self.check_tx_in_chain(1, txhash)
         self.expected_balance = 0
         self.checkBalances()
 

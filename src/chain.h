@@ -349,7 +349,7 @@ public:
             READWRITE(nMint);
             READWRITE(nMoneySupply);
             READWRITE(nFlags);
-            if (nHeight < Params().GetConsensus().height_start_StakeModifierV2) {
+            if (!Params().GetConsensus().NetworkUpgradeActive(nHeight, Consensus::UPGRADE_V3_4)) {
                 uint64_t nStakeModifier = 0;
                 READWRITE(nStakeModifier);
                 this->SetStakeModifier(nStakeModifier, this->GeneratedStakeModifier());
@@ -399,12 +399,10 @@ public:
 
     std::string ToString() const
     {
-        std::string str = "CDiskBlockIndex(";
-        str += CBlockIndex::ToString();
-        str += strprintf("\n                hashBlock=%s, hashPrev=%s)",
-            GetBlockHash().ToString(),
-            hashPrev.ToString());
-        return str;
+        return strprintf("CDiskBlockIndex(%s\n                hashBlock=%s, hashPrev=%s)",
+                CBlockIndex::ToString(),
+                GetBlockHash().ToString(),
+                hashPrev.ToString());
     }
 };
 
@@ -475,7 +473,7 @@ public:
             READWRITE(nMint);
             READWRITE(nMoneySupply);
             READWRITE(nFlags);
-            if (nHeight < Params().GetConsensus().height_start_StakeModifierV2) {
+            if (!Params().GetConsensus().NetworkUpgradeActive(nHeight, Consensus::UPGRADE_V3_4)) {
                 READWRITE(nStakeModifier);
             } else {
                 READWRITE(nStakeModifierV2);
@@ -572,9 +570,6 @@ public:
 
     /** Find the last common block between this chain and a block index entry. */
     const CBlockIndex* FindFork(const CBlockIndex* pindex) const;
-
-    /** Check if new message signatures are active **/
-    bool NewSigsActive() { return Params().GetConsensus().IsMessSigV2(Height()); }
 };
 
 #endif // BITCOIN_CHAIN_H

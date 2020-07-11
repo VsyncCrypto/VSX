@@ -213,7 +213,9 @@ void CBudgetManager::SubmitFinalBudget()
         // Get our change address
         CReserveKey reservekey(pwalletMain);
         // Send the tx to the network. Do NOT use SwiftTx, locking might need too much time to propagate, especially for testnet
-        pwalletMain->CommitTransaction(wtx, reservekey, "NO-ix");
+        const CWallet::CommitResult& res = pwalletMain->CommitTransaction(wtx, reservekey, "NO-ix");
+        if (res.status != CWallet::CommitStatus::OK)
+            return;
         tx = (CTransaction)wtx;
         txidCollateral = tx.GetHash();
         mapCollateralTxids.insert(std::make_pair(tempBudget.GetHash(), txidCollateral));
@@ -914,10 +916,11 @@ CAmount CBudgetManager::GetTotalBudget(int nHeight)
 
     //get block value and calculate from that
     CAmount nSubsidy = 0;
-    const int last_pow_block = Params().GetConsensus().height_last_PoW;
-    if (nHeight <= last_pow_block && nHeight >= 151200) {
+    const Consensus::Params& consensus = Params().GetConsensus();
+    const bool isPoSActive = consensus.NetworkUpgradeActive(nHeight, Consensus::UPGRADE_POS);
+    if (nHeight >= 151200 && !isPoSActive) {
         nSubsidy = 50 * COIN;
-    } else if (nHeight <= 302399 && nHeight > last_pow_block) {
+    } else if (isPoSActive && nHeight <= 302399) {
         nSubsidy = 50 * COIN;
     } else if (nHeight <= 345599 && nHeight >= 302400) {
         nSubsidy = 45 * COIN;
@@ -935,7 +938,7 @@ CAmount CBudgetManager::GetTotalBudget(int nHeight)
         nSubsidy = 15 * COIN;
     } else if (nHeight <= 647999 && nHeight >= 604800) {
         nSubsidy = 10 * COIN;
-    } else if (nHeight >= Params().GetConsensus().height_start_ZC_SerialsV2) {
+    } else if (consensus.NetworkUpgradeActive(nHeight, Consensus::UPGRADE_ZC_V2)) {
         nSubsidy = 10 * COIN;
     } else {
         nSubsidy = 5 * COIN;
@@ -1886,6 +1889,11 @@ void CFinalizedBudget::CheckAndVote()
         return;
     }
 
+    if (activeMasternode.vin == nullopt) {
+        LogPrint(BCLog::MNBUDGET,"%s: Active Masternode not initialized.\n", __func__);
+        return;
+    }
+
     // Do this 1 in 4 blocks -- spread out the voting activity
     // -- this function is only called every fourteenth block, so this is really 1 in 56 blocks
     if (rand() % 4 != 0) {
@@ -2196,23 +2204,20 @@ TrxValidationStatus CFinalizedBudget::IsTransactionValid(const CTransaction& txN
 
 void CFinalizedBudget::SubmitVote()
 {
+    // function called only from initialized masternodes
+    assert(fMasterNode && activeMasternode.vin != nullopt);
+
     std::string strError = "";
     CPubKey pubKeyMasternode;
     CKey keyMasternode;
-
-    bool fNewSigs = false;
-    {
-        LOCK(cs_main);
-        fNewSigs = chainActive.NewSigsActive();
-    }
 
     if (!CMessageSigner::GetKeysFromSecret(strMasterNodePrivKey, keyMasternode, pubKeyMasternode)) {
         LogPrint(BCLog::MNBUDGET,"CFinalizedBudget::SubmitVote - Error upon calling GetKeysFromSecret\n");
         return;
     }
 
-    CFinalizedBudgetVote vote(activeMasternode.vin, GetHash());
-    if (!vote.Sign(keyMasternode, pubKeyMasternode, fNewSigs)) {
+    CFinalizedBudgetVote vote(*(activeMasternode.vin), GetHash());
+    if (!vote.Sign(keyMasternode, pubKeyMasternode)) {
         LogPrint(BCLog::MNBUDGET,"CFinalizedBudget::SubmitVote - Failure to sign.");
         return;
     }

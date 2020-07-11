@@ -296,12 +296,14 @@ set(SERVER_SOURCES
         ./src/httpserver.cpp
         ./src/init.cpp
         ./src/dbwrapper.cpp
+        ./src/legacy/validation_zerocoin_legacy.cpp
         ./src/main.cpp
         ./src/merkleblock.cpp
         ./src/miner.cpp
         ./src/net.cpp
         ./src/noui.cpp
         ./src/policy/fees.cpp
+        ./src/policy/policy.cpp
         ./src/pow.cpp
         ./src/rest.cpp
         ./src/rpc/blockchain.cpp

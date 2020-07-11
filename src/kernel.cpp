@@ -11,6 +11,7 @@
 #include "legacy/stakemodifier.h"
 #include "script/interpreter.h"
 #include "util.h"
+#include "policy/policy.h"
 #include "stakeinput.h"
 #include "utilmoneystr.h"
 #include "zcarichain.h"
@@ -33,7 +34,7 @@ CStakeKernel::CStakeKernel(const CBlockIndex* const pindexPrev, CStakeInput* sta
     stakeValue(stakeInput->GetValue())
 {
     // Set kernel stake modifier
-    if (pindexPrev->nHeight + 1 < Params().GetConsensus().height_start_StakeModifierV2) {
+    if (!Params().GetConsensus().NetworkUpgradeActive(pindexPrev->nHeight + 1, Consensus::UPGRADE_V3_4)) {
         uint64_t nStakeModifier = 0;
         if (!GetOldStakeModifier(stakeInput, nStakeModifier))
             LogPrintf("%s : ERROR: Failed to get kernel stake modifier\n", __func__);
@@ -97,7 +98,7 @@ bool LoadStakeInput(const CBlock& block, const CBlockIndex* pindexPrev, std::uni
     } else {
         // check that is the actual parent block
         if (block.hashPrevBlock != pindexPrev->GetBlockHash())
-            return error("%s : previous block mismatch");
+            return error("%s : previous block mismatch", __func__);
     }
 
     // Check that this is a PoS block

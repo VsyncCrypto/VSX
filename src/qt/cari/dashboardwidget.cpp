@@ -108,8 +108,6 @@ DashboardWidget::DashboardWidget(CARIGUI* parent) :
     ui->listTransactions->setMinimumHeight(NUM_ITEMS * (DECORATION_SIZE + 2));
     ui->listTransactions->setAttribute(Qt::WA_MacShowFocusRect, false);
     ui->listTransactions->setSelectionBehavior(QAbstractItemView::SelectRows);
-    ui->listTransactions->setLayoutMode(QListView::LayoutMode::Batched);
-    ui->listTransactions->setBatchSize(50);
     ui->listTransactions->setUniformItemSizes(true);
 
     // Sync Warning
@@ -734,7 +732,7 @@ std::pair<int, int> DashboardWidget::getChartRange(QMap<int, std::pair<qint64, q
                 inform(tr("Error loading chart, invalid data"));
                 return std::make_pair(0, 0);
             }
-            qSort(keys);
+            std::sort(keys.begin(), keys.end());
             return std::make_pair(keys.first(), keys.last() + 1);
         }
         case MONTH:
@@ -760,9 +758,22 @@ void DashboardWidget::updateAxisX(const QStringList* args)
 
 void DashboardWidget::onChartArrowClicked(bool goLeft)
 {
+    bool updateMonth = false;
+    bool updateYear = false;
+    int dataenddate = getChartRange(chartData->amountsByCache).second;
+    QDate currentDate = QDate::currentDate();
     if (goLeft) {
         dayStart--;
         if (dayStart == 0) {
+            updateMonth = true;
+            if (monthFilter == 1) {
+                // Prev year
+                monthFilter = 12;
+                yearFilter--;
+                updateYear = true;
+            } else {
+                monthFilter--; // Prev month
+            }
             dayStart = QDate(yearFilter, monthFilter, 1).daysInMonth();
         }
     } else {
@@ -770,9 +781,32 @@ void DashboardWidget::onChartArrowClicked(bool goLeft)
         dayStart++;
         if (dayStart > dayInMonth) {
             dayStart = 1;
+            updateMonth = true;
+            if (monthFilter == 12) {
+                // Next year
+                monthFilter = 1;
+                yearFilter++;
+                updateYear = true;
+            } else {
+                monthFilter++; // Next month
+            }
         }
     }
+
     refreshChart();
+    //Check if data end day is current date and monthfilter is current month
+    bool fEndDayisCurrent = dataenddate  == currentDate.day() && monthFilter == currentDate.month();
+
+    if (updateMonth)
+        ui->comboBoxMonths->setCurrentIndex(monthFilter - 1);
+
+    if (updateYear)
+        ui->comboBoxYears->setCurrentText(QString::number(yearFilter));
+
+    // enable/disable the pushButtonChartRight.
+    ui->pushButtonChartRight->setEnabled(!fEndDayisCurrent);
+
+
 }
 
 void DashboardWidget::windowResizeEvent(QResizeEvent* event)

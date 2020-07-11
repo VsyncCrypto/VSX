@@ -110,6 +110,7 @@ BITCOIN_CORE_H = \
   primitives/block.h \
   primitives/transaction.h \
   core_io.h \
+  cuckoocache.h \
   crypter.h \
   pairresult.h \
   addressbook.h \
@@ -132,6 +133,7 @@ BITCOIN_CORE_H = \
   dbwrapper.h \
   limitedmap.h \
   logging.h \
+  legacy/validation_zerocoin_legacy.h \
   main.h \
   memusage.h \
   masternode.h \
@@ -143,12 +145,12 @@ BITCOIN_CORE_H = \
   merkleblock.h \
   messagesigner.h \
   miner.h \
-  mruset.h \
   net.h \
   netaddress.h \
   netbase.h \
   noui.h \
   policy/fees.h \
+  policy/policy.h \
   optional.h \
   pow.h \
   prevector.h \
@@ -198,6 +200,7 @@ BITCOIN_CORE_H = \
   validationinterface.h \
   version.h \
   wallet/hdchain.h \
+  wallet/rpcwallet.h \
   wallet/scriptpubkeyman.h \
   wallet/wallet.h \
   wallet/wallet_ismine.h \
@@ -237,12 +240,14 @@ libbitcoin_server_a_SOURCES = \
   httpserver.cpp \
   init.cpp \
   dbwrapper.cpp \
+  legacy/validation_zerocoin_legacy.cpp \
   main.cpp \
   merkleblock.cpp \
   miner.cpp \
   net.cpp \
   noui.cpp \
   policy/fees.cpp \
+  policy/policy.cpp \
   pow.cpp \
   rest.cpp \
   rpc/blockchain.cpp \

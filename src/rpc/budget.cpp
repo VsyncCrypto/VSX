@@ -91,9 +91,9 @@ void checkBudgetInputs(const UniValue& params, std::string &strProposalName, std
         throw JSONRPCError(RPC_INVALID_PARAMETER, strprintf("Invalid amount - Payment of %s more than max of %s", FormatMoney(nAmount), FormatMoney(budget.GetTotalBudget(nBlockStart))));
 }
 
-UniValue preparebudget(const UniValue& params, bool fHelp)
+UniValue preparebudget(const JSONRPCRequest& request)
 {
-    if (fHelp || params.size() != 6)
+    if (request.fHelp || request.params.size() != 6)
         throw std::runtime_error(
             "preparebudget \"proposal-name\" \"url\" payment-count block-start \"cari-address\" monthy-payment\n"
             "\nPrepare proposal for network by signing and creating tx\n"
@@ -128,7 +128,7 @@ UniValue preparebudget(const UniValue& params, bool fHelp)
     CTxDestination address;
     CAmount nAmount;
 
-    checkBudgetInputs(params, strProposalName, strURL, nPaymentCount, nBlockStart, address, nAmount);
+    checkBudgetInputs(request.params, strProposalName, strURL, nPaymentCount, nBlockStart, address, nAmount);
 
     // Parse CARI address
     CScript scriptPubKey = GetScriptForDestination(address);
@@ -141,10 +141,10 @@ UniValue preparebudget(const UniValue& params, bool fHelp)
         throw std::runtime_error("Proposal is not valid - " + budgetProposalBroadcast.GetHash().ToString() + " - " + strError);
 
     bool useIX = false; //true;
-    // if (params.size() > 7) {
-    //     if(params[7].get_str() != "false" && params[7].get_str() != "true")
+    // if (request.params.size() > 7) {
+    //     if(request.params[7].get_str() != "false" && request.params[7].get_str() != "true")
     //         return "Invalid use_ix, must be true or false";
-    //     useIX = params[7].get_str() == "true" ? true : false;
+    //     useIX = request.params[7].get_str() == "true" ? true : false;
     // }
 
     CWalletTx wtx;
@@ -155,14 +155,16 @@ UniValue preparebudget(const UniValue& params, bool fHelp)
     // make our change address
     CReserveKey reservekey(pwalletMain);
     //send the tx to the network
-    pwalletMain->CommitTransaction(wtx, reservekey, useIX ? NetMsgType::IX : NetMsgType::TX);
+    const CWallet::CommitResult& res = pwalletMain->CommitTransaction(wtx, reservekey, useIX ? NetMsgType::IX : NetMsgType::TX);
+    if (res.status != CWallet::CommitStatus::OK)
+        throw JSONRPCError(RPC_WALLET_ERROR, res.ToString());
 
     return wtx.GetHash().ToString();
 }
 
-UniValue submitbudget(const UniValue& params, bool fHelp)
+UniValue submitbudget(const JSONRPCRequest& request)
 {
-    if (fHelp || params.size() != 7)
+    if (request.fHelp || request.params.size() != 7)
         throw std::runtime_error(
             "submitbudget \"proposal-name\" \"url\" payment-count block-start \"cari-address\" monthly-payment \"fee-tx\"\n"
             "\nSubmit proposal to the network\n"
@@ -190,12 +192,12 @@ UniValue submitbudget(const UniValue& params, bool fHelp)
     CTxDestination address;
     CAmount nAmount;
 
-    checkBudgetInputs(params, strProposalName, strURL, nPaymentCount, nBlockStart, address, nAmount);
+    checkBudgetInputs(request.params, strProposalName, strURL, nPaymentCount, nBlockStart, address, nAmount);
 
     // Parse CARI address
     CScript scriptPubKey = GetScriptForDestination(address);
 
-    uint256 hash = ParseHashV(params[6], "parameter 1");
+    uint256 hash = ParseHashV(request.params[6], "parameter 1");
 
     //create the proposal incase we're the first to make it
     CBudgetProposalBroadcast budgetProposalBroadcast(strProposalName, strURL, nPaymentCount, scriptPubKey, nAmount, nBlockStart, hash);
@@ -222,11 +224,11 @@ UniValue submitbudget(const UniValue& params, bool fHelp)
     throw std::runtime_error("Invalid proposal, see debug.log for details.");
 }
 
-UniValue mnbudgetvote(const UniValue& params, bool fHelp)
+UniValue mnbudgetvote(const JSONRPCRequest& request)
 {
     std::string strCommand;
-    if (params.size() >= 1) {
-        strCommand = params[0].get_str();
+    if (request.params.size() >= 1) {
+        strCommand = request.params[0].get_str();
 
         // Backwards compatibility with legacy `mnbudget` command
         if (strCommand == "vote") strCommand = "local";
@@ -234,8 +236,8 @@ UniValue mnbudgetvote(const UniValue& params, bool fHelp)
         if (strCommand == "vote-alias") strCommand = "alias";
     }
 
-    if (fHelp || (params.size() == 3 && (strCommand != "local" && strCommand != "many")) || (params.size() == 4 && strCommand != "alias") ||
-        params.size() > 4 || params.size() < 3)
+    if (request.fHelp || (request.params.size() == 3 && (strCommand != "local" && strCommand != "many")) || (request.params.size() == 4 && strCommand != "alias") ||
+        request.params.size() > 4 || request.params.size() < 3)
         throw std::runtime_error(
             "mnbudgetvote \"local|many|alias\" \"votehash\" \"yes|no\" ( \"alias\" )\n"
             "\nVote on a budget proposal\n"
@@ -263,8 +265,8 @@ UniValue mnbudgetvote(const UniValue& params, bool fHelp)
             HelpExampleCli("mnbudgetvote", "\"local\" \"ed2f83cedee59a91406f5f47ec4d60bf5a7f9ee6293913c82976bd2d3a658041\" \"yes\"") +
             HelpExampleRpc("mnbudgetvote", "\"local\" \"ed2f83cedee59a91406f5f47ec4d60bf5a7f9ee6293913c82976bd2d3a658041\" \"yes\""));
 
-    uint256 hash = ParseHashV(params[1], "parameter 1");
-    std::string strVote = params[2].get_str();
+    uint256 hash = ParseHashV(request.params[1], "parameter 1");
+    std::string strVote = request.params[2].get_str();
 
     if (strVote != "yes" && strVote != "no") return "You can only vote 'yes' or 'no'";
     int nVote = VOTE_ABSTAIN;
@@ -274,15 +276,16 @@ UniValue mnbudgetvote(const UniValue& params, bool fHelp)
     int success = 0;
     int failed = 0;
 
-    bool fNewSigs = false;
-    {
-        LOCK(cs_main);
-        fNewSigs = chainActive.NewSigsActive();
-    }
-
     UniValue resultsObj(UniValue::VARR);
 
     if (strCommand == "local") {
+        // local node must be a masternode
+        if (!fMasterNode)
+            throw JSONRPCError(RPC_MISC_ERROR, _("This is not a masternode. 'local' option disabled."));
+
+        if (activeMasternode.vin == nullopt)
+            throw JSONRPCError(RPC_MISC_ERROR, _("Active Masternode not initialized."));
+
         CPubKey pubKeyMasternode;
         CKey keyMasternode;
 
@@ -298,18 +301,18 @@ UniValue mnbudgetvote(const UniValue& params, bool fHelp)
                 break;
             }
 
-            CMasternode* pmn = mnodeman.Find(activeMasternode.vin);
+            CMasternode* pmn = mnodeman.Find(*(activeMasternode.vin));
             if (pmn == NULL) {
                 failed++;
                 statusObj.push_back(Pair("node", "local"));
                 statusObj.push_back(Pair("result", "failed"));
-                statusObj.push_back(Pair("error", "Failure to find masternode in list : " + activeMasternode.vin.ToString()));
+                statusObj.push_back(Pair("error", "Failure to find masternode in list : " + activeMasternode.vin->ToString()));
                 resultsObj.push_back(statusObj);
                 break;
             }
 
-            CBudgetVote vote(activeMasternode.vin, hash, nVote);
-            if (!vote.Sign(keyMasternode, pubKeyMasternode, fNewSigs)) {
+            CBudgetVote vote(*(activeMasternode.vin), hash, nVote);
+            if (!vote.Sign(keyMasternode, pubKeyMasternode)) {
                 failed++;
                 statusObj.push_back(Pair("node", "local"));
                 statusObj.push_back(Pair("result", "failed"));
@@ -375,7 +378,7 @@ UniValue mnbudgetvote(const UniValue& params, bool fHelp)
             }
 
             CBudgetVote vote(pmn->vin, hash, nVote);
-            if (!vote.Sign(keyMasternode, pubKeyMasternode, fNewSigs)) {
+            if (!vote.Sign(keyMasternode, pubKeyMasternode)) {
                 failed++;
                 statusObj.push_back(Pair("node", mne.getAlias()));
                 statusObj.push_back(Pair("result", "failed"));
@@ -410,7 +413,7 @@ UniValue mnbudgetvote(const UniValue& params, bool fHelp)
     }
 
     if (strCommand == "alias") {
-        std::string strAlias = params[3].get_str();
+        std::string strAlias = request.params[3].get_str();
         std::vector<CMasternodeConfig::CMasternodeEntry> mnEntries;
         mnEntries = masternodeConfig.getEntries();
 
@@ -449,7 +452,7 @@ UniValue mnbudgetvote(const UniValue& params, bool fHelp)
             }
 
             CBudgetVote vote(pmn->vin, hash, nVote);
-            if(!vote.Sign(keyMasternode, pubKeyMasternode, fNewSigs)){
+            if(!vote.Sign(keyMasternode, pubKeyMasternode)){
                 failed++;
                 statusObj.push_back(Pair("node", mne.getAlias()));
                 statusObj.push_back(Pair("result", "failed"));
@@ -486,9 +489,9 @@ UniValue mnbudgetvote(const UniValue& params, bool fHelp)
     return NullUniValue;
 }
 
-UniValue getbudgetvotes(const UniValue& params, bool fHelp)
+UniValue getbudgetvotes(const JSONRPCRequest& request)
 {
-    if (params.size() != 1)
+    if (request.params.size() != 1)
         throw std::runtime_error(
             "getbudgetvotes \"proposal-name\"\n"
             "\nPrint vote information for a budget proposal\n"
@@ -511,7 +514,7 @@ UniValue getbudgetvotes(const UniValue& params, bool fHelp)
             "\nExamples:\n" +
             HelpExampleCli("getbudgetvotes", "\"test-proposal\"") + HelpExampleRpc("getbudgetvotes", "\"test-proposal\""));
 
-    std::string strProposalName = SanitizeString(params[0].get_str());
+    std::string strProposalName = SanitizeString(request.params[0].get_str());
 
     UniValue ret(UniValue::VARR);
 
@@ -536,9 +539,9 @@ UniValue getbudgetvotes(const UniValue& params, bool fHelp)
     return ret;
 }
 
-UniValue getnextsuperblock(const UniValue& params, bool fHelp)
+UniValue getnextsuperblock(const JSONRPCRequest& request)
 {
-    if (fHelp || params.size() != 0)
+    if (request.fHelp || request.params.size() != 0)
         throw std::runtime_error(
             "getnextsuperblock\n"
             "\nPrint the next super block height\n"
@@ -557,9 +560,9 @@ UniValue getnextsuperblock(const UniValue& params, bool fHelp)
     return nNext;
 }
 
-UniValue getbudgetprojection(const UniValue& params, bool fHelp)
+UniValue getbudgetprojection(const JSONRPCRequest& request)
 {
-    if (fHelp || params.size() != 0)
+    if (request.fHelp || request.params.size() != 0)
         throw std::runtime_error(
             "getbudgetprojection\n"
             "\nShow the projection of which proposals will be paid the next cycle\n"
@@ -617,9 +620,9 @@ UniValue getbudgetprojection(const UniValue& params, bool fHelp)
     return ret;
 }
 
-UniValue getbudgetinfo(const UniValue& params, bool fHelp)
+UniValue getbudgetinfo(const JSONRPCRequest& request)
 {
-    if (fHelp || params.size() > 1)
+    if (request.fHelp || request.params.size() > 1)
         throw std::runtime_error(
             "getbudgetinfo ( \"proposal\" )\n"
             "\nShow current masternode budgets\n"
@@ -659,8 +662,8 @@ UniValue getbudgetinfo(const UniValue& params, bool fHelp)
     UniValue ret(UniValue::VARR);
 
     std::string strShow = "valid";
-    if (params.size() == 1) {
-        std::string strProposalName = SanitizeString(params[0].get_str());
+    if (request.params.size() == 1) {
+        std::string strProposalName = SanitizeString(request.params[0].get_str());
         CBudgetProposal* pbudgetProposal = budget.FindProposal(strProposalName);
         if (pbudgetProposal == NULL) throw std::runtime_error("Unknown proposal name");
         UniValue bObj(UniValue::VOBJ);
@@ -682,9 +685,9 @@ UniValue getbudgetinfo(const UniValue& params, bool fHelp)
     return ret;
 }
 
-UniValue mnbudgetrawvote(const UniValue& params, bool fHelp)
+UniValue mnbudgetrawvote(const JSONRPCRequest& request)
 {
-    if (fHelp || params.size() != 6)
+    if (request.fHelp || request.params.size() != 6)
         throw std::runtime_error(
             "mnbudgetrawvote \"masternode-tx-hash\" masternode-tx-index \"proposal-hash\" yes|no time \"vote-sig\"\n"
             "\nCompile and relay a proposal vote with provided external signature instead of signing vote internally\n"
@@ -703,20 +706,20 @@ UniValue mnbudgetrawvote(const UniValue& params, bool fHelp)
             "\nExamples:\n" +
             HelpExampleCli("mnbudgetrawvote", "") + HelpExampleRpc("mnbudgetrawvote", ""));
 
-    uint256 hashMnTx = ParseHashV(params[0], "mn tx hash");
-    int nMnTxIndex = params[1].get_int();
+    uint256 hashMnTx = ParseHashV(request.params[0], "mn tx hash");
+    int nMnTxIndex = request.params[1].get_int();
     CTxIn vin = CTxIn(hashMnTx, nMnTxIndex);
 
-    uint256 hashProposal = ParseHashV(params[2], "Proposal hash");
-    std::string strVote = params[3].get_str();
+    uint256 hashProposal = ParseHashV(request.params[2], "Proposal hash");
+    std::string strVote = request.params[3].get_str();
 
     if (strVote != "yes" && strVote != "no") return "You can only vote 'yes' or 'no'";
     int nVote = VOTE_ABSTAIN;
     if (strVote == "yes") nVote = VOTE_YES;
     if (strVote == "no") nVote = VOTE_NO;
 
-    int64_t nTime = params[4].get_int64();
-    std::string strSig = params[5].get_str();
+    int64_t nTime = request.params[4].get_int64();
+    std::string strSig = request.params[5].get_str();
     bool fInvalid = false;
     std::vector<unsigned char> vchSig = DecodeBase64(strSig.c_str(), &fInvalid);
 
@@ -748,13 +751,13 @@ UniValue mnbudgetrawvote(const UniValue& params, bool fHelp)
     }
 }
 
-UniValue mnfinalbudget(const UniValue& params, bool fHelp)
+UniValue mnfinalbudget(const JSONRPCRequest& request)
 {
     std::string strCommand;
-    if (params.size() >= 1)
-        strCommand = params[0].get_str();
+    if (request.params.size() >= 1)
+        strCommand = request.params[0].get_str();
 
-    if (fHelp ||
+    if (request.fHelp ||
         (strCommand != "suggest" && strCommand != "vote-many" && strCommand != "vote" && strCommand != "show" && strCommand != "getvotes"))
         throw std::runtime_error(
             "mnfinalbudget \"command\"... ( \"passphrase\" )\n"
@@ -762,21 +765,15 @@ UniValue mnfinalbudget(const UniValue& params, bool fHelp)
 
             "\nAvailable commands:\n"
             "  vote-many   - Vote on a finalized budget\n"
-            "  vote        - Vote on a finalized budget\n"
+            "  vote        - Vote on a finalized budget with local masternode\n"
             "  show        - Show existing finalized budgets\n"
             "  getvotes     - Get vote information for each finalized budget\n");
 
-    bool fNewSigs = false;
-    {
-        LOCK(cs_main);
-        fNewSigs = chainActive.NewSigsActive();
-    }
-
     if (strCommand == "vote-many") {
-        if (params.size() != 2)
+        if (request.params.size() != 2)
             throw std::runtime_error("Correct usage is 'mnfinalbudget vote-many BUDGET_HASH'");
 
-        std::string strHash = params[1].get_str();
+        std::string strHash = request.params[1].get_str();
         uint256 hash(uint256S(strHash));
 
         int success = 0;
@@ -814,7 +811,7 @@ UniValue mnfinalbudget(const UniValue& params, bool fHelp)
 
 
             CFinalizedBudgetVote vote(pmn->vin, hash);
-            if (!vote.Sign(keyMasternode, pubKeyMasternode, fNewSigs)) {
+            if (!vote.Sign(keyMasternode, pubKeyMasternode)) {
                 failed++;
                 statusObj.push_back(Pair("result", "failed"));
                 statusObj.push_back(Pair("errorMessage", "Failure to sign."));
@@ -844,10 +841,16 @@ UniValue mnfinalbudget(const UniValue& params, bool fHelp)
     }
 
     if (strCommand == "vote") {
-        if (params.size() != 2)
+        if (!fMasterNode)
+            throw JSONRPCError(RPC_MISC_ERROR, _("This is not a masternode. 'local' option disabled."));
+
+        if (activeMasternode.vin == nullopt)
+            throw JSONRPCError(RPC_MISC_ERROR, _("Active Masternode not initialized."));
+
+        if (request.params.size() != 2)
             throw std::runtime_error("Correct usage is 'mnfinalbudget vote BUDGET_HASH'");
 
-        std::string strHash = params[1].get_str();
+        std::string strHash = request.params[1].get_str();
         uint256 hash(uint256S(strHash));
 
         CPubKey pubKeyMasternode;
@@ -856,13 +859,13 @@ UniValue mnfinalbudget(const UniValue& params, bool fHelp)
         if (!CMessageSigner::GetKeysFromSecret(strMasterNodePrivKey, keyMasternode, pubKeyMasternode))
             return "Error upon calling GetKeysFromSecret";
 
-        CMasternode* pmn = mnodeman.Find(activeMasternode.vin);
+        CMasternode* pmn = mnodeman.Find(*(activeMasternode.vin));
         if (pmn == NULL) {
-            return "Failure to find masternode in list : " + activeMasternode.vin.ToString();
+            return "Failure to find masternode in list : " + activeMasternode.vin->ToString();
         }
 
-        CFinalizedBudgetVote vote(activeMasternode.vin, hash);
-        if (!vote.Sign(keyMasternode, pubKeyMasternode, fNewSigs)) {
+        CFinalizedBudgetVote vote(*(activeMasternode.vin), hash);
+        if (!vote.Sign(keyMasternode, pubKeyMasternode)) {
             return "Failure to sign.";
         }
 
@@ -901,10 +904,10 @@ UniValue mnfinalbudget(const UniValue& params, bool fHelp)
     }
 
     if (strCommand == "getvotes") {
-        if (params.size() != 2)
+        if (request.params.size() != 2)
             throw std::runtime_error("Correct usage is 'mnbudget getvotes budget-hash'");
 
-        std::string strHash = params[1].get_str();
+        std::string strHash = request.params[1].get_str();
         uint256 hash(uint256S(strHash));
 
         UniValue obj(UniValue::VOBJ);
@@ -931,9 +934,9 @@ UniValue mnfinalbudget(const UniValue& params, bool fHelp)
     return NullUniValue;
 }
 
-UniValue checkbudgets(const UniValue& params, bool fHelp)
+UniValue checkbudgets(const JSONRPCRequest& request)
 {
-    if (fHelp || params.size() != 0)
+    if (request.fHelp || request.params.size() != 0)
         throw std::runtime_error(
             "checkbudgets\n"
             "\nInitiates a budget check cycle manually\n"

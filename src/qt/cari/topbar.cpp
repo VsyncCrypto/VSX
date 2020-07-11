@@ -125,6 +125,8 @@ TopBar::TopBar(CARIGUI* _mainWindow, QWidget *parent) :
     connect(ui->pushButtonColdStaking, &ExpandableButton::Mouse_Pressed, this, &TopBar::onColdStakingClicked);
     connect(ui->pushButtonSync, &ExpandableButton::Mouse_HoverLeave, this, &TopBar::refreshProgressBarSize);
     connect(ui->pushButtonSync, &ExpandableButton::Mouse_Hover, this, &TopBar::refreshProgressBarSize);
+    connect(ui->pushButtonSync, &ExpandableButton::Mouse_Pressed, [this](){window->goToSettingsInfo();});
+    connect(ui->pushButtonConnection, &ExpandableButton::Mouse_Pressed, [this](){window->openNetworkMonitor();});
 }
 
 void TopBar::onThemeClicked()
@@ -145,7 +147,6 @@ void TopBar::onThemeClicked()
 
     Q_EMIT themeChanged(lightTheme);
 }
-
 
 void TopBar::onBtnLockClicked()
 {
@@ -516,7 +517,7 @@ void TopBar::showUpgradeDialog()
     QString title = tr("Wallet Upgrade");
     if (ask(title,
             tr("Upgrading to HD wallet will improve\nthe wallet's reliability and security.\n\n\n"
-                    "NOTE: after the upgrade, a new \nbackup will be created.\n"))) {
+                    "NOTE: after the upgrade, a new\nbackup will be created.\n"))) {
 
         std::unique_ptr<WalletModel::UnlockContext> pctx = MakeUnique<WalletModel::UnlockContext>(walletModel->requestUnlock());
         if (!pctx->isValid()) {

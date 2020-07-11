@@ -5,7 +5,7 @@
 <style type="text/css">
 	.st0{fill:none;}
 	.st1{clip-path:url(#SVGID_2_);}
-	.st2{fill:url(#PIVX_wallet_core-02_1_);}
+	.st2{fill:url(#CARI_wallet_core-02_1_);}
 	.st3{opacity:0.301;enable-background:new    ;}
 </style>
 <pattern  y="800" width="1137.4" height="1137.4" patternUnits="userSpaceOnUse" id="pattern" viewBox="31.6 -1137.4 1137.4 1137.4" style="overflow:visible;">
@@ -386,9 +386,9 @@ Y8h5ClOmIqTqjen9Ggz/AAGn9Jabv9pj9Rf/2Q==" transform="matrix(0.7672 0 0 -0.7672 0
 			<g id="Mask_Group_94" class="st1">
 				<g id="Group_8914">
 					
-						<pattern  id="PIVX_wallet_core-02_1_" xlink:href="#pattern" patternTransform="matrix(1.0554 0 0 -1.0554 90.8263 -19185.875)">
+						<pattern  id="CARI_wallet_core-02_1_" xlink:href="#pattern" patternTransform="matrix(1.0554 0 0 -1.0554 90.8263 -19185.875)">
 					</pattern>
-					<path id="PIVX_wallet_core-02" class="st2" d="M-0.4-0.5H1200v833.2H-0.4V-0.5z"/>
+					<path id="CARI_wallet_core-02" class="st2" d="M-0.4-0.5H1200v833.2H-0.4V-0.5z"/>
 				</g>
 			</g>
 		</g>

@@ -21,13 +21,12 @@
 #include "init.h"
 #include "util.h"
 
-#include <QDesktopWidget>
-#include <QHBoxLayout>
-#include <QVBoxLayout>
 #include <QApplication>
 #include <QColor>
-#include <QShortcut>
+#include <QHBoxLayout>
 #include <QKeySequence>
+#include <QScreen>
+#include <QShortcut>
 #include <QWindowStateChangeEvent>
 
 
@@ -49,7 +48,7 @@ CARIGUI::CARIGUI(const NetworkStyle* networkStyle, QWidget* parent) :
 
 
     // Adapt screen size
-    QRect rec = QApplication::desktop()->screenGeometry();
+    QRect rec = QGuiApplication::primaryScreen()->geometry();
     int adaptedHeight = (rec.height() < BASE_WINDOW_HEIGHT) ?  BASE_WINDOW_MIN_HEIGHT : BASE_WINDOW_HEIGHT;
     int adaptedWidth = (rec.width() < BASE_WINDOW_WIDTH) ?  BASE_WINDOW_MIN_WIDTH : BASE_WINDOW_WIDTH;
     GUIUtil::restoreWindowGeometry(
@@ -502,9 +501,21 @@ void CARIGUI::goToSettings(){
     showTop(settingsWidget);
 }
 
+void CARIGUI::goToSettingsInfo()
+{
+    navMenu->selectSettings();
+    settingsWidget->showInformation();
+    goToSettings();
+}
+
 void CARIGUI::goToReceive()
 {
     showTop(receiveWidget);
+}
+
+void CARIGUI::openNetworkMonitor()
+{
+    settingsWidget->openNetworkMonitor();
 }
 
 void CARIGUI::showTop(QWidget* view)

@@ -122,6 +122,7 @@ public:
         AmountWithFeeExceedsBalance,
         DuplicateAddress,
         TransactionCreationFailed,
+        TransactionCheckFailed,
         TransactionCommitFailed,
         StakingOnlyUnlocked,
         InsaneFee,
@@ -151,7 +152,8 @@ public:
     bool isHDEnabled() const;
     bool upgradeWallet(std::string& upgradeError);
 
-    CAmount getBalance(const CCoinControl* coinControl = nullptr, bool fIncludeDelegated = true) const;
+    CAmount getBalance(const CCoinControl* coinControl = nullptr, bool fIncludeDelegated = true, bool fUnlockedOnly = false) const;
+    CAmount getUnlockedBalance(const CCoinControl* coinControl = nullptr, bool fIncludeDelegated = true) const;
     CAmount getUnconfirmedBalance() const;
     CAmount getImmatureBalance() const;
     CAmount getLockedBalance() const;
@@ -185,7 +187,12 @@ public:
     // Return status record for SendCoins, contains error id + information
     struct SendCoinsReturn {
         SendCoinsReturn(StatusCode status = OK) : status(status) {}
+        SendCoinsReturn(CWallet::CommitResult _commitRes) : commitRes(_commitRes)
+        {
+            status = (_commitRes.status == CWallet::CommitStatus::OK ? OK : TransactionCommitFailed);
+        }
         StatusCode status;
+        CWallet::CommitResult commitRes;
     };
 
     void setWalletDefaultFee(CAmount fee = DEFAULT_TRANSACTION_FEE);
@@ -256,12 +263,12 @@ public:
     bool whitelistAddressFromColdStaking(const QString &addressStr);
     bool blacklistAddressFromColdStaking(const QString &address);
     bool updateAddressBookPurpose(const QString &addressStr, const std::string& purpose);
-    std::string getLabelForAddress(const CBitcoinAddress& address);
-    bool getKeyId(const CBitcoinAddress& address, CKeyID& keyID);
+    std::string getLabelForAddress(const CTxDestination& address);
+    bool getKeyId(const CTxDestination& address, CKeyID& keyID);
 
     bool isMine(const CTxDestination& address);
     bool isMine(const QString& addressStr);
-    bool isUsed(CBitcoinAddress address);
+    bool isUsed(CTxDestination address);
     void getOutputs(const std::vector<COutPoint>& vOutpoints, std::vector<COutput>& vOutputs);
     bool getMNCollateralCandidate(COutPoint& outPoint);
     bool isSpent(const COutPoint& outpoint) const;

@@ -192,15 +192,13 @@ void SettingsWidget::loadClientModel()
 
         OptionsModel *optionsModel = this->clientModel->getOptionsModel();
         if (optionsModel) {
+            settingsDisplayOptionsWidget->setClientModel(clientModel);
+            settingsMainOptionsWidget->setClientModel(clientModel);
+            settingsWalletOptionsWidget->setClientModel(clientModel);
+
             mapper->setModel(optionsModel);
             setMapper();
             mapper->toFirst();
-            settingsMainOptionsWidget->setClientModel(clientModel);
-            settingsDisplayOptionsWidget->setClientModel(clientModel);
-            settingsWalletOptionsWidget->setClientModel(clientModel);
-            /* keep consistency for action triggered elsewhere */
-
-            // TODO: Connect show restart needed and apply changes.
         }
     }
 }
@@ -367,6 +365,14 @@ void SettingsWidget::showDebugConsole()
     onDebugConsoleClicked();
 }
 
+void SettingsWidget::showInformation()
+{
+    ui->pushButtonTools->setChecked(true);
+    onToolsClicked();
+    ui->pushButtonTools1->setChecked(true);
+    onInformationClicked();
+}
+
 void SettingsWidget::onDebugConsoleClicked()
 {
     ui->stackedWidgetContainer->setCurrentWidget(settingsConsoleWidget);
@@ -393,6 +399,11 @@ void SettingsWidget::onAboutClicked()
     HelpMessageDialog dlg(this, true);
     dlg.exec();
 
+}
+
+void SettingsWidget::openNetworkMonitor()
+{
+    settingsInformationWidget->openNetworkMonitor();
 }
 
 void SettingsWidget::selectOption(QPushButton* option)
