@@ -5593,8 +5593,8 @@ Portafoglio CARI Core.</translation>
         <translation>È necessario specificare una chiave masternodepriv nella configurazione. Consultare la documentazione per assistenza.</translation>
     </message>
     <message>
-        <source>(51472 could be used only on mainnet)</source>
-        <translation>(51472 potrebbe essere utilizzato solo su mainnet)</translation>
+        <source>(31813 could be used only on mainnet)</source>
+        <translation>(31813 potrebbe essere utilizzato solo su mainnet)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -5605,8 +5605,8 @@ Portafoglio CARI Core.</translation>
         <translation>(default: 1)</translation>
     </message>
     <message>
-        <source>(must be 51472 for mainnet)</source>
-        <translation>(deve essere 51472 per mainnet)</translation>
+        <source>(must be 31813 for mainnet)</source>
+        <translation>(deve essere 31813 per mainnet)</translation>
     </message>
     <message>
         <source>Accept command line and JSON-RPC commands</source>

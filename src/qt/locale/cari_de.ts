@@ -6004,8 +6004,8 @@ CARI Core Wallet</source>
         <translation>Sie müssen einen privaten Masternode-Schlüssel in der Konfiguration festlegen. Bitte nutzen Sie die Dokumentation zwecks Hilfe.</translation>
     </message>
     <message>
-        <source>(51472 could be used only on mainnet)</source>
-        <translation>(51472 kann nur im Mainnet verwendet werden)</translation>
+        <source>(31813 could be used only on mainnet)</source>
+        <translation>(31813 kann nur im Mainnet verwendet werden)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -6016,8 +6016,8 @@ CARI Core Wallet</source>
         <translation>(default: 1)</translation>
     </message>
     <message>
-        <source>(must be 51472 for mainnet)</source>
-        <translation>(muss im Mainnet 51472 sein)</translation>
+        <source>(must be 31813 for mainnet)</source>
+        <translation>(muss im Mainnet 31813 sein)</translation>
     </message>
     <message>
         <source>Accept command line and JSON-RPC commands</source>

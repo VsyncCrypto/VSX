@@ -6313,8 +6313,8 @@ CARI核心钱包</translation>
         <translation>您必须在配置中指定一个主节点privkey。有关帮助，请参阅文档。</translation>
     </message>
     <message>
-        <source>(51472 could be used only on mainnet)</source>
-        <translation>(51472只可在网上使用)</translation>
+        <source>(31813 could be used only on mainnet)</source>
+        <translation>(31813只可在网上使用)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -6325,8 +6325,8 @@ CARI核心钱包</translation>
         <translation>(默认: 1)</translation>
     </message>
     <message>
-        <source>(must be 51472 for mainnet)</source>
-        <translation>(主网必须为51472)</translation>
+        <source>(must be 31813 for mainnet)</source>
+        <translation>(主网必须为31813)</translation>
     </message>
     <message>
         <source>Accept command line and JSON-RPC commands</source>
