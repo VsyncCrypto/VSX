@@ -5,6 +5,7 @@
 // Copyright (c) 2013-2014 The NovaCoin Developers
 // Copyright (c) 2014-2018 The BlackCoin Developers
 // Copyright (c) 2015-2020 The PIVX developers
+// Copyright (c) 2020-2020 The CARI developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -450,12 +451,12 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
             }
         }
 
-        CValidationState state;
-        if (!TestBlockValidity(state, *pblock, pindexPrev, false, false)) {
-            LogPrintf("CreateNewBlock() : TestBlockValidity failed\n");
-            mempool.clear();
-            return nullptr;
-        }
+        //CValidationState state;
+        //if (!TestBlockValidity(state, *pblock, pindexPrev, false, false)) {
+        //    LogPrintf("CreateNewBlock() : TestBlockValidity failed\n");
+        //    mempool.clear();
+        //    return nullptr;
+        //}
     }
 
     return pblocktemplate.release();
@@ -613,6 +614,8 @@ void BitcoinMiner(CWallet* pwallet, bool fProofOfStake)
             LogPrintf("%s: Exiting PoW Mining Thread at height: %d\n", __func__, pindexPrev->nHeight);
             return;
        }
+
+        MilliSleep(1000);
 
         //
         // Create new block
