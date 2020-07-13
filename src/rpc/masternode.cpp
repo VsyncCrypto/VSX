@@ -404,7 +404,7 @@ UniValue getmasternodeoutputs (const JSONRPCRequest& request)
 
     // Find possible candidates
     std::vector<COutput> possibleCoins;
-    pwalletMain->AvailableCoins(&possibleCoins, nullptr, false, false, ONLY_10000);
+    pwalletMain->AvailableCoins(&possibleCoins, nullptr, false, false, ONLY_COLLATERAL);
 
     UniValue ret(UniValue::VARR);
     for (COutput& out : possibleCoins) {

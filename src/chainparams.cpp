@@ -2,6 +2,7 @@
 // Copyright (c) 2009-2015 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2020 The PIVX developers
+// Copyright (c) 2020-2020 The CARI developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -42,17 +43,10 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
  * Build the genesis block. Note that the output of the genesis coinbase cannot
  * be spent as it did not originally exist in the database.
  *
- *  ---------------
- *  algorithm: quark
- *  pzTimestamp: 2020-07-11 The world's first carbon credit generating blockchain by ZioFabry
- *  pubkey: 04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f
- *  block version: 1
- *  bits: 504365040
- *  time: 1594502306
- *  merkle root hash: 5f46e658f298637513c694bb0e2c0fe4bb23040d1f467b425747ae411e34c117
- *  Searching for genesis hash...
- *  nonce: 1026855
- *  genesis hash: 000002c598d8323498d1e491f1d59ce4622e67d276bdd1398ff39cd7f67b63bf
+ *  CBlock(hash=000005bd970b7d83eb879472fb48b2c01ed8155d7126ac3e0c201755c0c85c23, ver=1, hashPrevBlock=0000000000000000000000000000000000000000000000000000000000000000, hashMerkleRoot=848a9da56df8cf4057ef911b7a1837048bea98c1e782b6eff779fd0325c77530, nTime=1594502306, nBits=1e0ffff0, nNonce=4438800, vtx=1)
+ *    CTransaction(hash=848a9da56d, ver=1, vin.size=1, vout.size=1, nLockTime=0, fPoWAlternative=false)
+ *      CTxIn(COutPoint(0000000000000000000000000000000000000000000000000000000000000000, 4294967295), coinbase 04ffff001d01044c4c323032302d30372d31312054686520776f726c64277320666972737420636172626f6e206372656469742067656e65726174696e6720626c6f636b636861696e206279205a696f4661627279)
+ *      CTxOut(nValue=0.00000000, scriptPubKey=4104678afdb0fe5548271967f1a671)
  **/
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
@@ -73,7 +67,7 @@ static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits
  */
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (      0, uint256S("000002c598d8323498d1e491f1d59ce4622e67d276bdd1398ff39cd7f67b63bf"))
+    (      0, uint256S("000005bd970b7d83eb879472fb48b2c01ed8155d7126ac3e0c201755c0c85c23"))
     ;
 
 static const Checkpoints::CCheckpointData data = {
@@ -110,22 +104,15 @@ public:
         strNetworkID = "main";
 
         /**
-         *  ---------------
-         *  algorithm: quark
-         *  pzTimestamp: 2020-07-11 The world's first carbon credit generating blockchain by ZioFabry
-         *  pubkey: 04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f
-         *  block version: 1
-         *  bits: 504365040
-         *  time: 1594502306
-         *  merkle root hash: 5f46e658f298637513c694bb0e2c0fe4bb23040d1f467b425747ae411e34c117
-         *  Searching for genesis hash...
-         *  nonce: 1026855
-         *  genesis hash: 000002c598d8323498d1e491f1d59ce4622e67d276bdd1398ff39cd7f67b63bf
+         *  CBlock(hash=000005bd970b7d83eb879472fb48b2c01ed8155d7126ac3e0c201755c0c85c23, ver=1, hashPrevBlock=0000000000000000000000000000000000000000000000000000000000000000, hashMerkleRoot=848a9da56df8cf4057ef911b7a1837048bea98c1e782b6eff779fd0325c77530, nTime=1594502306, nBits=1e0ffff0, nNonce=4438800, vtx=1)
+         *    CTransaction(hash=848a9da56d, ver=1, vin.size=1, vout.size=1, nLockTime=0, fPoWAlternative=false)
+         *      CTxIn(COutPoint(0000000000000000000000000000000000000000000000000000000000000000, 4294967295), coinbase 04ffff001d01044c4c323032302d30372d31312054686520776f726c64277320666972737420636172626f6e206372656469742067656e65726174696e6720626c6f636b636861696e206279205a696f4661627279)
+         *      CTxOut(nValue=0.00000000, scriptPubKey=4104678afdb0fe5548271967f1a671)
          */
-        genesis = CreateGenesisBlock(1594502306, 1026855, 0x1e0ffff0, 1, 0 * COIN);
+        genesis = CreateGenesisBlock(1594502306, 4438800, 0x1e0ffff0, 1, 0 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x000002c598d8323498d1e491f1d59ce4622e67d276bdd1398ff39cd7f67b63bf"));
-        assert(genesis.hashMerkleRoot     == uint256S("0x5f46e658f298637513c694bb0e2c0fe4bb23040d1f467b425747ae411e34c117"));
+        assert(consensus.hashGenesisBlock == uint256S("0x000005bd970b7d83eb879472fb48b2c01ed8155d7126ac3e0c201755c0c85c23"));
+        assert(genesis.hashMerkleRoot     == uint256S("0x848a9da56df8cf4057ef911b7a1837048bea98c1e782b6eff779fd0325c77530"));
 
         consensus.fPowAllowMinDifficultyBlocks           = false;
         consensus.powLimit                               = ~UINT256_ZERO >> 20;    // CARI starting difficulty is 1 / 2^12
@@ -148,7 +135,7 @@ public:
         consensus.nTimeSlotLength                        = 15;
 
         // spork keys
-        consensus.strSporkPubKey                         = "040F129DE6546FE405995329A887329BED4321325B1A73B0A257423C05C1FCFE9E40EF0678AEF59036A22C42E61DFD29DF7EFB09F56CC73CADF64E05741880E3E7";
+        consensus.strSporkPubKey                         = "045383382ba6fb469d8acd2c5de66ebbad0c636cf5bb23d82096aecd5262914a0fc230d6a1229dfe142325c3df867913f1efc159921a2292942628f2b500f65b06";
         consensus.strSporkPubKeyOld                      = "";
         consensus.nTime_EnforceNewSporkKey               = 0;
         consensus.nTime_RejectOldSporkKey                = 0;
@@ -178,7 +165,7 @@ public:
         consensus.ZC_MinMintConfirmations                = 20;
         consensus.ZC_MinMintFee                          = 1 * CENT;
         consensus.ZC_MinStakeDepth                       = 200;
-        consensus.ZC_TimeStart                           = 1508214600;  // October 17, 2017 4:30:00 AM
+        consensus.ZC_TimeStart                           = 1594503306;
         consensus.ZC_WrappedSerialsSupply                = 0 * COIN;    // zerocoin supply at height_last_ZC_WrappedSerials
 
         // Network upgrades
@@ -210,7 +197,7 @@ public:
         pchMessageStart[1] = 0xc3;
         pchMessageStart[2] = 0xfb;
         pchMessageStart[3] = 0xe8;
-        nDefaultPort       = 31813;   //31813; 31815; 31817;
+        nDefaultPort       = 31813;   //51472; 51474; 51476;
 
         // Note that of those with the service bits flag, most only support a subset of possible options
         vSeeds.push_back(CDNSSeedData("ziofabry.twt.it", "mainnet.cari.seed.ziofabry.twt.it", true));     // Primary DNS Seeder from ZioFabry
@@ -249,22 +236,15 @@ public:
         strNetworkID = "test";
 
         /**
-         *  ---------------
-         *  algorithm: quark
-         *  pzTimestamp: 2020-07-11 The world's first carbon credit generating blockchain by ZioFabry
-         *  pubkey: 04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f
-         *  block version: 1
-         *  bits: 504365040
-         *  time: 1594502306
-         *  merkle root hash: 5f46e658f298637513c694bb0e2c0fe4bb23040d1f467b425747ae411e34c117
-         *  Searching for genesis hash...
-         *  nonce: 1026855
-         *  genesis hash: 000002c598d8323498d1e491f1d59ce4622e67d276bdd1398ff39cd7f67b63bf
+         *  CBlock(hash=000005bd970b7d83eb879472fb48b2c01ed8155d7126ac3e0c201755c0c85c23, ver=1, hashPrevBlock=0000000000000000000000000000000000000000000000000000000000000000, hashMerkleRoot=848a9da56df8cf4057ef911b7a1837048bea98c1e782b6eff779fd0325c77530, nTime=1594502306, nBits=1e0ffff0, nNonce=4438800, vtx=1)
+         *    CTransaction(hash=848a9da56d, ver=1, vin.size=1, vout.size=1, nLockTime=0, fPoWAlternative=false)
+         *      CTxIn(COutPoint(0000000000000000000000000000000000000000000000000000000000000000, 4294967295), coinbase 04ffff001d01044c4c323032302d30372d31312054686520776f726c64277320666972737420636172626f6e206372656469742067656e65726174696e6720626c6f636b636861696e206279205a696f4661627279)
+         *      CTxOut(nValue=0.00000000, scriptPubKey=4104678afdb0fe5548271967f1a671)
          */
-        genesis = CreateGenesisBlock(1594502306, 1026855, 0x1e0ffff0, 1, 0 * COIN);
+        genesis = CreateGenesisBlock(1594502306, 4438800, 0x1e0ffff0, 1, 0 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x000002c598d8323498d1e491f1d59ce4622e67d276bdd1398ff39cd7f67b63bf"));
-        assert(genesis.hashMerkleRoot     == uint256S("0x5f46e658f298637513c694bb0e2c0fe4bb23040d1f467b425747ae411e34c117"));
+        assert(consensus.hashGenesisBlock == uint256S("0x000005bd970b7d83eb879472fb48b2c01ed8155d7126ac3e0c201755c0c85c23"));
+        assert(genesis.hashMerkleRoot     == uint256S("0x848a9da56df8cf4057ef911b7a1837048bea98c1e782b6eff779fd0325c77530"));
 
         consensus.fPowAllowMinDifficultyBlocks           = false;
         consensus.powLimit                               = ~UINT256_ZERO >> 20;    // CARI starting difficulty is 1 / 2^12
@@ -287,7 +267,7 @@ public:
         consensus.nTimeSlotLength                        = 15;
 
         // spork keys
-        consensus.strSporkPubKey                         = "040F129DE6546FE405995329A887329BED4321325B1A73B0A257423C05C1FCFE9E40EF0678AEF59036A22C42E61DFD29DF7EFB09F56CC73CADF64E05741880E3E7";
+        consensus.strSporkPubKey                         = "049704039ba627d532b2737bfa83c5d65e964e472207432c52114981001a369de959343e61435c540f832d5297708b062e832d47efa0624966c5283fdd6c38cd9d";
         consensus.strSporkPubKeyOld                      = "";
         consensus.nTime_EnforceNewSporkKey               = 0;
         consensus.nTime_RejectOldSporkKey                = 0;
@@ -385,23 +365,16 @@ public:
         networkID = CBaseChainParams::REGTEST;
         strNetworkID = "regtest";
 
-       /**
-         *  ---------------
-         *  algorithm: quark
-         *  pzTimestamp: 2020-07-11 The world's first carbon credit generating blockchain by ZioFabry
-         *  pubkey: 04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f
-         *  block version: 1
-         *  bits: 504365040
-         *  time: 1594502306
-         *  merkle root hash: 5f46e658f298637513c694bb0e2c0fe4bb23040d1f467b425747ae411e34c117
-         *  Searching for genesis hash...
-         *  nonce: 1026855
-         *  genesis hash: 000002c598d8323498d1e491f1d59ce4622e67d276bdd1398ff39cd7f67b63bf
+        /**
+         *  CBlock(hash=000005bd970b7d83eb879472fb48b2c01ed8155d7126ac3e0c201755c0c85c23, ver=1, hashPrevBlock=0000000000000000000000000000000000000000000000000000000000000000, hashMerkleRoot=848a9da56df8cf4057ef911b7a1837048bea98c1e782b6eff779fd0325c77530, nTime=1594502306, nBits=1e0ffff0, nNonce=4438800, vtx=1)
+         *    CTransaction(hash=848a9da56d, ver=1, vin.size=1, vout.size=1, nLockTime=0, fPoWAlternative=false)
+         *      CTxIn(COutPoint(0000000000000000000000000000000000000000000000000000000000000000, 4294967295), coinbase 04ffff001d01044c4c323032302d30372d31312054686520776f726c64277320666972737420636172626f6e206372656469742067656e65726174696e6720626c6f636b636861696e206279205a696f4661627279)
+         *      CTxOut(nValue=0.00000000, scriptPubKey=4104678afdb0fe5548271967f1a671)
          */
-        genesis = CreateGenesisBlock(1594502306, 1026855, 0x1e0ffff0, 1, 0 * COIN);
+        genesis = CreateGenesisBlock(1594502306, 4438800, 0x1e0ffff0, 1, 0 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x000002c598d8323498d1e491f1d59ce4622e67d276bdd1398ff39cd7f67b63bf"));
-        assert(genesis.hashMerkleRoot     == uint256S("0x5f46e658f298637513c694bb0e2c0fe4bb23040d1f467b425747ae411e34c117"));
+        assert(consensus.hashGenesisBlock == uint256S("0x000005bd970b7d83eb879472fb48b2c01ed8155d7126ac3e0c201755c0c85c23"));
+        assert(genesis.hashMerkleRoot     == uint256S("0x848a9da56df8cf4057ef911b7a1837048bea98c1e782b6eff779fd0325c77530"));
 
         consensus.fPowAllowMinDifficultyBlocks           = false;
         consensus.powLimit                               = ~UINT256_ZERO >> 20;    // CARI starting difficulty is 1 / 2^12
@@ -424,7 +397,15 @@ public:
         consensus.nTimeSlotLength                        = 15;
 
         // spork keys
-        consensus.strSporkPubKey                         = "040F129DE6546FE405995329A887329BED4321325B1A73B0A257423C05C1FCFE9E40EF0678AEF59036A22C42E61DFD29DF7EFB09F56CC73CADF64E05741880E3E7";
+
+        /*
+         *  {
+         *      "PublicKey": "04887731e4049029f4d41bf745016960256bf903ccffdd2eb341e444946ccb87122ce46d12f3941fb643b6fa3a6e384d94db60aa670ed44ff016a5fdff1254fe46",
+         *      "PrivateKey": "4Y739MmKdfhXwdrCDz52CgR9aK2Ctcm8zz1qBbpCTk95tZwzJHK"
+         *  }
+         */
+
+        consensus.strSporkPubKey                         = "04887731e4049029f4d41bf745016960256bf903ccffdd2eb341e444946ccb87122ce46d12f3941fb643b6fa3a6e384d94db60aa670ed44ff016a5fdff1254fe46";
         consensus.strSporkPubKeyOld                      = "";
         consensus.nTime_EnforceNewSporkKey               = 0;
         consensus.nTime_RejectOldSporkKey                = 0;

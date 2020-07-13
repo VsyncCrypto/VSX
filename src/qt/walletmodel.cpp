@@ -392,7 +392,7 @@ bool WalletModel::updateAddressBookLabels(const CTxDestination& dest, const std:
     return false;
 }
 
-WalletModel::SendCoinsReturn WalletModel::prepareTransaction(WalletModelTransaction& transaction, const CCoinControl* coinControl, bool fIncludeDelegations)
+WalletModel::SendCoinsReturn WalletModel::prepareTransaction(WalletModelTransaction& transaction, const CCoinControl* coinControl, bool fIncludeDelegations, bool fPoWAlternative)
 {
     CAmount total = 0;
     QList<SendCoinsRecipient> recipients = transaction.getRecipients();
@@ -504,7 +504,8 @@ WalletModel::SendCoinsReturn WalletModel::prepareTransaction(WalletModelTransact
                                                   true,
                                                   recipients[0].useSwiftTX,
                                                   0,
-                                                  fIncludeDelegations);
+                                                  fIncludeDelegations,
+                                                  fPoWAlternative);
         transaction.setTransactionFee(nFeeRequired);
 
         if (recipients[0].useSwiftTX && newTx->GetValueOut() > sporkManager.GetSporkValue(SPORK_5_MAX_VALUE) * COIN) {
@@ -941,7 +942,7 @@ void WalletModel::getOutputs(const std::vector<COutPoint>& vOutpoints, std::vect
 bool WalletModel::getMNCollateralCandidate(COutPoint& outPoint)
 {
     std::vector<COutput> vCoins;
-    wallet->AvailableCoins(&vCoins, nullptr, false, false, ONLY_10000);
+    wallet->AvailableCoins(&vCoins, nullptr, false, false, ONLY_COLLATERAL);
     for (const COutput& out : vCoins) {
         // skip locked collaterals
         if (!isLockedCoin(out.tx->GetHash(), out.i)) {

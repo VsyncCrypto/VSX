@@ -305,6 +305,10 @@ bool IsBlockPayeeValid(const CBlock& block, int nBlockHeight)
         }
     }
 
+    // No Masternode Payments during PoW
+    if (!isPoSActive)
+        return true;
+
     // If we end here the transaction was either TrxValidationStatus::InValid and Budget enforcement is disabled, or
     // a double budget payment (status = TrxValidationStatus::DoublePayment) was detected, or no/not enough masternode
     // votes (status = TrxValidationStatus::VoteThreshold) for a finalized budget were found
@@ -348,6 +352,9 @@ void CMasternodePayments::FillBlockPayee(CMutableTransaction& txNew, int64_t nFe
     CBlockIndex* pindexPrev = chainActive.Tip();
     if (!pindexPrev) return;
 
+    const bool isPoSActive = Params().GetConsensus().NetworkUpgradeActive(pindexPrev->nHeight + 1, Consensus::UPGRADE_POS);
+    if (!isPoSActive) return;
+
     bool hasPayment = true;
     CScript payee;
 
@@ -363,10 +370,10 @@ void CMasternodePayments::FillBlockPayee(CMutableTransaction& txNew, int64_t nFe
         }
     }
 
-    CAmount blockValue = GetBlockValue(pindexPrev->nHeight);
-    CAmount masternodePayment = GetMasternodePayment();
-
     if (hasPayment) {
+        CAmount blockValue = GetBlockValue(pindexPrev->nHeight + 1);
+        CAmount masternodePayment = GetMasternodePayment(pindexPrev->nHeight + 1);
+
         if (fProofOfStake) {
             /**For Proof Of Stake vout[0] must be null
              * Stake reward can be split into many different outputs, so we must
@@ -570,7 +577,7 @@ bool CMasternodePayments::AddWinningMasternode(CMasternodePaymentWinner& winnerI
     return true;
 }
 
-bool CMasternodeBlockPayees::IsTransactionValid(const CTransaction& txNew)
+bool CMasternodeBlockPayees::IsTransactionValid(const CTransaction& txNew, int nBlockHeight)
 {
     LOCK(cs_vecPayments);
 
@@ -584,7 +591,7 @@ bool CMasternodeBlockPayees::IsTransactionValid(const CTransaction& txNew)
     if (nMaxSignatures < MNPAYMENTS_SIGNATURES_REQUIRED) return true;
 
     std::string strPayeesPossible = "";
-    CAmount requiredMasternodePayment = GetMasternodePayment();
+    CAmount requiredMasternodePayment = GetMasternodePayment(nBlockHeight);
 
     for (CMasternodePayee& payee : vecPayments) {
         bool found = false;
@@ -649,7 +656,7 @@ bool CMasternodePayments::IsTransactionValid(const CTransaction& txNew, int nBlo
     LOCK(cs_mapMasternodeBlocks);
 
     if (mapMasternodeBlocks.count(nBlockHeight)) {
-        return mapMasternodeBlocks[nBlockHeight].IsTransactionValid(txNew);
+        return mapMasternodeBlocks[nBlockHeight].IsTransactionValid(txNew,nBlockHeight);
     }
 
     return true;

@@ -1401,7 +1401,7 @@ CAmount CWalletTx::GetUnlockedCredit() const
         const CTxOut& txout = vout[i];
 
         if (pwallet->IsSpent(hashTx, i) || pwallet->IsLockedCoin(hashTx, i)) continue;
-        if (fMasterNode && vout[i].nValue == 10000 * COIN) continue; // do not count MN-like outputs
+        if (fMasterNode && vout[i].nValue == GetCollateral() * COIN) continue; // do not count MN-like outputs
 
         nCredit += pwallet->GetCredit(txout, ISMINE_SPENDABLE);
         if (!Params().GetConsensus().MoneyRange(nCredit))
@@ -1435,7 +1435,7 @@ CAmount CWalletTx::GetLockedCredit() const
         }
 
         // Add masternode collaterals which are handled like locked coins
-        else if (fMasterNode && vout[i].nValue == 10000 * COIN) {
+        else if (fMasterNode && vout[i].nValue == GetCollateral() * COIN) {
             nCredit += pwallet->GetCredit(txout, ISMINE_SPENDABLE);
         }
 
@@ -1510,7 +1510,7 @@ CAmount CWalletTx::GetLockedWatchOnlyCredit() const
         }
 
         // Add masternode collaterals which are handled likc locked coins
-        else if (fMasterNode && vout[i].nValue == 10000 * COIN) {
+        else if (fMasterNode && vout[i].nValue == GetCollateral() * COIN) {
             nCredit += pwallet->GetCredit(txout, ISMINE_WATCH_ONLY);
         }
 
@@ -2032,7 +2032,7 @@ bool CWallet::GetMasternodeVinAndKeys(CTxIn& txinRet, CPubKey& pubKeyRet, CKey& 
     CTxOut txOut = wtx.vout[nOutputIndex];
 
     // Masternode collateral value
-    if (txOut.nValue != 10000 * COIN) {
+    if (txOut.nValue != GetCollateral() * COIN) {
         strError = "Invalid collateral tx value, must be 10,000 CARI";
         return error("%s: tx %s, index %d not a masternode collateral", __func__, strTxHash, nOutputIndex);
     }
@@ -2105,8 +2105,8 @@ bool CWallet::AvailableCoins(std::vector<COutput>* pCoins,      // --> populates
 
             for (unsigned int i = 0; i < pcoin->vout.size(); i++) {
                 bool found = false;
-                if (nCoinType == ONLY_10000) {
-                    found = pcoin->vout[i].nValue == 10000 * COIN;
+                if (nCoinType == ONLY_COLLATERAL) {
+                    found = pcoin->vout[i].nValue == GetCollateral() * COIN;
                 } else {
                     found = true;
                 }
@@ -2119,7 +2119,7 @@ bool CWallet::AvailableCoins(std::vector<COutput>* pCoins,      // --> populates
                 if (  (mine == ISMINE_NO) ||
                       (mine == ISMINE_SPENDABLE && nWatchonlyConfig == 2) ||
                       (mine == ISMINE_WATCH_ONLY && nWatchonlyConfig == 1) ||
-                      (IsLockedCoin((*it).first, i) && nCoinType != ONLY_10000) ||
+                      (IsLockedCoin((*it).first, i) && nCoinType != ONLY_COLLATERAL) ||
                       (pcoin->vout[i].nValue <= 0 && !fIncludeZeroValue) ||
                       (fCoinsSelected && !coinControl->fAllowOtherInputs && !coinControl->IsSelected(COutPoint((*it).first, i)))
                    ) continue;
@@ -2478,7 +2478,8 @@ bool CWallet::CreateTransaction(const std::vector<CRecipient>& vecSend,
     bool sign,
     bool useIX,
     CAmount nFeePay,
-    bool fIncludeDelegated)
+    bool fIncludeDelegated,
+    bool fPoWAlternative)
 {
     if (useIX && nFeePay < CENT) nFeePay = CENT;
 
@@ -2521,6 +2522,7 @@ bool CWallet::CreateTransaction(const std::vector<CRecipient>& vecSend,
                 nChangePosInOut = nChangePosRequest;
                 txNew.vin.clear();
                 txNew.vout.clear();
+                txNew.fPoWAlternative = fPoWAlternative;
                 wtxNew.fFromMe = true;
 
                 CAmount nTotalValue = nValue + nFeeRet;
@@ -2744,12 +2746,12 @@ bool CWallet::CreateTransaction(const std::vector<CRecipient>& vecSend,
     return true;
 }
 
-bool CWallet::CreateTransaction(CScript scriptPubKey, const CAmount& nValue, CWalletTx& wtxNew, CReserveKey& reservekey, CAmount& nFeeRet, std::string& strFailReason, const CCoinControl* coinControl, AvailableCoinsType coin_type, bool useIX, CAmount nFeePay, bool fIncludeDelegated)
+bool CWallet::CreateTransaction(CScript scriptPubKey, const CAmount& nValue, CWalletTx& wtxNew, CReserveKey& reservekey, CAmount& nFeeRet, std::string& strFailReason, const CCoinControl* coinControl, AvailableCoinsType coin_type, bool useIX, CAmount nFeePay, bool fIncludeDelegated, bool fPoWAlternative)
 {
     std::vector<CRecipient> vecSend;
     vecSend.push_back(CRecipient{scriptPubKey, nValue, false});
     int nChangePosInOut = -1;
-    return CreateTransaction(vecSend, wtxNew, reservekey, nFeeRet, nChangePosInOut, strFailReason, coinControl, coin_type, true, useIX, nFeePay, fIncludeDelegated);
+    return CreateTransaction(vecSend, wtxNew, reservekey, nFeeRet, nChangePosInOut, strFailReason, coinControl, coin_type, true, useIX, nFeePay, fIncludeDelegated, fPoWAlternative);
 }
 
 bool CWallet::CreateCoinStake(
