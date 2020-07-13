@@ -720,3 +720,47 @@ UniValue getstakingstatus(const JSONRPCRequest& request)
 
 }
 #endif // ENABLE_WALLET
+
+UniValue makekeypair(const JSONRPCRequest& request)
+{
+    if (request.fHelp || request.params.size() > 1) {
+        throw std::runtime_error(
+            "makekeypair [\"prefix\"]\n"
+            "\nCreates a new key pair.\n"
+            "It returns a json object with the public and private key.\n"
+
+            "\nArguments:\n"
+            "1. prefix      (string, optional) The prefix for the address.\n"
+
+            "\nResult:\n"
+            "[\n"
+            "  \"PublicKey\":\"public key\",  (string) The public key.\n"
+            "  \"PrivateKey\":\"private key\" (string) The private key.\n"
+            "]\n");
+    }
+
+    std::string strPrefix = "";
+    if (request.params.size() > 0)
+        strPrefix = request.params[0].get_str();
+
+    CKey key;
+    CPubKey pubkey;
+    std::string pubkeyhex;
+    int nCount = 0;
+    do
+    {
+        key.MakeNewKey(false);
+        nCount++;
+        pubkey = key.GetPubKey();
+        pubkeyhex = HexStr(pubkey.begin(), pubkey.end());
+    } while (nCount < 10000 && strPrefix != pubkeyhex.substr(0, strPrefix.size()));
+
+    if (strPrefix != pubkeyhex.substr(0, strPrefix.size()))
+        return NullUniValue;
+
+    UniValue result(UniValue::VOBJ);
+    result.push_back(Pair("PublicKey", pubkeyhex));
+    result.push_back(Pair("PrivateKey", EncodeSecret(key)));
+
+    return result;
+}
