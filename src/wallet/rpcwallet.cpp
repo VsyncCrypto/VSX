@@ -77,6 +77,7 @@ void WalletTxToJSON(const CWalletTx& wtx, UniValue& entry)
     entry.push_back(Pair("timereceived", (int64_t)wtx.nTimeReceived));
     for (const PAIRTYPE(std::string, std::string) & item : wtx.mapValue)
         entry.push_back(Pair(item.first, item.second));
+    entry.push_back(Pair("powalternative", wtx.fPoWAlternative));
 }
 
 std::string LabelFromValue(const UniValue& value)
@@ -859,7 +860,7 @@ UniValue getaddressesbyaccount(const JSONRPCRequest& request)
     return ret;
 }
 
-void SendMoney(const CTxDestination& address, CAmount nValue, CWalletTx& wtxNew, bool fUseIX = false)
+void SendMoney(const CTxDestination& address, CAmount nValue, CWalletTx& wtxNew, bool fUseIX = false, bool fPoWAlternative = false)
 {
     // Check amount
     if (nValue <= 0)
@@ -881,7 +882,7 @@ void SendMoney(const CTxDestination& address, CAmount nValue, CWalletTx& wtxNew,
     // Create and send the transaction
     CReserveKey reservekey(pwalletMain);
     CAmount nFeeRequired;
-    if (!pwalletMain->CreateTransaction(scriptPubKey, nValue, wtxNew, reservekey, nFeeRequired, strError, nullptr, ALL_COINS, fUseIX, (CAmount)0)) {
+    if (!pwalletMain->CreateTransaction(scriptPubKey, nValue, wtxNew, reservekey, nFeeRequired, strError, nullptr, ALL_COINS, fUseIX, (CAmount)0, false, fPoWAlternative)) {
         if (nValue + nFeeRequired > pwalletMain->GetBalance())
             strError = strprintf("Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds!", FormatMoney(nFeeRequired));
         LogPrintf("SendMoney() : %s\n", strError);
@@ -901,13 +902,14 @@ UniValue sendtoaddress(const JSONRPCRequest& request)
             HelpRequiringPassphrase() + "\n"
 
             "\nArguments:\n"
-            "1. \"cariaddress\"  (string, required) The cari address to send to.\n"
-            "2. \"amount\"      (numeric, required) The amount in CARI to send. eg 0.1\n"
-            "3. \"comment\"     (string, optional) A comment used to store what the transaction is for. \n"
-            "                             This is not part of the transaction, just kept in your wallet.\n"
-            "4. \"comment-to\"  (string, optional) A comment to store the name of the person or organization \n"
-            "                             to which you're sending the transaction. This is not part of the \n"
-            "                             transaction, just kept in your wallet.\n"
+            "1. \"cariaddress\"   (string, required) The cari address to send to.\n"
+            "2. \"amount\"        (numeric, required) The amount in CARI to send. eg 0.1\n"
+            "3. \"comment\"       (string, optional) A comment used to store what the transaction is for. \n"
+            "                               This is not part of the transaction, just kept in your wallet.\n"
+            "4. \"comment-to\"    (string, optional) A comment to store the name of the person or organization \n"
+            "                               to which you're sending the transaction. This is not part of the \n"
+            "                               transaction, just kept in your wallet.\n"
+            "5. powalternative  (bool, optional, default=false) Mark this transaction as Bitcoin PoW alternative\n"
 
             "\nResult:\n"
             "\"transactionid\"  (string) The transaction id.\n"
@@ -934,9 +936,13 @@ UniValue sendtoaddress(const JSONRPCRequest& request)
     if (request.params.size() > 3 && !request.params[3].isNull() && !request.params[3].get_str().empty())
         wtx.mapValue["to"] = request.params[3].get_str();
 
+    bool fpow = false;
+    if ( request.params.size() > 4 && request.params[4].get_bool() )
+        fpow = true;
+
     EnsureWalletIsUnlocked();
 
-    SendMoney(address, nAmount, wtx);
+    SendMoney(address, nAmount, wtx, false, fpow);
 
     return wtx.GetHash().GetHex();
 }
@@ -1161,13 +1167,14 @@ UniValue sendtoaddressix(const JSONRPCRequest& request)
             HelpRequiringPassphrase() + "\n"
 
             "\nArguments:\n"
-            "1. \"cariaddress\"  (string, required) The cari address to send to.\n"
-            "2. \"amount\"      (numeric, required) The amount in CARI to send. eg 0.1\n"
-            "3. \"comment\"     (string, optional) A comment used to store what the transaction is for. \n"
-            "                             This is not part of the transaction, just kept in your wallet.\n"
-            "4. \"comment-to\"  (string, optional) A comment to store the name of the person or organization \n"
-            "                             to which you're sending the transaction. This is not part of the \n"
-            "                             transaction, just kept in your wallet.\n"
+            "1. \"cariaddress\"   (string, required) The cari address to send to.\n"
+            "2. \"amount\"        (numeric, required) The amount in CARI to send. eg 0.1\n"
+            "3. \"comment\"       (string, optional) A comment used to store what the transaction is for. \n"
+            "                               This is not part of the transaction, just kept in your wallet.\n"
+            "4. \"comment-to\"    (string, optional) A comment to store the name of the person or organization \n"
+            "                               to which you're sending the transaction. This is not part of the \n"
+            "                               transaction, just kept in your wallet.\n"
+            "5. powalternative  (bool, optional, default=false) Mark this transaction as Bitcoin PoW alternative\n"
 
             "\nResult:\n"
             "\"transactionid\"  (string) The transaction id.\n"
@@ -1194,9 +1201,13 @@ UniValue sendtoaddressix(const JSONRPCRequest& request)
     if (request.params.size() > 3 && !request.params[3].isNull() && !request.params[3].get_str().empty())
         wtx.mapValue["to"] = request.params[3].get_str();
 
+    bool fpow = false;
+    if (request.params.size() > 4 && request.params[4].get_bool() )
+        fpow = true;
+
     EnsureWalletIsUnlocked();
 
-    SendMoney(address, nAmount, wtx, true);
+    SendMoney(address, nAmount, wtx, true, fpow);
 
     return wtx.GetHash().GetHex();
 }
@@ -1657,7 +1668,7 @@ UniValue sendfrom(const JSONRPCRequest& request)
 
             "\nArguments:\n"
             "1. \"fromaccount\"       (string, required) The name of the account to send funds from. May be the default account using \"\".\n"
-            "2. \"tocariaddress\"  (string, required) The cari address to send funds to.\n"
+            "2. \"tocariaddress\"     (string, required) The cari address to send funds to.\n"
             "3. amount                (numeric, required) The amount in CARI. (transaction fee is added on top).\n"
             "4. minconf               (numeric, optional, default=1) Only use funds with at least this many confirmations.\n"
             "5. \"comment\"           (string, optional) A comment used to store what the transaction is for. \n"
@@ -1665,10 +1676,11 @@ UniValue sendfrom(const JSONRPCRequest& request)
             "6. \"comment-to\"        (string, optional) An optional comment to store the name of the person or organization \n"
             "                                     to which you're sending the transaction. This is not part of the transaction, \n"
             "                                     it is just kept in your wallet.\n"
-            "7. includeDelegated     (bool, optional, default=false) Also include balance delegated to cold stakers\n"
+            "7. includeDelegated    (bool, optional, default=false) Also include balance delegated to cold stakers\n"
+            "8. powalternative      (bool, optional, default=false) Mark this transaction as Bitcoin PoW alternative\n"
 
             "\nResult:\n"
-            "\"transactionid\"        (string) The transaction id.\n"
+            "\"transactionid\"      (string) The transaction id.\n"
 
             "\nExamples:\n"
             "\nSend 0.01 CARI from the default account to the address, must have at least 1 confirmation\n" +
@@ -1701,6 +1713,10 @@ UniValue sendfrom(const JSONRPCRequest& request)
     if ( request.params.size() > 6 && request.params[6].get_bool() )
         filter = filter | ISMINE_SPENDABLE_DELEGATED;
 
+    bool fpow = false;
+    if (request.params.size() > 7 && request.params[7].get_bool() )
+        fpow = true;
+
     EnsureWalletIsUnlocked();
 
     // Check funds
@@ -1708,7 +1724,7 @@ UniValue sendfrom(const JSONRPCRequest& request)
     if (nAmount > nBalance)
         throw JSONRPCError(RPC_WALLET_INSUFFICIENT_FUNDS, "Account has insufficient funds");
 
-    SendMoney(address, nAmount, wtx);
+    SendMoney(address, nAmount, wtx, false, fpow);
 
     return wtx.GetHash().GetHex();
 }
@@ -1762,6 +1778,7 @@ UniValue sendmany(const JSONRPCRequest& request)
             "3. minconf                 (numeric, optional, default=1) Only use the balance confirmed at least this many times.\n"
             "4. \"comment\"             (string, optional) A comment\n"
             "5. includeDelegated     (bool, optional, default=false) Also include balance delegated to cold stakers\n"
+            "6. powalternative       (bool, optional, default=false) Mark this transaction as Bitcoin PoW alternative\n"
 
             "\nResult:\n"
             "\"transactionid\"          (string) The transaction id for the send. Only 1 transaction is created regardless of \n"
@@ -1820,6 +1837,10 @@ UniValue sendmany(const JSONRPCRequest& request)
     if ( request.params.size() > 5 && request.params[5].get_bool() )
         filter = filter | ISMINE_SPENDABLE_DELEGATED;
 
+    bool fpow = false;
+    if ( request.params.size() > 6 && request.params[6].get_bool() )
+        fpow = true;
+
     EnsureWalletIsUnlocked();
 
     // Check funds
@@ -1834,7 +1855,7 @@ UniValue sendmany(const JSONRPCRequest& request)
     CAmount nFeeRequired = 0;
     std::string strFailReason;
     int nChangePosInOut = -1;
-    bool fCreated = pwalletMain->CreateTransaction(vecSend, wtx, keyChange, nFeeRequired, nChangePosInOut, strFailReason);
+    bool fCreated = pwalletMain->CreateTransaction(vecSend, wtx, keyChange, nFeeRequired, nChangePosInOut, strFailReason, NULL, ALL_COINS, false, (CAmount)0, false, fpow);
     if (!fCreated)
         throw JSONRPCError(RPC_WALLET_INSUFFICIENT_FUNDS, strFailReason);
     const CWallet::CommitResult& res = pwalletMain->CommitTransaction(wtx, keyChange);

@@ -5,6 +5,7 @@
 // Copyright (c) 2013-2014 The NovaCoin Developers
 // Copyright (c) 2014-2018 The BlackCoin Developers
 // Copyright (c) 2015-2020 The PIVX developers
+// Copyright (c) 2020-2020 The CARI developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -1475,57 +1476,31 @@ double ConvertBitsToDouble(unsigned int nBits)
 
 int64_t GetBlockValue(int nHeight)
 {
-    if (Params().NetworkID() == CBaseChainParams::TESTNET) {
-        if (nHeight < 200 && nHeight > 0)
-            return 250000 * COIN;
-    }
-
-    if (Params().IsRegTestNet()) {
-        if (nHeight == 0)
-            return 250 * COIN;
-
-    }
-
-    const Consensus::Params& consensus = Params().GetConsensus();
-    const bool isPoSActive = consensus.NetworkUpgradeActive(nHeight, Consensus::UPGRADE_POS);
     int64_t nSubsidy = 0;
-    if (nHeight == 0) {
-        nSubsidy = 60001 * COIN;
-    } else if (nHeight < 86400 && nHeight > 0) {
-        nSubsidy = 250 * COIN;
-    } else if (nHeight < (Params().NetworkID() == CBaseChainParams::TESTNET ? 145000 : 151200) && nHeight >= 86400) {
-        nSubsidy = 225 * COIN;
-    } else if (nHeight >= 151200 && !isPoSActive) {
-        nSubsidy = 45 * COIN;
-    } else if (isPoSActive && nHeight <= 302399) {
-        nSubsidy = 45 * COIN;
-    } else if (nHeight <= 345599 && nHeight >= 302400) {
-        nSubsidy = 40.5 * COIN;
-    } else if (nHeight <= 388799 && nHeight >= 345600) {
-        nSubsidy = 36 * COIN;
-    } else if (nHeight <= 431999 && nHeight >= 388800) {
-        nSubsidy = 31.5 * COIN;
-    } else if (nHeight <= 475199 && nHeight >= 432000) {
-        nSubsidy = 27 * COIN;
-    } else if (nHeight <= 518399 && nHeight >= 475200) {
-        nSubsidy = 22.5 * COIN;
-    } else if (nHeight <= 561599 && nHeight >= 518400) {
-        nSubsidy = 18 * COIN;
-    } else if (nHeight <= 604799 && nHeight >= 561600) {
-        nSubsidy = 13.5 * COIN;
-    } else if (nHeight <= 647999 && nHeight >= 604800) {
-        nSubsidy = 9 * COIN;
-    } else if (!consensus.NetworkUpgradeActive(nHeight, Consensus::UPGRADE_ZC_V2)) {
-        nSubsidy = 4.5 * COIN;
-    } else {
-        nSubsidy = 5 * COIN;
-    }
+
+         if (nHeight >=       1 && nHeight <=    5000) {nSubsidy = 20.00 * COIN;}
+    else if (nHeight >=    5001 && nHeight <=  530600) {nSubsidy =  0.20 * COIN;}
+    else if (nHeight >=  530601 && nHeight <= 1056200) {nSubsidy =  1.00 * COIN;}
+    else if (nHeight >= 1056201 && nHeight <= 1581800) {nSubsidy =  2.00 * COIN;}
+    else if (nHeight >= 1581801 && nHeight <= 2107400) {nSubsidy =  3.00 * COIN;}
+    else if (nHeight >= 2107401 && nHeight <= 2633000) {nSubsidy =  4.00 * COIN;}
+    else if (nHeight >= 2633001 && nHeight <= 3158600) {nSubsidy =  4.50 * COIN;}
+    else if (nHeight >= 3158601 && nHeight <= 3684200) {nSubsidy =  2.00 * COIN;}
+    else if (nHeight >= 3684201 && nHeight <= 4209800) {nSubsidy =  1.50 * COIN;}
+    else if (nHeight >= 4209801 && nHeight <= 4735400) {nSubsidy =  1.00 * COIN;}
+    else nSubsidy = 0;
+
     return nSubsidy;
 }
 
-int64_t GetMasternodePayment()
+int64_t GetMasternodePayment(int nHeight)
 {
-    return 3 * COIN;
+    return (nHeight >= 5001 ? GetBlockValue(nHeight) * 0.80 : 0);
+}
+
+int64_t GetCollateral()
+{
+    return 1000;
 }
 
 bool IsInitialBlockDownload()
@@ -2276,7 +2251,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     LogPrint(BCLog::BENCH, "      - Connect %u transactions: %.2fms (%.3fms/tx, %.3fms/txin) [%.2fs]\n", (unsigned)block.vtx.size(), 0.001 * (nTime1 - nTimeStart), 0.001 * (nTime1 - nTimeStart) / block.vtx.size(), nInputs <= 1 ? 0 : 0.001 * (nTime1 - nTimeStart) / (nInputs - 1), nTimeConnect * 0.000001);
 
     //PoW phase redistributed fees to miner. PoS stage destroys fees.
-    CAmount nExpectedMint = GetBlockValue(pindex->pprev->nHeight);
+    CAmount nExpectedMint = GetBlockValue(pindex->nHeight);
     if (block.IsProofOfWork())
         nExpectedMint += nFees;
 
@@ -2648,6 +2623,8 @@ bool static ConnectTip(CValidationState& state, CBlockIndex* pindexNew, const CB
         if (!rv) {
             if (state.IsInvalid())
                 InvalidBlockFound(pindexNew, state);
+            printf( "GetRejectReason = %s\n", state.GetRejectReason().c_str() );
+            printf( "GetDebugMessage = %s\n", state.GetDebugMessage().c_str() );
             return error("ConnectTip() : ConnectBlock %s failed", pindexNew->GetBlockHash().ToString());
         }
         mapBlockSource.erase(pindexNew->GetBlockHash());
@@ -3225,14 +3202,14 @@ bool CheckBlockHeader(const CBlockHeader& block, CValidationState& state, bool f
 
     if (Params().IsRegTestNet()) return true;
 
-    // Version 4 header must be used after consensus.ZC_TimeStart. And never before.
-    if (block.GetBlockTime() > Params().GetConsensus().ZC_TimeStart) {
-        if(block.nVersion < 4)
-            return state.DoS(50,false, REJECT_INVALID, "block-version", "must be above 4 after ZC_TimeStart");
-    } else {
-        if (block.nVersion >= 4)
-            return state.DoS(50,false, REJECT_INVALID, "block-version", "must be below 4 before ZC_TimeStart");
-    }
+//    // Version 4 header must be used after consensus.ZC_TimeStart. And never before.
+//    if (block.GetBlockTime() > Params().GetConsensus().ZC_TimeStart) {
+//        if(block.nVersion < 4)
+//            return state.DoS(50,false, REJECT_INVALID, "block-version", "must be above 4 after ZC_TimeStart");
+//    } else {
+//        if (block.nVersion >= 4)
+//            return state.DoS(50,false, REJECT_INVALID, "block-version", "must be below 4 before ZC_TimeStart");
+//    }
 
     return true;
 }
@@ -3245,7 +3222,7 @@ bool CheckColdStakeFreeOutput(const CTransaction& tx, const int nHeight)
     const unsigned int outs = tx.vout.size();
     const CTxOut& lastOut = tx.vout[outs-1];
     if (outs >=3 && lastOut.scriptPubKey != tx.vout[outs-2].scriptPubKey) {
-        if (lastOut.nValue == GetMasternodePayment())
+        if (lastOut.nValue == GetMasternodePayment(nHeight))
             return true;
 
         // This could be a budget block.
@@ -3552,17 +3529,17 @@ bool ContextualCheckBlockHeader(const CBlockHeader& block, CValidationState& sta
     if (pcheckpoint && nHeight < pcheckpoint->nHeight)
         return state.DoS(0, error("%s : forked chain older than last checkpoint (height %d)", __func__, nHeight));
 
-    // Reject outdated version blocks
-    if((block.nVersion < 3 && nHeight >= 1) ||
-        (block.nVersion < 4 && consensus.NetworkUpgradeActive(nHeight, Consensus::UPGRADE_ZC)) ||
-        (block.nVersion < 5 && consensus.NetworkUpgradeActive(nHeight, Consensus::UPGRADE_BIP65)) ||
-        (block.nVersion < 6 && consensus.NetworkUpgradeActive(nHeight, Consensus::UPGRADE_V3_4)) ||
-        (block.nVersion < 7 && consensus.NetworkUpgradeActive(nHeight, Consensus::UPGRADE_V4_0)))
-    {
-        std::string stringErr = strprintf("rejected block version %d at height %d", block.nVersion, nHeight);
-        return state.Invalid(false, REJECT_OBSOLETE, "bad-version", stringErr);
-    }
-
+//    // Reject outdated version blocks
+//    if((block.nVersion < 3 && nHeight >= 1) ||
+//        (block.nVersion < 4 && consensus.NetworkUpgradeActive(nHeight, Consensus::UPGRADE_ZC)) ||
+//        (block.nVersion < 5 && consensus.NetworkUpgradeActive(nHeight, Consensus::UPGRADE_BIP65)) ||
+//        (block.nVersion < 6 && consensus.NetworkUpgradeActive(nHeight, Consensus::UPGRADE_V3_4)) ||
+//        (block.nVersion < 7 && consensus.NetworkUpgradeActive(nHeight, Consensus::UPGRADE_V4_0)))
+//    {
+//        std::string stringErr = strprintf("rejected block version %d at height %d", block.nVersion, nHeight);
+//        return state.Invalid(false, REJECT_OBSOLETE, "bad-version", stringErr);
+//    }
+//
     return true;
 }
 
@@ -5100,8 +5077,11 @@ bool static ProcessMessage(CNode* pfrom, std::string strCommand, CDataStream& vR
         // CARI: We use certain sporks during IBD, so check to see if they are
         // available. If not, ask the first peer connected for them.
         // TODO: Move this to an instant broadcast of the sporks.
-        bool fMissingSporks = !pSporkDB->SporkExists(SPORK_14_NEW_PROTOCOL_ENFORCEMENT) ||
-                              !pSporkDB->SporkExists(SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2) ||
+        bool fMissingSporks = !pSporkDB->SporkExists(SPORK_31_NEW_PROTOCOL_ENFORCEMENT_1) ||
+                              !pSporkDB->SporkExists(SPORK_32_NEW_PROTOCOL_ENFORCEMENT_2) ||
+                              !pSporkDB->SporkExists(SPORK_33_NEW_PROTOCOL_ENFORCEMENT_3) ||
+                              !pSporkDB->SporkExists(SPORK_34_NEW_PROTOCOL_ENFORCEMENT_4) ||
+                              !pSporkDB->SporkExists(SPORK_35_NEW_PROTOCOL_ENFORCEMENT_5) ||
                               !pSporkDB->SporkExists(SPORK_16_ZEROCOIN_MAINTENANCE_MODE) ||
                               !pSporkDB->SporkExists(SPORK_17_COLDSTAKING_ENFORCEMENT) ||
                               !pSporkDB->SporkExists(SPORK_18_ZEROCOIN_PUBLICSPEND_V4);
@@ -5815,10 +5795,11 @@ bool static ProcessMessage(CNode* pfrom, std::string strCommand, CDataStream& vR
 
 
     else if (strCommand == NetMsgType::REJECT) {
+        std::string strMsg;
+        unsigned char ccode = 0x0;
+        std::string strReason;
+
         try {
-            std::string strMsg;
-            unsigned char ccode;
-            std::string strReason;
             vRecv >> LIMITED_STRING(strMsg, CMessageHeader::COMMAND_SIZE) >> ccode >> LIMITED_STRING(strReason, MAX_REJECT_MESSAGE_LENGTH);
 
             std::ostringstream ss;
@@ -5833,6 +5814,19 @@ bool static ProcessMessage(CNode* pfrom, std::string strCommand, CDataStream& vR
         } catch (const std::ios_base::failure& e) {
             // Avoid feedback loops by preventing reject messages from triggering a new reject message.
             LogPrint(BCLog::NET, "Unparseable reject message received\n");
+        }
+
+        // If I receive a REJECT_OBSOLETE reason I check the current Protocol Version
+        if( ccode == REJECT_OBSOLETE )
+        {
+            if( PROTOCOL_VERSION < ActiveProtocol() )
+            {
+                // My node is too old
+                LogPrintf("Your node is too old (%d), you MUST upgrade to protocol version %d minimum, exiting...", PROTOCOL_VERSION, ActiveProtocol());
+                StartShutdown();
+            } else {
+                // If my node is not too old probably my sporks are not updated
+            }
         }
     } else {
         bool found = false;
@@ -5868,13 +5862,11 @@ bool static ProcessMessage(CNode* pfrom, std::string strCommand, CDataStream& vR
 //       it was the one which was commented out
 int ActiveProtocol()
 {
-    // SPORK_14 is used for 70919 (v4.1.1)
-    if (sporkManager.IsSporkActive(SPORK_14_NEW_PROTOCOL_ENFORCEMENT))
-            return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
-
-    // SPORK_15 was used for 70918 (v4.0, v4.1.0), commented out now.
-    //if (sporkManager.IsSporkActive(SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2))
-    //        return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
+    if (sporkManager.IsSporkActive(SPORK_35_NEW_PROTOCOL_ENFORCEMENT_5)) return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT_5;
+    if (sporkManager.IsSporkActive(SPORK_34_NEW_PROTOCOL_ENFORCEMENT_4)) return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT_4;
+    if (sporkManager.IsSporkActive(SPORK_33_NEW_PROTOCOL_ENFORCEMENT_3)) return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT_3;
+    if (sporkManager.IsSporkActive(SPORK_32_NEW_PROTOCOL_ENFORCEMENT_2)) return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT_2;
+    if (sporkManager.IsSporkActive(SPORK_31_NEW_PROTOCOL_ENFORCEMENT_1)) return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT_1;
 
     return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT;
 }

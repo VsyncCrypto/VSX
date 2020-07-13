@@ -73,10 +73,10 @@ SendWidget::SendWidget(CARIGUI* parent) :
     connect(ui->btnUri, &OptionButton::clicked, this, &SendWidget::onOpenUriClicked);
     connect(ui->pushButtonReset, &QPushButton::clicked, [this](){ onResetCustomOptions(true); });
     connect(ui->checkBoxDelegations, &QCheckBox::stateChanged, this, &SendWidget::onCheckBoxChanged);
+    connect(ui->checkBoxPoWAlternative, &QCheckBox::stateChanged, this, &SendWidget::onCheckBoxChanged);
 
     setCssProperty(ui->coinWidget, "container-coin-type");
     setCssProperty(ui->labelLine, "container-divider");
-
 
     // Total Send
     setCssProperty(ui->labelTitleTotalSend, "text-title");
@@ -147,6 +147,7 @@ void SendWidget::refreshAmounts()
                     false
                     )
     );
+    ui->checkBoxPoWAlternative->setToolTip(tr("I hereby certify that this transaction replaces one performed on<br>the Bitcoin proof-of-work network not a transaction in the traditional<br>banking or any alternative transfer system"));
     // show or hide delegations checkbox if need be
     showHideCheckBoxDelegations();
 }
@@ -214,6 +215,7 @@ void SendWidget::onResetCustomOptions(bool fRefreshAmounts)
     ui->btnChangeAddress->setActive(false);
     ui->btnCoinControl->setActive(false);
     if (ui->checkBoxDelegations->isChecked()) ui->checkBoxDelegations->setChecked(false);
+    if (ui->checkBoxPoWAlternative->isChecked()) ui->checkBoxPoWAlternative->setChecked(false);
     if (fRefreshAmounts) {
         refreshAmounts();
     }
@@ -357,7 +359,7 @@ bool SendWidget::send(QList<SendCoinsRecipient> recipients)
     WalletModelTransaction currentTransaction(recipients);
     WalletModel::SendCoinsReturn prepareStatus;
 
-    prepareStatus = walletModel->prepareTransaction(currentTransaction, coinControlDialog->coinControl, fDelegationsChecked);
+    prepareStatus = walletModel->prepareTransaction(currentTransaction, coinControlDialog->coinControl, fDelegationsChecked, fPoWAlternative);
 
     // process prepareStatus and on error generate message shown to user
     GuiTransactionsUtils::ProcessSendCoinsReturnAndInform(
@@ -554,6 +556,8 @@ void SendWidget::onCheckBoxChanged()
         fDelegationsChecked = checked;
         refreshAmounts();
     }
+
+    fPoWAlternative = ui->checkBoxPoWAlternative->isChecked();
 }
 
 void SendWidget::onContactsClicked(SendMultiRow* entry)

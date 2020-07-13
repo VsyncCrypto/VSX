@@ -176,13 +176,13 @@ UniValue mnsync(const JSONRPCRequest& request)
     if (request.params.size() == 1)
         strMode = request.params[0].get_str();
 
-    if (request.fHelp || request.params.size() != 1 || (strMode != "status" && strMode != "reset")) {
+    if (request.fHelp || request.params.size() != 1 || (strMode != "status" && strMode != "reset" && strMode != "next")) {
         throw std::runtime_error(
             "mnsync \"status|reset\"\n"
             "\nReturns the sync status or resets sync.\n"
 
             "\nArguments:\n"
-            "1. \"mode\"    (string, required) either 'status' or 'reset'\n"
+            "1. \"mode\"    (string, required) either 'status' or 'reset' or 'next'\n"
 
             "\nResult ('status' mode):\n"
             "{\n"
@@ -237,6 +237,11 @@ UniValue mnsync(const JSONRPCRequest& request)
     if (strMode == "reset") {
         masternodeSync.Reset();
         return "success";
+    }
+
+    if (strMode == "next") {
+        masternodeSync.GetNextAsset();
+        return masternodeSync.GetSyncStatus();
     }
     return "failure";
 }
