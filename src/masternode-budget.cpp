@@ -14,6 +14,7 @@
 #include "masternode.h"
 #include "masternodeman.h"
 #include "util.h"
+#include "spork.h"
 
 
 CBudgetManager budget;
@@ -1079,9 +1080,13 @@ void CBudgetManager::ProcessMessage(CNode* pfrom, std::string& strCommand, CData
         if (Params().NetworkID() == CBaseChainParams::MAIN) {
             if (nProp.IsNull()) {
                 if (pfrom->HasFulfilledRequest("budgetvotesync")) {
-                    LogPrint(BCLog::MNBUDGET,"mnvs - peer already asked me for the list\n");
-                    Misbehaving(pfrom->GetId(), 20);
-                    return;
+                    if (sporkManager.IsSporkActive(SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT))
+                    {
+                        LogPrint(BCLog::MNBUDGET,"mnvs - peer already asked me for the list\n");
+                        Misbehaving(pfrom->GetId(), 20);
+                        return;
+                    }
+                    pfrom->ClearFulfilledRequest("budgetvotesync");
                 }
                 pfrom->FulfilledRequest("budgetvotesync");
             }
