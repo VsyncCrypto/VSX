@@ -430,8 +430,11 @@ void CMasternodeMan::DsegUpdate(CNode* pnode)
             std::map<CNetAddr, int64_t>::iterator it = mWeAskedForMasternodeList.find(pnode->addr);
             if (it != mWeAskedForMasternodeList.end()) {
                 if (GetTime() < (*it).second) {
-                    LogPrint(BCLog::MASTERNODE, "dseg - we already asked peer %i for the list; skipping...\n", pnode->GetId());
-                    if (sporkManager.IsSporkActive(SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT)) return;
+                    if (sporkManager.IsSporkActive(SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT))
+                    {
+                        LogPrint(BCLog::MASTERNODE, "dseg - we already asked peer %i for the list; skipping...\n", pnode->GetId());
+                        return;
+                    }
                 }
             }
         }
@@ -770,8 +773,11 @@ void CMasternodeMan::ProcessMessage(CNode* pfrom, std::string& strCommand, CData
                     int64_t t = (*i).second;
                     if (GetTime() < t) {
                         LogPrintf("CMasternodeMan::ProcessMessage() : dseg - peer already asked me for the list\n");
-                        Misbehaving(pfrom->GetId(), 34);
-                        if (sporkManager.IsSporkActive(SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT)) return;
+                        if (sporkManager.IsSporkActive(SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT))
+                        {
+                            Misbehaving(pfrom->GetId(), 34);
+                            return;
+                        }
                     }
                 }
                 int64_t askAgain = GetTime() + MASTERNODES_DSEG_SECONDS;

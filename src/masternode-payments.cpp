@@ -437,8 +437,11 @@ void CMasternodePayments::ProcessMessageMasternodePayments(CNode* pfrom, std::st
         if (Params().NetworkID() == CBaseChainParams::MAIN) {
             if (pfrom->HasFulfilledRequest(NetMsgType::GETMNWINNERS)) {
                 LogPrintf("CMasternodePayments::ProcessMessageMasternodePayments() : mnget - peer already asked me for the list\n");
-                Misbehaving(pfrom->GetId(), 20);
-                if (sporkManager.IsSporkActive(SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT)) return;
+                if (sporkManager.IsSporkActive(SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT))
+                {
+                    Misbehaving(pfrom->GetId(), 20);
+                    return;
+                }
                 pfrom->ClearFulfilledRequest(NetMsgType::GETMNWINNERS);
             }
         }
