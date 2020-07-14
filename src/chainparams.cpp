@@ -68,12 +68,13 @@ static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
     (      0, uint256S("000005bd970b7d83eb879472fb48b2c01ed8155d7126ac3e0c201755c0c85c23"))
+    (    800, uint256S("0000032ba1ac42c466307ebe6cf2e39c7e50b8d3c86fe93e0a2b3897737357c5"))
     ;
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
     1594502306, // * UNIX timestamp of last checkpoint block
-    0,          // * total number of transactions between genesis and last checkpoint (the tx=... number in the UpdateTip debug.log lines)
+    803,        // * total number of transactions between genesis and last checkpoint (the tx=... number in the UpdateTip debug.log lines)
     3000        // * estimated number of transactions per day after checkpoint
 };
 
@@ -197,10 +198,11 @@ public:
         pchMessageStart[1] = 0xc3;
         pchMessageStart[2] = 0xfb;
         pchMessageStart[3] = 0xe8;
-        nDefaultPort       = 31813;   //51472; 51474; 51476;
+        nDefaultPort       = 31813;
 
         // Note that of those with the service bits flag, most only support a subset of possible options
-        vSeeds.push_back(CDNSSeedData("ziofabry.twt.it", "mainnet.cari.seed.ziofabry.twt.it", true));     // Primary DNS Seeder from ZioFabry
+        vSeeds.push_back(CDNSSeedData("cri.eco", "mainnet.seed.cri.eco", true));                        // Official DNS Seeder
+        vSeeds.push_back(CDNSSeedData("ziofabry.twt.it", "mainnet.cari.seed.ziofabry.twt.it", true));   // Secondary DNS Seeder from ZioFabry
 
         base58Prefixes[PUBKEY_ADDRESS]  = std::vector<unsigned char>(1, 28);        // Start with 'C' from https://en.bitcoin.it/wiki/List_of_address_prefixes
         base58Prefixes[SCRIPT_ADDRESS]  = std::vector<unsigned char>(1, 13);        // Start with '6' from https://en.bitcoin.it/wiki/List_of_address_prefixes
@@ -332,7 +334,9 @@ public:
         nDefaultPort       = 31815;
 
         // Note that of those with the service bits flag, most only support a subset of possible options
-        vSeeds.push_back(CDNSSeedData("ziofabry.twt.it", "mainnet.cari.seed.ziofabry.twt.it", true));     // Primary DNS Seeder from ZioFabry
+        vSeeds.push_back(CDNSSeedData("cri.eco", "testnet.seed.cri.eco", true));                        // Official DNS Seeder
+        vSeeds.push_back(CDNSSeedData("ziofabry.twt.it", "mainnet.cari.seed.ziofabry.twt.it", true));   // Secondary DNS Seeder from ZioFabry
+
         base58Prefixes[PUBKEY_ADDRESS]  = std::vector<unsigned char>(1, 88);        // Start with 'c' from https://en.bitcoin.it/wiki/List_of_address_prefixes
         base58Prefixes[SCRIPT_ADDRESS]  = std::vector<unsigned char>(1, 11);        // Start with '5' from https://en.bitcoin.it/wiki/List_of_address_prefixes
         base58Prefixes[STAKING_ADDRESS] = std::vector<unsigned char>(1,125);        // Start with 's' from https://en.bitcoin.it/wiki/List_of_address_prefixes
