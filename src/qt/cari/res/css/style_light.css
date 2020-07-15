@@ -1717,7 +1717,7 @@ HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH*/
 }
 
 *[cssClass="img-splash-logo"] {
-    qproperty-icon: url("://img-logo-cari");
+    qproperty-icon: url("://img-logo-pivx");
     qproperty-iconSize: 300px 100px;
     border:0;
     background-color:transparent;
@@ -1771,28 +1771,28 @@ HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH*/
     font-size:20px;
 }
 
-*[cssClass="text-stake-cari"] {
+*[cssClass="text-stake-piv"] {
     color:#4f7d4b;
     font-size:16px;
     padding:10px;
     border-bottom: 5px solid #4f7d4b;
 }
 
-*[cssClass="text-stake-cari-disable"] {
+*[cssClass="text-stake-piv-disable"] {
     color:#d7d5da;
     font-size:16px;
     padding:10px;
     border-bottom: 5px solid #bbb8c0;
 }
 
-*[cssClass="text-stake-zcari"] {
+*[cssClass="text-stake-zpiv"] {
     color:#91ff87;
     font-size:16px;
     padding:10px;
     border-bottom: 5px solid #91ff87;
 }
 
-*[cssClass="text-stake-zcari-disable"] {
+*[cssClass="text-stake-zpiv-disable"] {
     color:#d7d5da;
     font-size:16px;
     padding:10px;
@@ -1804,24 +1804,24 @@ HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH*/
     font-size:16px;
 }
 
-*[cssClass="text-chart-zcari"] {
+*[cssClass="text-chart-zpiv"] {
     color:#91ff87;
     font-size:16px;
     padding-left:4px;
 }
 
-*[cssClass="text-chart-cari"] {
+*[cssClass="text-chart-piv"] {
     color:#4f7d4b;
     font-size:16px;
     padding-left:4px;
 }
 
-*[cssClass="square-chart-zcari"] {
+*[cssClass="square-chart-zpiv"] {
     background-color:#91ff87;
     border:none;
 }
 
-*[cssClass="square-chart-cari"] {
+*[cssClass="square-chart-piv"] {
     background-color:#4f7d4b;
     border:none;
 }
@@ -2403,18 +2403,18 @@ HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH*/
 }
 
 
-*[cssClass="coin-icon-cari"] {
-    qproperty-icon: url("://ic-coin-cari") off,
-    url("://ic-coin-cari") on ;
+*[cssClass="coin-icon-piv"] {
+    qproperty-icon: url("://ic-coin-piv") off,
+    url("://ic-coin-piv") on ;
     qproperty-iconSize: 24px 24px;
     background-color: #FFFFFF;
     border:  2px solid #FFFFFF;
     border-radius: 12px;
 }
 
-*[cssClass="coin-icon-zcari"] {
-    qproperty-icon: url("://ic-coin-zcari") off,
-    url("://ic-coin-zcari") on ;
+*[cssClass="coin-icon-zpiv"] {
+    qproperty-icon: url("://ic-coin-zpiv") off,
+    url("://ic-coin-zpiv") on ;
     qproperty-iconSize: 24px 24px;
     background-position:center;
     background-repeat:no-repeat;
@@ -2952,7 +2952,7 @@ HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH*/
 
 QToolTip {
     color: white;
-    background-color: #91ff87;
+    background-color: #436600;
     border: none;
     padding:4px;
     border-radius:3px;
