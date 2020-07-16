@@ -113,6 +113,7 @@ UniValue getrawtransaction(const JSONRPCRequest& request)
             "  \"size\" : n,             (numeric) The serialized transaction size\n"
             "  \"version\" : n,          (numeric) The version\n"
             "  \"locktime\" : ttt,       (numeric) The lock time\n"
+            "  \"powalternative\" : b,   (boolean) The PoW Alternative flag\n"
             "  \"vin\" : [               (array of json objects)\n"
             "     {\n"
             "       \"txid\": \"id\",    (string) The transaction id\n"
@@ -208,7 +209,7 @@ UniValue createrawtransaction(const JSONRPCRequest& request)
 {
     if (request.fHelp || request.params.size() < 2 || request.params.size() > 3)
         throw std::runtime_error(
-            "createrawtransaction [{\"txid\":\"id\",\"vout\":n},...] {\"address\":amount,...} ( locktime )\n"
+            "createrawtransaction [{\"txid\":\"id\",\"vout\":n},...] {\"address\":amount,...} ( locktime ) ( powalternative )\n"
             "\nCreate a transaction spending the given inputs and sending to the given addresses.\n"
             "Returns hex-encoded raw transaction.\n"
             "Note that the transaction's inputs are not signed, and\n"
@@ -230,6 +231,7 @@ UniValue createrawtransaction(const JSONRPCRequest& request)
             "      ,...\n"
             "    }\n"
             "3. locktime                (numeric, optional, default=0) Raw locktime. Non-0 value also locktime-activates inputs\n"
+            "4. powalternative          (boolean, optional, default=false) PoW Alternative flag\n"
 
             "\nResult:\n"
             "\"transaction\"            (string) hex string of the transaction\n"
@@ -252,6 +254,10 @@ UniValue createrawtransaction(const JSONRPCRequest& request)
         if (nLockTime < 0 || nLockTime > std::numeric_limits<uint32_t>::max())
             throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter, locktime out of range");
         rawTx.nLockTime = nLockTime;
+
+        if (request.params.size() > 3 && !request.params[3].isNull()) {
+            rawTx.fPoWAlternative = request.params[3].get_bool();
+        }
     }
 
     for (unsigned int idx = 0; idx < inputs.size(); idx++) {
@@ -321,6 +327,7 @@ UniValue decoderawtransaction(const JSONRPCRequest& request)
             "  \"size\" : n,             (numeric) The transaction size\n"
             "  \"version\" : n,          (numeric) The version\n"
             "  \"locktime\" : ttt,       (numeric) The lock time\n"
+            "  \"powalternative\" : b,   (boolean) The PoW Alternative flag\n"
             "  \"vin\" : [               (array of json objects)\n"
             "     {\n"
             "       \"txid\": \"id\",    (string) The transaction id\n"

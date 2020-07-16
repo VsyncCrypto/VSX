@@ -160,6 +160,7 @@ void TxToUniv(const CTransaction& tx, const uint256& hashBlock, UniValue& entry)
     entry.pushKV("version", tx.nVersion);
     entry.pushKV("size", (int)::GetSerializeSize(tx, SER_NETWORK, PROTOCOL_VERSION));
     entry.pushKV("locktime", (int64_t)tx.nLockTime);
+    entry.pushKV("powalternative", (bool)tx.fPoWAlternative);
 
     UniValue vin(UniValue::VARR);
     for (const CTxIn& txin : tx.vin) {
