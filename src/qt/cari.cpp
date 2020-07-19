@@ -674,7 +674,7 @@ int main(int argc, char* argv[])
     }
 
     fs::path pathBootstrap = GetDataDir() / strWalletFile;
-    if (!fs::exists(pathBootstrap)) {
+    if (!fs::exists(pathBootstrap) || GetBoolArg("-welcome", false)) {
         // wallet doesn't exist, popup tutorial screen.
         ret = app.createTutorialScreen();
     }

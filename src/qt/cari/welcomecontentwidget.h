@@ -41,6 +41,7 @@ private:
     QPushButton *icConfirm2;
     QPushButton *icConfirm3;
     QPushButton *icConfirm4;
+    QPushButton *icConfirm5;
     QPushButton *backButton;
     QPushButton *nextButton;
 
