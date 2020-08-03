@@ -21,7 +21,7 @@ More information, including the Business Plan, can be found at [cri.eco](http://
 ### PreMine Generation
 
 <table>
-<th>Block Height</th><th>Block Reward</th><th>Miner</th><th>Budget</th>
+<th>Block Height</th><th>Block Reward</th>
 <tr><td>1-5000</td><td>20 CARI</td></tr>
 </table>
 
