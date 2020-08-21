@@ -439,7 +439,8 @@ void CMasternodePayments::ProcessMessageMasternodePayments(CNode* pfrom, std::st
                 if (sporkManager.IsSporkActive(SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT))
                 {
                     LogPrintf("CMasternodePayments::ProcessMessageMasternodePayments() : mnget - peer already asked me for the list\n");
-                    Misbehaving(pfrom->GetId(), 20);
+                    LOCK(cs_main);
+		    Misbehaving(pfrom->GetId(), 20);
                     return;
                 }
                 pfrom->ClearFulfilledRequest(NetMsgType::GETMNWINNERS);
@@ -495,6 +496,7 @@ void CMasternodePayments::ProcessMessageMasternodePayments(CNode* pfrom, std::st
         if (!winner.CheckSignature()) {
             if (masternodeSync.IsSynced()) {
                 LogPrintf("CMasternodePayments::ProcessMessageMasternodePayments() : mnw - invalid signature\n");
+                LOCK(cs_main);
                 Misbehaving(pfrom->GetId(), 20);
             }
             // it could just be a non-synced masternode

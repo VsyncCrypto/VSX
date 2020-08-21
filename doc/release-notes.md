@@ -7,9 +7,10 @@ This is a new major version release, including various bug fixes and performance
 Please report bugs using the issue tracker at github: <https://github.com/Carbon-Reduction-Initiative/CARI/issues>
 
 
-Mandatory Update
+Recommended Update
 ==============
 
+This version is an optional, but recommended, update for all users and services.
 
 How to Upgrade
 ==============
@@ -32,7 +33,10 @@ CARI Core should also work on most other Unix-like systems but is not frequently
 Notable Changes
 ==============
 
-(Developers: add your notes here as part of your pull requests whenever possible)
+### Removed zerocoin GUI
+
+Spending zPIV and getting zPIV balance information is no longer available in the graphical interface ([#1549](https://github.com/PIVX-Project/PIVX/pull/1549)). The feature remains accessible through the RPC interface: `getzerocoinbalance`, `listmintedzerocoins`, `listzerocoinamounts`, `spendzerocoin`, `spendzerocoinmints`.
+
 
 ### Memory pool limiting
 
@@ -104,11 +108,6 @@ GUI Changes
 
 - The "connections" button in the GUI topbar can be clicked to open the network monitor dialog ([#1688](https://github.com/PIVX-Project/PIVX/pull/1688)).
 
-### Removed zerocoin GUI
-
-Spending zPIV and getting zPIV balance information is no longer available in the graphical interface ([#1549](https://github.com/PIVX-Project/PIVX/pull/1549)). The feature remains accessible through the RPC interface: `getzerocoinbalance`, `listmintedzerocoins`, `listzerocoinamounts`, `spendzerocoin`, `spendzerocoinmints`.
-
-
 Functional Changes
 ----------
 
@@ -126,14 +125,10 @@ If the stake split is active (threshold > 0), then stake split threshold value m
 
 - new commands `-limitdescendantcount=N` and `limitdescendantsize=N`, to limit the number and total size of all in-mempool descendants for a transaction ([#1647](https://github.com/PIVX-Project/PIVX/pull/1647)).
 
-Dependencies
-------------
-
-...
-
-
 RPC Changes
 ------------
+
+In addition to the afore mentioned 'label' and 'account' API changes, other RPC changes are as follows:
 
 ### Low-level API changes
 
@@ -153,31 +148,166 @@ and are affected by this change: RPC `getrawtransaction`, RPC `decoderawtransact
 
 - `masternodedebug`. Use `getmasternodestatus` instead. ([#1698](https://github.com/PIVX-Project/PIVX/pull/1698)).
 
-### Newly introduced commands
-
-
-*version* Change log
+*4.2.0* Change log
 ==============
 
 Detailed release notes follow. This overview includes changes that affect behavior, not code moves, refactors and string updates. For convenience in locating the code changes and accompanying discussion, both the pull request and git merge commit are mentioned.
 
 ### Core Features
+ - #1414 `e3ceda31c5` uint256 to arith_uint256 migration (Second step). (furszy)
+ - #1486 `e146131780` Replace OpenSSL AES with ctaes-based version (furszy)
+ - #1488 `cc84157e52` CCrypter using secure allocator vector. (furszy)
+ - #1531 `1f9e7e45ba` [Backport] Implement accurate UTXO cache size accounting (furszy)
+ - #1533 `898bcd24ad` [Backport] Make connect=0 disable automatic outbound connections. (furszy)
+ - #1534 `d45c58e89d` [Backport] Preemptively catch a few potential bugs (furszy)
+ - #1554 `0dedec8157` [Core] Big endian support (random-zebra)
+ - #1557 `8dfc4806f7` [Core] Prevector (random-zebra)
+ - #1564 `2c11e37c91` Abstract out CTransaction-specific signing into SignatureCreator (furszy)
+ - #1587 `c9741c53b1` [Backport] Shut down if trying to connect a corrupted block (furszy)
+ - #1593 `f59c8fb625` Prepare for non-Base58 addresses [Step 1] (furszy)
+ - #1629 `73d26f20e9` [DB] Bitcoin 0.12-0.14 dbwrapper improvements (random-zebra)
+ - #1630 `a9ac1cc51f` [Refactoring] Lightweight abstraction of boost::filesystem (random-zebra)
+ - #1631 `56b414761c` [Miner] Remove 2017 invalid outputs check (furszy)
+ - #1633 `8cd9c592a9` [Core] Bitcoin 0.12-0.14 serialization improvements (random-zebra)
+ - #1634 `e0239f801d` [Core] prevector: named union and defaults vars initialization (random-zebra)
+ - #1641 `7c102142c7` [Core] New fee estimation code (random-zebra)
+ - #1645 `49867086da` [Core] Implement accurate memory accounting for mempool (random-zebra)
+ - #1647 `eb00d0f62f` [Core] MemPool package tracking and limits (Alex Morcos)
+ - #1650 `4ed15cc69d` [Tests] Benchmarking Framework (random-zebra)
+ - #1665 `602ad3d7f8` New upgrade structure. (furszy)
+ - #1668 `7e65a82e7d` [Backport] Make sigcache faster (furszy)
+ - #1669 `c072659135` Better sigcache implementation (CuckooCache) (furszy)
+ - #1670 `8d7e7808d0` [Refactoring] CValidationState logging (random-zebra)
+ - #1673 `a5ba7200c6` [Core] Separate Consensus CheckTxInputs and GetSpendHeight in CheckInputs (furszy)
+ - #1676 `961e2d2a70` [Backport] Base58 performance improvements (Kaz Wesley)
+ - #1677 `95fefe9c0d` Prepare for non-Base58 addresses [Step 2] (furszy)
+ - #1679 `c157deb76b` Prepare for non-Base58 addresses [Step 3] (furszy)
+ - #1687 `f054e3e627` [Refactor] Network upgrades management cleanup (random-zebra)
+ - #1697 `13576cfe14` [BUG] Fix mempool entry priority (furszy)
+ - #1707 `6bc917e859` RPC & Mempool back ports. (furszy)
+ - #1728 `1c472ebae8` IsInitialBlockDownload: usually avoid locking (furszy)
+ - #1729 `76ea490ac1` [Core] Add checkpoints for PIVX v4.1.1 enforcement (random-zebra)
+ - #1733 `e4ae10db31` Move zerocoin validation to its own legacy file. (furszy)
+ - #1747 `6f90e8be13` NU custom activation height startup arg. (furszy)
 
 ### Build System
+ - #1681 `131ec069fd` [Build] Set complete cpp/cxx flags for bench_pivx binary (Fuzzbawls)
+ - #1684 `69fa8dce5e` [Travis] Bump macOS CMake target image (Fuzzbawls)
+ - #1710 `ed63a331a3` [Depends] Update dependency fallback URL (Fuzzbawls)
 
 ### P2P Protocol and Network Code
+ - #1542 `87feface84` [Net] Add and document network messages in protocol.h (Fuzzbawls)
+ - #1579 `e941230894` [Net] Use SeedSpec6's rather than CAddress's for fixed seeds (Cory Fields)
+ - #1616 `f295ee4e4e` [P2P] Enforce expected outbound services (Pieter Wuille)
+ - #1618 `077ab3db70` [P2P] Do not set extra flags for unfiltered DNS seed results (Pieter Wuille)
+ - #1638 `cadf9e6daa` [Net] Fix masking of irrelevant bits in address groups (Alex Morcos)
+ - #1646 `4c829bb274` [Net] Turn net structures into dumb storage classes (furszy)
+ - #1672 `745a05804f` [Bug] removed "dseg" message support re-introduced. (furszy)
+ - #1704 `8bbc0650e6` [Net] Pre-requirements for network encapsulation (random-zebra)
 
 ### GUI
+ - #1059 `39a0fa6e04` [UI] Improve staking chart workflow (Akshay)
+ - #1287 `e7dd0947c0` [GUI] Load persisted transaction filter during start (Mrs-X)
+ - #1516 `93df7ce6ec` [GUI] MacOS fix open files with no default app. (furszy)
+ - #1548 `176d3ae558` [Cleanup][GUI] Remove zPIV faqs (random-zebra)
+ - #1549 `47bf23aa14` [Cleanup][GUI] Nuke zPIV from the GUI (random-zebra)
+ - #1598 `f66f72656d` [GUI] Split "Delegators" address type in the table model (furszy)
+ - #1601 `78a2923184` [GUI] Tor state missing translation (furszy)
+ - #1604 `8ec6bbe737` [Refactor][GUI] Set static texts in .ui files + add missing tr() (random-zebra)
+ - #1607 `749d42a812` [QT] Add password mismatch warnings (JSKitty)
+ - #1610 `9ac68cffd5` [GUI][UX] Add accept/close keyboard controls to all dialogs (random-zebra)
+ - #1611 `3d9222edf0` [GUI][Bug] CoinControl payAmounts and nBytes calculation (random-zebra)
+ - #1612 `eea3f42ab6` [GUI] CoinControlDialog fix SelectAll / UnselectAll (random-zebra)
+ - #1623 `b7e2d97a42` [GUI][Trivial] Change Custom fee amount when Recommended fee is selected (Ambassador)
+ - #1626 `5b064a6145` [GUI][Bug] Notify transaction creation failure reason (random-zebra)
+ - #1644 `34bf1c0583` [GUI] Fix invalid Destination toString encoding. (Fuzzbawls)
+ - #1652 `a2850ce0fe` [GUI] cs widget: minor usability improvements (random-zebra)
+ - #1653 `6ad9bfcc48` [GUI] Reuse collateral UTXOs in MnWizard (random-zebra)
+ - #1657 `169fc34192` [GUI][Model] Remove unneeded lock in checkBalanceChanged (furszy)
+ - #1667 `730566d510` [GUI] removing unused bitcoinamountfield file (furszy)
+ - #1678 `fb14a8fb46` [GUI][Model] Remove zerocoin methods. (furszy)
+ - #1683 `68e1ee69e5` [GUI] Add missing QPainterPath include (Fuzzbawls)
+ - #1688 `129563c273` [GUI] TopBar navigation (sync/peers) (random-zebra)
+ - #1690 `12a8f8a5c4` [BUG][GUI] check for available "unlocked" balance in prepareTransaction (random-zebra)
+ - #1696 `f84445af1e` [BUG][GUI] Restore message() connection for ColdStakingWidget (random-zebra)
+ - #1699 `9bba19c62e` [GUI] Fix dashboard txs list blinking issue (furszy)
+ - #1708 `f3b54df58d` [BUG][GUI] Non-static coinControl object in CoinControlDialogs (random-zebra)
+ - #1715 `37c01cf359` [GUI][Trivial] Update settingsfaqwidget.ui (Jeffrey)
+ - #1724 `c178aab2fe` [GUI] Return early in pollBalanceChanged (Fuzzbawls)
+ - #1732 `be99df3342` [GUI] Better start single MN error description. (furszy)
+ - #1737 `78ed084999` [GUI] Replace more deprecated Qt methods (Fuzzbawls)
+ - #1740 `141141c9cf` [GUI] Periodic make translate (Fuzzbawls)
+ - #1741 `ffae965fad` [GUI] Settings console message moved to read only. (furszy)
+ - #1742 `a94f8f9a90` [GUI] Fix settings language combobox initialization. (furszy)
+ - #1744 `fda84ee710` [GUI] Recognize key event for clearing console (Fuzzbawls)
+ - #1749 `e182e112bc` [GUI] Solving old, not loaded at startup, transactions notification issue. (furszy)
 
 ### RPC/REST
+ - #1640 `0b84a5025d` [P2P][RPC] Rework addnode behaviour (Pieter Wuille)
+ - #1660 `10876c6c80` [RPC] Change btc to PIV in help text (PeterL73)
+ - #1663 `0724bbbad2` [Wallet][RPC] FundTransaction - fundrawtransaction (random-zebra)
+ - #1702 `7a849ca06a` [RPC] Table registration update and wallet table decoupled. (furszy)
+ - #1731 `fe845a83d2` [RPC][Wallet] Deprecate internal account system (Fuzzbawls)
 
 ### Wallet
+ - #1586 `73c3ecc388` [Wallet] Minimum value for stake split threshold (random-zebra)
+ - #1695 `98cf582557` [Wallet] Abandon tx in CommitTransaction if ATMP fails (random-zebra)
+ - #1698 `ccecffd144` [Wallet] Masternodes start performance boost (furszy)
+ - #1713 `f31b51f08e` [Refactor] zerocoin code moved from wallet.cpp to wallet_zerocoin.cpp (furszy)
+ - #1717 `f928674bf7` [Wallet] AddToWallet split in AddToWallet and LoadToWallet (furszy)
+ - #1734 `78a4f68ab2` [Wallet][BUG] fix detection of wallet conflicts in CWallet::AddToWallet (random-zebra)
+
+### Scripts and Tools
+ - #1693 `a5265a4db4` Upstream scripts back ports [Step 1] (furszy)
+ - #1701 `f8f0fe0bf1` [Tools] logprint-scanner for error() and strprintf() (random-zebra)
 
 ### Miscellaneous
+ - #1547 `1824def118` [Refactor] Define constant string variable for currency unit (random-zebra)
+ - #1568 `8c06746f18` [Trivial] Unused Image Removal & Readme Revisions (Yuurin Bee)
+ - #1643 `80c5499b39` Fix Destination wrapper segfault on copy constructor (furszy)
+ - #1659 `494c841f7e` Few compiler warnings fixed. (furszy)
+ - #1662 `5d3266c25c` [Cleanup] Remove obsolete multisig code (random-zebra)
+ - #1674 `360ee1dfc5` Remove unused MultiSigScriptSet typedef and member (furszy)
+ - #1689 `9205aa6277` [Cleanup] Small main.cpp cleanup (furszy)
+ - #1692 `1221efd5d6` [Cleanup] Don't sign MESS_VER_STRMESS network msgs anymore (random-zebra)
+ - #1705 `2d6835e734` [Doc] Add/Update some release notes for 4.2 (random-zebra)
+ - #1718 `5e75d4c344` [Trivial] Spelling Error (Yuurin Bee)
+ - #1719 `b72ec2ff52` [Cleanup] remove masternode broadcast from CActiveMasternode class (random-zebra)
+ - #1722 `f68acbe01e` Unused methods cleanup (furszy)
+ - #1736 `fc5d36ac77` [Cleanup] Transaction primitive unused methods cleanup. (furszy)
+ - #1751 `dbcbf8a995` [Miner] Unused reserveKey cleanup (furszy)
 
 ## Credits
 
 Thanks to everyone who directly contributed to this release:
+- Akshay
+- Alex Morcos
+- Ambassador
+- Ben Woosley
+- Cory Fields
+- Ethan Heilman
+- Fuzzbawls
+- Gavin Andresen
+- Gregory Maxwell
+- JSKitty
+- Jeffrey
+- Jeremy Rubin
+- Jiaxing Wang
+- John Newbery
+- Jonas Schnelli
+- João Barbosa
+- Kaz Wesley
+- Marko Bencun
+- Patrick Strateman
+- Peter Todd
+- PeterL73
+- Pieter Wuille
+- Suhas Daftuar
+- Wladimir J. van der Laan
+- Yuurin Bee
+- furszy
+- practicalswift
+- random-zebra
 
 
 As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/cari-project-translations/), the QA team during Testing and the Node hosts supporting our Testnet.
