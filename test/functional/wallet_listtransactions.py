@@ -7,7 +7,7 @@ from decimal import Decimal
 from io import BytesIO
 
 from test_framework.mininode import CTransaction, COIN
-from test_framework.test_framework import PivxTestFramework
+from test_framework.test_framework import CariTestFramework
 from test_framework.util import (
     assert_array_result,
     assert_equal,
@@ -22,7 +22,7 @@ def txFromHex(hexstring):
     tx.deserialize(f)
     return tx
 
-class ListTransactionsTest(PivxTestFramework):
+class ListTransactionsTest(CariTestFramework):
     def set_test_params(self):
         self.num_nodes = 2
         self.enable_mocktime()

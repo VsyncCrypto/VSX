@@ -6,10 +6,6 @@
         <translation>对话框</translation>
     </message>
     <message>
-        <source>My Address</source>
-        <translation>我的地址</translation>
-    </message>
-    <message>
         <source>Address</source>
         <translation>地址</translation>
     </message>
@@ -22,8 +18,8 @@
         <translation>删除</translation>
     </message>
     <message>
-        <source>OK</source>
-        <translation>好的</translation>
+        <source>SAVE</source>
+        <translation>保存</translation>
     </message>
 </context>
 <context>
@@ -33,16 +29,8 @@
         <translation>对话框</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>文本标签</translation>
-    </message>
-    <message>
         <source>CANCEL</source>
         <translation>删除</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>好的</translation>
     </message>
     <message>
         <source>Edit Contact</source>
@@ -51,10 +39,6 @@
     <message>
         <source>Set a label for the selected address</source>
         <translation>为所选地址设置标签</translation>
-    </message>
-    <message>
-        <source>Enter a name for the address (e.g Exchange)</source>
-        <translation>输入地址的名称(例如：交换所)</translation>
     </message>
     <message>
         <source>SAVE</source>
@@ -211,28 +195,12 @@
         <translation>来自</translation>
     </message>
     <message>
-        <source>Send</source>
-        <translation>发送</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>文本标签</translation>
-    </message>
-    <message>
-        <source>N/A</source>
-        <translation>N/A</translation>
-    </message>
-    <message>
         <source>Contact name</source>
         <translation>联系人名字</translation>
     </message>
     <message>
         <source>Enter address</source>
         <translation>输入地址</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>好的</translation>
     </message>
     <message>
         <source>Contacts</source>
@@ -245,14 +213,6 @@
     <message>
         <source>No contacts yet</source>
         <translation>暂无联系人</translation>
-    </message>
-    <message>
-        <source>e.g. John Doe</source>
-        <translation>例如John Doe</translation>
-    </message>
-    <message>
-        <source>Enter CARI address</source>
-        <translation>输入CARI地址</translation>
     </message>
     <message>
         <source>SAVE</source>
@@ -380,20 +340,12 @@ for staking</source>
         <translation>如果你对钱包进行加密但丢失密码的话，你会</translation>
     </message>
     <message>
-        <source>LOSE ALL OF YOUR CARI</source>
-        <translation>丢失你所有的CARI</translation>
-    </message>
-    <message>
         <source>ENCRYPT</source>
         <translation>加密</translation>
     </message>
     <message>
         <source>CANCEL</source>
         <translation>删除</translation>
-    </message>
-    <message>
-        <source>WARNING: The Caps Lock key is on!</source>
-        <translation>注意：键盘目前为大写锁定状态。</translation>
     </message>
     <message>
         <source>CARI will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your CARIs from being stolen by malware infecting your computer.</source>
@@ -692,6 +644,10 @@ for staking</source>
         <translation>委托到%1进行冷加注</translation>
     </message>
     <message>
+        <source>Select All</source>
+        <translation>选择所有</translation>
+    </message>
+    <message>
         <source>no</source>
         <translation>否</translation>
     </message>
@@ -720,10 +676,6 @@ for staking</source>
         <translation>如果任何收件人收到的金额小于%1，此标签将变为红色。</translation>
     </message>
     <message>
-        <source>Can vary +/- %1 ucari per input.</source>
-        <translation>每个输入可以浮动+/- %1 ucari。</translation>
-    </message>
-    <message>
         <source>(no label)</source>
         <translation>未设置标签</translation>
     </message>
@@ -743,28 +695,12 @@ for staking</source>
         <translation>来自</translation>
     </message>
     <message>
-        <source>Title</source>
-        <translation>抬头</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>文本标签</translation>
-    </message>
-    <message>
         <source>Owner address (optional, if empty a new address will be created)</source>
         <translation>所有者地址(可选项，如果为空，将创建一个新地址)</translation>
     </message>
     <message>
         <source>Total Staking:</source>
         <translation>加注总额：</translation>
-    </message>
-    <message>
-        <source>List of delegated balance by address</source>
-        <translation>按地址划分的委托余额清单</translation>
-    </message>
-    <message>
-        <source>No balance delegated</source>
-        <translation>没有佣金余额</translation>
     </message>
     <message>
         <source>Cold Staking</source>
@@ -837,6 +773,10 @@ stake on your behalf, while you keep the keys securely offline.</source>
         <translation>禁用网络冷积累</translation>
     </message>
     <message>
+        <source>Coin Control</source>
+        <translation>币控制</translation>
+    </message>
+    <message>
         <source>Invalid entry</source>
         <translation>条目无效</translation>
     </message>
@@ -879,10 +819,6 @@ Do you wish to proceed?</source>
     <message>
         <source>Coins delegated</source>
         <translation>委托硬币</translation>
-    </message>
-    <message>
-        <source>You don't have any CARI to select.</source>
-        <translation>您没有任何CARI可选择。</translation>
     </message>
     <message>
         <source>Cannot perform operation, wallet locked</source>
@@ -969,14 +905,6 @@ address</source>
         <source>Form</source>
         <translation>来自</translation>
     </message>
-    <message>
-        <source>Bob Allen</source>
-        <translation>Bob Allen</translation>
-    </message>
-    <message>
-        <source>DN6i46dytMPVhV1JMGZFuQBh7BZZ6nNLox</source>
-        <translation>DN6i46dytMPVhV1JMGZFuQBh7BZZ6nNLox</translation>
-    </message>
 </context>
 <context>
     <name>DashboardWidget</name>
@@ -989,36 +917,12 @@ address</source>
         <translation>交易</translation>
     </message>
     <message>
-        <source>You can see here the history of your account</source>
-        <translation>你可以在这里查看你账户的历史</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>注意</translation>
-    </message>
-    <message>
-        <source>No transactions</source>
-        <translation>无交易</translation>
-    </message>
-    <message>
         <source>Staking Rewards</source>
         <translation>加注奖励</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>文本标签</translation>
-    </message>
-    <message>
         <source>Staking statistics</source>
         <translation>加注数据</translation>
-    </message>
-    <message>
-        <source>CARI</source>
-        <translation>CARI</translation>
-    </message>
-    <message>
-        <source>zCARI</source>
-        <translation>zCARI</translation>
     </message>
     <message>
         <source>Sort by</source>
@@ -1041,14 +945,6 @@ address</source>
         <translation>过滤</translation>
     </message>
     <message>
-        <source>LabelText</source>
-        <translation>标签文本</translation>
-    </message>
-    <message>
-        <source>You can view your account's history</source>
-        <translation>您可以查看您的帐户的历史</translation>
-    </message>
-    <message>
         <source>Amount of CARI and zCARI staked.</source>
         <translation>已加注的CARI 和 zCARI 金额</translation>
     </message>
@@ -1059,10 +955,6 @@ address</source>
     <message>
         <source>No transactions yet</source>
         <translation>暂无交易</translation>
-    </message>
-    <message>
-        <source>How to get CARI or zCARI</source>
-        <translation>如何获取CARI 或 zCARI</translation>
     </message>
     <message>
         <source>You can verify the staking activity in the status bar at the top right of the wallet.
@@ -1102,20 +994,12 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation>来自</translation>
     </message>
     <message>
-        <source>Transaction Details</source>
-        <translation>交易明细</translation>
-    </message>
-    <message>
-        <source>Text Label</source>
-        <translation>文本标签</translation>
+        <source>OK</source>
+        <translation>好的</translation>
     </message>
     <message>
         <source>CANCEL</source>
         <translation>删除</translation>
-    </message>
-    <message>
-        <source>SAVE</source>
-        <translation>保存</translation>
     </message>
 </context>
 <context>
@@ -1365,7 +1249,7 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <source>Form</source>
         <translation>来自</translation>
     </message>
-</context>
+    </context>
 <context>
     <name>MasterNodeWizardDialog</name>
     <message>
@@ -1401,8 +1285,8 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation>创建新的主节点控制器</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To create a CARI Masternode you must dedicate 10,000 CARI (the unit of CARI) to the network (however, these coins are still yours and will never leave your possession). &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;You can deactivate the node and unlock the coins at any time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;要去创建一个CARI主节点，你必须奉献10,000 CARI（CARI的单位）到网络（但是这些币还是属于你的，一直为你所有）。&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;你可以在任何时候关闭该节点并解锁币。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To create a CARI Masternode you must dedicate 1,000 CARI (the unit of CARI) to the network (however, these coins are still yours and will never leave your possession). &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;You can deactivate the node and unlock the coins at any time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;要去创建一个CARI主节点，你必须奉献1,000 CARI（CARI的单位）到网络（但是这些币还是属于你的，一直为你所有）。&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;你可以在任何时候关闭该节点并解锁币。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Set Masternode Name</source>
@@ -1421,8 +1305,8 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation>确保你有这么多币</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A transaction of 10,000 CARI will be made&lt;/p&gt;&lt;p&gt;to a new empty address in your wallet.&lt;/p&gt;&lt;p&gt;The Address is labeled under the master node's name.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;将进行10,000 CARI的交易&lt;/p&gt;&lt;p&gt;到您的钱包空地址&lt;/p&gt;&lt;p&gt;地址被标记在主节点的名称之下&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A transaction of 1,000 CARI will be made&lt;/p&gt;&lt;p&gt;to a new empty address in your wallet.&lt;/p&gt;&lt;p&gt;The Address is labeled under the master node's name.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;将进行1,000 CARI的交易&lt;/p&gt;&lt;p&gt;到您的钱包空地址&lt;/p&gt;&lt;p&gt;地址被标记在主节点的名称之下&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Address of the node that must always be online running the actual master node.</source>
@@ -1431,18 +1315,6 @@ It will start automatically as soon as the wallet has enough confirmations on an
     <message>
         <source>Enter IP address</source>
         <translation>输入IP 地址</translation>
-    </message>
-    <message>
-        <source>CANCEL</source>
-        <translation>删除</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>好的</translation>
-    </message>
-    <message>
-        <source>e.g user_masternode</source>
-        <translation>例如 用户_主节点</translation>
     </message>
     <message>
         <source>NEXT</source>
@@ -1508,14 +1380,6 @@ It will start automatically as soon as the wallet has enough confirmations on an
     <message>
         <source>Form</source>
         <translation>来自</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>文本标签</translation>
-    </message>
-    <message>
-        <source>N/A</source>
-        <translation>N/A</translation>
     </message>
     <message>
         <source>Start All</source>
@@ -1616,6 +1480,10 @@ Please wait few more minutes (masternode collaterals require %1 confirmations).<
         <translation>远程主节点数据</translation>
     </message>
     <message>
+        <source>What is a Masternode?</source>
+        <translation>主节点是什么？</translation>
+    </message>
+    <message>
         <source>You are just about to export the required data to run a Masternode
 on a remote server to your clipboard.
 
@@ -1664,10 +1532,6 @@ Are you sure?</source>
         <translation>无法创建主节点控制器，钱包被锁了</translation>
     </message>
     <message>
-        <source>Not enough balance to create a masternode, 10,000 CARI required.</source>
-        <translation>没有足够的余额创建主节点，需要10,000 CARI。</translation>
-    </message>
-    <message>
         <source>Error creating masternode</source>
         <translation>创建主节点出错</translation>
     </message>
@@ -1687,16 +1551,8 @@ Are you sure?</source>
         <translation>公钥：</translation>
     </message>
     <message>
-        <source>492526e7fa3c810b35016...40a5df85ee227ab00b1156994</source>
-        <translation>492526e7fa3c810b35016...40a5df85ee227ab00b1156994</translation>
-    </message>
-    <message>
         <source>Address: </source>
         <translation>地址：</translation>
-    </message>
-    <message>
-        <source>127.0.0.2:43223</source>
-        <translation>127.0.0.2:43223</translation>
     </message>
     <message>
         <source>Collaterall tx id:</source>
@@ -1715,31 +1571,15 @@ Are you sure?</source>
         <translation>状态：</translation>
     </message>
     <message>
-        <source>MISSING</source>
-        <translation>略过</translation>
-    </message>
-    <message>
         <source>Export data to run the Masternode on a remote server</source>
         <translation>导出数据去远程服务器上运行主节点</translation>
     </message>
-</context>
+    </context>
 <context>
     <name>MyAddressRow</name>
     <message>
         <source>Form</source>
         <translation>来自</translation>
-    </message>
-    <message>
-        <source>Savings</source>
-        <translation>存款</translation>
-    </message>
-    <message>
-        <source>Jan. 19, 2019</source>
-        <translation>2019年1月19日</translation>
-    </message>
-    <message>
-        <source>DN6i46dytMPVhV1JMGZFuQBh7BZZ6nNLox</source>
-        <translation>DN6i46dytMPVhV1JMGZFuQBh7BZZ6nNLox</translation>
     </message>
 </context>
 <context>
@@ -1805,10 +1645,6 @@ Are you sure?</source>
     <message>
         <source>Form</source>
         <translation>来自</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>文本标签</translation>
     </message>
 </context>
 <context>
@@ -2166,10 +2002,6 @@ Address: %4
 地址：%4
 </translation>
     </message>
-    <message>
-        <source>A fatal error occurred. CARI can no longer continue safely and will quit.</source>
-        <translation>发生了一个致命的错误。CARI不能继续安全，将退出。</translation>
-    </message>
 </context>
 <context>
     <name>PaymentServer</name>
@@ -2278,131 +2110,6 @@ Address: %4
     </message>
 </context>
 <context>
-    <name>PrivacyWidget</name>
-    <message>
-        <source>Form</source>
-        <translation>来自</translation>
-    </message>
-    <message>
-        <source>Title</source>
-        <translation>抬头</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>文本标签</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>按钮</translation>
-    </message>
-    <message>
-        <source>N/A</source>
-        <translation>N/A</translation>
-    </message>
-    <message>
-        <source>Privacy</source>
-        <translation>隐私</translation>
-    </message>
-    <message>
-        <source>Convert</source>
-        <translation>转换</translation>
-    </message>
-    <message>
-        <source>Mint</source>
-        <translation>铸造</translation>
-    </message>
-    <message>
-        <source>Minting zCARI anonymizes your CARI by removing any
-transaction history, making transactions untraceable </source>
-        <translation>铸造zCARI会通过删除任何
-交易历史匿名化您的CARI，使交易无法被跟踪</translation>
-    </message>
-    <message>
-        <source>Mint new zCARI or convert back to CARI</source>
-        <translation>铸造新的zCARI或转换回CARI</translation>
-    </message>
-    <message>
-        <source>Last zCARI Movements</source>
-        <translation>最后zCARI轨迹</translation>
-    </message>
-    <message>
-        <source>No transactions yet</source>
-        <translation>暂无交易</translation>
-    </message>
-    <message>
-        <source>Mint zCARI</source>
-        <translation>铸造zCARI</translation>
-    </message>
-    <message>
-        <source>Enter amount of CARI to mint into zCARI</source>
-        <translation>输入一定量的CARI铸造成zCARI</translation>
-    </message>
-    <message>
-        <source>Convert back to CARI</source>
-        <translation>转换回CARI</translation>
-    </message>
-    <message>
-        <source>Enter amount of zCARI to convert back into CARI</source>
-        <translation>输入一定量的zCARI转换回CARI</translation>
-    </message>
-    <message>
-        <source>Zerocoin</source>
-        <translation>零币</translation>
-    </message>
-    <message>
-        <source>zCARI is currently undergoing maintenance</source>
-        <translation>zCARI目前正在维护中</translation>
-    </message>
-    <message>
-        <source>You need to unlock the wallet to be able to %1 zCARI</source>
-        <translation>你需要解锁钱包才能%1 zCARI</translation>
-    </message>
-    <message>
-        <source>convert</source>
-        <translation>转换</translation>
-    </message>
-    <message>
-        <source>mint</source>
-        <translation>铸造</translation>
-    </message>
-    <message>
-        <source>Invalid value</source>
-        <translation>无效值</translation>
-    </message>
-    <message>
-        <source>zCARI minted successfully</source>
-        <translation>zCARI铸造成功</translation>
-    </message>
-    <message>
-        <source>zCARI converted back to CARI</source>
-        <translation>zCARI 转换回CARI</translation>
-    </message>
-    <message>
-        <source>You don't have any CARI to select.</source>
-        <translation>您没有任何CARI可选择。</translation>
-    </message>
-    <message>
-        <source>Rescan Mints</source>
-        <translation>重新扫描铸造</translation>
-    </message>
-    <message>
-        <source>Your zerocoin mints are going to be scanned from the blockchain from scratch</source>
-        <translation>你的零币铸造将从零区块链被扫描</translation>
-    </message>
-    <message>
-        <source>Reset Spent zCARI</source>
-        <translation>重置花费zCARI</translation>
-    </message>
-    <message>
-        <source>Your zerocoin spends are going to be scanned from the blockchain from scratch</source>
-        <translation>你的零币花费铸造将从零区块链被扫描</translation>
-    </message>
-    <message>
-        <source>Total %1</source>
-        <translation>总额%1</translation>
-    </message>
-</context>
-<context>
     <name>QObject</name>
     <message>
         <source>Amount</source>
@@ -2451,6 +2158,10 @@ transaction history, making transactions untraceable </source>
     <message>
         <source>%1 ms</source>
         <translation>%1 毫秒</translation>
+    </message>
+    <message>
+        <source>A fatal error occurred. CARI can no longer continue safely and will quit.</source>
+        <translation>发生了一个致命的错误。CARI不能继续安全，将退出。</translation>
     </message>
     <message>
         <source>CARI Core</source>
@@ -2511,10 +2222,6 @@ transaction history, making transactions untraceable </source>
     <message>
         <source>Contacts</source>
         <translation>联系人</translation>
-    </message>
-    <message>
-        <source>Delegators</source>
-        <translation>委托人</translation>
     </message>
     <message>
         <source>Staking Contacts</source>
@@ -2588,7 +2295,7 @@ transaction history, making transactions untraceable </source>
         <source>by Date</source>
         <translation>日期</translation>
     </message>
-</context>
+    </context>
 <context>
     <name>RPCConsole</name>
     <message>
@@ -3003,20 +2710,12 @@ transaction history, making transactions untraceable </source>
         <translation>对话框</translation>
     </message>
     <message>
-        <source>Transaction Details</source>
-        <translation>交易明细</translation>
-    </message>
-    <message>
-        <source>D7VFR83SQbiezrW72hjcWJtcfip5krte2Z </source>
-        <translation>D7VFR83SQbiezrW72hjcWJtcfip5krte2Z </translation>
+        <source>My Address</source>
+        <translation>我的地址</translation>
     </message>
     <message>
         <source>CANCEL</source>
         <translation>删除</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>好的</translation>
     </message>
 </context>
 <context>
@@ -3024,10 +2723,6 @@ transaction history, making transactions untraceable </source>
     <message>
         <source>Form</source>
         <translation>来自</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>文本标签</translation>
     </message>
     <message>
         <source>No address</source>
@@ -3048,14 +2743,6 @@ transaction history, making transactions untraceable </source>
     <message>
         <source>Receive</source>
         <translation>接收</translation>
-    </message>
-    <message>
-        <source>Scan the QR code or copy the address to receive CARI.</source>
-        <translation>扫描二维码或复制地址接收CARI</translation>
-    </message>
-    <message>
-        <source>No address </source>
-        <translation>无地址</translation>
     </message>
     <message>
         <source>No available address, try unlocking the wallet</source>
@@ -3148,24 +2835,12 @@ transaction history, making transactions untraceable </source>
         <translation>对话框</translation>
     </message>
     <message>
-        <source>New Request Payment</source>
-        <translation>新支付请求</translation>
-    </message>
-    <message>
-        <source>Lorem ipsum dolor sit amet, consectur cling elit, sed do </source>
-        <translation>Lorem ipsum dolor sit amet, consectur cling elit, sed do </translation>
-    </message>
-    <message>
         <source>Amount</source>
         <translation>金额</translation>
     </message>
     <message>
         <source>CARI</source>
         <translation>CARI</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>文本标签</translation>
     </message>
     <message>
         <source>D7VFR83SQbiezrW72hjcWJtcfip5krte2Z </source>
@@ -3184,10 +2859,6 @@ transaction history, making transactions untraceable </source>
         <translation>删除</translation>
     </message>
     <message>
-        <source>REQUEST</source>
-        <translation>请求</translation>
-    </message>
-    <message>
         <source>Label</source>
         <translation>标签</translation>
     </message>
@@ -3198,10 +2869,6 @@ transaction history, making transactions untraceable </source>
     <message>
         <source>New Payment Request</source>
         <translation>新的支付请求</translation>
-    </message>
-    <message>
-        <source>Instead of sharing only a CARI address, you can create a payment request, bundling up more information.</source>
-        <translation>与只共享CARI地址不同，您可以创建一个支付请求，绑定更多信息。</translation>
     </message>
     <message>
         <source>Enter a label for the address</source>
@@ -3231,7 +2898,11 @@ transaction history, making transactions untraceable </source>
         <source>Amount (optional)</source>
         <translation>金额（可选项）</translation>
     </message>
-</context>
+    <message>
+        <source>Invalid amount</source>
+        <translation>金额无效</translation>
+    </message>
+    </context>
 <context>
     <name>SendChangeAddressDialog</name>
     <message>
@@ -3239,21 +2910,8 @@ transaction history, making transactions untraceable </source>
         <translation>对话框</translation>
     </message>
     <message>
-        <source>Transaction Details</source>
-        <translation>交易明细</translation>
-    </message>
-    <message>
-        <source>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</source>
-        <translation> 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</translation>
-    </message>
-    <message>
         <source>CANCEL</source>
         <translation>删除</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>好的</translation>
     </message>
     <message>
         <source>Custom Change Address</source>
@@ -3275,20 +2933,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
         <source>Invalid address</source>
         <translation>地址无效</translation>
     </message>
-</context>
+    </context>
 <context>
     <name>SendCustomFeeDialog</name>
     <message>
         <source>Form</source>
         <translation>来自</translation>
-    </message>
-    <message>
-        <source>Transaction Details</source>
-        <translation>交易明细</translation>
-    </message>
-    <message>
-        <source>Customize the transaction fee at your to your liking, depending on the fee value your transaction will be included or not in the blockchain.</source>
-        <translation>根据您的喜好定制交易费用，取决于您的交易是否包含在区块链中。</translation>
     </message>
     <message>
         <source>Recommended</source>
@@ -3311,16 +2961,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
         <translation>删除</translation>
     </message>
     <message>
-        <source>OK</source>
-        <translation>好的</translation>
-    </message>
-    <message>
         <source>Customize Fee</source>
         <translation>定制费用</translation>
-    </message>
-    <message>
-        <source>Customize the transaction fee, depending on the fee value your transaction might be included faster in the blockchain.</source>
-        <translation>定制交易费用，根据费用高低，您的交易可能更快地被融入到区块链。</translation>
     </message>
     <message>
         <source>Normal</source>
@@ -3346,10 +2988,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
         <translation>来自</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>文本标签</translation>
-    </message>
-    <message>
         <source>Enter address</source>
         <translation>输入地址</translation>
     </message>
@@ -3361,56 +2999,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <context>
     <name>SendWidget</name>
     <message>
-        <source>Send</source>
-        <translation>发送</translation>
-    </message>
-    <message>
-        <source>You can transfer public coins (CARI) or private coins (zCARI)</source>
-        <translation>您可以转换公共币(CARI)或私人币(zCARI)</translation>
-    </message>
-    <message>
-        <source>Select coin type to spend</source>
-        <translation>选择需要花费的币种类</translation>
-    </message>
-    <message>
-        <source>Amount</source>
-        <translation>金额</translation>
-    </message>
-    <message>
-        <source>Customize fee</source>
-        <translation>定制费用</translation>
-    </message>
-    <message>
-        <source>Clear all</source>
-        <translation>清除所有</translation>
-    </message>
-    <message>
-        <source>Add recipient</source>
-        <translation>添加接收人</translation>
-    </message>
-    <message>
-        <source>Reset to default</source>
-        <translation>重置到默认值</translation>
-    </message>
-    <message>
-        <source>Total to send</source>
-        <translation>花费总金额</translation>
-    </message>
-    <message>
-        <source>Send CARI</source>
-        <translation>花费CARI</translation>
-    </message>
-    <message>
-        <source>Send zCARI</source>
-        <translation>花费zCARI</translation>
-    </message>
-    <message>
         <source>Total remaining from the selected UTXO</source>
         <translation>所选UTXO的剩余总数</translation>
-    </message>
-    <message>
-        <source>Total remaining</source>
-        <translation>总剩余</translation>
     </message>
     <message>
         <source>Warning!</source>
@@ -3431,10 +3021,6 @@ Do you want to continue?</source>
     <message>
         <source>Maximum amount of outputs reached</source>
         <translation>达到最大输出金额</translation>
-    </message>
-    <message>
-        <source>CARI address or contact label</source>
-        <translation>CARI 地址或者联系人标签</translation>
     </message>
     <message>
         <source>Invalid entry, previous entries must be valid before add a new one</source>
@@ -3473,54 +3059,6 @@ These coins will no longer be cold-staked.</source>
         <translation>交易已发送</translation>
     </message>
     <message>
-        <source>Spend Zerocoin</source>
-        <translation>花费零币</translation>
-    </message>
-    <message>
-        <source>zCARI is currently undergoing maintenance.</source>
-        <translation>zCARI目前正在维护中</translation>
-    </message>
-    <message>
-        <source>Coin control mint not found</source>
-        <translation>硬币控制铸币不存在</translation>
-    </message>
-    <message>
-        <source>Sending %1 to address %2
-</source>
-        <translation>正在发送%1 到 地址%2
-</translation>
-    </message>
-    <message>
-        <source>Sending %1 to addresses:
-%2</source>
-        <translation>正在发送%1到地址：
-%2</translation>
-    </message>
-    <message>
-        <source>zCARI transaction sent!</source>
-        <translation>zCARI交易已发送！</translation>
-    </message>
-    <message>
-        <source>Version 1 zCARI require a security level of 100 to successfully spend.</source>
-        <translation>版本1 zCARI要求安全级别为100才能成功使用。</translation>
-    </message>
-    <message>
-        <source>Too much inputs (</source>
-        <translation>输入过多（</translation>
-    </message>
-    <message>
-        <source>) needed.
-Maximum allowed: </source>
-        <translation>)需要。
-最大额限制:</translation>
-    </message>
-    <message>
-        <source>
-Either mint higher denominations (so fewer inputs are needed) or reduce the amount to spend.</source>
-        <translation>
-要么铸造更高面额的币(这样需要的投入就更少)，要么减少开支。</translation>
-    </message>
-    <message>
         <source>Address label update failed for address: %1</source>
         <translation>地址标签更新失败的地址:%1</translation>
     </message>
@@ -3537,12 +3075,12 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>定制费用%1</translation>
     </message>
     <message>
-        <source>You don't have any CARI to select.</source>
-        <translation>您没有任何CARI可选择。</translation>
+        <source>Coin Control</source>
+        <translation>币控制</translation>
     </message>
     <message>
-        <source>You don't have any zCARI in your balance to select.</source>
-        <translation>你的余额中没有zCARI可供选择。</translation>
+        <source>Open URI</source>
+        <translation>开源URI</translation>
     </message>
     <message>
         <source>No contacts available, you can go to the contacts screen and add some there!</source>
@@ -3588,32 +3126,12 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>来自</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>文本标签</translation>
-    </message>
-    <message>
-        <source>Backup Wallet </source>
-        <translation>返回钱包</translation>
-    </message>
-    <message>
         <source>Change Wallet Passphrase</source>
         <translation>变更钱包密码</translation>
     </message>
     <message>
-        <source>This will decrypt the whole wallet data and encrypt it back with the new passphrase.
-Remember to write it down and store it safely, otherwise you might lose access to your funds.</source>
-        <translation>这将解密整个钱包数据，并使用新密码将其加密回来。
-请记住将其写下并安全地存储，否则您可能无法使用这笔资金。</translation>
-    </message>
-    <message>
         <source>Where</source>
         <translation>哪里</translation>
-    </message>
-    <message>
-        <source>Keep your wallet safe by doing regular backups and storing your backup file externally.
-This option creates a wallet.dat file that can be used to recover your whole balance (transactions and addresses) on another device.</source>
-        <translation>通过定期备份和将备份文件存储在外部来保证钱包的安全。
-此选项创建一个wallet.dat文件，可用于在另一个设备上恢复您的全部余额(交易和地址)。</translation>
     </message>
     <message>
         <source>Select folder...</source>
@@ -3651,24 +3169,8 @@ This option creates a wallet.dat file that can be used to recover your whole bal
         <translation>来自</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>文本标签</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>按钮</translation>
-    </message>
-    <message>
-        <source>Decrypt Address Result</source>
-        <translation>解密地址结果</translation>
-    </message>
-    <message>
         <source>Import Address</source>
         <translation>导入地址</translation>
-    </message>
-    <message>
-        <source>Clear</source>
-        <translation>清除</translation>
     </message>
     <message>
         <source>BIP38 Tool</source>
@@ -3693,10 +3195,6 @@ This option creates a wallet.dat file that can be used to recover your whole bal
     <message>
         <source>Passphrase</source>
         <translation>密码</translation>
-    </message>
-    <message>
-        <source>Enter a passphrase </source>
-        <translation>输入密码</translation>
     </message>
     <message>
         <source>Decrypted address result</source>
@@ -3814,20 +3312,12 @@ This option creates a wallet.dat file that can be used to recover your whole bal
         <translation>来自</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>文本标签</translation>
-    </message>
-    <message>
         <source>Console</source>
         <translation>控制台</translation>
     </message>
     <message>
         <source>Console input</source>
         <translation>控制台输入</translation>
-    </message>
-    <message>
-        <source>Command Line Options </source>
-        <translation>命令行选项</translation>
     </message>
     <message>
         <source>Open Debug File</source>
@@ -3865,10 +3355,6 @@ Verify that you have installed a predetermined text editor.</source>
     <message>
         <source>Form</source>
         <translation>来自</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>文本标签</translation>
     </message>
     <message>
         <source>Hide stake charts in the dashboard</source>
@@ -4033,54 +3519,12 @@ There was an error trying to save the address list to %1. Please try again.</sou
         <translation>来自</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>文本标签</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>按钮</translation>
-    </message>
-    <message>
         <source>1) What is CARI?</source>
         <translation>1）什么是CARI?</translation>
     </message>
     <message>
         <source>2) Why are my CARI unspendable?</source>
         <translation>2) 我的CARI为什么不能用？</translation>
-    </message>
-    <message>
-        <source>3) CARI privacy? What is Zerocoin (zCARI)?</source>
-        <translation>3）CARI 隐私？什么是零币(zCARI)？</translation>
-    </message>
-    <message>
-        <source>4) Why are my zCARI unspendable?</source>
-        <translation>4) 我的zCARI为什么不能用？</translation>
-    </message>
-    <message>
-        <source>5) Why did my wallet convert the balance
-    into zCARI automatically?</source>
-        <translation>5）为什么我的钱包把余额自动转换成
-zCARI了?</translation>
-    </message>
-    <message>
-        <source>6) How do I receive CARI/zCARI?</source>
-        <translation>6）如何接收CARI/zCARI?</translation>
-    </message>
-    <message>
-        <source>7) How do I stake CARI/zCARI?</source>
-        <translation>7）如何加注CARI/zCARI?</translation>
-    </message>
-    <message>
-        <source>8) Where I should go if I need support?</source>
-        <translation>8）该到哪里寻求帮助？</translation>
-    </message>
-    <message>
-        <source>9) What is a Masternode?</source>
-        <translation>9）什么是主节点？</translation>
-    </message>
-    <message>
-        <source>10) What is a Masternode Controller?</source>
-        <translation>10）什么是主节点控制器？</translation>
     </message>
     <message>
         <source>1</source>
@@ -4151,152 +3595,16 @@ CARI使用了一个股权证明(PoS)一致系统算法，
         <translation>3</translation>
     </message>
     <message>
-        <source>CARI privacy? What is Zerocoin (zCARI)?</source>
-        <translation>CARI 隐私？什么是零币(zCARI)？</translation>
-    </message>
-    <message>
-        <source>
-                           &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           zCARI is an optional privacy-centric method of coin mixing on the
-                           CARI blockchain. Basically all your transactions cannot be tracked
-                           on to any block explorer. You can read more about the technicals in the
-                           &lt;a style='color: #b088ff' href='https://cri.eco/zcari/'&gt;
-                           "CARI Zerocoin (zCARI) Technical Paper"&lt;/a&gt;.
-                           &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                         </source>
-        <translation>
-&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-zCARI是一种可选的以隐私为中心的隐私币
-它是CARI区块链的一员，基本上在任何块资源管理器
-所有的交易都不能被跟踪&lt;a style='color: #b088ff' href='https://cri.eco/zcari/'&gt;
-
-你可以阅读更多关于技术方面的文章&lt;/a&gt;
-
-CARI零币(zCARI)技术文件
-&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-</translation>
-    </message>
-    <message>
         <source>4</source>
         <translation>4</translation>
-    </message>
-    <message>
-        <source>Why are my zCARI unspendable?</source>
-        <translation>我的CARI为什么不能用？</translation>
-    </message>
-    <message>
-        <source>
-                           &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           After minting, zCARI will require 20 confirmations as well as 1
-                           additional mint of the same denomination on the network to
-                           become eligible for spending.
-                           &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                         </source>
-        <translation>
-&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-铸币后，zCARI将需要20个确认和1个确认
-在网络上增加相同面额的铸币
-才够资格消费。
-&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>5</source>
         <translation>5</translation>
     </message>
     <message>
-        <source>Why did my wallet convert the balance into zCARI automatically?</source>
-        <translation>为什么我的钱包会自动将余额转换成zCARI ?</translation>
-    </message>
-    <message>
         <source>6</source>
         <translation>6</translation>
-    </message>
-    <message>
-        <source>How do I receive CARI/zCARI?</source>
-        <translation>我怎么接收CARI/zCARI?</translation>
-    </message>
-    <message>
-        <source>
-                           &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           zCARI can be spent and sent to any CARI address. The receiver will
-                           receive standard CARI but the origin of the CARI is anonymized by the zCARI Protocol.
-                           &lt;/p&gt;&lt;p align="justify"&gt;
-                           If you want more zCARI you will need to mint your balance in the “Privacy” tab.
-                           &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                         </source>
-        <translation>
-&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-可以使用zCARI并将其发送到任何CARI地址。接收机将
-接收标准的CARI，但是根据zCARI协议，CARI的来源是匿名的。
-&lt;/p&gt;&lt;p align="justify"&gt;
-如果你想要更多的zCARI，你将需要在“隐私”标签上铸造你的余额。
-&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <source>7</source>
-        <translation>7</translation>
-    </message>
-    <message>
-        <source>How do I stake CARI/zCARI?</source>
-        <translation>我怎么加注CARI/zCARI?</translation>
-    </message>
-    <message>
-        <source>
-                           &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           To Stake CARI:
-                           &lt;/p&gt;&lt;p align="justify"&gt;
-                           &lt;ol&gt;&lt;li&gt;
-                           Make sure your wallet is completely synchronized and you are using the latest release.
-                           &lt;li&gt;
-                           You must have a balance of CARI with a minimum of 600 confirmations.
-                           &lt;li&gt;
-                           Your wallet must stay online and be unlocked for staking purposes.
-                           &lt;li&gt;
-                           Once all those steps are followed staking should be enabled.
-                           &lt;li&gt;
-                           You can see the status of staking in the wallet by mousing over the package icon in the row on the top left of the wallet interface. There package will be lit up and will state "Staking Enabled" to indicate it is staking.  Using the command line interface (cari-cli); the command &lt;i&gt;getstakingstatus&lt;/i&gt; will confirm that staking is active.
-                           &lt;/li&gt;&lt;/ol&gt;
-                           &lt;/p&gt;&lt;p align="justify"&gt;
-                           To Stake zCARI:
-                           &lt;/p&gt;&lt;p align="justify"&gt;
-                           &lt;ol&gt;&lt;li&gt;
-                           Make sure your wallet is completely synchronized and you are using the latest release.
-                           &lt;li&gt;
-                           Your newly minted or existing zCARI balance must have a minimum of 200 confirmations.
-                           &lt;li&gt;
-                           Your wallet must stay online and be unlocked for anonymization and staking purposes.
-                           Staking should now be enabled.
-                           &lt;/li&gt;&lt;/ol&gt;
-                           &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                         </source>
-        <translation>
- &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-加注CARI:
-&lt;/p&gt;&lt;p align="justify"&gt;
-&lt;ol&gt;&lt;li&gt;
-确保你的钱包保持完全同步且当前使用的是最新版本。
-&lt;li&gt;
-您必须有至少600的确认CARI余额。
-&lt;li&gt;
-你必须保证钱包在线且用于加注目的未锁状态。
-&lt;li&gt;
-所有这些步骤都完成后应该就可以启用加注了。
-&lt;li&gt;
-您可以将鼠标移到钱包界面左上角的行中的包图标上来查看在钱包加注的状态。加注状态的时候，包会被点亮且状态显示“加注启用”。使用命令行接口(cari-cli);命令&lt;i&gt;getstakingstatus&lt;/i&gt;将确认加注是激活状态。
-&lt;/li&gt;&lt;/ol&gt;
-&lt;/p&gt;&lt;p align="justify"&gt;
-加注zCARI:
-&lt;/p&gt;&lt;p align="justify"&gt;
-&lt;ol&gt;&lt;li&gt;
-确保你的钱包保持完全同步且当前使用的是最新版本。
-&lt;li&gt;
-你最新铸造或现有的zCARI余额必须至少有200个确认。
-&lt;li&gt;
-你必须保证钱包在线且用于加注和匿名目的处于未锁状态。
-现在加注应该已经可以启用了
-&lt;/li&gt;&lt;/ol&gt;
-&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                          </translation>
     </message>
     <message>
         <source>Where should I go if I need support?</source>
@@ -4311,44 +3619,14 @@ CARI零币(zCARI)技术文件
         <translation>什么是主节点控制器？</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;A Masternode Controller wallet is where the 10,000 CARI collateral can reside during a Controller-Remote masternode setup. It is a wallet that can activate the remote masternode wallet(s) and allows you to keep your collateral coins offline while the remote masternode remains online. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;主节点控制器钱包是控制器-远程主节点建立期间10,000 CARI抵押可以驻留的地方。这是一个可以激活远程主节点钱包(s)的钱包，可以让你的抵押币离线但远程主节点保持在线。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <source>8</source>
-        <translation>8</translation>
-    </message>
-    <message>
-        <source>
-                           &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           We have support channels in most of our official chat groups, for example
-                           &lt;a style='color: #b088ff' href='https://discord.gg/m9CwKFp'&gt;
-                           #support in our Discord&lt;/a&gt;.
-                           If you prefer to submit a ticket, One can be
-                           &lt;a style='color: #b088ff' href='https://CARI.freshdesk.com'&gt;
-                           our Freshdesk support site&lt;/a&gt;.
-                           &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                         </source>
-        <translation>
-&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-我们在大多数官方聊天群都有支持频道，例如
-&lt;a style='color: #b088ff' href='https://discord.gg/m9CwKFp'&gt;
-＃Discord  里面的支持&lt;/a&gt;。
-如果你想要提交门票，请到这里
-&lt;a style='color: #b088ff' href='https://CARI.freshdesk.com'&gt;
-我们的前台支持网站&lt;/a&gt;。
-&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-</translation>
-    </message>
-    <message>
-        <source>9</source>
-        <translation>9</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;A Masternode Controller wallet is where the 1,000 CARI collateral can reside during a Controller-Remote masternode setup. It is a wallet that can activate the remote masternode wallet(s) and allows you to keep your collateral coins offline while the remote masternode remains online. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;主节点控制器钱包是控制器-远程主节点建立期间1,000 CARI抵押可以驻留的地方。这是一个可以激活远程主节点钱包(s)的钱包，可以让你的抵押币离线但远程主节点保持在线。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
                            A masternode is a computer running a full node CARI core wallet with a
-                           requirement of 10,000 CARI secured collateral to provide extra services
+                           requirement of 1,000 CARI secured collateral to provide extra services
                            to the network and in return, receive a portion of the block reward
                            regularly.  These services include:
                            &lt;/p&gt;&lt;p align="justify"&gt;
@@ -4380,7 +3658,7 @@ CARI零币(zCARI)技术文件
                            Requirements:
                            &lt;/p&gt;&lt;p align="justify"&gt;
                            &lt;ul&gt;
-                           &lt;li&gt;10,000 CARI per single Masternode instance&lt;/li&gt;
+                           &lt;li&gt;1,000 CARI per single Masternode instance&lt;/li&gt;
                            &lt;li&gt;Must be stored in a core wallet&lt;/li&gt;
                            &lt;li&gt;Need dedicated IP address&lt;/li&gt;
                            &lt;li&gt;Masternode wallet to remain online&lt;/li&gt;
@@ -4390,7 +3668,7 @@ CARI零币(zCARI)技术文件
         <translation>
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
 主节点是运行完整节点CARI核心钱包的计算机
-需要10,000个CARI作抵押以提供额外服务
+需要1,000个CARI作抵押以提供额外服务
 到网络，会收到一部分的区块奖励作为定期
 回报
 这些服务包括:
@@ -4422,7 +3700,7 @@ CARI零币(zCARI)技术文件
 要求：
 &lt;/p&gt;&lt;p align="justify"&gt;
 &lt;ul&gt;
-&lt;li&gt;每个主节点实例有10,000 CARI&lt;/li&gt;
+&lt;li&gt;每个主节点实例有1,000 CARI&lt;/li&gt;
 &lt;li&gt;必须存储在核心钱包&lt;/li&gt;
 &lt;li&gt;需要专用IP地址&lt;/li&gt;
 主节点钱包保持在线&lt;li&gt;
@@ -4430,10 +3708,6 @@ CARI零币(zCARI)技术文件
 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
 
 </translation>
-    </message>
-    <message>
-        <source>10</source>
-        <translation>10</translation>
     </message>
     <message>
         <source>Frequently Asked Questions</source>
@@ -4566,20 +3840,12 @@ CARI零币(zCARI)技术文件
         <translation>来自</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>文本标签</translation>
-    </message>
-    <message>
         <source>Window</source>
         <translation>窗口</translation>
     </message>
     <message>
         <source>Customize the application window options</source>
         <translation>自定义应用视图选项</translation>
-    </message>
-    <message>
-        <source>CheckBox</source>
-        <translation>查看列表</translation>
     </message>
     <message>
         <source>Reset to default</source>
@@ -4793,14 +4059,6 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
         <translation>来自</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>文本标签</translation>
-    </message>
-    <message>
-        <source>Clear</source>
-        <translation>清除</translation>
-    </message>
-    <message>
         <source>Sign/Verify Message</source>
         <translation>签署/验证消息</translation>
     </message>
@@ -4827,10 +4085,6 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
     <message>
         <source>Enter address</source>
         <translation>输入地址</translation>
-    </message>
-    <message>
-        <source>Write message</source>
-        <translation>写入信息</translation>
     </message>
     <message>
         <source>Signature</source>
@@ -4916,18 +4170,6 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
         <translation>来自</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>文本标签</translation>
-    </message>
-    <message>
-        <source>CheckBox</source>
-        <translation>查看列表</translation>
-    </message>
-    <message>
-        <source>RadioButton</source>
-        <translation>单选按钮</translation>
-    </message>
-    <message>
         <source>Reset to default</source>
         <translation>重置到默认值</translation>
     </message>
@@ -4944,10 +4186,6 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
         <translation>自定义内部钱包选项</translation>
     </message>
     <message>
-        <source>Stake split threshold:</source>
-        <translation>股权分割阈值:</translation>
-    </message>
-    <message>
         <source>Spend unconfirmed change</source>
         <translation>&amp;花费未经证实的变化</translation>
     </message>
@@ -4960,16 +4198,12 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
         <translation>自定义节点网络选项</translation>
     </message>
     <message>
-        <source>Proxy IP:</source>
-        <translation>代理 IP</translation>
+        <source>Enter port</source>
+        <translation>输入端口</translation>
     </message>
     <message>
         <source>Enter proxy IP</source>
         <translation>输入代理 IP</translation>
-    </message>
-    <message>
-        <source>Port:</source>
-        <translation>端口：</translation>
     </message>
     <message>
         <source>Map port using UPnP</source>
@@ -4978,10 +4212,6 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
     <message>
         <source>Allow incoming connections</source>
         <translation>允许进来的连接</translation>
-    </message>
-    <message>
-        <source>Connect through SOCKS5 proxy (default proxy):</source>
-        <translation>使用SOCKS5代理（默认代理）：</translation>
     </message>
     <message>
         <source>SAVE</source>
@@ -4999,48 +4229,20 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
         <translation>来自</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>文本标签</translation>
-    </message>
-    <message>
         <source>Wallet Repair</source>
         <translation>钱包修复</translation>
-    </message>
-    <message>
-        <source>The buttons below will restart the wallet with command-line options to repair this wallet, fix issues with corrupt blockchain files or missing/obsolete transactions.</source>
-        <translation>下面的按钮将用命令行选项重新启动钱包来修复这个钱包，修复损坏的区块链文件或丢失/过时的交易。</translation>
-    </message>
-    <message>
-        <source>Attempt to recover private keys from a corrupt wallet.dat.</source>
-        <translation>尝试从损坏的钱包中恢复私钥。</translation>
-    </message>
-    <message>
-        <source>Rescan the blockchain for missing wallet transactions.</source>
-        <translation>重新扫描区块链以查找丢失的钱包交易。</translation>
-    </message>
-    <message>
-        <source>Recover transactions from blockchain (keep-meta-data, e.g. account owner).</source>
-        <translation>从区块链恢复交易(保存元数据，例如帐户所有者)。</translation>
-    </message>
-    <message>
-        <source>Recover transactions from blockchain (drop meta-data).</source>
-        <translation>从区块链恢复交易(删除元数据)。</translation>
     </message>
     <message>
         <source>Upgrade wallet to latest format on startup. (Note: this is NOT an update of the wallet itself)</source>
         <translation>启动时将钱包升级到最新格式。(注意:这不是钱包本身的更新)</translation>
     </message>
     <message>
-        <source>Rebuild blockchain index from current blk000???.dat files.</source>
-        <translation>从当前的blk000?? .dat文件重建区块链索引。</translation>
-    </message>
-    <message>
-        <source>Deletes all local blockchain folders so the wallet synchronizes from scratch.</source>
-        <translation>删除所有本地区块链文件夹，使钱包从零开始同步。</translation>
-    </message>
-    <message>
         <source>Salvage wallet</source>
         <translation>Salvage 钱包：</translation>
+    </message>
+    <message>
+        <source>Attempt to recover private keys from a corrupt wallet.dat</source>
+        <translation>试图从损坏的钱包中恢复私钥</translation>
     </message>
     <message>
         <source>Rescan blockchain file</source>
@@ -5061,10 +4263,6 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
     <message>
         <source>Rebuild index</source>
         <translation>重建索引</translation>
-    </message>
-    <message>
-        <source>Delete local blockchain </source>
-        <translation>删除本地区块链</translation>
     </message>
     <message>
         <source>This will delete your local blockchain folders and the wallet will synchronize the complete Blockchain from scratch.&lt;br /&gt;&lt;br /&gt;</source>
@@ -5107,7 +4305,7 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
     </message>
     <message>
         <source>Export Accounting</source>
-        <translation>输出计数</translation>
+        <translation>导出账单</translation>
     </message>
     <message>
         <source>Tools</source>
@@ -5262,26 +4460,6 @@ Are you sure?
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>CARI Core</source>
-        <translation>CARI Core</translation>
-    </message>
-    <message>
-        <source>Version %1</source>
-        <translation>版本%1</translation>
-    </message>
-    <message>
-        <source>The Bitcoin Core developers</source>
-        <translation>比特币核心开发者</translation>
-    </message>
-    <message>
-        <source>The Dash Core developers</source>
-        <translation>达世币核心开发者</translation>
-    </message>
-    <message>
-        <source>The CARI Core developers</source>
-        <translation>CARI 核心开发者</translation>
-    </message>
-    <message>
         <source>[testnet]</source>
         <translation>［测试网］</translation>
     </message>
@@ -5347,33 +4525,13 @@ Are you sure?
         <source>Staking not active</source>
         <translation>加注没激活</translation>
     </message>
-    <message numerus="yes">
-        <source>%n active connection(s)</source>
-        <translation><numerusform>%n 激活连接 （秒）</numerusform></translation>
-    </message>
     <message>
         <source>Synchronized - Block: %1</source>
         <translation>已同步区块：%1</translation>
     </message>
-    <message numerus="yes">
-        <source>%n hour(s)</source>
-        <translation><numerusform>%n小时</numerusform></translation>
-    </message>
-    <message numerus="yes">
-        <source>%n day(s)</source>
-        <translation><numerusform> %n天</numerusform></translation>
-    </message>
-    <message numerus="yes">
-        <source>%n week(s)</source>
-        <translation><numerusform>%n周</numerusform></translation>
-    </message>
     <message>
         <source>%1 and %2</source>
         <translation>%1 和 %2</translation>
-    </message>
-    <message numerus="yes">
-        <source>%n year(s)</source>
-        <translation><numerusform>%n年</numerusform></translation>
     </message>
     <message>
         <source>Wallet Upgrade</source>
@@ -5410,6 +4568,14 @@ backup will be created.
     <message>
         <source>Tor Disabled</source>
         <translation>Tor 关闭</translation>
+    </message>
+    <message>
+        <source>FAQ</source>
+        <translation>常见问题</translation>
+    </message>
+    <message>
+        <source>Wallet Locked</source>
+        <translation>钱包已锁住</translation>
     </message>
     <message>
         <source>Available (Locked included)</source>
@@ -5469,10 +4635,6 @@ backup will be created.
 </context>
 <context>
     <name>TransactionDesc</name>
-    <message numerus="yes">
-        <source>Open for %n more block(s)</source>
-        <translation><numerusform>打开％n更多的区块</numerusform></translation>
-    </message>
     <message>
         <source>Open until %1</source>
         <translation>直到%1才打开</translation>
@@ -5533,10 +4695,6 @@ backup will be created.
         <source>, has not been successfully broadcast yet</source>
         <translation>，尚未成功播出</translation>
     </message>
-    <message numerus="yes">
-        <source>, broadcast through %n node(s)</source>
-        <translation><numerusform>，通过%n节点广播</numerusform></translation>
-    </message>
     <message>
         <source>Date</source>
         <translation>日期</translation>
@@ -5576,10 +4734,6 @@ backup will be created.
     <message>
         <source>Credit</source>
         <translation>信用</translation>
-    </message>
-    <message numerus="yes">
-        <source>matures in %n more block(s)</source>
-        <translation><numerusform>在更多%n区块生成</numerusform></translation>
     </message>
     <message>
         <source>not accepted</source>
@@ -5664,10 +4818,6 @@ backup will be created.
         <source>Address</source>
         <translation>地址</translation>
     </message>
-    <message numerus="yes">
-        <source>Open for %n more block(s)</source>
-        <translation><numerusform>打开％n更多的区块</numerusform></translation>
-    </message>
     <message>
         <source>Open until %1</source>
         <translation>直到%1才打开</translation>
@@ -5713,40 +4863,8 @@ backup will be created.
         <translation>接收</translation>
     </message>
     <message>
-        <source>CARI Stake</source>
-        <translation>CARI加注</translation>
-    </message>
-    <message>
-        <source>zCARI Stake</source>
-        <translation>zCARI 加注</translation>
-    </message>
-    <message>
-        <source>CARI Cold Stake</source>
-        <translation>CARI冷饮</translation>
-    </message>
-    <message>
         <source>Stake delegation</source>
         <translation>股权委托</translation>
-    </message>
-    <message>
-        <source>Converted CARI to zCARI</source>
-        <translation>转换CARI为zCARI</translation>
-    </message>
-    <message>
-        <source>Spent zCARI</source>
-        <translation>已经花费zCARI</translation>
-    </message>
-    <message>
-        <source>Received CARI from zCARI</source>
-        <translation>从zCARI接收CARI</translation>
-    </message>
-    <message>
-        <source>Minted Change as zCARI from zCARI Spend</source>
-        <translation>铸币的变化，从zCARI花费zCARI</translation>
-    </message>
-    <message>
-        <source>Converted zCARI to CARI</source>
-        <translation>转换CARI为zCARI</translation>
     </message>
     <message>
         <source>Sent to</source>
@@ -5759,10 +4877,6 @@ backup will be created.
     <message>
         <source>Payment to yourself</source>
         <translation>支付给您自己</translation>
-    </message>
-    <message>
-        <source>CARI Stake on behalf of</source>
-        <translation>代表CARI加注</translation>
     </message>
     <message>
         <source>Stake delegation spent by</source>
@@ -5918,18 +5032,6 @@ backup will be created.
         <source>Form</source>
         <translation>来自</translation>
     </message>
-    <message>
-        <source>Received from Bob</source>
-        <translation>从Bob接收</translation>
-    </message>
-    <message>
-        <source>18/05/18</source>
-        <translation>18/05/18</translation>
-    </message>
-    <message>
-        <source>+0.000585 CARI</source>
-        <translation>+0.000585 CARI</translation>
-    </message>
 </context>
 <context>
     <name>WalletModel</name>
@@ -5937,11 +5039,7 @@ backup will be created.
         <source>Send Coins</source>
         <translation>发送币</translation>
     </message>
-    <message>
-        <source>SwiftX doesn't support sending values that high yet. Transactions are currently limited to %1 CARI.</source>
-        <translation>SwiftX目前还不支持发送这么高的值。当前的交易限制为%1 CARI。</translation>
-    </message>
-</context>
+    </context>
 <context>
     <name>WelcomeContentWidget</name>
     <message>
@@ -6012,49 +5110,6 @@ CARI核心钱包</translation>
     </message>
 </context>
 <context>
-    <name>ZCariControlDialog</name>
-    <message>
-        <source>Select zCARI to Spend</source>
-        <translation>选择zCARI 花费</translation>
-    </message>
-    <message>
-        <source>Coin Control</source>
-        <translation>币控制</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>按钮</translation>
-    </message>
-    <message>
-        <source>zCari</source>
-        <translation>zCari</translation>
-    </message>
-    <message>
-        <source>0.00 </source>
-        <translation>0.00</translation>
-    </message>
-    <message>
-        <source>Quantity:</source>
-        <translation>数量：</translation>
-    </message>
-    <message>
-        <source>Is Spendable</source>
-        <translation>可用</translation>
-    </message>
-    <message>
-        <source>0</source>
-        <translation>0</translation>
-    </message>
-    <message>
-        <source>Select/Deselect All</source>
-        <translation>选择／删除所有</translation>
-    </message>
-    <message>
-        <source>Select zCARI Denominations to Spend</source>
-        <translation>选择zCARI 面额花费</translation>
-    </message>
-</context>
-<context>
     <name>cari-core</name>
     <message>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
@@ -6109,14 +5164,6 @@ CARI核心钱包</translation>
         <translation>启用冷堆叠（0-1，默认值：%u）。 如果累计= 0，则禁用</translation>
     </message>
     <message>
-        <source>Enable or disable staking functionality for CARI inputs (0-1, default: %u)</source>
-        <translation>启用或禁用CARI输入标记功能(0-1，默认值:%u)</translation>
-    </message>
-    <message>
-        <source>Enable or disable staking functionality for zCARI inputs (0-1, default: %u)</source>
-        <translation>启用或禁用zCARI输入的标记功能(0-1，默认值:%u)</translation>
-    </message>
-    <message>
         <source>Enable spork administration functionality with the appropriate private key.</source>
         <translation>使用适当的私钥启用spork管理功能。</translation>
     </message>
@@ -6153,14 +5200,6 @@ CARI核心钱包</translation>
         <translation>当最佳区块更改时执行命令(cmd中的%s被块散列替换)</translation>
     </message>
     <message>
-        <source>Fees (in CARI/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>小于此值的费用(以CARI/Kb为单位)视为零中继费用(默认值:%s)</translation>
-    </message>
-    <message>
-        <source>Fees (in CARI/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>小于此值的费用(以CARI/Kb为单位)被认为是交易创建的零费用(默认值:%s)</translation>
-    </message>
-    <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>
         <translation>每&lt;n&gt;兆字节将数据库活动从内存池刷新到磁盘日志(默认:%u)</translation>
     </message>
@@ -6179,10 +5218,6 @@ CARI核心钱包</translation>
     <message>
         <source>Invalid amount for -maxtxfee=&lt;amount&gt;: '%s' (must be at least the minrelay fee of %s to prevent stuck transactions)</source>
         <translation>最大tx费用金额无效=&lt;amount&gt;:'%s'(必须至少是%s的最小中继费用，以防止交易中断)</translation>
-    </message>
-    <message>
-        <source>Keep the specified amount available for spending at all times (default: 0)</source>
-        <translation>始终保留指定的支出金额(默认值:0)</translation>
     </message>
     <message>
         <source>Log transaction priority and fee per kB when mining blocks (default: %u)</source>
@@ -6215,10 +5250,6 @@ CARI核心钱包</translation>
     <message>
         <source>Output debugging information (default: %u, supplying &lt;category&gt; is optional)</source>
         <translation>输出调试信息(默认:%u，&lt;category&gt;可选提供)</translation>
-    </message>
-    <message>
-        <source>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect)</source>
-        <translation>如果地址为低值的话，通过DNS查询端口地址(默认:1除非-连接)</translation>
     </message>
     <message>
         <source>Randomize credentials for every proxy connection. This enables Tor stream isolation (default: %u)</source>
@@ -6313,10 +5344,6 @@ CARI核心钱包</translation>
         <translation>您必须在配置中指定一个主节点privkey。有关帮助，请参阅文档。</translation>
     </message>
     <message>
-        <source>(31813 could be used only on mainnet)</source>
-        <translation>(31813只可在网上使用)</translation>
-    </message>
-    <message>
         <source>(default: %s)</source>
         <translation>(默认: %s)</translation>
     </message>
@@ -6325,16 +5352,8 @@ CARI核心钱包</translation>
         <translation>(默认: 1)</translation>
     </message>
     <message>
-        <source>(must be 31813 for mainnet)</source>
-        <translation>(主网必须为31813)</translation>
-    </message>
-    <message>
         <source>Accept command line and JSON-RPC commands</source>
         <translation>接受命令行和JSON-RPC命令</translation>
-    </message>
-    <message>
-        <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>
-        <translation>接受外部连接(如果没有-proxy或-connect，默认为1)</translation>
     </message>
     <message>
         <source>Accept public REST requests (default: %u)</source>
@@ -6371,10 +5390,6 @@ CARI核心钱包</translation>
     <message>
         <source>Cannot downgrade wallet</source>
         <translation>不能降级钱包</translation>
-    </message>
-    <message>
-        <source>Connect only to the specified node(s)</source>
-        <translation>只连接到指定的节点（）</translation>
     </message>
     <message>
         <source>Connect through SOCKS5 proxy</source>
@@ -6521,14 +5536,6 @@ CARI核心钱包</translation>
         <translation>未能解析:主机端口字符串</translation>
     </message>
     <message>
-        <source>Failed to read block</source>
-        <translation>读取区块失败</translation>
-    </message>
-    <message>
-        <source>Fee (in CARI/kB) to add to transactions you send (default: %s)</source>
-        <translation>将费用(以CARI/kB为单位)添加到您发送的交易中(默认:%s)</translation>
-    </message>
-    <message>
         <source>Force safe mode (default: %u)</source>
         <translation>安全模式原力(默认值:%u)</translation>
     </message>
@@ -6597,16 +5604,8 @@ CARI核心钱包</translation>
         <translation>白名单中指定的无效网络掩码:'%s'</translation>
     </message>
     <message>
-        <source>Invalid port detected in masternode.conf</source>
-        <translation>在masternode.conf中检测到无效端口</translation>
-    </message>
-    <message>
         <source>Recalculating CARI supply...</source>
         <translation>重新计算CARI供应量……</translation>
-    </message>
-    <message>
-        <source>Reindex the CARI and zCARI money supply statistics</source>
-        <translation>重新索引CARI和zCARI货币供应统计数据</translation>
     </message>
     <message>
         <source>Reindexing zerocoin database...</source>
@@ -6651,10 +5650,6 @@ CARI核心钱包</translation>
     <message>
         <source>Enable SwiftX, show confirmations for locked transactions (bool, default: %s)</source>
         <translation>启用SwiftX，显示锁定交易的确认(bool，默认值:%s)</translation>
-    </message>
-    <message>
-        <source>Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>错误:交易被拒绝!如果你钱包里的硬币已经花掉了，比如你用了复制钱包，那么这种情况就会发生。</translation>
     </message>
     <message>
         <source>Error: Unsupported argument -checklevel found. Checklevel must be level 4.</source>
@@ -6755,10 +5750,6 @@ CARI核心钱包</translation>
     <message>
         <source>Keep at most &lt;n&gt; unconnectable transactions in memory (default: %u)</source>
         <translation>在内存中保留最多&lt;n&gt;不可连接的交易(默认值:%u)</translation>
-    </message>
-    <message>
-        <source>Limit size of signature cache to &lt;n&gt; entries (default: %u)</source>
-        <translation>将签名缓存的大小限制为&lt;n&gt;条目大小(默认为%u)</translation>
     </message>
     <message>
         <source>Line: %d</source>
@@ -7308,16 +6299,36 @@ CARI核心钱包</translation>
         <translation>发送</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>文本标签</translation>
+        <source>CARI address or contact label</source>
+        <translation>CARI 地址或者联系人标签</translation>
+    </message>
+    <message>
+        <source>Amount</source>
+        <translation>金额</translation>
+    </message>
+    <message>
+        <source>Customize fee</source>
+        <translation>定制费用</translation>
+    </message>
+    <message>
+        <source>Clear all</source>
+        <translation>清除所有</translation>
+    </message>
+    <message>
+        <source>Add recipient</source>
+        <translation>添加接收人</translation>
+    </message>
+    <message>
+        <source>Total to send</source>
+        <translation>花费总金额</translation>
+    </message>
+    <message>
+        <source>Reset to default</source>
+        <translation>重置到默认值</translation>
     </message>
     <message>
         <source>Include delegated</source>
         <translation>包含委托</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>按钮</translation>
     </message>
 </context>
 </TS>

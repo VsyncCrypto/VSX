@@ -461,6 +461,7 @@ public:
         consensus.vUpgrades[Consensus::UPGRADE_ZC_PUBLIC].hashActivationBlock   = uint256S("0x1");
         consensus.vUpgrades[Consensus::UPGRADE_V3_4].hashActivationBlock        = uint256S("0x1");
         consensus.vUpgrades[Consensus::UPGRADE_V4_0].hashActivationBlock        = uint256S("0x1");
+        consensus.vUpgrades[Consensus::UPGRADE_V5_DUMMY].hashActivationBlock    = uint256S("0x1");
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.

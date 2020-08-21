@@ -44,7 +44,7 @@ class TxnMallTest(CariTestFramework):
         # Coins are sent to node1_address
         node1_address = self.nodes[1].getnewaddress()
 
-        # First: use raw transaction API to send 1240 * 5 PIV to node1_address,
+        # First: use raw transaction API to send 1240 * 5 CARI to node1_address,
         # but don't broadcast:
         doublespend_fee = Decimal('-.02')
         rawtx_input_0 = {}
