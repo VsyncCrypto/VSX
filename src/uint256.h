@@ -5,8 +5,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef CARI_UINT256_H
-#define CARI_UINT256_H
+#ifndef VSYNC_UINT256_H
+#define VSYNC_UINT256_H
 
 #include "arith_uint256.h"
 #include <assert.h>
@@ -128,4 +128,4 @@ arith_uint512 UintToArith512(const uint512 &);
 const uint256 UINT256_ZERO = uint256();
 const uint256 UINT256_ONE = uint256("0000000000000000000000000000000000000000000000000000000000000001");
 
-#endif // CARI_UINT256_H
+#endif // VSYNC_UINT256_H

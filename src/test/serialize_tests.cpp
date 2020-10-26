@@ -6,7 +6,7 @@
 #include "serialize.h"
 #include "streams.h"
 #include "hash.h"
-#include "test/test_cari.h"
+#include "test/test_vsync.h"
 
 #include <stdint.h>
 

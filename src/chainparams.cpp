@@ -2,7 +2,7 @@
 // Copyright (c) 2009-2015 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2020 The PIVX developers
-// Copyright (c) 2020-2020 The CARI developers
+// Copyright (c) 2020-2020 The VSYNC developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -116,7 +116,7 @@ public:
         assert(genesis.hashMerkleRoot     == uint256S("0x848a9da56df8cf4057ef911b7a1837048bea98c1e782b6eff779fd0325c77530"));
 
         consensus.fPowAllowMinDifficultyBlocks           = false;
-        consensus.powLimit                               = ~UINT256_ZERO >> 20;    // CARI starting difficulty is 1 / 2^12
+        consensus.powLimit                               = ~UINT256_ZERO >> 20;    // VSYNC starting difficulty is 1 / 2^12
         consensus.posLimitV1                             = ~UINT256_ZERO >> 24;
         consensus.posLimitV2                             = ~UINT256_ZERO >> 20;
         consensus.nBudgetCycleBlocks                     = 43200;                  // approx. 1 every 30 days
@@ -150,8 +150,8 @@ public:
         consensus.height_ZC_RecalcAccumulators           = 999999999;
 
         // validation by-pass
-        consensus.nCariBadBlockTime                      = 1471401614;    // Skip nBit validation of Block 259201 per PR #915
-        consensus.nCariBadBlockBits                      = 0x1c056dac;    // Skip nBit validation of Block 259201 per PR #915
+        consensus.nVsyncBadBlockTime                      = 1471401614;    // Skip nBit validation of Block 259201 per PR #915
+        consensus.nVsyncBadBlockBits                      = 0x1c056dac;    // Skip nBit validation of Block 259201 per PR #915
 
         // Zerocoin-related params
         consensus.ZC_Modulus                             = "25195908475657893494027183240048398571429282126204032027777137836043662020707595556264018525880784"
@@ -202,7 +202,7 @@ public:
 
         // Note that of those with the service bits flag, most only support a subset of possible options
         vSeeds.push_back(CDNSSeedData("cri.eco", "mainnet.seed.cri.eco", true));                        // Official DNS Seeder
-        vSeeds.push_back(CDNSSeedData("ziofabry.twt.it", "mainnet.cari.seed.ziofabry.twt.it", true));   // Secondary DNS Seeder from ZioFabry
+        vSeeds.push_back(CDNSSeedData("ziofabry.twt.it", "mainnet.vsync.seed.ziofabry.twt.it", true));   // Secondary DNS Seeder from ZioFabry
 
         base58Prefixes[PUBKEY_ADDRESS]  = std::vector<unsigned char>(1, 28);        // Start with 'C' from https://en.bitcoin.it/wiki/List_of_address_prefixes
         base58Prefixes[SCRIPT_ADDRESS]  = std::vector<unsigned char>(1, 13);        // Start with '6' from https://en.bitcoin.it/wiki/List_of_address_prefixes
@@ -249,7 +249,7 @@ public:
         assert(genesis.hashMerkleRoot     == uint256S("0x848a9da56df8cf4057ef911b7a1837048bea98c1e782b6eff779fd0325c77530"));
 
         consensus.fPowAllowMinDifficultyBlocks           = false;
-        consensus.powLimit                               = ~UINT256_ZERO >> 20;    // CARI starting difficulty is 1 / 2^12
+        consensus.powLimit                               = ~UINT256_ZERO >> 20;    // VSYNC starting difficulty is 1 / 2^12
         consensus.posLimitV1                             = ~UINT256_ZERO >> 24;
         consensus.posLimitV2                             = ~UINT256_ZERO >> 20;
         consensus.nBudgetCycleBlocks                     = 43200;                  // approx. 1 every 30 days
@@ -283,8 +283,8 @@ public:
         consensus.height_ZC_RecalcAccumulators           = 999999999;
 
         // validation by-pass
-        consensus.nCariBadBlockTime                      = 1471401614;    // Skip nBit validation of Block 259201 per PR #915
-        consensus.nCariBadBlockBits                      = 0x1c056dac;    // Skip nBit validation of Block 259201 per PR #915
+        consensus.nVsyncBadBlockTime                      = 1471401614;    // Skip nBit validation of Block 259201 per PR #915
+        consensus.nVsyncBadBlockBits                      = 0x1c056dac;    // Skip nBit validation of Block 259201 per PR #915
 
         // Zerocoin-related params
         consensus.ZC_Modulus                             = "25195908475657893494027183240048398571429282126204032027777137836043662020707595556264018525880784"
@@ -335,7 +335,7 @@ public:
 
         // Note that of those with the service bits flag, most only support a subset of possible options
         vSeeds.push_back(CDNSSeedData("cri.eco", "testnet.seed.cri.eco", true));                        // Official DNS Seeder
-        vSeeds.push_back(CDNSSeedData("ziofabry.twt.it", "mainnet.cari.seed.ziofabry.twt.it", true));   // Secondary DNS Seeder from ZioFabry
+        vSeeds.push_back(CDNSSeedData("ziofabry.twt.it", "mainnet.vsync.seed.ziofabry.twt.it", true));   // Secondary DNS Seeder from ZioFabry
 
         base58Prefixes[PUBKEY_ADDRESS]  = std::vector<unsigned char>(1, 88);        // Start with 'c' from https://en.bitcoin.it/wiki/List_of_address_prefixes
         base58Prefixes[SCRIPT_ADDRESS]  = std::vector<unsigned char>(1, 11);        // Start with '5' from https://en.bitcoin.it/wiki/List_of_address_prefixes
@@ -381,7 +381,7 @@ public:
         assert(genesis.hashMerkleRoot     == uint256S("0x848a9da56df8cf4057ef911b7a1837048bea98c1e782b6eff779fd0325c77530"));
 
         consensus.fPowAllowMinDifficultyBlocks           = false;
-        consensus.powLimit                               = ~UINT256_ZERO >> 20;    // CARI starting difficulty is 1 / 2^12
+        consensus.powLimit                               = ~UINT256_ZERO >> 20;    // VSYNC starting difficulty is 1 / 2^12
         consensus.posLimitV1                             = ~UINT256_ZERO >> 24;
         consensus.posLimitV2                             = ~UINT256_ZERO >> 20;
         consensus.nBudgetCycleBlocks                     = 43200;                  // approx. 1 every 30 days
@@ -423,8 +423,8 @@ public:
         consensus.height_ZC_RecalcAccumulators           = 999999999;
 
         // validation by-pass
-        consensus.nCariBadBlockTime                      = 1471401614;    // Skip nBit validation of Block 259201 per PR #915
-        consensus.nCariBadBlockBits                      = 0x1c056dac;    // Skip nBit validation of Block 259201 per PR #915
+        consensus.nVsyncBadBlockTime                      = 1471401614;    // Skip nBit validation of Block 259201 per PR #915
+        consensus.nVsyncBadBlockBits                      = 0x1c056dac;    // Skip nBit validation of Block 259201 per PR #915
 
         // Zerocoin-related params
         consensus.ZC_Modulus                             = "25195908475657893494027183240048398571429282126204032027777137836043662020707595556264018525880784"

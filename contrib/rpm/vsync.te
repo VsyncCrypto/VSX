@@ -1,0 +1,81 @@
+policy_module(vsync, 1.100.1)
+
+########################################
+#
+# Declarations
+#
+
+type vsync_t;
+type vsync_exec_t;
+init_daemon_domain(vsync_t, vsync_exec_t)
+
+permissive vsync_t;
+
+type vsync_initrc_exec_t;
+init_script_file(vsync_initrc_exec_t)
+
+type vsync_conf_t;
+files_type(vsync_conf_t)
+
+type vsync_var_lib_t;
+files_type(vsync_var_lib_t)
+
+type vsync_var_run_t;
+files_type(vsync_var_run_t)
+
+type vsync_port_t;
+corenet_port(vsync_port_t)
+
+########################################
+#
+# vsync local policy
+#
+allow vsync_t self:process { fork };
+
+allow vsync_t self:fifo_file rw_fifo_file_perms;
+allow vsync_t self:unix_stream_socket create_stream_socket_perms;
+
+manage_dirs_pattern(vsync_t, vsync_conf_t, vsync_conf_t)
+manage_files_pattern(vsync_t, vsync_conf_t, vsync_conf_t)
+
+manage_dirs_pattern(vsync_t, vsync_var_lib_t, vsync_var_lib_t)
+manage_files_pattern(vsync_t, vsync_var_lib_t, vsync_var_lib_t)
+files_var_lib_filetrans(vsync_t, vsync_var_lib_t, { dir file })
+
+manage_dirs_pattern(vsync_t, vsync_var_run_t, vsync_var_run_t)
+manage_files_pattern(vsync_t, vsync_var_run_t, vsync_var_run_t)
+
+sysnet_dns_name_resolve(vsync_t)
+corenet_all_recvfrom_unlabeled(vsync_t)
+
+allow vsync_t self:tcp_socket create_stream_socket_perms;
+corenet_tcp_sendrecv_generic_if(vsync_t)
+corenet_tcp_sendrecv_generic_node(vsync_t)
+corenet_tcp_sendrecv_all_ports(vsync_t)
+corenet_tcp_bind_generic_node(vsync_t)
+
+gen_require(`
+    type vsync_port_t;
+')
+allow vsync_t vsync_port_t:tcp_socket name_bind;
+
+gen_require(`
+    type vsync_port_t;
+')
+allow vsync_t vsync_port_t:tcp_socket name_connect;
+
+domain_use_interactive_fds(vsync_t)
+
+files_read_etc_files(vsync_t)
+
+miscfiles_read_localization(vsync_t)
+
+sysnet_dns_name_resolve(vsync_t)
+
+allow vsync_t vsync_exec_t:file execute_no_trans;
+allow vsync_t self:process setsched;
+corecmd_exec_ls(vsync_t)
+corenet_tcp_connect_http_port(vsync_t)
+dev_read_urand(vsync_t)
+fs_getattr_xattr_fs(vsync_t)
+kernel_read_system_state(vsync_t)

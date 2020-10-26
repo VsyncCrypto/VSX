@@ -7,7 +7,7 @@
 #define BITCOIN_QT_COINCONTROLDIALOG_H
 
 #include "amount.h"
-#include "qt/cari/snackbar.h"
+#include "qt/vsync/snackbar.h"
 
 #include <QAbstractButton>
 #include <QAction>

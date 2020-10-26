@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef CARI_SCRIPTPUBKEYMAN_H
-#define CARI_SCRIPTPUBKEYMAN_H
+#ifndef VSYNC_SCRIPTPUBKEYMAN_H
+#define VSYNC_SCRIPTPUBKEYMAN_H
 
 #include "wallet/hdchain.h"
 #include "wallet/wallet.h"
@@ -160,4 +160,4 @@ private:
 };
 
 
-#endif //CARI_SCRIPTPUBKEYMAN_H
+#endif //VSYNC_SCRIPTPUBKEYMAN_H

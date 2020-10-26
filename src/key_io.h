@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef CARI_KEY_IO_H
-#define CARI_KEY_IO_H
+#ifndef VSYNC_KEY_IO_H
+#define VSYNC_KEY_IO_H
 
 #include "chainparams.h"
 #include "key.h"
@@ -25,4 +25,4 @@ namespace KeyIO {
 
 }
 
-#endif //CARI_KEY_IO_H
+#endif //VSYNC_KEY_IO_H

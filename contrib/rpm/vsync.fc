@@ -1,0 +1,8 @@
+/usr/bin/vsync-cli		--	gen_context(system_u:object_r:vsync_exec_t,s0)
+/usr/sbin/vsyncd		--	gen_context(system_u:object_r:vsync_exec_t,s0)
+/usr/lib(64)?/vsync/vsyncd		--	gen_context(system_u:object_r:vsync_exec_t,s0)
+
+/etc/vsync(/.*)?		gen_context(system_u:object_r:vsync_conf_t,s0)
+/var/lib/vsync(/.*)?		gen_context(system_u:object_r:vsync_var_lib_t,s0)
+
+(/var)?/run/vsyncd(/.*)?   gen_context(system_u:object_r:vsync_var_run_t,s0)

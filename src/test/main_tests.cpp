@@ -6,7 +6,7 @@
 
 #include "primitives/transaction.h"
 #include "main.h"
-#include "test_cari.h"
+#include "test_vsync.h"
 
 #include <boost/test/unit_test.hpp>
 
@@ -18,7 +18,7 @@ BOOST_AUTO_TEST_CASE(subsidy_limit_test)
 {
     CAmount nSum = 0;
     for (int nHeight = 0; nHeight < 1; nHeight += 1) {
-        /* premine in block 1 (60,001 CARI) */
+        /* premine in block 1 (60,001 VSYNC) */
         CAmount nSubsidy = GetBlockValue(nHeight);
         BOOST_CHECK(nSubsidy <= 60001 * COIN);
         nSum += nSubsidy;

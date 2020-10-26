@@ -21,18 +21,18 @@ BitcoinUnits::BitcoinUnits(QObject* parent) : QAbstractListModel(parent),
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(CARI);
-    unitlist.append(mCARI);
-    unitlist.append(uCARI);
+    unitlist.append(VSYNC);
+    unitlist.append(mVSYNC);
+    unitlist.append(uVSYNC);
     return unitlist;
 }
 
 bool BitcoinUnits::valid(int unit)
 {
     switch (unit) {
-    case CARI:
-    case mCARI:
-    case uCARI:
+    case VSYNC:
+    case mVSYNC:
+    case uVSYNC:
         return true;
     default:
         return false;
@@ -42,40 +42,40 @@ bool BitcoinUnits::valid(int unit)
 QString BitcoinUnits::id(int unit)
 {
     switch (unit) {
-    case CARI:
-        return QString("cari");
-    case mCARI:
-        return QString("mcari");
-    case uCARI:
-        return QString::fromUtf8("ucari");
+    case VSYNC:
+        return QString("vsx");
+    case mVSYNC:
+        return QString("mvsx");
+    case uVSYNC:
+        return QString::fromUtf8("uvsx");
     default:
         return QString("???");
     }
 }
 
-QString BitcoinUnits::name(int unit, bool isZcari)
+QString BitcoinUnits::name(int unit, bool isZvsync)
 {
     const QString CURR_UNIT = QString(CURRENCY_UNIT.c_str());
     QString z = "";
-    if(isZcari) z = "z";
+    if(isZvsync) z = "z";
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
-        case CARI:
+        case VSYNC:
             return z + CURR_UNIT;
-        case mCARI:
+        case mVSYNC:
             return z + QString("m") + CURR_UNIT;
-        case uCARI:
+        case uVSYNC:
             return z + QString::fromUtf8("μ") + CURR_UNIT;
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
-        case CARI:
+        case VSYNC:
             return z + QString("t") + CURR_UNIT;
-        case mCARI:
+        case mVSYNC:
             return z + QString("mt") + CURR_UNIT;
-        case uCARI:
+        case uVSYNC:
             return z + QString::fromUtf8("μt") + CURR_UNIT;
         default:
             return QString("???");
@@ -88,22 +88,22 @@ QString BitcoinUnits::description(int unit)
     const QString CURR_UNIT = QString(CURRENCY_UNIT.c_str());
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
-        case CARI:
+        case VSYNC:
             return CURR_UNIT;
-        case mCARI:
+        case mVSYNC:
             return QString("Milli-") + CURR_UNIT + QString(" (1 / 1" THIN_SP_UTF8 "000)");
-        case uCARI:
+        case uVSYNC:
             return QString("Micro-") + CURR_UNIT + QString(" (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
-        case CARI:
+        case VSYNC:
             return QString("Test") + CURR_UNIT;
-        case mCARI:
+        case mVSYNC:
             return QString("Milli-Test") + CURR_UNIT + QString(" (1 / 1" THIN_SP_UTF8 "000)");
-        case uCARI:
+        case uVSYNC:
             return QString("Micro-Test") + CURR_UNIT + QString(" (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
@@ -114,11 +114,11 @@ QString BitcoinUnits::description(int unit)
 qint64 BitcoinUnits::factor(int unit)
 {
     switch (unit) {
-    case CARI:
+    case VSYNC:
         return 100000000;
-    case mCARI:
+    case mVSYNC:
         return 100000;
-    case uCARI:
+    case uVSYNC:
         return 100;
     default:
         return 100000000;
@@ -128,11 +128,11 @@ qint64 BitcoinUnits::factor(int unit)
 int BitcoinUnits::decimals(int unit)
 {
     switch (unit) {
-    case CARI:
+    case VSYNC:
         return 8;
-    case mCARI:
+    case mVSYNC:
         return 5;
-    case uCARI:
+    case uVSYNC:
         return 2;
     default:
         return 0;
@@ -214,7 +214,7 @@ QString BitcoinUnits::formatHtmlWithUnit(int unit, const CAmount& amount, bool p
     return QString("<span style='white-space: nowrap;'>%1</span>").arg(str);
 }
 
-QString BitcoinUnits::floorWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators, bool cleanRemainderZeros, bool isZCARI)
+QString BitcoinUnits::floorWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators, bool cleanRemainderZeros, bool isZVSYNC)
 {
     QSettings settings;
     int digits = settings.value("digits").toInt();
@@ -231,12 +231,12 @@ QString BitcoinUnits::floorWithUnit(int unit, const CAmount& amount, bool plussi
         }
     }
 
-    return result + QString(" ") + name(unit, isZCARI);
+    return result + QString(" ") + name(unit, isZVSYNC);
 }
 
-QString BitcoinUnits::floorHtmlWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators, bool cleanRemainderZeros, bool isZCARI)
+QString BitcoinUnits::floorHtmlWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators, bool cleanRemainderZeros, bool isZVSYNC)
 {
-    QString str(floorWithUnit(unit, amount, plussign, separators, cleanRemainderZeros, isZCARI));
+    QString str(floorWithUnit(unit, amount, plussign, separators, cleanRemainderZeros, isZVSYNC));
     str.replace(QChar(THIN_SP_CP), QString(COMMA_HTML));
     return QString("<span style='white-space: nowrap;'>%1</span>").arg(str);
 }

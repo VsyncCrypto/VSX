@@ -5,7 +5,7 @@
 // Copyright (c) 2013-2014 The NovaCoin Developers
 // Copyright (c) 2014-2018 The BlackCoin Developers
 // Copyright (c) 2015-2020 The PIVX developers
-// Copyright (c) 2020-2020 The CARI developers
+// Copyright (c) 2020-2020 The VSYNC developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -33,7 +33,7 @@
 #include "spork.h"
 #include "invalid.h"
 #include "policy/policy.h"
-#include "zcarichain.h"
+#include "zvsxchain.h"
 
 
 #include <boost/thread.hpp>
@@ -42,7 +42,7 @@
 
 //////////////////////////////////////////////////////////////////////////////
 //
-// CARIMiner
+// VSYNCMiner
 //
 
 //
@@ -243,7 +243,7 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
 
                 int nConf = nHeight - coins->nHeight;
 
-                // zCARI spends can have very large priority, use non-overflowing safe functions
+                // zVSX spends can have very large priority, use non-overflowing safe functions
                 dPriority = double_safe_addition(dPriority, ((double)nValueIn * nConf));
 
             }
@@ -316,7 +316,7 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
             if (!view.HaveInputs(tx))
                 continue;
 
-            // double check that there are no double spent zCARI spends in this block or tx
+            // double check that there are no double spent zVSX spends in this block or tx
             if (tx.HasZerocoinSpendInputs()) {
                 int nHeightTx = 0;
                 if (IsTransactionInChain(tx.GetHash(), nHeightTx))
@@ -331,7 +331,7 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
                             libzerocoin::ZerocoinParams* params = consensus.Zerocoin_Params(false);
                             PublicCoinSpend publicSpend(params);
                             CValidationState state;
-                            if (!ZCARIModule::ParseZerocoinPublicSpend(txIn, tx, state, publicSpend)){
+                            if (!ZVSYNCModule::ParseZerocoinPublicSpend(txIn, tx, state, publicSpend)){
                                 throw std::runtime_error("Invalid public spend parse");
                             }
                             spend = &publicSpend;
@@ -352,7 +352,7 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
                         vTxSerials.emplace_back(spend->getCoinSerialNumber());
                     }
                 }
-                //This zCARI serial has already been included in the block, do not add this tx.
+                //This zVSX serial has already been included in the block, do not add this tx.
                 if (fDoubleSerial)
                     continue;
             }
@@ -515,7 +515,7 @@ bool ProcessBlockFound(CBlock* pblock, CWallet& wallet, Optional<CReserveKey>& r
     {
         WAIT_LOCK(g_best_block_mutex, lock);
         if (pblock->hashPrevBlock != g_best_block)
-            return error("CARIMiner : generated block is stale");
+            return error("VSYNCMiner : generated block is stale");
     }
 
     // Remove key from key pool
@@ -534,7 +534,7 @@ bool ProcessBlockFound(CBlock* pblock, CWallet& wallet, Optional<CReserveKey>& r
     // Process this block the same as if we had received it from another node
     CValidationState state;
     if (!ProcessNewBlock(state, NULL, pblock)) {
-        return error("CARIMiner : ProcessNewBlock, block not accepted");
+        return error("VSYNCMiner : ProcessNewBlock, block not accepted");
     }
 
     for (CNode* node : vNodes) {
@@ -560,9 +560,9 @@ void CheckForCoins(CWallet* pwallet, const int minutes)
 
 void BitcoinMiner(CWallet* pwallet, bool fProofOfStake)
 {
-    LogPrintf("CARIMiner started\n");
+    LogPrintf("VSYNCMiner started\n");
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
-    util::ThreadRename("cari-miner");
+    util::ThreadRename("vsync-miner");
     const Consensus::Params& consensus = Params().GetConsensus();
     const int64_t nSpacingMillis = consensus.nTargetSpacing * 1000;
 
@@ -638,7 +638,7 @@ void BitcoinMiner(CWallet* pwallet, bool fProofOfStake)
         // POW - miner main
         IncrementExtraNonce(pblock, pindexPrev, nExtraNonce);
 
-        //LogPrintf("Running CARIMiner with %u transactions in block (%u bytes)\n", pblock->vtx.size(),
+        //LogPrintf("Running VSYNCMiner with %u transactions in block (%u bytes)\n", pblock->vtx.size(),
         //    ::GetSerializeSize(*pblock, SER_NETWORK, PROTOCOL_VERSION));
 
         //
@@ -724,12 +724,12 @@ void static ThreadBitcoinMiner(void* parg)
         BitcoinMiner(pwallet, false);
         boost::this_thread::interruption_point();
     } catch (const std::exception& e) {
-        LogPrintf("CARIMiner exception");
+        LogPrintf("VSYNCMiner exception");
     } catch (...) {
-        LogPrintf("CARIMiner exception");
+        LogPrintf("VSYNCMiner exception");
     }
 
-    LogPrintf("CARIMiner exiting\n");
+    LogPrintf("VSYNCMiner exiting\n");
 }
 
 void GenerateBitcoins(bool fGenerate, CWallet* pwallet, int nThreads)

@@ -10,7 +10,7 @@
 #include "netbase.h"
 #include "util.h"
 
-#include "test/test_cari.h"
+#include "test/test_vsync.h"
 
 #include <boost/algorithm/string.hpp>
 #include <boost/test/unit_test.hpp>

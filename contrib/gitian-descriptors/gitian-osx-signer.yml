@@ -1,5 +1,5 @@
 ---
-name: "cari-dmg-signer"
+name: "vsync-dmg-signer"
 distro: "ubuntu"
 suites:
 - "bionic"
@@ -8,10 +8,10 @@ architectures:
 packages:
 - "faketime"
 remotes:
-- "url": "https://github.com/Carbon-Reduction-Initiative/CARI-detached-sigs.git"
+- "url": "https://github.com/Carbon-Reduction-Initiative/VSYNC-detached-sigs.git"
   "dir": "signature"
 files:
-- "cari-osx-unsigned.tar.gz"
+- "vsync-osx-unsigned.tar.gz"
 script: |
   set -e -o pipefail
 
@@ -30,8 +30,8 @@ script: |
     chmod +x ${WRAP_DIR}/${prog}
   done
 
-  UNSIGNED=cari-osx-unsigned.tar.gz
-  SIGNED=cari-osx-signed.dmg
+  UNSIGNED=vsync-osx-unsigned.tar.gz
+  SIGNED=vsync-osx-signed.dmg
 
   tar -xf ${UNSIGNED}
   OSX_VOLNAME="$(cat osx_volname)"

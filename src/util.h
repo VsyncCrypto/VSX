@@ -13,7 +13,7 @@
 #define BITCOIN_UTIL_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/cari-config.h"
+#include "config/vsync-config.h"
 #endif
 
 #include "fs.h"
@@ -35,7 +35,7 @@
 
 extern const char * const DEFAULT_DEBUGLOGFILE;
 
-//CARI only features
+//VSYNC only features
 
 extern bool fMasterNode;
 extern bool fLiteMode;
@@ -175,7 +175,7 @@ void SetThreadPriority(int nPriority);
 template <typename Callable>
 void TraceThread(const char* name, Callable func)
 {
-    std::string s = strprintf("cari-%s", name);
+    std::string s = strprintf("vsync-%s", name);
     util::ThreadRename(s.c_str());
     try {
         LogPrintf("%s thread start\n", name);

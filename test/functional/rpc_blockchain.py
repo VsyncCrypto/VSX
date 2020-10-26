@@ -22,7 +22,7 @@ from decimal import Decimal
 import http.client
 import subprocess
 
-from test_framework.test_framework import CariTestFramework
+from test_framework.test_framework import VsyncTestFramework
 from test_framework.util import (
     assert_equal,
     assert_greater_than,
@@ -33,7 +33,7 @@ from test_framework.util import (
     assert_is_hash_string,
 )
 
-class BlockchainTest(CariTestFramework):
+class BlockchainTest(VsyncTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
 

@@ -12,7 +12,7 @@
 #define BITCOIN_MAIN_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/cari-config.h"
+#include "config/vsync-config.h"
 #endif
 
 #include "amount.h"
@@ -24,8 +24,8 @@
 #include "pow.h"
 #include "primitives/block.h"
 #include "primitives/transaction.h"
-#include "zcari/zerocoin.h"
-#include "zcari/zcarimodule.h"
+#include "zvsx/zerocoin.h"
+#include "zvsx/zvsxmodule.h"
 #include "script/script.h"
 #include "script/sigcache.h"
 #include "script/standard.h"

@@ -1,5 +1,5 @@
-cari (3.2.0-trusty1) trusty; urgency=medium
+vsync (3.2.0-trusty1) trusty; urgency=medium
 
-  * CARI Core v3.2.0 (trusty).
+  * VSYNC Core v3.2.0 (trusty).
 
  -- Fuzzbawls  Fri, 12 Apr 2019 12:01:00 -0700

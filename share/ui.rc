@@ -1,4 +1,4 @@
-bitcoin               ICON    "pixmaps/cari.ico"
+bitcoin               ICON    "pixmaps/vsync.ico"
 
 #include "wx/msw/wx.rc"
 

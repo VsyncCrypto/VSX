@@ -4,8 +4,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef CARI_QT_WALLETMODEL_H
-#define CARI_QT_WALLETMODEL_H
+#ifndef VSYNC_QT_WALLETMODEL_H
+#define VSYNC_QT_WALLETMODEL_H
 
 #include "askpassphrasedialog.h"
 #include "paymentrequestplus.h"
@@ -104,7 +104,7 @@ public:
     }
 };
 
-/** Interface to CARI wallet from Qt view code. */
+/** Interface to VSYNC wallet from Qt view code. */
 class WalletModel : public QObject
 {
     Q_OBJECT
@@ -364,4 +364,4 @@ public Q_SLOTS:
     bool updateAddressBookLabels(const CTxDestination& address, const std::string& strName, const std::string& strPurpose);
 };
 
-#endif // CARI_QT_WALLETMODEL_H
+#endif // VSYNC_QT_WALLETMODEL_H

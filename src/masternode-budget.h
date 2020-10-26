@@ -365,7 +365,7 @@ public:
 
     // Verify and vote on finalized budget
     void CheckAndVote();
-    //total cari paid out by this budget
+    //total vsync paid out by this budget
     CAmount GetTotalPayout();
     //vote on this finalized budget as a masternode
     void SubmitVote();

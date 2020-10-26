@@ -1,15 +1,15 @@
 QT_TS = \
-  qt/locale/cari_de.ts \
-  qt/locale/cari_en.ts \
-  qt/locale/cari_en_US.ts \
-  qt/locale/cari_es.ts \
-  qt/locale/cari_es_ES.ts \
-  qt/locale/cari_fr_FR.ts \
-  qt/locale/cari_hr_HR.ts \
-  qt/locale/cari_it.ts \
-  qt/locale/cari_ko_KR.ts \
-  qt/locale/cari_nl.ts \
-  qt/locale/cari_pl.ts \
-  qt/locale/cari_ru.ts \
-  qt/locale/cari_tr.ts \
-  qt/locale/cari_zh_CN.ts
+  qt/locale/vsync_de.ts \
+  qt/locale/vsync_en.ts \
+  qt/locale/vsync_en_US.ts \
+  qt/locale/vsync_es.ts \
+  qt/locale/vsync_es_ES.ts \
+  qt/locale/vsync_fr_FR.ts \
+  qt/locale/vsync_hr_HR.ts \
+  qt/locale/vsync_it.ts \
+  qt/locale/vsync_ko_KR.ts \
+  qt/locale/vsync_nl.ts \
+  qt/locale/vsync_pl.ts \
+  qt/locale/vsync_ru.ts \
+  qt/locale/vsync_tr.ts \
+  qt/locale/vsync_zh_CN.ts

@@ -1,11 +1,11 @@
 Sample configuration files for:
 ```
-SystemD: carid.service
-Upstart: carid.conf
-OpenRC:  carid.openrc
-         carid.openrcconf
-CentOS:  carid.init
-macOS:    org.cari.carid.plist
+SystemD: vsyncd.service
+Upstart: vsyncd.conf
+OpenRC:  vsyncd.openrc
+         vsyncd.openrcconf
+CentOS:  vsyncd.init
+macOS:    org.vsync.vsyncd.plist
 ```
 have been made available to assist packagers in creating node packages here.
 

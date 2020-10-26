@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
-# Copyright (c) 2019-2020 The CARI developers
+# Copyright (c) 2019-2020 The VSYNC developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 # -*- coding: utf-8 -*-
 
 from time import sleep
 
-from test_framework.test_framework import CariTestFramework
+from test_framework.test_framework import VsyncTestFramework
 from test_framework.util import set_node_times, assert_equal
 
 
-class CARI_RPCSporkTest(CariTestFramework):
+class VSYNC_RPCSporkTest(VsyncTestFramework):
 
     def set_test_params(self):
         self.setup_clean_chain = True
@@ -70,5 +70,5 @@ class CARI_RPCSporkTest(CariTestFramework):
 
 
 if __name__ == '__main__':
-    CARI_RPCSporkTest().main()
+    VSYNC_RPCSporkTest().main()
 

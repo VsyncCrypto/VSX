@@ -11,14 +11,14 @@
 #include "txdb.h"
 #include "wallet/wallet.h"
 #include "wallet/walletdb.h"
-#include "test/test_cari.h"
+#include "test/test_vsync.h"
 #include <boost/test/unit_test.hpp>
 #include <iostream>
 
 
 BOOST_FIXTURE_TEST_SUITE(zerocoin_denom_tests, BasicTestingSetup)
 
-//translation from cari quantity to zerocoin denomination
+//translation from vsync quantity to zerocoin denomination
 BOOST_AUTO_TEST_CASE(amount_to_denomination_test)
 {
     std::cout << "Running amount_to_denomination_test...\n";

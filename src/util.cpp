@@ -6,7 +6,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/cari-config.h"
+#include "config/vsync-config.h"
 #endif
 
 #include "util.h"
@@ -84,7 +84,7 @@
 #include <openssl/rand.h>
 
 
-// CARI only features
+// VSYNC only features
 // Masternode
 bool fMasterNode = false;
 std::string strMasterNodePrivKey = "";
@@ -264,7 +264,7 @@ static std::string FormatException(const std::exception* pex, const char* pszThr
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "cari";
+    const char* pszModule = "vsync";
 #endif
     if (pex)
         return strprintf(
@@ -284,13 +284,13 @@ void PrintExceptionContinue(const std::exception* pex, const char* pszThread)
 
 fs::path GetDefaultDataDir()
 {
-// Windows < Vista: C:\Documents and Settings\Username\Application Data\CARI
-// Windows >= Vista: C:\Users\Username\AppData\Roaming\CARI
-// Mac: ~/Library/Application Support/CARI
-// Unix: ~/.cari
+// Windows < Vista: C:\Documents and Settings\Username\Application Data\VSYNC
+// Windows >= Vista: C:\Users\Username\AppData\Roaming\VSYNC
+// Mac: ~/Library/Application Support/VSYNC
+// Unix: ~/.vsync
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "CARI";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "VSYNC";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -302,10 +302,10 @@ fs::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     TryCreateDirectory(pathRet);
-    return pathRet / "CARI";
+    return pathRet / "VSYNC";
 #else
     // Unix
-    return pathRet / ".cari";
+    return pathRet / ".vsync";
 #endif
 #endif
 }
@@ -350,7 +350,7 @@ void ClearDatadirCache()
 
 fs::path GetConfigFile()
 {
-    fs::path pathConfigFile(GetArg("-conf", "cari.conf"));
+    fs::path pathConfigFile(GetArg("-conf", "vsync.conf"));
     return AbsPathForConfigVal(pathConfigFile, false);
 }
 
@@ -365,7 +365,7 @@ void ReadConfigFile(std::map<std::string, std::string>& mapSettingsRet,
 {
     fs::ifstream streamConfig(GetConfigFile());
     if (!streamConfig.good()) {
-        // Create empty cari.conf if it does not exist
+        // Create empty vsync.conf if it does not exist
         FILE* configFile = fsbridge::fopen(GetConfigFile(), "a");
         if (configFile != NULL)
             fclose(configFile);
@@ -376,7 +376,7 @@ void ReadConfigFile(std::map<std::string, std::string>& mapSettingsRet,
     setOptions.insert("*");
 
     for (boost::program_options::detail::config_file_iterator it(streamConfig, setOptions), end; it != end; ++it) {
-        // Don't overwrite existing settings so command line settings override cari.conf
+        // Don't overwrite existing settings so command line settings override vsync.conf
         std::string strKey = std::string("-") + it->string_key;
         std::string strValue = it->value[0];
         InterpretNegativeSetting(strKey, strValue);
@@ -399,7 +399,7 @@ fs::path AbsPathForConfigVal(const fs::path& path, bool net_specific)
 #ifndef WIN32
 fs::path GetPidFile()
 {
-    fs::path pathPidFile(GetArg("-pid", "carid.pid"));
+    fs::path pathPidFile(GetArg("-pid", "vsyncd.pid"));
     return AbsPathForConfigVal(pathPidFile);
 }
 

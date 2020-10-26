@@ -5,7 +5,7 @@
 // Copyright (c) 2013-2014 The NovaCoin Developers
 // Copyright (c) 2014-2018 The BlackCoin Developers
 // Copyright (c) 2015-2020 The PIVX developers
-// Copyright (c) 2020-2020 The CARI developers
+// Copyright (c) 2020-2020 The VSYNC developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -42,13 +42,13 @@
 #include "util.h"
 #include "utilmoneystr.h"
 #include "validationinterface.h"
-#include "zcarichain.h"
+#include "zvsxchain.h"
 
 #include "invalid.h"
 #include "legacy/validation_zerocoin_legacy.h"
 #include "libzerocoin/Denominations.h"
 #include "masternode-sync.h"
-#include "zcari/zerocoin.h"
+#include "zvsx/zerocoin.h"
 #include <sstream>
 
 #include <boost/algorithm/string/replace.hpp>
@@ -59,7 +59,7 @@
 
 
 #if defined(NDEBUG)
-#error "CARI cannot be compiled without assertions."
+#error "VSYNC cannot be compiled without assertions."
 #endif
 
 /**
@@ -102,7 +102,7 @@ size_t nCoinCacheUsage = 5000 * 300;
 /* If the tip is older than this (in seconds), the node is considered to be in initial block download. */
 int64_t nMaxTipAge = DEFAULT_MAX_TIP_AGE;
 
-/** Fees smaller than this (in ucari) are considered zero fee (for relaying, mining and transaction creation)
+/** Fees smaller than this (in uvsync) are considered zero fee (for relaying, mining and transaction creation)
  * We are ~100 times smaller then bitcoin now (2015-06-23), set minRelayTxFee only 10 times higher
  * so it's still 10 times lower comparing to bitcoin.
  */
@@ -935,9 +935,9 @@ bool AcceptToMemoryPool(CTxMemPool& pool, CValidationState& state, const CTransa
                     return state.Invalid(false, REJECT_INVALID, "bad-txns-invalid-inputs");
             }
 
-            // Reject legacy zCARI mints
+            // Reject legacy zVSX mints
             if (!Params().IsRegTestNet() && tx.HasZerocoinMintOutputs())
-                return state.Invalid(error("%s : tried to include zCARI mint output in tx %s",
+                return state.Invalid(error("%s : tried to include zVSX mint output in tx %s",
                         __func__, tx.GetHash().GetHex()), REJECT_INVALID, "bad-zc-spend-mint");
 
             // are the actual inputs available?
@@ -1734,7 +1734,7 @@ void AddInvalidSpendsToMap(const CBlock& block)
                 if (isPublicSpend) {
                     PublicCoinSpend publicSpend(params);
                     CValidationState state;
-                    if (!ZCARIModule::ParseZerocoinPublicSpend(in, tx, state, publicSpend)){
+                    if (!ZVSYNCModule::ParseZerocoinPublicSpend(in, tx, state, publicSpend)){
                         throw std::runtime_error("Failed to parse public spend");
                     }
                     spend = &publicSpend;
@@ -2039,9 +2039,9 @@ DisconnectResult DisconnectBlock(CBlock& block, CBlockIndex* pindex, CCoinsViewC
         return DISCONNECT_FAILED;
     }
 
-    //Track zCARI money supply
-    if (!UpdateZCARISupplyDisconnect(block, pindex)) {
-        error("%s: Failed to calculate new zCARI supply", __func__);
+    //Track zVSX money supply
+    if (!UpdateZVSYNCSupplyDisconnect(block, pindex)) {
+        error("%s: Failed to calculate new zVSX supply", __func__);
         return DISCONNECT_FAILED;
     }
 
@@ -2142,7 +2142,7 @@ static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck()
 {
-    util::ThreadRename("cari-scriptch");
+    util::ThreadRename("vsync-scriptch");
     scriptcheckqueue.Thread();
 }
 
@@ -2271,7 +2271,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
                 if (isPublicSpend) {
                     libzerocoin::ZerocoinParams* params = consensus.Zerocoin_Params(false);
                     PublicCoinSpend publicSpend(params);
-                    if (!ZCARIModule::ParseZerocoinPublicSpend(txIn, tx, state, publicSpend)){
+                    if (!ZVSYNCModule::ParseZerocoinPublicSpend(txIn, tx, state, publicSpend)){
                         return false;
                     }
                     nValueIn += publicSpend.getDenomination() * COIN;
@@ -2382,7 +2382,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
         setDirtyBlockIndex.insert(pindex);
     }
 
-    //Record zCARI serials
+    //Record zVSX serials
     if (pwalletMain) {
         std::set<uint256> setAddedTx;
         for (const std::pair<libzerocoin::CoinSpend, uint256>& pSpend : vSpends) {
@@ -2425,16 +2425,16 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     // add this block to the view's block chain
     view.SetBestBlock(pindex->GetBlockHash());
 
-    // Update zCARI money supply map
-    if (!UpdateZCARISupplyConnect(block, pindex, fJustCheck)) {
-        return state.DoS(100, error("%s: Failed to calculate new zCARI supply for block=%s height=%d", __func__,
+    // Update zVSX money supply map
+    if (!UpdateZVSYNCSupplyConnect(block, pindex, fJustCheck)) {
+        return state.DoS(100, error("%s: Failed to calculate new zVSX supply for block=%s height=%d", __func__,
                                     block.GetHash().GetHex(), pindex->nHeight), REJECT_INVALID);
     }
 
-    // A one-time event where the zCARI supply was off (due to serial duplication off-chain on main net)
+    // A one-time event where the zVSX supply was off (due to serial duplication off-chain on main net)
     if (Params().NetworkID() == CBaseChainParams::MAIN && pindex->nHeight == consensus.height_last_ZC_WrappedSerials + 1
             && GetZerocoinSupply() != consensus.ZC_WrappedSerialsSupply + GetWrapppedSerialInflationAmount()) {
-        RecalculateCARISupply(consensus.vUpgrades[Consensus::UPGRADE_ZC].nActivationHeight, false);
+        RecalculateVSYNCSupply(consensus.vUpgrades[Consensus::UPGRADE_ZC].nActivationHeight, false);
     }
 
     // Add fraudulent funds to the supply and remove any recovered funds.
@@ -2446,7 +2446,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
         nMoneySupply -= nLocked;
     }
 
-    // Update CARI money supply
+    // Update VSYNC money supply
     nMoneySupply += (nValueOut - nValueIn);
 
     int64_t nTime3 = GetTimeMicros();
@@ -3445,7 +3445,7 @@ bool CheckBlock(const CBlock& block, CValidationState& state, bool fCheckPOW, bo
                 nHeight = (*mi).second->nHeight + 1;
         }
 
-        // CARI
+        // VSYNC
         // It is entierly possible that we don't have enough data and this could fail
         // (i.e. the block could indeed be valid). Store the block for later consideration
         // but issue an initial reject message.
@@ -3487,7 +3487,7 @@ bool CheckBlock(const CBlock& block, CValidationState& state, bool fCheckPOW, bo
             return state.Invalid(false, state.GetRejectCode(), state.GetRejectReason(),
                                              strprintf("Transaction check failed (tx hash %s) %s", tx.GetHash().ToString(), state.GetDebugMessage()));
 
-        // double check that there are no double spent zCARI spends in this block
+        // double check that there are no double spent zVSX spends in this block
         if (tx.HasZerocoinSpendInputs()) {
             for (const CTxIn& txIn : tx.vin) {
                 bool isPublicSpend = txIn.IsZerocoinPublicSpend();
@@ -3496,7 +3496,7 @@ bool CheckBlock(const CBlock& block, CValidationState& state, bool fCheckPOW, bo
                     if (isPublicSpend) {
                         libzerocoin::ZerocoinParams* params = Params().GetConsensus().Zerocoin_Params(false);
                         PublicCoinSpend publicSpend(params);
-                        if (!ZCARIModule::ParseZerocoinPublicSpend(txIn, tx, state, publicSpend)){
+                        if (!ZVSYNCModule::ParseZerocoinPublicSpend(txIn, tx, state, publicSpend)){
                             return false;
                         }
                         spend = publicSpend;
@@ -3509,7 +3509,7 @@ bool CheckBlock(const CBlock& block, CValidationState& state, bool fCheckPOW, bo
                         spend = TxInToZerocoinSpend(txIn);
                     }
                     if (std::count(vBlockSerials.begin(), vBlockSerials.end(), spend.getCoinSerialNumber()))
-                        return state.DoS(100, error("%s : Double spending of zCARI serial %s in block\n Block: %s",
+                        return state.DoS(100, error("%s : Double spending of zVSX serial %s in block\n Block: %s",
                                                     __func__, spend.getCoinSerialNumber().GetHex(), block.ToString()));
                     vBlockSerials.emplace_back(spend.getCoinSerialNumber());
                 }
@@ -3550,11 +3550,11 @@ bool CheckWork(const CBlock block, CBlockIndex* const pindexPrev)
     }
 
     if (block.nBits != nBitsRequired) {
-        // Cari Specific reference to the block with the wrong threshold was used.
+        // Vsync Specific reference to the block with the wrong threshold was used.
         const Consensus::Params& consensus = Params().GetConsensus();
-        if ((block.nTime == (uint32_t) consensus.nCariBadBlockTime) &&
-                (block.nBits == (uint32_t) consensus.nCariBadBlockBits)) {
-            // accept CARI block minted with incorrect proof of work threshold
+        if ((block.nTime == (uint32_t) consensus.nVsyncBadBlockTime) &&
+                (block.nBits == (uint32_t) consensus.nVsyncBadBlockBits)) {
+            // accept VSYNC block minted with incorrect proof of work threshold
             return true;
         }
 
@@ -3816,18 +3816,18 @@ bool AcceptBlock(const CBlock& block, CValidationState& state, CBlockIndex** ppi
         const CTransaction &stakeTxIn = block.vtx[1];
 
         // Inputs
-        std::vector<CTxIn> cariInputs;
-        std::vector<CTxIn> zCARIInputs;
+        std::vector<CTxIn> vsyncInputs;
+        std::vector<CTxIn> zVSXInputs;
 
         for (const CTxIn& stakeIn : stakeTxIn.vin) {
             if(stakeIn.IsZerocoinSpend()){
-                zCARIInputs.push_back(stakeIn);
+                zVSXInputs.push_back(stakeIn);
             }else{
-                cariInputs.push_back(stakeIn);
+                vsyncInputs.push_back(stakeIn);
             }
         }
-        const bool hasCARIInputs = !cariInputs.empty();
-        const bool hasZCARIInputs = !zCARIInputs.empty();
+        const bool hasVSYNCInputs = !vsyncInputs.empty();
+        const bool hasZVSYNCInputs = !zVSXInputs.empty();
 
         // ZC started after PoS.
         // Check for serial double spent on the same block, TODO: Move this to the proper method..
@@ -3849,7 +3849,7 @@ bool AcceptBlock(const CBlock& block, CValidationState& state, CBlockIndex** ppi
                         if (isPublicSpend) {
                             libzerocoin::ZerocoinParams* params = consensus.Zerocoin_Params(false);
                             PublicCoinSpend publicSpend(params);
-                            if (!ZCARIModule::ParseZerocoinPublicSpend(in, tx, state, publicSpend)){
+                            if (!ZVSYNCModule::ParseZerocoinPublicSpend(in, tx, state, publicSpend)){
                                 return false;
                             }
                             spend = publicSpend;
@@ -3865,10 +3865,10 @@ bool AcceptBlock(const CBlock& block, CValidationState& state, CBlockIndex** ppi
                     }
                 }
                 if(tx.IsCoinStake()) continue;
-                if(hasCARIInputs) {
+                if(hasVSYNCInputs) {
                     // Check if coinstake input is double spent inside the same block
-                    for (const CTxIn& cariIn : cariInputs)
-                        if(cariIn.prevout == in.prevout)
+                    for (const CTxIn& vsyncIn : vsyncInputs)
+                        if(vsyncIn.prevout == in.prevout)
                             // double spent coinstake input inside block
                             return error("%s: double spent coinstake input inside block", __func__);
                 }
@@ -3907,12 +3907,12 @@ bool AcceptBlock(const CBlock& block, CValidationState& state, CBlockIndex** ppi
                     for (const CTxIn& in: t.vin) {
                         // If this input is a zerocoin spend, and the coinstake has zerocoin inputs
                         // then store the serials for later check
-                        if(hasZCARIInputs && in.IsZerocoinSpend())
+                        if(hasZVSYNCInputs && in.IsZerocoinSpend())
                             vBlockSerials.push_back(TxInToZerocoinSpend(in).getCoinSerialNumber());
 
                         // Loop through every input of the staking tx
-                        if (hasCARIInputs) {
-                            for (const CTxIn& stakeIn : cariInputs)
+                        if (hasVSYNCInputs) {
+                            for (const CTxIn& stakeIn : vsyncInputs)
                                 // check if the tx input is double spending any coinstake input
                                 if (stakeIn.prevout == in.prevout)
                                     return state.DoS(100, error("%s: input already spent on a previous block", __func__));
@@ -3931,10 +3931,10 @@ bool AcceptBlock(const CBlock& block, CValidationState& state, CBlockIndex** ppi
             // Split height
             splitHeight = prev->nHeight;
 
-            // Now that this loop if completed. Check if we have zCARI inputs.
-            if(hasZCARIInputs) {
-                for (const CTxIn& zCariInput : zCARIInputs) {
-                    libzerocoin::CoinSpend spend = TxInToZerocoinSpend(zCariInput);
+            // Now that this loop if completed. Check if we have zVSX inputs.
+            if(hasZVSYNCInputs) {
+                for (const CTxIn& zVsxInput : zVSXInputs) {
+                    libzerocoin::CoinSpend spend = TxInToZerocoinSpend(zVsxInput);
 
                     // First check if the serials were not already spent on the forked blocks.
                     CBigNum coinSerial = spend.getCoinSerialNumber();
@@ -3954,7 +3954,7 @@ bool AcceptBlock(const CBlock& block, CValidationState& state, CBlockIndex** ppi
 
                     if (!ContextualCheckZerocoinSpendNoSerialCheck(stakeTxIn, &spend, pindex->nHeight, UINT256_ZERO))
                         return state.DoS(100,error("%s: forked chain ContextualCheckZerocoinSpend failed for tx %s", __func__,
-                                                   stakeTxIn.GetHash().GetHex()), REJECT_INVALID, "bad-txns-invalid-zcari");
+                                                   stakeTxIn.GetHash().GetHex()), REJECT_INVALID, "bad-txns-invalid-zvsx");
 
                 }
             }
@@ -3981,11 +3981,11 @@ bool AcceptBlock(const CBlock& block, CValidationState& state, CBlockIndex** ppi
             }
         } else {
             if(!isBlockFromFork)
-                for (const CTxIn& zCariInput : zCARIInputs) {
-                        libzerocoin::CoinSpend spend = TxInToZerocoinSpend(zCariInput);
+                for (const CTxIn& zVsxInput : zVSXInputs) {
+                        libzerocoin::CoinSpend spend = TxInToZerocoinSpend(zVsxInput);
                         if (!ContextualCheckZerocoinSpend(stakeTxIn, &spend, pindex->nHeight, UINT256_ZERO))
                             return state.DoS(100,error("%s: main chain ContextualCheckZerocoinSpend failed for tx %s", __func__,
-                                    stakeTxIn.GetHash().GetHex()), REJECT_INVALID, "bad-txns-invalid-zcari");
+                                    stakeTxIn.GetHash().GetHex()), REJECT_INVALID, "bad-txns-invalid-zvsx");
                 }
 
         }
@@ -5169,7 +5169,7 @@ bool static ProcessMessage(CNode* pfrom, std::string strCommand, CDataStream& vR
             return true;
         }
 
-        // CARI: We use certain sporks during IBD, so check to see if they are
+        // VSYNC: We use certain sporks during IBD, so check to see if they are
         // available. If not, ask the first peer connected for them.
         // TODO: Move this to an instant broadcast of the sporks.
         bool fMissingSporks = !pSporkDB->SporkExists(SPORK_31_NEW_PROTOCOL_ENFORCEMENT_1) ||

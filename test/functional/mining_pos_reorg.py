@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-# Copyright (c) 2019-2020 The CARI developers
+# Copyright (c) 2019-2020 The VSYNC developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 from test_framework.authproxy import JSONRPCException
-from test_framework.test_framework import CariTestFramework
+from test_framework.test_framework import VsyncTestFramework
 from test_framework.util import (
     sync_blocks,
     assert_equal,
@@ -16,7 +16,7 @@ from test_framework.util import (
     DecimalAmt,
 )
 
-class ReorgStakeTest(CariTestFramework):
+class ReorgStakeTest(VsyncTestFramework):
 
     def set_test_params(self):
         self.num_nodes = 3
@@ -51,13 +51,13 @@ class ReorgStakeTest(CariTestFramework):
         wi = self.nodes[nodeid].getwalletinfo()
         return wi['balance'] + wi['immature_balance']
 
-    def check_money_supply(self, expected_cari, expected_zcari):
+    def check_money_supply(self, expected_vsync, expected_zvsx):
         g_info = [self.nodes[i].getinfo() for i in range(self.num_nodes)]
-        # verify that nodes have the expected CARI and zCARI supply
+        # verify that nodes have the expected VSYNC and zVSX supply
         for node in g_info:
-            assert_equal(node['moneysupply'], DecimalAmt(expected_cari))
-            for denom in node['zCARIsupply']:
-                assert_equal(node['zCARIsupply'][denom], DecimalAmt(expected_zcari[denom]))
+            assert_equal(node['moneysupply'], DecimalAmt(expected_vsync))
+            for denom in node['zVSXsupply']:
+                assert_equal(node['zVSXsupply'][denom], DecimalAmt(expected_zvsx[denom]))
 
 
     def run_test(self):
@@ -68,10 +68,10 @@ class ReorgStakeTest(CariTestFramework):
                     return True, x
             return False, None
 
-        # Check CARI and zCARI supply at the beginning
+        # Check VSYNC and zVSX supply at the beginning
         # ------------------------------------------
-        # zCARI supply: 2 coins for each denomination
-        expected_zcari_supply = {
+        # zVSX supply: 2 coins for each denomination
+        expected_zvsx_supply = {
             "1": 2,
             "5": 10,
             "10": 20,
@@ -82,9 +82,9 @@ class ReorgStakeTest(CariTestFramework):
             "5000": 10000,
             "total": 13332,
         }
-        # CARI supply: block rewards minus burned fees for minting
+        # VSYNC supply: block rewards minus burned fees for minting
         expected_money_supply = 250.0 * 330 - 16 * 0.01
-        self.check_money_supply(expected_money_supply, expected_zcari_supply)
+        self.check_money_supply(expected_money_supply, expected_zvsx_supply)
 
         # Stake with node 0 and node 1 up to public spend activation (400)
         # 70 blocks: 5 blocks each (x7)
@@ -230,15 +230,15 @@ class ReorgStakeTest(CariTestFramework):
         res, utxo = findUtxoInList(stakeinput["txid"], stakeinput["vout"], self.nodes[0].listunspent())
         assert (not res or not utxo["spendable"])
 
-        # Verify that CARI and zCARI supplies were properly updated after the spends and reorgs
-        self.log.info("Check CARI and zCARI supply...")
+        # Verify that VSYNC and zVSX supplies were properly updated after the spends and reorgs
+        self.log.info("Check VSYNC and zVSX supply...")
         expected_money_supply += 250.0 * (self.nodes[1].getblockcount() - 330)
         spent_coin_0 = mints[0]["denomination"]
         spent_coin_1 = mints[1]["denomination"]
-        expected_zcari_supply[str(spent_coin_0)] -= spent_coin_0
-        expected_zcari_supply[str(spent_coin_1)] -= spent_coin_1
-        expected_zcari_supply["total"] -= (spent_coin_0 + spent_coin_1)
-        self.check_money_supply(expected_money_supply, expected_zcari_supply)
+        expected_zvsx_supply[str(spent_coin_0)] -= spent_coin_0
+        expected_zvsx_supply[str(spent_coin_1)] -= spent_coin_1
+        expected_zvsx_supply["total"] -= (spent_coin_0 + spent_coin_1)
+        self.check_money_supply(expected_money_supply, expected_zvsx_supply)
         self.log.info("Supply checks out.")
 
 

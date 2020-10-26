@@ -39,7 +39,7 @@ enum NumConnections {
     CONNECTIONS_ALL = (CONNECTIONS_IN | CONNECTIONS_OUT),
 };
 
-/** Model for CARI network client. */
+/** Model for VSYNC network client. */
 class ClientModel : public QObject
 {
     Q_OBJECT

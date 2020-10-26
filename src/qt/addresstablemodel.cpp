@@ -455,7 +455,7 @@ void AddressTableModel::updateEntry(const QString& address,
     const QString& purpose,
     int status)
 {
-    // Update address book model from Cari core
+    // Update address book model from Vsync core
     priv->updateEntry(address, label, isMine, purpose, status);
 }
 

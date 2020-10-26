@@ -13,7 +13,7 @@ static const int MODEL_UPDATE_DELAY = 1000;
 /* AskPassphraseDialog -- Maximum passphrase length */
 static const int MAX_PASSPHRASE_SIZE = 1024;
 
-/* Cari GUI -- Size of icons in status bar */
+/* Vsync GUI -- Size of icons in status bar */
 static const int STATUSBAR_ICONSIZE = 16;
 
 static const bool DEFAULT_SPLASHSCREEN = true;
@@ -51,9 +51,9 @@ static const int MAX_URI_LENGTH = 255;
 #define EXPORT_IMAGE_SIZE 256
 
 
-#define QAPP_ORG_NAME "CARI"
+#define QAPP_ORG_NAME "VSYNC"
 #define QAPP_ORG_DOMAIN "cri.eco"
-#define QAPP_APP_NAME_DEFAULT "CARI-Qt"
-#define QAPP_APP_NAME_TESTNET "CARI-Qt-testnet"
+#define QAPP_APP_NAME_DEFAULT "VSYNC-Qt"
+#define QAPP_APP_NAME_TESTNET "VSYNC-Qt-testnet"
 
 #endif // BITCOIN_QT_GUICONSTANTS_H

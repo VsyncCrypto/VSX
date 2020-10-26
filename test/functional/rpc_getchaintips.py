@@ -10,10 +10,10 @@
 - verify that getchaintips now returns two chain tips.
 """
 
-from test_framework.test_framework import CariTestFramework
+from test_framework.test_framework import VsyncTestFramework
 from test_framework.util import assert_equal
 
-class GetChainTipsTest (CariTestFramework):
+class GetChainTipsTest (VsyncTestFramework):
     def set_test_params(self):
         self.num_nodes = 4
 

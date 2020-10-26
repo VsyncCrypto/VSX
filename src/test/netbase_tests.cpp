@@ -5,7 +5,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "netbase.h"
-#include "test/test_cari.h"
+#include "test/test_vsync.h"
 
 #include <string>
 

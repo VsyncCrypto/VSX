@@ -265,11 +265,11 @@ UniValue stop(const JSONRPCRequest& jsonRequest)
     if (jsonRequest.fHelp || jsonRequest.params.size() > 1)
         throw std::runtime_error(
             "stop\n"
-            "\nStop CARI server.");
+            "\nStop VSYNC server.");
     // Event loop will exit after current HTTP requests have been handled, so
     // this reply will get back to the client.
     StartShutdown();
-    return "CARI server stopping";
+    return "VSYNC server stopping";
 }
 
 
@@ -360,32 +360,32 @@ static const CRPCCommand vRPCCommands[] =
         {"hidden", "waitforblockheight",            &waitforblockheight,        true  },
         {"hidden", "makekeypair",                   &makekeypair,               true  },
 
-        /* CARI features */
-        {"cari", "listmasternodes",                 &listmasternodes,           true  },
-        {"cari", "getmasternodecount",              &getmasternodecount,        true  },
-        {"cari", "createmasternodebroadcast",       &createmasternodebroadcast, true  },
-        {"cari", "decodemasternodebroadcast",       &decodemasternodebroadcast, true  },
-        {"cari", "relaymasternodebroadcast",        &relaymasternodebroadcast,  true  },
-        {"cari", "masternodecurrent",               &masternodecurrent,         true  },
-        {"cari", "startmasternode",                 &startmasternode,           true  },
-        {"cari", "createmasternodekey",             &createmasternodekey,       true  },
-        {"cari", "getmasternodeoutputs",            &getmasternodeoutputs,      true  },
-        {"cari", "listmasternodeconf",              &listmasternodeconf,        true  },
-        {"cari", "getmasternodestatus",             &getmasternodestatus,       true  },
-        {"cari", "getmasternodewinners",            &getmasternodewinners,      true  },
-        {"cari", "getmasternodescores",             &getmasternodescores,       true  },
-        {"cari", "preparebudget",                   &preparebudget,             true  },
-        {"cari", "submitbudget",                    &submitbudget,              true  },
-        {"cari", "mnbudgetvote",                    &mnbudgetvote,              true  },
-        {"cari", "getbudgetvotes",                  &getbudgetvotes,            true  },
-        {"cari", "getnextsuperblock",               &getnextsuperblock,         true  },
-        {"cari", "getbudgetprojection",             &getbudgetprojection,       true  },
-        {"cari", "getbudgetinfo",                   &getbudgetinfo,             true  },
-        {"cari", "mnbudgetrawvote",                 &mnbudgetrawvote,           true  },
-        {"cari", "mnfinalbudget",                   &mnfinalbudget,             true  },
-        {"cari", "checkbudgets",                    &checkbudgets,              true  },
-        {"cari", "mnsync",                          &mnsync,                    true  },
-        {"cari", "spork",                           &spork,                     true  },
+        /* VSYNC features */
+        {"vsync", "listmasternodes",                 &listmasternodes,           true  },
+        {"vsync", "getmasternodecount",              &getmasternodecount,        true  },
+        {"vsync", "createmasternodebroadcast",       &createmasternodebroadcast, true  },
+        {"vsync", "decodemasternodebroadcast",       &decodemasternodebroadcast, true  },
+        {"vsync", "relaymasternodebroadcast",        &relaymasternodebroadcast,  true  },
+        {"vsync", "masternodecurrent",               &masternodecurrent,         true  },
+        {"vsync", "startmasternode",                 &startmasternode,           true  },
+        {"vsync", "createmasternodekey",             &createmasternodekey,       true  },
+        {"vsync", "getmasternodeoutputs",            &getmasternodeoutputs,      true  },
+        {"vsync", "listmasternodeconf",              &listmasternodeconf,        true  },
+        {"vsync", "getmasternodestatus",             &getmasternodestatus,       true  },
+        {"vsync", "getmasternodewinners",            &getmasternodewinners,      true  },
+        {"vsync", "getmasternodescores",             &getmasternodescores,       true  },
+        {"vsync", "preparebudget",                   &preparebudget,             true  },
+        {"vsync", "submitbudget",                    &submitbudget,              true  },
+        {"vsync", "mnbudgetvote",                    &mnbudgetvote,              true  },
+        {"vsync", "getbudgetvotes",                  &getbudgetvotes,            true  },
+        {"vsync", "getnextsuperblock",               &getnextsuperblock,         true  },
+        {"vsync", "getbudgetprojection",             &getbudgetprojection,       true  },
+        {"vsync", "getbudgetinfo",                   &getbudgetinfo,             true  },
+        {"vsync", "mnbudgetrawvote",                 &mnbudgetrawvote,           true  },
+        {"vsync", "mnfinalbudget",                   &mnfinalbudget,             true  },
+        {"vsync", "checkbudgets",                    &checkbudgets,              true  },
+        {"vsync", "mnsync",                          &mnsync,                    true  },
+        {"vsync", "spork",                           &spork,                     true  },
 
 #ifdef ENABLE_WALLET
         /* Wallet */
@@ -411,11 +411,11 @@ static const CRPCCommand vRPCCommands[] =
         {"zerocoin", "exportzerocoins",             &exportzerocoins,           false },
         {"zerocoin", "reconsiderzerocoins",         &reconsiderzerocoins,       false },
         {"zerocoin", "getspentzerocoinamount",      &getspentzerocoinamount,    false },
-        {"zerocoin", "getzcariseed",                &getzcariseed,              false },
-        {"zerocoin", "setzcariseed",                &setzcariseed,              false },
+        {"zerocoin", "getzvsxseed",                &getzvsxseed,              false },
+        {"zerocoin", "setzvsxseed",                &setzvsxseed,              false },
         {"zerocoin", "generatemintlist",            &generatemintlist,          false },
-        {"zerocoin", "searchdzcari",                &searchdzcari,              false },
-        {"zerocoin", "dzcaristate",                 &dzcaristate,               false },
+        {"zerocoin", "searchdzvsx",                &searchdzvsx,              false },
+        {"zerocoin", "dzvsxstate",                 &dzvsxstate,               false },
 #endif // ENABLE_WALLET
 };
 
@@ -598,7 +598,7 @@ std::vector<std::string> CRPCTable::listCommands() const
 
 std::string HelpExampleCli(std::string methodname, std::string args)
 {
-    return "> cari-cli " + methodname + " " + args + "\n";
+    return "> vsync-cli " + methodname + " " + args + "\n";
 }
 
 std::string HelpExampleRpc(std::string methodname, std::string args)

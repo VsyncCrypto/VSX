@@ -2,8 +2,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef CARI_CSPORKDB_H
-#define CARI_CSPORKDB_H
+#ifndef VSYNC_CSPORKDB_H
+#define VSYNC_CSPORKDB_H
 
 #include "fs.h"
 #include "dbwrapper.h"
@@ -25,4 +25,4 @@ public:
 };
 
 
-#endif //CARI_CSPORKDB_H
+#endif //VSYNC_CSPORKDB_H
