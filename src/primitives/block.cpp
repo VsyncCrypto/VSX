@@ -16,7 +16,15 @@
 
 uint256 CBlockHeader::GetHash() const
 {
-    return HashQuark(BEGIN(nVersion), END(nNonce));
+    if (nVersion < 4)  {
+        return XEVAN(BEGIN(nVersion), END(nNonce));
+    }
+
+    if (nVersion == 4) {
+        return XEVAN(BEGIN(nVersion), END(nAccumulatorCheckpoint));
+    }
+    // version >= 4
+    return XEVAN(BEGIN(nVersion), END(nNonce));
 }
 
 std::string CBlock::ToString() const
