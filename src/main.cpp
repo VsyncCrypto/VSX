@@ -1500,7 +1500,7 @@ int64_t GetMasternodePayment(int nHeight)
 
 int64_t GetCollateral()
 {
-    return 1000;
+    return 100000;
 }
 
 bool IsInitialBlockDownload()
