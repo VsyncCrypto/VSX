@@ -1476,26 +1476,94 @@ double ConvertBitsToDouble(unsigned int nBits)
 
 int64_t GetBlockValue(int nHeight)
 {
-    int64_t nSubsidy = 0;
+    // nHeight-1 to account for the historical bug (this function was called
+    // passing the previous block height, instead of the current block height)
+    // See issue #814 and PR #967
+    if (nHeight != 1434250) nHeight--;
 
-         if (nHeight >=       1 && nHeight <=    5000) {nSubsidy = 20.00 * COIN;}
-    else if (nHeight >=    5001 && nHeight <=  530600) {nSubsidy =  0.20 * COIN;}
-    else if (nHeight >=  530601 && nHeight <= 1056200) {nSubsidy =  1.00 * COIN;}
-    else if (nHeight >= 1056201 && nHeight <= 1581800) {nSubsidy =  2.00 * COIN;}
-    else if (nHeight >= 1581801 && nHeight <= 2107400) {nSubsidy =  3.00 * COIN;}
-    else if (nHeight >= 2107401 && nHeight <= 2633000) {nSubsidy =  4.00 * COIN;}
-    else if (nHeight >= 2633001 && nHeight <= 3158600) {nSubsidy =  4.50 * COIN;}
-    else if (nHeight >= 3158601 && nHeight <= 3684200) {nSubsidy =  2.00 * COIN;}
-    else if (nHeight >= 3684201 && nHeight <= 4209800) {nSubsidy =  1.50 * COIN;}
-    else if (nHeight >= 4209801 && nHeight <= 4735400) {nSubsidy =  1.00 * COIN;}
-    else nSubsidy = 0;
+    if (Params().NetworkID() == CBaseChainParams::TESTNET) {
+        if (nHeight < 200 && nHeight > 0)
+            return 250000 * COIN;
+    }
+
+    if (Params().IsRegTestNet()) {
+        if (nHeight == 0)
+            return 250 * COIN;
+
+    }
+
+    const Consensus::Params& consensus = Params().GetConsensus();
+    const bool isPoSActive = consensus.NetworkUpgradeActive(nHeight, Consensus::UPGRADE_POS);
+    int64_t nSubsidy = 0;
+    if (nHeight == 0) {
+        nSubsidy = 125000000 * COIN;
+    } else if (nHeight < 86400 && nHeight > 0) {
+        nSubsidy = 225 * COIN;
+    } else if (nHeight < 151200 && nHeight >= 86400) {
+        nSubsidy = 225 * COIN;
+    } else if (!isPoSActive && nHeight >= 151200) {
+        nSubsidy = 80 * COIN;
+    } else if (nHeight <= 302399 && isPoSActive) {
+        nSubsidy = 75 * COIN;
+    } else if (nHeight <= 345599 && nHeight >= 302400) {
+        nSubsidy = 67 * COIN;
+    } else if (nHeight <= 388799 && nHeight >= 345600) {
+        nSubsidy = 59 * COIN;
+    } else if (nHeight <= 431999 && nHeight >= 388800) {
+        nSubsidy = 51 * COIN;
+    } else if (nHeight <= 475199 && nHeight >= 432000) {
+        nSubsidy = 43 * COIN;
+    } else if (nHeight <= 518399 && nHeight >= 475200) {
+        nSubsidy = 35 * COIN;
+    } else if (nHeight <= 561599 && nHeight >= 518400) {
+        nSubsidy = 27 * COIN;
+    } else if (nHeight <= 604799 && nHeight >= 561600) {
+        nSubsidy = 19 * COIN;
+    } else if (nHeight <= 647999 && nHeight >= 604800) {
+        nSubsidy = 11 * COIN;
+    } else if (nHeight <= 1049999 && nHeight >= 648000) {
+        nSubsidy = 3 * COIN;
+    } else if (nHeight <= 1434249 && nHeight >= 1050000) {
+        nSubsidy = 5 * COIN;
+    } else if (nHeight > 1434249) {
+        nSubsidy = 10 * COIN;
+    }
 
     return nSubsidy;
 }
 
 int64_t GetMasternodePayment(int nHeight)
 {
-    return (nHeight >= 5001 ? GetBlockValue(nHeight) * 0.80 : 0);
+    const Consensus::Params& consensus = Params().GetConsensus();
+    const bool isPoSActive = consensus.NetworkUpgradeActive(nHeight, Consensus::UPGRADE_POS);
+    int64_t blockValue = GetBlockValue(nHeight);
+    int64_t ret = 0;
+
+    if (!isPoSActive) {
+        ret = blockValue * 0;
+    } else if (isPoSActive && nHeight <= 1050000) {
+        ret = blockValue * 0.70;
+    } else if (nHeight > 1050000 && nHeight <= 1100000) {
+        ret = blockValue * 0.71;
+    } else if (nHeight > 1100000 && nHeight <= 1150000) {
+        ret = blockValue * 0.72;
+    } else if (nHeight > 1150000 && nHeight <= 1200000) {
+        ret = blockValue * 0.73;
+    } else if (nHeight > 1200000 && nHeight <= 1250000) {
+        ret = blockValue * 0.74;
+    } else if (nHeight > 1250000 && nHeight <= 1300000) {
+        ret = blockValue * 0.75;
+    } else if (nHeight > 1300000 && nHeight <= 1350000) {
+        ret = blockValue * 0.76;
+    } else if (nHeight > 1350000 && nHeight <= 1400000) {
+        ret = blockValue * 0.77;
+    } else if (nHeight > 1400000 && nHeight <= 1434250) {
+        ret = blockValue * 0.78;
+    } else if (nHeight > 1434250) {
+        ret = blockValue * 0.40; 
+    }
+
+    return ret;
 }
 
 int64_t GetCollateral()
@@ -3328,7 +3396,7 @@ bool CheckColdStakeFreeOutput(const CTransaction& tx, const int nHeight)
             CTransaction txPrev; uint256 hashBlock;
             if (!GetTransaction(tx.vin[0].prevout.hash, txPrev, hashBlock, true))
                 return error("%s : read txPrev failed: %s",  __func__, tx.vin[0].prevout.hash.GetHex());
-            CAmount amtIn = txPrev.vout[tx.vin[0].prevout.n].nValue + GetBlockValue(nHeight - 1);
+            CAmount amtIn = txPrev.vout[tx.vin[0].prevout.n].nValue + GetBlockValue(nHeight);
             CAmount amtOut = 0;
             for (unsigned int i = 1; i < outs-1; i++) amtOut += tx.vout[i].nValue;
             if (amtOut != amtIn)
