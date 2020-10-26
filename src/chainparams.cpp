@@ -26,7 +26,6 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
     txNew.vin[0].scriptSig = CScript() << 486604799 << CScriptNum(4) << std::vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
     txNew.vout[0].nValue = genesisReward;
     txNew.vout[0].scriptPubKey = genesisOutputScript;
-    txNew.fPoWAlternative = false;
 
     CBlock genesis;
     genesis.vtx.push_back(txNew);
@@ -44,7 +43,7 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
  * be spent as it did not originally exist in the database.
  *
  *  CBlock(hash=000005bd970b7d83eb879472fb48b2c01ed8155d7126ac3e0c201755c0c85c23, ver=1, hashPrevBlock=0000000000000000000000000000000000000000000000000000000000000000, hashMerkleRoot=848a9da56df8cf4057ef911b7a1837048bea98c1e782b6eff779fd0325c77530, nTime=1594502306, nBits=1e0ffff0, nNonce=4438800, vtx=1)
- *    CTransaction(hash=848a9da56d, ver=1, vin.size=1, vout.size=1, nLockTime=0, fPoWAlternative=false)
+ *    CTransaction(hash=848a9da56d, ver=1, vin.size=1, vout.size=1, nLockTime=0)
  *      CTxIn(COutPoint(0000000000000000000000000000000000000000000000000000000000000000, 4294967295), coinbase 04ffff001d01044c4c323032302d30372d31312054686520776f726c64277320666972737420636172626f6e206372656469742067656e65726174696e6720626c6f636b636861696e206279205a696f4661627279)
  *      CTxOut(nValue=0.00000000, scriptPubKey=4104678afdb0fe5548271967f1a671)
  **/
@@ -246,7 +245,7 @@ public:
 
         /**
          *  CBlock(hash=000005bd970b7d83eb879472fb48b2c01ed8155d7126ac3e0c201755c0c85c23, ver=1, hashPrevBlock=0000000000000000000000000000000000000000000000000000000000000000, hashMerkleRoot=848a9da56df8cf4057ef911b7a1837048bea98c1e782b6eff779fd0325c77530, nTime=1594502306, nBits=1e0ffff0, nNonce=4438800, vtx=1)
-         *    CTransaction(hash=848a9da56d, ver=1, vin.size=1, vout.size=1, nLockTime=0, fPoWAlternative=false)
+         *    CTransaction(hash=848a9da56d, ver=1, vin.size=1, vout.size=1, nLockTime=0)
          *      CTxIn(COutPoint(0000000000000000000000000000000000000000000000000000000000000000, 4294967295), coinbase 04ffff001d01044c4c323032302d30372d31312054686520776f726c64277320666972737420636172626f6e206372656469742067656e65726174696e6720626c6f636b636861696e206279205a696f4661627279)
          *      CTxOut(nValue=0.00000000, scriptPubKey=4104678afdb0fe5548271967f1a671)
          */
@@ -378,7 +377,7 @@ public:
 
         /**
          *  CBlock(hash=000005bd970b7d83eb879472fb48b2c01ed8155d7126ac3e0c201755c0c85c23, ver=1, hashPrevBlock=0000000000000000000000000000000000000000000000000000000000000000, hashMerkleRoot=848a9da56df8cf4057ef911b7a1837048bea98c1e782b6eff779fd0325c77530, nTime=1594502306, nBits=1e0ffff0, nNonce=4438800, vtx=1)
-         *    CTransaction(hash=848a9da56d, ver=1, vin.size=1, vout.size=1, nLockTime=0, fPoWAlternative=false)
+         *    CTransaction(hash=848a9da56d, ver=1, vin.size=1, vout.size=1, nLockTime=0)
          *      CTxIn(COutPoint(0000000000000000000000000000000000000000000000000000000000000000, 4294967295), coinbase 04ffff001d01044c4c323032302d30372d31312054686520776f726c64277320666972737420636172626f6e206372656469742067656e65726174696e6720626c6f636b636861696e206279205a696f4661627279)
          *      CTxOut(nValue=0.00000000, scriptPubKey=4104678afdb0fe5548271967f1a671)
          */

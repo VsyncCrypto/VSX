@@ -79,7 +79,6 @@ private:
     SendCustomFeeDialog* customFeeDialog = nullptr;
     bool isCustomFeeSelected = false;
     bool fDelegationsChecked = false;
-    bool fPoWAlternative = false;
     CAmount cachedDelegatedBalance{0};
 
     int nDisplayUnit;
