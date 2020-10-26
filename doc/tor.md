@@ -47,11 +47,11 @@ versions of Tor see [Section 3](#3-automatically-listen-on-tor).*
 
 	HiddenServiceDir /var/lib/tor/vsync-service/
 	HiddenServiceVersion 2
-	HiddenServicePort 31813 127.0.0.1:31813
+	HiddenServicePort 65010 127.0.0.1:65010
 	HiddenServicePort 61472 127.0.0.1:61472
 
 The directory can be different of course, but (both) port numbers should be equal to
-your vsyncd's P2P listen port (31813 by default).
+your vsyncd's P2P listen port (65010 by default).
 
 	-externalip=X   You can tell vsync about its publicly reachable address using
 	                this option, and this can be a v2 .onion address (v3 .onion
@@ -87,7 +87,7 @@ as well, use `discover` instead:
 
 	./vsyncd ... -discover
 
-and open port 31813 on your firewall (or use -upnp).
+and open port 65010 on your firewall (or use -upnp).
 
 If you only want to use Tor to reach .onion addresses, but not use it as a proxy
 for normal IPv4/IPv6 communication, use:

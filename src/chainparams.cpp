@@ -198,7 +198,7 @@ public:
         pchMessageStart[1] = 0xc3;
         pchMessageStart[2] = 0xfb;
         pchMessageStart[3] = 0xe8;
-        nDefaultPort       = 31813;
+        nDefaultPort       = 65010;
 
         // Note that of those with the service bits flag, most only support a subset of possible options
         vSeeds.push_back(CDNSSeedData("cri.eco", "mainnet.seed.cri.eco", true));                        // Official DNS Seeder
