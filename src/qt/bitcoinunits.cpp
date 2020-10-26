@@ -21,18 +21,18 @@ BitcoinUnits::BitcoinUnits(QObject* parent) : QAbstractListModel(parent),
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(VSYNC);
-    unitlist.append(mVSYNC);
-    unitlist.append(uVSYNC);
+    unitlist.append(VSX);
+    unitlist.append(mVSX);
+    unitlist.append(uVSX);
     return unitlist;
 }
 
 bool BitcoinUnits::valid(int unit)
 {
     switch (unit) {
-    case VSYNC:
-    case mVSYNC:
-    case uVSYNC:
+    case VSX:
+    case mVSX:
+    case uVSX:
         return true;
     default:
         return false;
@@ -42,11 +42,11 @@ bool BitcoinUnits::valid(int unit)
 QString BitcoinUnits::id(int unit)
 {
     switch (unit) {
-    case VSYNC:
+    case VSX:
         return QString("vsx");
-    case mVSYNC:
+    case mVSX:
         return QString("mvsx");
-    case uVSYNC:
+    case uVSX:
         return QString::fromUtf8("uvsx");
     default:
         return QString("???");
@@ -60,22 +60,22 @@ QString BitcoinUnits::name(int unit, bool isZvsync)
     if(isZvsync) z = "z";
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
-        case VSYNC:
+        case VSX:
             return z + CURR_UNIT;
-        case mVSYNC:
+        case mVSX:
             return z + QString("m") + CURR_UNIT;
-        case uVSYNC:
+        case uVSX:
             return z + QString::fromUtf8("μ") + CURR_UNIT;
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
-        case VSYNC:
+        case VSX:
             return z + QString("t") + CURR_UNIT;
-        case mVSYNC:
+        case mVSX:
             return z + QString("mt") + CURR_UNIT;
-        case uVSYNC:
+        case uVSX:
             return z + QString::fromUtf8("μt") + CURR_UNIT;
         default:
             return QString("???");
@@ -88,22 +88,22 @@ QString BitcoinUnits::description(int unit)
     const QString CURR_UNIT = QString(CURRENCY_UNIT.c_str());
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
-        case VSYNC:
+        case VSX:
             return CURR_UNIT;
-        case mVSYNC:
+        case mVSX:
             return QString("Milli-") + CURR_UNIT + QString(" (1 / 1" THIN_SP_UTF8 "000)");
-        case uVSYNC:
+        case uVSX:
             return QString("Micro-") + CURR_UNIT + QString(" (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
-        case VSYNC:
+        case VSX:
             return QString("Test") + CURR_UNIT;
-        case mVSYNC:
+        case mVSX:
             return QString("Milli-Test") + CURR_UNIT + QString(" (1 / 1" THIN_SP_UTF8 "000)");
-        case uVSYNC:
+        case uVSX:
             return QString("Micro-Test") + CURR_UNIT + QString(" (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
@@ -114,11 +114,11 @@ QString BitcoinUnits::description(int unit)
 qint64 BitcoinUnits::factor(int unit)
 {
     switch (unit) {
-    case VSYNC:
+    case VSX:
         return 100000000;
-    case mVSYNC:
+    case mVSX:
         return 100000;
-    case uVSYNC:
+    case uVSX:
         return 100;
     default:
         return 100000000;
@@ -128,11 +128,11 @@ qint64 BitcoinUnits::factor(int unit)
 int BitcoinUnits::decimals(int unit)
 {
     switch (unit) {
-    case VSYNC:
+    case VSX:
         return 8;
-    case mVSYNC:
+    case mVSX:
         return 5;
-    case uVSYNC:
+    case uVSX:
         return 2;
     default:
         return 0;

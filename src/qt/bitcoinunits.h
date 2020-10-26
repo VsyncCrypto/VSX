@@ -57,13 +57,13 @@ class BitcoinUnits : public QAbstractListModel
 public:
     explicit BitcoinUnits(QObject* parent);
 
-    /** VSYNC units.
+    /** VSX units.
       @note Source: https://en.bitcoin.it/wiki/Units . Please add only sensible ones
      */
     enum Unit {
-        VSYNC,
-        mVSYNC,
-        uVSYNC
+        VSX,
+        mVSX,
+        uVSX
     };
 
     enum SeparatorStyle {

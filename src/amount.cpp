@@ -8,7 +8,7 @@
 
 #include "tinyformat.h"
 
-const std::string CURRENCY_UNIT = "VSYNC";
+const std::string CURRENCY_UNIT = "VSX";
 
 CFeeRate::CFeeRate(const CAmount& nFeePaid, size_t nSize)
 {
