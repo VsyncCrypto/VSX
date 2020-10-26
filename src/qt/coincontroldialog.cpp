@@ -687,7 +687,7 @@ void CoinControlDialog::updateLabels()
     }
 
     // actually update labels
-    int nDisplayUnit = BitcoinUnits::VSYNC;
+    int nDisplayUnit = BitcoinUnits::VSX;
     if (model && model->getOptionsModel())
         nDisplayUnit = model->getOptionsModel()->getDisplayUnit();
 
