@@ -1476,6 +1476,12 @@ double ConvertBitsToDouble(unsigned int nBits)
 
 int64_t GetBlockValue(int nHeight)
 {
+
+    // nHeight-1 to account for the historical bug (this function was called
+    // passing the previous block height, instead of the current block height)
+    // See issue #814 and PR #967
+    if (nHeight != 1434250) nHeight--;
+
     if (Params().NetworkID() == CBaseChainParams::TESTNET) {
         if (nHeight < 200 && nHeight > 0)
             return 250000 * COIN;
@@ -3392,7 +3398,7 @@ bool CheckColdStakeFreeOutput(const CTransaction& tx, const int nHeight)
             CTransaction txPrev; uint256 hashBlock;
             if (!GetTransaction(tx.vin[0].prevout.hash, txPrev, hashBlock, true))
                 return error("%s : read txPrev failed: %s",  __func__, tx.vin[0].prevout.hash.GetHex());
-            CAmount amtIn = txPrev.vout[tx.vin[0].prevout.n].nValue + GetBlockValue(nHeight - 1);
+            CAmount amtIn = txPrev.vout[tx.vin[0].prevout.n].nValue + GetBlockValue(nHeight);
             CAmount amtOut = 0;
             for (unsigned int i = 1; i < outs-1; i++) amtOut += tx.vout[i].nValue;
             if (amtOut != amtIn)

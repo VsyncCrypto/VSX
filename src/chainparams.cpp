@@ -67,15 +67,16 @@ static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
 	(     0, uint256("00000a47e5f67b18cc1bd58c9e50b5295370cc36df1245a2cd07bf6bb2486e72"))
-    (259214, uint256("4e5f7d61d3cbd896c9713abaa925a7b21aa7114ecf22dc893729025a6246ad1a"))
-    (259215, uint256("5bb80cc05579203e2c0b8b2e9595c48f6a026821fcc7f50b6a2e9bb56e68af26"))
-    (259216, uint256("4e8a14bdce2ae8a3100dce9255db3cad6a3c2c6b7638287f69501114fa76753b"))
-    (259389, uint256("0707d2a7b0dac00980438ad37cb54dc45edc82f9ddd71b4ae1b6c5e45dfed71e"))
     (299491, uint256("6edd1b17ab2855ad409c87662c17d418385f4bb27b9d6b6aa87ae0968eff5398"))
     (299492, uint256("384318efe10e5ca05d4270154b7f11b4269d888e6da24bb47f2206292803f081"))
     (1434249, uint256("566c66a2b4fc9a8465045970be8ab7f9d1b5cc5d44af496db2129534a36e9463"))
     (1434250, uint256("beb62c1c9c5e9802c62b3ff1dd5de734b3635f37868765b72d07f51980238aca"))
-    (1438350, uint256("0758c1037c646714a222c0d70ba7d4ea38aa551e48ced0682d76138764ccd2f1"));
+    (1438350, uint256("0758c1037c646714a222c0d70ba7d4ea38aa551e48ced0682d76138764ccd2f1"))
+    (1485050, uint256("ac3d82541580ab16ed917bbb7fa8b19705e9e8493dfb7394abd309ff3acc53bb"))
+    (1485070, uint256("158a3c4df67ae794d582d7fad83516a1d580b98f5641eed5d0ba75465bf78eba"))
+    (1485100, uint256("25b872c94fca221f8abd428491fdbec8f526f2b4ce7af05d66ab729f414d821e"))
+    (1485150, uint256("ee0c12848a99c4b16758bcad75a7d3290039634429ed14a868af8fb2e9ac7713"))
+    (1485500, uint256("1e8a32860cd655ad9a1060f619aa6c33e692389434e635d04abceff541a15420"));
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
@@ -185,10 +186,10 @@ public:
 
         consensus.vUpgrades[Consensus::UPGRADE_ZC].hashActivationBlock          = uint256S("0x384318efe10e5ca05d4270154b7f11b4269d888e6da24bb47f2206292803f081");
         consensus.vUpgrades[Consensus::UPGRADE_ZC_V2].hashActivationBlock       = uint256S("0x1");
-        consensus.vUpgrades[Consensus::UPGRADE_BIP65].hashActivationBlock       = uint256S("0x1");
+        consensus.vUpgrades[Consensus::UPGRADE_BIP65].hashActivationBlock       = uint256S("0xac3d82541580ab16ed917bbb7fa8b19705e9e8493dfb7394abd309ff3acc53bb");
         consensus.vUpgrades[Consensus::UPGRADE_ZC_PUBLIC].hashActivationBlock   = uint256S("0x1");
-        consensus.vUpgrades[Consensus::UPGRADE_V3_4].hashActivationBlock        = uint256S("0x1");
-        consensus.vUpgrades[Consensus::UPGRADE_V4_0].hashActivationBlock        = uint256S("0x1");
+        consensus.vUpgrades[Consensus::UPGRADE_V3_4].hashActivationBlock        = uint256S("0x158a3c4df67ae794d582d7fad83516a1d580b98f5641eed5d0ba75465bf78eba");
+        consensus.vUpgrades[Consensus::UPGRADE_V4_0].hashActivationBlock        = uint256S("0x25b872c94fca221f8abd428491fdbec8f526f2b4ce7af05d66ab729f414d821e");
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
