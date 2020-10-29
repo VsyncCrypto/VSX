@@ -6,7 +6,7 @@
 
 export LC_ALL=C.UTF-8
 
-cd "build/cari-$HOST" || (echo "could not enter distdir build/cari-$HOST"; exit 1)
+cd "build/vsync-$HOST" || (echo "could not enter distdir build/vsync-$HOST"; exit 1)
 
 if [ "$RUN_UNIT_TESTS" = "true" ]; then
   BEGIN_FOLD unit-tests
