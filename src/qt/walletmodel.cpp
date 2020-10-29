@@ -74,7 +74,7 @@ bool WalletModel::isColdStakingNetworkelyEnabled() const
 
 bool WalletModel::isStakingStatusActive() const
 {
-    return wallet->pStakerStatus->IsActive();
+    return wallet && wallet->pStakerStatus && wallet->pStakerStatus->IsActive();
 }
 
 bool WalletModel::isHDEnabled() const
@@ -194,6 +194,7 @@ bool WalletModel::isColdStaking() const
 
 void WalletModel::updateStatus()
 {
+    if (!wallet) return;
     EncryptionStatus newEncryptionStatus = getEncryptionStatus();
 
     if (cachedEncryptionStatus != newEncryptionStatus)
@@ -202,12 +203,14 @@ void WalletModel::updateStatus()
 
 bool WalletModel::isWalletUnlocked() const
 {
+    if (!wallet) return false;
     EncryptionStatus status = getEncryptionStatus();
     return (status == Unencrypted || status == Unlocked);
 }
 
 bool WalletModel::isWalletLocked(bool fFullUnlocked) const
 {
+    if (!wallet) return false;
     EncryptionStatus status = getEncryptionStatus();
     return (status == Locked || (!fFullUnlocked && status == UnlockedForStaking));
 }
@@ -625,6 +628,7 @@ RecentRequestsTableModel* WalletModel::getRecentRequestsTableModel()
 
 WalletModel::EncryptionStatus WalletModel::getEncryptionStatus() const
 {
+    if (!wallet) throw std::runtime_error("Error, cannot get encryption status. Wallet doesn't exist");
     if (!wallet->IsCrypted()) {
         return Unencrypted;
     } else if (wallet->fWalletUnlockStaking) {

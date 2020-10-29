@@ -3,7 +3,7 @@ VSYNC Core
 
 Setup
 ---------------------
-[VSYNC Core](http://cri.eco/wallet) is the original VSYNC client and it builds the backbone of the network. However, it downloads and stores the entire history of VSYNC transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
+[VSYNC Core](http://vsync.io/wallet) is the original VSYNC client and it builds the backbone of the network. However, it downloads and stores the entire history of VSYNC transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
 
 Running
 ---------------------
@@ -26,9 +26,9 @@ Drag VSYNC-Qt to your applications folder, and then run VSYNC-Qt.
 
 ### Need Help?
 
-* See the documentation at the [VSYNC Wiki](https://github.com/Carbon-Reduction-Initiative/VSYNC/wiki)
+* See the documentation at the [VSYNC Wiki](https://github.com/VsyncCrypto/VSX/wiki)
 for help and more information.
-* Ask for help on our Discord server [Discord Server](https://discord.gg/m9CwKFp)
+* Ask for help on our Discord server [Discord Server](https://discord.gg/Arqhyqg)
 
 Building
 ---------------------
@@ -55,7 +55,7 @@ The VSYNC repo's [root README](/README.md) contains relevant information on the 
 - [Dnsseed Policy](dnsseed-policy.md)
 
 ### Resources
-* Discuss on our [VSYNC Discord](https://discord.gg/m9CwKFp).
+* Discuss on our [VSYNC Discord](https://discord.gg/Arqhyqg).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

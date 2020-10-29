@@ -52,7 +52,7 @@ static const int MAX_URI_LENGTH = 255;
 
 
 #define QAPP_ORG_NAME "VSYNC"
-#define QAPP_ORG_DOMAIN "cri.eco"
+#define QAPP_ORG_DOMAIN "vsync.io"
 #define QAPP_APP_NAME_DEFAULT "VSYNC-Qt"
 #define QAPP_APP_NAME_TESTNET "VSYNC-Qt-testnet"
 

@@ -73,7 +73,6 @@ SendWidget::SendWidget(VSYNCGUI* parent) :
     connect(ui->btnUri, &OptionButton::clicked, this, &SendWidget::onOpenUriClicked);
     connect(ui->pushButtonReset, &QPushButton::clicked, [this](){ onResetCustomOptions(true); });
     connect(ui->checkBoxDelegations, &QCheckBox::stateChanged, this, &SendWidget::onCheckBoxChanged);
-    connect(ui->checkBoxPoWAlternative, &QCheckBox::stateChanged, this, &SendWidget::onCheckBoxChanged);
 
     setCssProperty(ui->coinWidget, "container-coin-type");
     setCssProperty(ui->labelLine, "container-divider");
@@ -147,7 +146,6 @@ void SendWidget::refreshAmounts()
                     false
                     )
     );
-    ui->checkBoxPoWAlternative->setToolTip(tr("I hereby certify that this transaction replaces one performed on<br>the Bitcoin proof-of-work network not a transaction in the traditional<br>banking or any alternative transfer system"));
     // show or hide delegations checkbox if need be
     showHideCheckBoxDelegations();
 }
@@ -215,7 +213,6 @@ void SendWidget::onResetCustomOptions(bool fRefreshAmounts)
     ui->btnChangeAddress->setActive(false);
     ui->btnCoinControl->setActive(false);
     if (ui->checkBoxDelegations->isChecked()) ui->checkBoxDelegations->setChecked(false);
-    if (ui->checkBoxPoWAlternative->isChecked()) ui->checkBoxPoWAlternative->setChecked(false);
     if (fRefreshAmounts) {
         refreshAmounts();
     }

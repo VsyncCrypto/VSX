@@ -149,6 +149,8 @@ public:
     /* current staking status from the miner thread **/
     bool isStakingStatusActive() const;
 
+    bool hasWallet() { return wallet; };
+
     bool isHDEnabled() const;
     bool upgradeWallet(std::string& upgradeError);
 

@@ -5,7 +5,7 @@ VSYNC Core integration/staging repository
 
 VSYNC is the world's first carbon credit generating blockchain, being implemented by Carbon Reduction Initiative (CRI) Ltd as a low-energy, decentralised masternode blockchain that will generate carbon credits certified by a third-party issuing body. It is an open source cryptocurrency focused on fast, private transactions using the Zerocoin protocol, with low transaction fees & low environmental footprint.
 
-More information, including the Business Plan, can be found at [cri.eco](http://www.cri.eco). Join the community at [CRI Twitter](https://twitter.com/CRILtdUK).
+More information, including the Business Plan, can be found at [vsync.io](http://www.vsync.io). Join the community at [CRI Twitter](https://twitter.com/VsyncCrypto).
 
 ### Coin Specs
 <table>

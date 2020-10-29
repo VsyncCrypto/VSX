@@ -519,7 +519,7 @@
             <item>
              <widget class="QLabel" name="labelMessage">
               <property name="text">
-               <string>Amount of VSYNC and zVSX staked.</string>
+               <string>Amount of VSX and zVSX staked.</string>
               </property>
              </widget>
             </item>
@@ -567,7 +567,7 @@
           <item>
            <widget class="QLabel" name="labelAmountVsync">
             <property name="text">
-             <string notr="true">0 VSYNC</string>
+             <string notr="true">0 VSX</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -694,7 +694,7 @@
                 <item>
                  <widget class="QLabel" name="labelVsync">
                   <property name="text">
-                   <string notr="true">VSYNC</string>
+                   <string notr="true">VSX</string>
                   </property>
                  </widget>
                 </item>

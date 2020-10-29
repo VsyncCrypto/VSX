@@ -1,8 +1,8 @@
-VSYNC Core version *4.1.0* is now available from:  <https://github.com/Carbon-Reduction-Initiative/VSYNC/releases>
+VSYNC Core version *4.1.0* is now available from:  <https://github.com/VsyncCrypto/VSX/releases>
 
 This is a new major version release, including various bug fixes and performance improvements, as well as updated translations.
 
-Please report bugs using the issue tracker at github: <https://github.com/Carbon-Reduction-Initiative/VSYNC/issues>
+Please report bugs using the issue tracker at github: <https://github.com/VsyncCrypto/VSX/issues>
 
 
 Recommended Update
@@ -41,7 +41,7 @@ As well as new possibilities like the account extended public key that enables d
 
 This work includes a customization/extension to the [BIP44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki) standard. We have included an unique staking keys derivation path which introduced the deterministic generation/recovery of staking addresses.
 
-An extended description of this large work can be found in the PR [here](https://github.com/Carbon-Reduction-Initiative/VSYNC/pull/1327).
+An extended description of this large work can be found in the PR [here](https://github.com/VsyncCrypto/VSX/pull/1327).
 
 ### HD Wallet FAQ
 
@@ -89,38 +89,38 @@ GUI Changes
 
 ### Keyboard navigation
 
-Dialogs can now be accepted with the `ENTER` (`RETURN`) key, and dismissed with the `ESC` key ([#1392](https://github.com/Carbon-Reduction-Initiative/VSYNC/pull/1392)).
+Dialogs can now be accepted with the `ENTER` (`RETURN`) key, and dismissed with the `ESC` key ([#1392](https://github.com/VsyncCrypto/VSX/pull/1392)).
 
 ### Address sorting
 
 Address sorting in "My Addresses" / "Contacts" / "Cold Staking" can now be customized, setting it either by label (default), by address, or by creation date, ascending (default) or descending order.
-Addresses in the dropdown of the "Send Transaction" and "Send Delegation" widgets are now automatically sorted by label with ascending order ([#1393](https://github.com/Carbon-Reduction-Initiative/VSYNC/pull/1393)).
+Addresses in the dropdown of the "Send Transaction" and "Send Delegation" widgets are now automatically sorted by label with ascending order ([#1393](https://github.com/VsyncCrypto/VSX/pull/1393)).
 
 ### Custom Fee
 
-The custom fee selected when sending a transaction is now saved in the wallet database and persisted across multiple sends and wallet's restarts ([#1406](https://github.com/Carbon-Reduction-Initiative/VSYNC/pull/1406)). The fee is now also validated against the maximum value (10000 times `minRelayTxFee`) and minimum value (`minTxFee`) ([#1576](https://github.com/Carbon-Reduction-Initiative/VSYNC/pull/1576)).
+The custom fee selected when sending a transaction is now saved in the wallet database and persisted across multiple sends and wallet's restarts ([#1406](https://github.com/VsyncCrypto/VSX/pull/1406)). The fee is now also validated against the maximum value (10000 times `minRelayTxFee`) and minimum value (`minTxFee`) ([#1576](https://github.com/VsyncCrypto/VSX/pull/1576)).
 
 ### Include delegations in send
 
-The send and cold-staking page present a checkbox to make the automatic input selection algorithm include delegated (P2CS) utxos if needed. The option is unchecked by default. ([#1391](https://github.com/Carbon-Reduction-Initiative/VSYNC/pull/1391))
+The send and cold-staking page present a checkbox to make the automatic input selection algorithm include delegated (P2CS) utxos if needed. The option is unchecked by default. ([#1391](https://github.com/VsyncCrypto/VSX/pull/1391))
 
 ### Optional Hiding of Staking Charts
 
-The staking charts can now be hidden at startup (with a flag `--hidecharts`) or at runtime with a checkbox in settings --> options --> display ([#1475](https://github.com/Carbon-Reduction-Initiative/VSYNC/pull/1475)).
+The staking charts can now be hidden at startup (with a flag `--hidecharts`) or at runtime with a checkbox in settings --> options --> display ([#1475](https://github.com/VsyncCrypto/VSX/pull/1475)).
 
 ### Context Lock/Unlock
 
 Present the unlock dialog directly (instead of an error message), whenever an action on encrypted/locked wallet requires full unlock.<br>
 
-Restore the previous locking state ("locked" or "locked for staking only") when the action is completed. ([#1387](https://github.com/Carbon-Reduction-Initiative/VSYNC/pull/1387))
+Restore the previous locking state ("locked" or "locked for staking only") when the action is completed. ([#1387](https://github.com/VsyncCrypto/VSX/pull/1387))
 
 ### External Change Address Warning
 
-A new warning/confirmation dialog is displayed if a custom change address is not part of the wallet. ([#1527](https://github.com/Carbon-Reduction-Initiative/VSYNC/pull/1527))
+A new warning/confirmation dialog is displayed if a custom change address is not part of the wallet. ([#1527](https://github.com/VsyncCrypto/VSX/pull/1527))
 
 ### Cold Stake delegations marked in Coin Control
 
-The Coin Control window now includes an icon next to the select checkbox when the UTXO is a Cold Stake delegation. This shares the space with the locked UTXO indicator icon, and locked UTXO's take priority in their icon display. ([#1470](https://github.com/Carbon-Reduction-Initiative/VSYNC/pull/1470))
+The Coin Control window now includes an icon next to the select checkbox when the UTXO is a Cold Stake delegation. This shares the space with the locked UTXO indicator icon, and locked UTXO's take priority in their icon display. ([#1470](https://github.com/VsyncCrypto/VSX/pull/1470))
 
 ### Hide zVSX balance info as needed
 
@@ -161,13 +161,13 @@ The default value for the stake-split threshold has been lowered from 2000 VSYNC
 
 - `-debuglogfile=<file>` can be used to specify an alternative debug logging file. This can be an absolute path or a path relative to the data directory
 - `-debugexclude=<category>` can be used to specify which debug categories to not log, useful when pairing with the `-debug=<exclude>` option.
-- The `-reservebalance` configuration/startup option has been removed ([#1373](https://github.com/Carbon-Reduction-Initiative/VSYNC/pull/1373)).
+- The `-reservebalance` configuration/startup option has been removed ([#1373](https://github.com/VsyncCrypto/VSX/pull/1373)).
 
 
 Dependencies
 ------------
 
-The minimum required version of QT has been increased from 5.0 to 5.5.1 (the [depends system](https://github.com/Carbon-Reduction-Initiative/VSYNC/blob/master/depends/README.md) provides 5.9.7)
+The minimum required version of QT has been increased from 5.0 to 5.5.1 (the [depends system](https://github.com/VsyncCrypto/VSX/blob/master/depends/README.md) provides 5.9.7)
 
 
 RPC Changes

@@ -8,7 +8,7 @@ architectures:
 packages:
 - "faketime"
 remotes:
-- "url": "https://github.com/Carbon-Reduction-Initiative/VSYNC-detached-sigs.git"
+- "url": "https://github.com/VsyncCrypto/VSX-detached-sigs.git"
   "dir": "signature"
 files:
 - "vsync-osx-unsigned.tar.gz"

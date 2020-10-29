@@ -1,8 +1,8 @@
-VSYNC Core version *3.2.0* is now available from:  <https://github.com/Carbon-Reduction-Initiative/VSYNC/releases>
+VSYNC Core version *3.2.0* is now available from:  <https://github.com/VsyncCrypto/VSX/releases>
 
 This is a new major version release, including various bug fixes and performance improvements, as well as updated translations.
 
-Please report bugs using the issue tracker at github: <https://github.com/Carbon-Reduction-Initiative/VSYNC/issues>
+Please report bugs using the issue tracker at github: <https://github.com/VsyncCrypto/VSX/issues>
 
 
 Mandatory Update
@@ -46,7 +46,7 @@ Attacks, Exploits, and Mitigations
 
 On Janurary 22 2019, Decentralized Systems Lab out of the University of Illinois published a study entitled “[‘Fake Stake’ attacks on chain-based Proof-of-Stake cryptocurrencies](https://medium.com/@dsl_uiuc/fake-stake-attacks-on-chain-based-proof-of-stake-cryptocurrencies-b8b05723f806)”, which outlined a type of Denial of Service attack that could take place on a number of Proof of Stake based networks by exhausting a client's RAM or Disk resources.
 
-A full report provided by VSYNC developers is available on the [VSYNC Website](https://vsync.org/fake-stake-official-vsync-report/), which includes additional findings, mitigation details, and resources for testing. This type of attack has no risk to users' privacy and does not affect their holdings.
+A full report provided by VSYNC developers is available on the [VSYNC Website](https://vsync.io/fake-stake-official-vsync-report/), which includes additional findings, mitigation details, and resources for testing. This type of attack has no risk to users' privacy and does not affect their holdings.
 
 ### Wrapped Serials
 
@@ -77,7 +77,7 @@ A new UI wallet tab has been introduced that allows users to view the current bu
 
 Support for the ZLN Protocol has been added, which allows for a node to opt-in to providing extended network services for the protocol. By default, this functionality is disabled, but can be enabled by using the `-peerbloomfilterszc` runtime option.
 
-A full technical writeup of the protocol can be found [Here](https://vsync.org/wp-content/uploads/2018/11/Zerocoin_Light_Node_Protocol.pdf).
+A full technical writeup of the protocol can be found [Here](https://vsync.io/wp-content/uploads/2018/11/Zerocoin_Light_Node_Protocol.pdf).
 
 ### Precomputed Zerocoin Proofs
 

@@ -33,7 +33,7 @@ packages:
 - "ca-certificates"
 - "python3"
 remotes:
-- "url": "https://github.com/Carbon-Reduction-Initiative/VSYNC.git"
+- "url": "https://github.com/VsyncCrypto/VSX.git"
   "dir": "vsync"
 files: []
 script: |

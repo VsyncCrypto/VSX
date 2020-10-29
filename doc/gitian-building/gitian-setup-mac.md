@@ -49,7 +49,7 @@ git config --global user.email "MY_NAME@example.com"
 Fetching the Build Script
 --------------------------
 
-The build script we'll be using is contained in the VSYNC github repository ([contrib/gitian-build.py](https://github.com/Carbon-Reduction-Initiative/VSYNC/blob/master/contrib/gitian-build.py)). Since this is a completely fresh environment, we haven't yet cloned the VSYNC repository and will need to fetch this script with the following commands:
+The build script we'll be using is contained in the VSYNC github repository ([contrib/gitian-build.py](https://github.com/VsyncCrypto/VSX/blob/master/contrib/gitian-build.py)). Since this is a completely fresh environment, we haven't yet cloned the VSYNC repository and will need to fetch this script with the following commands:
 
 ```bash
 curl -L -O https://raw.githubusercontent.com/VSYNC-Project/VSYNC/master/contrib/gitian-build.py

@@ -2039,7 +2039,7 @@ bool CWallet::GetMasternodeVinAndKeys(CTxIn& txinRet, CPubKey& pubKeyRet, CKey& 
 
     // Masternode collateral value
     if (txOut.nValue != GetCollateral() * COIN) {
-        strError = "Invalid collateral tx value, must be 1,000 VSYNC";
+        strError = "Invalid collateral tx value, must be 100,000 VSYNC";
         return error("%s: tx %s, index %d not a masternode collateral", __func__, strTxHash, nOutputIndex);
     }
 

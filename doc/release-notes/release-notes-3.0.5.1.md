@@ -6,7 +6,7 @@ If you are stuck on block 908000:
 
 If you are stuck on a block before 908000:
 - Download the 3.0.5.1 wallet (the file names do not display the "build" version and cutoff the 1)
-- Start the wallet with `reindexaccumulators=1` in your `vsync.conf` file (you can figure out the location of your `vsync.conf` [here](https://vsync.freshdesk.com/support/solutions/articles/30000004664-where-are-my-wallet-dat-blockchain-and-configuration-conf-files-located-) )
+- Start the wallet with `reindexaccumulators=1` in your `vsync.conf` file (you can figure out the location of your `vsync.conf` [here](https://vsync.io/support/solutions/articles/30000004664-where-are-my-wallet-dat-blockchain-and-configuration-conf-files-located-) )
 - After starting the wallet, remove `reindexaccumulators=1` from your `vsync.conf` or else it will perform this operation each time you start your wallet.
 
 If both of those solutions failed you can use the [blockchain snapshot](http://178.254.23.111/~pub/VSYNC/Daily-Snapshots-Html/VSYNC-Daily-Snapshots.html). If using the snapshot, please carefully follow the instructions on the snapshot page.

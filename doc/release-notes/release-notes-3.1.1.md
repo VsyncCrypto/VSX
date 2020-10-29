@@ -1,8 +1,8 @@
-VSYNC Core version *3.1.1* is now available from:  <https://github.com/Carbon-Reduction-Initiative/VSYNC/releases>
+VSYNC Core version *3.1.1* is now available from:  <https://github.com/VsyncCrypto/VSX/releases>
 
 This is a new minor version release, including various bug fixes and performance improvements, as well as updated translations.
 
-Please report bugs using the issue tracker at github: <https://github.com/Carbon-Reduction-Initiative/VSYNC/issues>
+Please report bugs using the issue tracker at github: <https://github.com/VsyncCrypto/VSX/issues>
 
 Non-Mandatory Update
 ==============

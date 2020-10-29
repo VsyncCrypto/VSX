@@ -67,6 +67,10 @@ static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
 	(     0, uint256("00000a47e5f67b18cc1bd58c9e50b5295370cc36df1245a2cd07bf6bb2486e72"))
+    (259214, uint256("4e5f7d61d3cbd896c9713abaa925a7b21aa7114ecf22dc893729025a6246ad1a"))
+    (259215, uint256("5bb80cc05579203e2c0b8b2e9595c48f6a026821fcc7f50b6a2e9bb56e68af26"))
+    (259216, uint256("4e8a14bdce2ae8a3100dce9255db3cad6a3c2c6b7638287f69501114fa76753b"))
+    (259389, uint256("0707d2a7b0dac00980438ad37cb54dc45edc82f9ddd71b4ae1b6c5e45dfed71e"))
     (299491, uint256("6edd1b17ab2855ad409c87662c17d418385f4bb27b9d6b6aa87ae0968eff5398"))
     (299492, uint256("384318efe10e5ca05d4270154b7f11b4269d888e6da24bb47f2206292803f081"))
     (1434249, uint256("566c66a2b4fc9a8465045970be8ab7f9d1b5cc5d44af496db2129534a36e9463"))
@@ -179,7 +183,7 @@ public:
         consensus.vUpgrades[Consensus::UPGRADE_V4_0].nActivationHeight          = 1485100;
         consensus.vUpgrades[Consensus::UPGRADE_V5_DUMMY].nActivationHeight      = Consensus::NetworkUpgrade::NO_ACTIVATION_HEIGHT;
 
-        consensus.vUpgrades[Consensus::UPGRADE_ZC].hashActivationBlock          = uint256S("0x1");
+        consensus.vUpgrades[Consensus::UPGRADE_ZC].hashActivationBlock          = uint256S("0x384318efe10e5ca05d4270154b7f11b4269d888e6da24bb47f2206292803f081");
         consensus.vUpgrades[Consensus::UPGRADE_ZC_V2].hashActivationBlock       = uint256S("0x1");
         consensus.vUpgrades[Consensus::UPGRADE_BIP65].hashActivationBlock       = uint256S("0x1");
         consensus.vUpgrades[Consensus::UPGRADE_ZC_PUBLIC].hashActivationBlock   = uint256S("0x1");
@@ -251,8 +255,8 @@ public:
          */
         genesis = CreateGenesisBlock(1594502306, 4438800, 0x1e0ffff0, 1, 0 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x000005bd970b7d83eb879472fb48b2c01ed8155d7126ac3e0c201755c0c85c23"));
-        assert(genesis.hashMerkleRoot     == uint256S("0x848a9da56df8cf4057ef911b7a1837048bea98c1e782b6eff779fd0325c77530"));
+        //assert(consensus.hashGenesisBlock == uint256S("0x000005bd970b7d83eb879472fb48b2c01ed8155d7126ac3e0c201755c0c85c23"));
+        //assert(genesis.hashMerkleRoot     == uint256S("0x848a9da56df8cf4057ef911b7a1837048bea98c1e782b6eff779fd0325c77530"));
 
         consensus.fPowAllowMinDifficultyBlocks           = false;
         consensus.powLimit                               = ~UINT256_ZERO >> 20;    // VSYNC starting difficulty is 1 / 2^12
@@ -340,7 +344,7 @@ public:
         nDefaultPort       = 31815;
 
         // Note that of those with the service bits flag, most only support a subset of possible options
-        vSeeds.push_back(CDNSSeedData("cri.eco", "testnet.seed.cri.eco", true));                        // Official DNS Seeder
+        vSeeds.push_back(CDNSSeedData("vsync.io", "testnet.seed.vsync.io", true));                        // Official DNS Seeder
         vSeeds.push_back(CDNSSeedData("ziofabry.twt.it", "mainnet.vsync.seed.ziofabry.twt.it", true));   // Secondary DNS Seeder from ZioFabry
 
         base58Prefixes[PUBKEY_ADDRESS]  = std::vector<unsigned char>(1, 88);        // Start with 'c' from https://en.bitcoin.it/wiki/List_of_address_prefixes
@@ -383,8 +387,8 @@ public:
          */
         genesis = CreateGenesisBlock(1594502306, 4438800, 0x1e0ffff0, 1, 0 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x000005bd970b7d83eb879472fb48b2c01ed8155d7126ac3e0c201755c0c85c23"));
-        assert(genesis.hashMerkleRoot     == uint256S("0x848a9da56df8cf4057ef911b7a1837048bea98c1e782b6eff779fd0325c77530"));
+        //assert(consensus.hashGenesisBlock == uint256S("0x000005bd970b7d83eb879472fb48b2c01ed8155d7126ac3e0c201755c0c85c23"));
+        //assert(genesis.hashMerkleRoot     == uint256S("0x848a9da56df8cf4057ef911b7a1837048bea98c1e782b6eff779fd0325c77530"));
 
         consensus.fPowAllowMinDifficultyBlocks           = false;
         consensus.powLimit                               = ~UINT256_ZERO >> 20;    // VSYNC starting difficulty is 1 / 2^12

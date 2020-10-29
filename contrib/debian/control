@@ -28,9 +28,9 @@ Build-Depends: debhelper,
  libzmq3-dev,
  dh-systemd
 Standards-Version: 3.9.2
-Homepage: http://www.cri.eco
-Vcs-Git: git://github.com/Carbon-Reduction-Initiative/VSYNC.git
-Vcs-Browser: http://github.com/Carbon-Reduction-Initiative/VSYNC
+Homepage: http://www.vsync.io
+Vcs-Git: git://github.com/VsyncCrypto/VSX.git
+Vcs-Browser: http://github.com/VsyncCrypto/VSX
 
 Package: vsyncd
 Architecture: any

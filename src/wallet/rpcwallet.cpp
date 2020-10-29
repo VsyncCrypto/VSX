@@ -908,7 +908,6 @@ UniValue sendtoaddress(const JSONRPCRequest& request)
             "4. \"comment-to\"    (string, optional) A comment to store the name of the person or organization \n"
             "                               to which you're sending the transaction. This is not part of the \n"
             "                               transaction, just kept in your wallet.\n"
-            "5. powalternative  (bool, optional, default=false) Mark this transaction as Bitcoin PoW alternative\n"
 
             "\nResult:\n"
             "\"transactionid\"  (string) The transaction id.\n"
@@ -935,13 +934,9 @@ UniValue sendtoaddress(const JSONRPCRequest& request)
     if (request.params.size() > 3 && !request.params[3].isNull() && !request.params[3].get_str().empty())
         wtx.mapValue["to"] = request.params[3].get_str();
 
-    bool fpow = false;
-    if ( request.params.size() > 4 && request.params[4].get_bool() )
-        fpow = true;
-
     EnsureWalletIsUnlocked();
 
-    SendMoney(address, nAmount, wtx, false, fpow);
+    SendMoney(address, nAmount, wtx, false);
 
     return wtx.GetHash().GetHex();
 }
@@ -1173,7 +1168,6 @@ UniValue sendtoaddressix(const JSONRPCRequest& request)
             "4. \"comment-to\"    (string, optional) A comment to store the name of the person or organization \n"
             "                               to which you're sending the transaction. This is not part of the \n"
             "                               transaction, just kept in your wallet.\n"
-            "5. powalternative  (bool, optional, default=false) Mark this transaction as Bitcoin PoW alternative\n"
 
             "\nResult:\n"
             "\"transactionid\"  (string) The transaction id.\n"
@@ -1200,13 +1194,9 @@ UniValue sendtoaddressix(const JSONRPCRequest& request)
     if (request.params.size() > 3 && !request.params[3].isNull() && !request.params[3].get_str().empty())
         wtx.mapValue["to"] = request.params[3].get_str();
 
-    bool fpow = false;
-    if (request.params.size() > 4 && request.params[4].get_bool() )
-        fpow = true;
-
     EnsureWalletIsUnlocked();
 
-    SendMoney(address, nAmount, wtx, true, fpow);
+    SendMoney(address, nAmount, wtx, true);
 
     return wtx.GetHash().GetHex();
 }
@@ -1676,7 +1666,6 @@ UniValue sendfrom(const JSONRPCRequest& request)
             "                                     to which you're sending the transaction. This is not part of the transaction, \n"
             "                                     it is just kept in your wallet.\n"
             "7. includeDelegated    (bool, optional, default=false) Also include balance delegated to cold stakers\n"
-            "8. powalternative      (bool, optional, default=false) Mark this transaction as Bitcoin PoW alternative\n"
 
             "\nResult:\n"
             "\"transactionid\"      (string) The transaction id.\n"
@@ -1712,10 +1701,6 @@ UniValue sendfrom(const JSONRPCRequest& request)
     if ( request.params.size() > 6 && request.params[6].get_bool() )
         filter = filter | ISMINE_SPENDABLE_DELEGATED;
 
-    bool fpow = false;
-    if (request.params.size() > 7 && request.params[7].get_bool() )
-        fpow = true;
-
     EnsureWalletIsUnlocked();
 
     // Check funds
@@ -1723,7 +1708,7 @@ UniValue sendfrom(const JSONRPCRequest& request)
     if (nAmount > nBalance)
         throw JSONRPCError(RPC_WALLET_INSUFFICIENT_FUNDS, "Account has insufficient funds");
 
-    SendMoney(address, nAmount, wtx, false, fpow);
+    SendMoney(address, nAmount, wtx, false);
 
     return wtx.GetHash().GetHex();
 }
@@ -1777,7 +1762,6 @@ UniValue sendmany(const JSONRPCRequest& request)
             "3. minconf                 (numeric, optional, default=1) Only use the balance confirmed at least this many times.\n"
             "4. \"comment\"             (string, optional) A comment\n"
             "5. includeDelegated     (bool, optional, default=false) Also include balance delegated to cold stakers\n"
-            "6. powalternative       (bool, optional, default=false) Mark this transaction as Bitcoin PoW alternative\n"
 
             "\nResult:\n"
             "\"transactionid\"          (string) The transaction id for the send. Only 1 transaction is created regardless of \n"

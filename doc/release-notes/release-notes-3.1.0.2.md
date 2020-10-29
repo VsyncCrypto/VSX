@@ -1,11 +1,11 @@
-VSYNC Core version *3.1.0.2* is now available from:  <https://github.com/Carbon-Reduction-Initiative/VSYNC/releases>
+VSYNC Core version *3.1.0.2* is now available from:  <https://github.com/VsyncCrypto/VSX/releases>
 
 This is a new mandatory bugfix release, specifically addressing a bug with windows OS masternode control wallets as well as a missed commit from our private repository affecting the budget amount. 
 
-### Users upgrading to this version are encouraged to also read the detailed release notes for the previous [3.1.0](https://github.com/Carbon-Reduction-Initiative/VSYNC/releases/tag/v3.1.0) release as information will not be duplicated here.
+### Users upgrading to this version are encouraged to also read the detailed release notes for the previous [3.1.0](https://github.com/VsyncCrypto/VSX/releases/tag/v3.1.0) release as information will not be duplicated here.
 
 
-Please report bugs using the issue tracker at github: <https://github.com/Carbon-Reduction-Initiative/VSYNC/issues>
+Please report bugs using the issue tracker at github: <https://github.com/VsyncCrypto/VSX/issues>
 
 Mandatory Update
 ==============

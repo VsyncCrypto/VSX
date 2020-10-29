@@ -20,8 +20,8 @@ Summary:	Peer to Peer Cryptographic Currency
 
 Group:		Applications/System
 License:	MIT
-URL:		https://cri.eco/
-Source0:	https://cri.eco/bin/vsync-core-%{version}/vsync-%{version}.tar.gz
+URL:		https://vsync.io/
+Source0:	https://vsync.io/bin/vsync-core-%{version}/vsync-%{version}.tar.gz
 Source1:	http://download.oracle.com/berkeley-db/db-%{bdbv}.NC.tar.gz
 
 Source10:	https://raw.githubusercontent.com/Carbon-Reduction-Initiative/VSYNC/v%{version}/contrib/debian/examples/vsync.conf

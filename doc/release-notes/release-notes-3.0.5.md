@@ -1,19 +1,19 @@
 VSYNC Core version 3.0.5 is now available from:
 
-  <https://github.com/Carbon-Reduction-Initiative/VSYNC/releases>
+  <https://github.com/VsyncCrypto/VSX/releases>
 
 This is a new minor-revision version release, including various bug fixes and
 performance improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at github:
 
-  <https://github.com/Carbon-Reduction-Initiative/VSYNC/issues>
+  <https://github.com/VsyncCrypto/VSX/issues>
 
 
 Mandatory Update
 ==============
 
-VSYNC Core v3.0.5 is a mandatory update for all users. This release contains various updates/fixes pertaining to the zVSX protocol, supply tracking, block transmission and relaying, as well as usability and quality-of-life updates to the GUI. Users are required to update before block `908000` which is when the accumulators will be refactored. Shortly after that block, zVSX transactions will be enabled. **When zVSX is enabled, autominting will also be enabled.** If you would like to disable automatic conversion of 10% of your VSYNC balance to zVSX, then you will need to add `enablezeromint=0` to your `vsync.conf` file. For information about where to find your vsync.conf you can visit this link from [VSYNC Support](https://vsync.freshdesk.com/support/solutions/articles/30000004664-where-are-my-wallet-dat-blockchain-and-configuration-conf-files-located-).
+VSYNC Core v3.0.5 is a mandatory update for all users. This release contains various updates/fixes pertaining to the zVSX protocol, supply tracking, block transmission and relaying, as well as usability and quality-of-life updates to the GUI. Users are required to update before block `908000` which is when the accumulators will be refactored. Shortly after that block, zVSX transactions will be enabled. **When zVSX is enabled, autominting will also be enabled.** If you would like to disable automatic conversion of 10% of your VSYNC balance to zVSX, then you will need to add `enablezeromint=0` to your `vsync.conf` file. For information about where to find your vsync.conf you can visit this link from [VSYNC Support](https://vsync.io/support/solutions/articles/30000004664-where-are-my-wallet-dat-blockchain-and-configuration-conf-files-located-).
 
 Users will have a grace period to update their clients before versions prior to this release are no longer allowed to connect to this (and future) version(s).
 

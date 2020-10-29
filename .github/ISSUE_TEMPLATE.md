@@ -1,7 +1,7 @@
 <!--- Remove this description and sections that do not apply -->
 
 This issue tracker is only for technical issues related to CARI Core.
-General CARI questions and/or support requests and are best directed to the [CARI Discord](https://discord.gg/m9CwKFp).
+General CARI questions and/or support requests and are best directed to the [CARI Discord](https://discord.gg/Arqhyqg).
 
 ### Describe the issue
 

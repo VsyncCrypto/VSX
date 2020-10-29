@@ -1,13 +1,13 @@
 VSYNC Core version 2.3.0 is now available from:
 
-  <https://github.com/Carbon-Reduction-Initiative/VSYNC/releases>
+  <https://github.com/VsyncCrypto/VSX/releases>
 
 This is a new major version release, including various bug fixes and
 performance improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at github:
 
-  <https://github.com/Carbon-Reduction-Initiative/VSYNC/issues>
+  <https://github.com/VsyncCrypto/VSX/issues>
 
 Mandatory Update
 ==============

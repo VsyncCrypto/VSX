@@ -24,7 +24,7 @@ packages:
 - "python3"
 - "rename"
 remotes:
-- "url": "https://github.com/Carbon-Reduction-Initiative/VSYNC.git"
+- "url": "https://github.com/VsyncCrypto/VSX.git"
   "dir": "vsync"
 files: []
 script: |
