@@ -17,7 +17,7 @@
 #include "serialize.h"
 #include "util.h"
 
-#include "test/test_cari.h"
+#include "test/test_vsync.h"
 
 #include <stdint.h>
 

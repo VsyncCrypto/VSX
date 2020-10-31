@@ -4,7 +4,7 @@
 
 #include "compat/sanity.h"
 #include "key.h"
-#include "test_cari.h"
+#include "test_vsync.h"
 
 #include <boost/test/unit_test.hpp>
 

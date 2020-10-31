@@ -7,13 +7,13 @@
 #include "chain.h"
 #include "main.h"
 #include "txdb.h"
-#include "zcari/deterministicmint.h"
+#include "zvsx/deterministicmint.h"
 #include "wallet/wallet.h"
 
-bool CCariStake::InitFromTxIn(const CTxIn& txin)
+bool CVsyncStake::InitFromTxIn(const CTxIn& txin)
 {
     if (txin.IsZerocoinSpend())
-        return error("%s: unable to initialize CCariStake from zerocoin spend", __func__);
+        return error("%s: unable to initialize CVsyncStake from zerocoin spend", __func__);
 
     // Find the previous transaction in database
     uint256 hashBlock;
@@ -35,14 +35,14 @@ bool CCariStake::InitFromTxIn(const CTxIn& txin)
     return true;
 }
 
-bool CCariStake::SetPrevout(CTransaction txPrev, unsigned int n)
+bool CVsyncStake::SetPrevout(CTransaction txPrev, unsigned int n)
 {
     this->txFrom = txPrev;
     this->nPosition = n;
     return true;
 }
 
-bool CCariStake::GetTxFrom(CTransaction& tx) const
+bool CVsyncStake::GetTxFrom(CTransaction& tx) const
 {
     if (txFrom.IsNull())
         return false;
@@ -50,7 +50,7 @@ bool CCariStake::GetTxFrom(CTransaction& tx) const
     return true;
 }
 
-bool CCariStake::GetTxOutFrom(CTxOut& out) const
+bool CVsyncStake::GetTxOutFrom(CTxOut& out) const
 {
     if (txFrom.IsNull() || nPosition >= txFrom.vout.size())
         return false;
@@ -58,18 +58,18 @@ bool CCariStake::GetTxOutFrom(CTxOut& out) const
     return true;
 }
 
-bool CCariStake::CreateTxIn(CWallet* pwallet, CTxIn& txIn, uint256 hashTxOut)
+bool CVsyncStake::CreateTxIn(CWallet* pwallet, CTxIn& txIn, uint256 hashTxOut)
 {
     txIn = CTxIn(txFrom.GetHash(), nPosition);
     return true;
 }
 
-CAmount CCariStake::GetValue() const
+CAmount CVsyncStake::GetValue() const
 {
     return txFrom.vout[nPosition].nValue;
 }
 
-bool CCariStake::CreateTxOuts(CWallet* pwallet, std::vector<CTxOut>& vout, CAmount nTotal)
+bool CVsyncStake::CreateTxOuts(CWallet* pwallet, std::vector<CTxOut>& vout, CAmount nTotal)
 {
     std::vector<valtype> vSolutions;
     txnouttype whichType;
@@ -119,16 +119,16 @@ bool CCariStake::CreateTxOuts(CWallet* pwallet, std::vector<CTxOut>& vout, CAmou
     return true;
 }
 
-CDataStream CCariStake::GetUniqueness() const
+CDataStream CVsyncStake::GetUniqueness() const
 {
-    //The unique identifier for a CARI stake is the outpoint
+    //The unique identifier for a VSYNC stake is the outpoint
     CDataStream ss(SER_NETWORK, 0);
     ss << nPosition << txFrom.GetHash();
     return ss;
 }
 
 //The block that the UTXO was added to the chain
-CBlockIndex* CCariStake::GetIndexFrom()
+CBlockIndex* CVsyncStake::GetIndexFrom()
 {
     if (pindexFrom)
         return pindexFrom;
@@ -149,7 +149,7 @@ CBlockIndex* CCariStake::GetIndexFrom()
 }
 
 // Verify stake contextual checks
-bool CCariStake::ContextCheck(int nHeight, uint32_t nTime)
+bool CVsyncStake::ContextCheck(int nHeight, uint32_t nTime)
 {
     const Consensus::Params& consensus = Params().GetConsensus();
     // Get Stake input block time/height

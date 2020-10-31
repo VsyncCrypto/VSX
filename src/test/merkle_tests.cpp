@@ -4,7 +4,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "consensus/merkle.h"
-#include "test/test_cari.h"
+#include "test/test_vsync.h"
 
 #include <boost/test/unit_test.hpp>
 

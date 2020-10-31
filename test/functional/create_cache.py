@@ -9,9 +9,9 @@ multiple functional tests. This helper script is executed by test_runner when mu
 tests are being run in parallel.
 """
 
-from test_framework.test_framework import CariTestFramework
+from test_framework.test_framework import VsyncTestFramework
 
-class CreateCache(CariTestFramework):
+class CreateCache(VsyncTestFramework):
     # Test network and test nodes are not required:
     def setup_chain(self):
         self.log.info("Initializing test directory " + self.options.tmpdir)

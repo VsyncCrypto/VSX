@@ -11,14 +11,14 @@
 
 class CScheduler;
 class CWallet;
-class CzCARIWallet;
+class CzVSXWallet;
 
 namespace boost
 {
 class thread_group;
 } // namespace boost
 
-extern CzCARIWallet* zwalletMain;
+extern CzVSXWallet* zwalletMain;
 
 void StartShutdown();
 bool ShutdownRequested();
@@ -32,7 +32,7 @@ void InitLogging();
 void InitParameterInteraction();
 bool AppInit2();
 
-/** Initialize CARI core: Basic context setup.
+/** Initialize VSYNC core: Basic context setup.
  *  @note This can be done before daemonization. Do not call Shutdown() if this function fails.
  *  @pre Parameters should be parsed and config file should be read.
  */

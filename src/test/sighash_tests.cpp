@@ -12,7 +12,7 @@
 #include "script/interpreter.h"
 #include "util.h"
 #include "version.h"
-#include "test_cari.h"
+#include "test_vsync.h"
 
 #include <iostream>
 

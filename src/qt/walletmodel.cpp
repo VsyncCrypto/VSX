@@ -74,7 +74,7 @@ bool WalletModel::isColdStakingNetworkelyEnabled() const
 
 bool WalletModel::isStakingStatusActive() const
 {
-    return wallet->pStakerStatus->IsActive();
+    return wallet && wallet->pStakerStatus && wallet->pStakerStatus->IsActive();
 }
 
 bool WalletModel::isHDEnabled() const
@@ -194,6 +194,7 @@ bool WalletModel::isColdStaking() const
 
 void WalletModel::updateStatus()
 {
+    if (!wallet) return;
     EncryptionStatus newEncryptionStatus = getEncryptionStatus();
 
     if (cachedEncryptionStatus != newEncryptionStatus)
@@ -202,12 +203,14 @@ void WalletModel::updateStatus()
 
 bool WalletModel::isWalletUnlocked() const
 {
+    if (!wallet) return false;
     EncryptionStatus status = getEncryptionStatus();
     return (status == Unencrypted || status == Unlocked);
 }
 
 bool WalletModel::isWalletLocked(bool fFullUnlocked) const
 {
+    if (!wallet) return false;
     EncryptionStatus status = getEncryptionStatus();
     return (status == Locked || (!fFullUnlocked && status == UnlockedForStaking));
 }
@@ -392,7 +395,7 @@ bool WalletModel::updateAddressBookLabels(const CTxDestination& dest, const std:
     return false;
 }
 
-WalletModel::SendCoinsReturn WalletModel::prepareTransaction(WalletModelTransaction& transaction, const CCoinControl* coinControl, bool fIncludeDelegations, bool fPoWAlternative)
+WalletModel::SendCoinsReturn WalletModel::prepareTransaction(WalletModelTransaction& transaction, const CCoinControl* coinControl, bool fIncludeDelegations)
 {
     CAmount total = 0;
     QList<SendCoinsRecipient> recipients = transaction.getRecipients();
@@ -426,7 +429,7 @@ WalletModel::SendCoinsReturn WalletModel::prepareTransaction(WalletModelTransact
                 return InvalidAmount;
             }
             total += subtotal;
-        } else { // User-entered cari address / amount:
+        } else { // User-entered vsync address / amount:
             if (!validateAddress(rcp.address, rcp.isP2CS)) {
                 return InvalidAddress;
             }
@@ -504,8 +507,7 @@ WalletModel::SendCoinsReturn WalletModel::prepareTransaction(WalletModelTransact
                                                   true,
                                                   recipients[0].useSwiftTX,
                                                   0,
-                                                  fIncludeDelegations,
-                                                  fPoWAlternative);
+                                                  fIncludeDelegations);
         transaction.setTransactionFee(nFeeRequired);
 
         if (recipients[0].useSwiftTX && newTx->GetValueOut() > sporkManager.GetSporkValue(SPORK_5_MAX_VALUE) * COIN) {
@@ -563,7 +565,7 @@ WalletModel::SendCoinsReturn WalletModel::sendCoins(WalletModelTransaction& tran
                 std::string value;
                 rcp.paymentRequest.SerializeToString(&value);
                 newTx->vOrderForm.push_back(std::make_pair(key, value));
-            } else if (!rcp.message.isEmpty()) // Message from normal cari:URI (cari:XyZ...?message=example)
+            } else if (!rcp.message.isEmpty()) // Message from normal vsync:URI (vsync:XyZ...?message=example)
             {
                 newTx->vOrderForm.push_back(std::make_pair("Message", rcp.message.toStdString()));
             }
@@ -626,6 +628,7 @@ RecentRequestsTableModel* WalletModel::getRecentRequestsTableModel()
 
 WalletModel::EncryptionStatus WalletModel::getEncryptionStatus() const
 {
+    if (!wallet) throw std::runtime_error("Error, cannot get encryption status. Wallet doesn't exist");
     if (!wallet->IsCrypted()) {
         return Unencrypted;
     } else if (wallet->fWalletUnlockStaking) {
@@ -891,7 +894,7 @@ bool WalletModel::updateAddressBookPurpose(const QString &addressStr, const std:
     bool isStaking = false;
     CTxDestination address = DecodeDestination(addressStr.toStdString(), isStaking);
     if (isStaking)
-        return error("Invalid CARI address, cold staking address");
+        return error("Invalid VSYNC address, cold staking address");
     CKeyID keyID;
     if (!getKeyId(address, keyID))
         return false;
@@ -901,11 +904,11 @@ bool WalletModel::updateAddressBookPurpose(const QString &addressStr, const std:
 bool WalletModel::getKeyId(const CTxDestination& address, CKeyID& keyID)
 {
     if (!IsValidDestination(address))
-        return error("Invalid CARI address");
+        return error("Invalid VSYNC address");
 
     const CKeyID* inKeyID = boost::get<CKeyID>(&address);
     if (!inKeyID)
-        return error("Unable to get KeyID from CARI address");
+        return error("Unable to get KeyID from VSYNC address");
 
     keyID = *inKeyID;
     return true;
@@ -938,7 +941,7 @@ void WalletModel::getOutputs(const std::vector<COutPoint>& vOutpoints, std::vect
     }
 }
 
-// returns a COutPoint of 10000 CARI if found
+// returns a COutPoint of 10000 VSYNC if found
 bool WalletModel::getMNCollateralCandidate(COutPoint& outPoint)
 {
     std::vector<COutput> vCoins;

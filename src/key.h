@@ -4,8 +4,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef CARI_KEY_H
-#define CARI_KEY_H
+#ifndef VSYNC_KEY_H
+#define VSYNC_KEY_H
 
 #include "allocators.h"
 #include "serialize.h"
@@ -181,4 +181,4 @@ void ECC_Stop(void);
 /** Check that required EC support is available at runtime. */
 bool ECC_InitSanityCheck(void);
 
-#endif // CARI_KEY_H
+#endif // VSYNC_KEY_H

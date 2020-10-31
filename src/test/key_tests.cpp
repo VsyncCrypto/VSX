@@ -10,7 +10,7 @@
 #include "uint256.h"
 #include "util.h"
 #include "utilstrencodings.h"
-#include "test_cari.h"
+#include "test_vsync.h"
 
 #include <string>
 #include <vector>

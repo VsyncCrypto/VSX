@@ -17,7 +17,7 @@
   <string>APPL</string>
 
   <key>CFBundleGetInfoString</key>
-  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@.@CLIENT_VERSION_BUILD@, Copyright © 2009-@COPYRIGHT_YEAR@ The Bitcoin Core developers, 2014-@COPYRIGHT_YEAR@ The Dash Core developers, 2015-@COPYRIGHT_YEAR@ The PIVX Core developers, 2020-@COPYRIGHT_YEAR@ The CARI Core developers</string>
+  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@.@CLIENT_VERSION_BUILD@, Copyright © 2009-@COPYRIGHT_YEAR@ The Bitcoin Core developers, 2014-@COPYRIGHT_YEAR@ The Dash Core developers, 2015-@COPYRIGHT_YEAR@ The PIVX Core developers, 2020-@COPYRIGHT_YEAR@ The VSYNC Core developers</string>
 
   <key>CFBundleShortVersionString</key>
   <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@</string>
@@ -29,16 +29,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>CARI-Qt</string>
+  <string>VSYNC-Qt</string>
 
   <key>CFBundleName</key>
-  <string>CARI-Qt</string>
+  <string>VSYNC-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>io.cari.Cari-Qt</string>
+  <string>io.vsync.Vsync-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -46,10 +46,10 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>io.cari.CariPayment</string>
+      <string>io.vsync.VsyncPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>cari</string>
+        <string>vsync</string>
       </array>
     </dict>
   </array>
@@ -58,9 +58,9 @@
   <array>
     <dict>
       <key>UTTypeIdentifier</key>
-      <string>io.cari.paymentrequest</string>
+      <string>io.vsync.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>Cari payment request</string>
+      <string>Vsync payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>
@@ -68,10 +68,10 @@
       <key>UTTypeTagSpecification</key>
       <dict>
         <key>public.mime-type</key>
-        <string>application/x-cari-payment-request</string>
+        <string>application/x-vsync-payment-request</string>
         <key>public.filename-extension</key>
         <array>
-          <string>caripaymentrequest</string>
+          <string>vsyncpaymentrequest</string>
         </array>
       </dict>
     </dict>
@@ -84,7 +84,7 @@
       <string>Editor</string>
       <key>LSItemContentTypes</key>
       <array>
-        <string>io.cari.paymentrequest</string>
+        <string>io.vsync.paymentrequest</string>
       </array>
       <key>LSHandlerRank</key>
       <string>Owner</string>

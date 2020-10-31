@@ -11,7 +11,7 @@
 #include "guiutil.h"
 
 #include "util.h"
-#include "qt/cari/qtutils.h"
+#include "qt/vsync/qtutils.h"
 
 #include <QFileDialog>
 #include <QMessageBox>
@@ -196,7 +196,7 @@ bool Intro::pickDataDirectory()
                 TryCreateDirectory(GUIUtil::qstringToBoostPath(dataDir));
                 break;
             } catch (const fs::filesystem_error& e) {
-                QMessageBox::critical(0, tr("CARI Core"),
+                QMessageBox::critical(0, tr("VSYNC Core"),
                     tr("Error: Specified data directory \"%1\" cannot be created.").arg(dataDir));
                 // fall through, back to choosing screen
             }
@@ -206,8 +206,8 @@ bool Intro::pickDataDirectory()
     }
 
     /* Only override -datadir if different from the default, to make it possible to
-     * override -datadir in the cari.conf file in the default data directory
-     * (to be consistent with carid behavior)
+     * override -datadir in the vsync.conf file in the default data directory
+     * (to be consistent with vsyncd behavior)
      */
 
     if (dataDir != getDefaultDataDirectory())

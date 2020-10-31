@@ -38,10 +38,10 @@ Test is as follows:
 import os
 import time
 
-from test_framework.test_framework import CariTestFramework
+from test_framework.test_framework import VsyncTestFramework
 from test_framework.util import *
 
-class MempoolPersistTest(CariTestFramework):
+class MempoolPersistTest(VsyncTestFramework):
     def set_test_params(self):
         self.num_nodes = 3
         self.extra_args = [[], ["-persistmempool=0"], []]

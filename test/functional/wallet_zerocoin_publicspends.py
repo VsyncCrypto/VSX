@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2019-2020 The CARI developers
+# Copyright (c) 2019-2020 The VSYNC developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -10,7 +10,7 @@ Tests v2, v3 and v4 Zerocoin Spends
 from time import sleep
 
 from test_framework.authproxy import JSONRPCException
-from test_framework.test_framework import CariTestFramework
+from test_framework.test_framework import VsyncTestFramework
 from test_framework.util import (
     sync_blocks,
     sync_mempools,
@@ -21,7 +21,7 @@ from test_framework.util import (
 )
 
 
-class ZerocoinSpendTest(CariTestFramework):
+class ZerocoinSpendTest(VsyncTestFramework):
 
     def set_test_params(self):
         self.num_nodes = 3
@@ -63,13 +63,13 @@ class ZerocoinSpendTest(CariTestFramework):
         def get_zerocoin_data(coin):
             return coin["s"], coin["r"], coin["k"], coin["id"], coin["d"], coin["t"]
 
-        def check_balances(denom, zcari_bal, cari_bal):
-            zcari_bal -= denom
-            assert_equal(self.nodes[2].getzerocoinbalance()['Total'], zcari_bal)
-            cari_bal += denom
+        def check_balances(denom, zvsx_bal, vsync_bal):
+            zvsx_bal -= denom
+            assert_equal(self.nodes[2].getzerocoinbalance()['Total'], zvsx_bal)
+            vsync_bal += denom
             wi = self.nodes[2].getwalletinfo()
-            assert_equal(wi['balance'] + wi['immature_balance'], cari_bal)
-            return zcari_bal, cari_bal
+            assert_equal(wi['balance'] + wi['immature_balance'], vsync_bal)
+            return zvsx_bal, vsync_bal
 
         def stake_4_blocks(block_time):
             sync_mempools(self.nodes)
@@ -86,9 +86,9 @@ class ZerocoinSpendTest(CariTestFramework):
         # Start with cache balances
         wi = self.nodes[2].getwalletinfo()
         balance = wi['balance'] + wi['immature_balance']
-        zcari_balance = self.nodes[2].getzerocoinbalance()['Total']
+        zvsx_balance = self.nodes[2].getzerocoinbalance()['Total']
         assert_equal(balance, DecimalAmt(13833.92))
-        assert_equal(zcari_balance, 6666)
+        assert_equal(zvsx_balance, 6666)
 
         # Export zerocoin data
         listmints = self.nodes[2].listmintedzerocoins(True, True)
@@ -114,7 +114,7 @@ class ZerocoinSpendTest(CariTestFramework):
         # stake 4 blocks - check it gets included on chain and check balances
         block_time = stake_4_blocks(block_time)
         self.check_tx_in_chain(0, txid)
-        zcari_balance, balance = check_balances(denom_2, zcari_balance, balance)
+        zvsx_balance, balance = check_balances(denom_2, zvsx_balance, balance)
         self.log.info("--> VALID PUBLIC COIN SPEND (v3) PASSED")
 
         # 3) Check double spends - spend v3
@@ -133,7 +133,7 @@ class ZerocoinSpendTest(CariTestFramework):
         # stake 4 blocks - check it gets included on chain and check balances
         block_time = stake_4_blocks(block_time)
         self.check_tx_in_chain(0, txid)
-        zcari_balance, balance = check_balances(denom_3, zcari_balance, balance)
+        zvsx_balance, balance = check_balances(denom_3, zvsx_balance, balance)
         self.log.info("--> VALID PUBLIC COIN SPEND (v4) PASSED")
 
         # 6) Check double spends - spend v4
@@ -162,7 +162,7 @@ class ZerocoinSpendTest(CariTestFramework):
         self.check_tx_in_chain(0, txid)
         # need to reset spent mints since this was a raw broadcast
         self.nodes[2].resetmintzerocoin()
-        _, _ = check_balances(denom_1, zcari_balance, balance)
+        _, _ = check_balances(denom_1, zvsx_balance, balance)
         self.log.info("--> VALID PUBLIC COIN SPEND (v3) PASSED")
 
 

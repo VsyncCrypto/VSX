@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef CARI_SCRIPT_KEYORIGIN_H
-#define CARI_SCRIPT_KEYORIGIN_H
+#ifndef VSYNC_SCRIPT_KEYORIGIN_H
+#define VSYNC_SCRIPT_KEYORIGIN_H
 
 #include <serialize.h>
 #include <vector>
@@ -52,4 +52,4 @@ struct KeyOriginInfo
     }
 };
 
-#endif // CARI_SCRIPT_KEYORIGIN_H
+#endif // VSYNC_SCRIPT_KEYORIGIN_H

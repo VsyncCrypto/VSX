@@ -2,7 +2,7 @@ CMAKE_MINIMUM_REQUIRED(VERSION 3.10)
 
 set(QT_MINIMUM_VERSION 5.5.1)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
-set(CMAKE_AUTOUIC_SEARCH_PATHS ${CMAKE_CURRENT_SOURCE_DIR}/forms ${CMAKE_CURRENT_SOURCE_DIR}/cari/forms ${CMAKE_CURRENT_SOURCE_DIR}/cari/settings/forms)
+set(CMAKE_AUTOUIC_SEARCH_PATHS ${CMAKE_CURRENT_SOURCE_DIR}/forms ${CMAKE_CURRENT_SOURCE_DIR}/vsync/forms ${CMAKE_CURRENT_SOURCE_DIR}/vsync/settings/forms)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
@@ -112,81 +112,81 @@ SET(QT_SOURCES
         ${CMAKE_CURRENT_SOURCE_DIR}/transactiontablemodel.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/walletmodel.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/walletmodeltransaction.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/carigui.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/loadingdialog.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/pwidget.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/focuseddialog.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/guitransactionsutils.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/snackbar.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/navmenuwidget.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/lockunlock.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/receivedialog.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/furabstractlistitemdelegate.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/txviewholder.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/qtutils.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/expandablebutton.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/topbar.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/txrow.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/addressfilterproxymodel.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/dashboardwidget.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/addresslabelrow.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/contactdropdownrow.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/contactsdropdown.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/optionbutton.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/mninfodialog.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/coldstakingmodel.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/mnmodel.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/masternodewizarddialog.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/mnrow.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/masternodeswidget.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/sendchangeaddressdialog.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/sendconfirmdialog.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/sendcustomfeedialog.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/sendchangeaddressdialog.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/sendmultirow.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/send.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/addnewaddressdialog.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/addnewcontactdialog.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/requestdialog.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/receivewidget.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/myaddressrow.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/csrow.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/addressholder.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/tooltipmenu.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/addresseswidget.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/defaultdialog.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/privacywidget.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/coldstakingwidget.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/settings/settingsbackupwallet.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/settings/settingsbittoolwidget.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/settings/settingsconsolewidget.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/settings/settingsdisplayoptionswidget.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/settings/settingsfaqwidget.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/settings/settingsinformationwidget.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/settings/settingsmainoptionswidget.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/settings/settingsmultisenddialog.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/settings/settingsmultisendwidget.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/settings/settingssignmessagewidgets.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/settings/settingswalletoptionswidget.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/settings/settingswalletrepairwidget.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/settings/settingsexportcsv.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/settings/settingswidget.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/welcomecontentwidget.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/splash.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/vsyncgui.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/loadingdialog.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/pwidget.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/focuseddialog.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/guitransactionsutils.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/snackbar.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/navmenuwidget.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/lockunlock.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/receivedialog.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/furabstractlistitemdelegate.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/txviewholder.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/qtutils.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/expandablebutton.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/topbar.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/txrow.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/addressfilterproxymodel.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/dashboardwidget.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/addresslabelrow.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/contactdropdownrow.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/contactsdropdown.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/optionbutton.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/mninfodialog.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/coldstakingmodel.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/mnmodel.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/masternodewizarddialog.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/mnrow.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/masternodeswidget.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/sendchangeaddressdialog.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/sendconfirmdialog.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/sendcustomfeedialog.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/sendchangeaddressdialog.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/sendmultirow.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/send.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/addnewaddressdialog.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/addnewcontactdialog.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/requestdialog.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/receivewidget.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/myaddressrow.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/csrow.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/addressholder.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/tooltipmenu.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/addresseswidget.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/defaultdialog.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/privacywidget.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/coldstakingwidget.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/settings/settingsbackupwallet.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/settings/settingsbittoolwidget.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/settings/settingsconsolewidget.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/settings/settingsdisplayoptionswidget.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/settings/settingsfaqwidget.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/settings/settingsinformationwidget.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/settings/settingsmainoptionswidget.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/settings/settingsmultisenddialog.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/settings/settingsmultisendwidget.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/settings/settingssignmessagewidgets.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/settings/settingswalletoptionswidget.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/settings/settingswalletrepairwidget.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/settings/settingsexportcsv.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/settings/settingswidget.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/welcomecontentwidget.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/splash.cpp
         )
 
 # Workaround until the old rpcconsole UI window is fully removed
-set_property(SOURCE ${CMAKE_CURRENT_SOURCE_DIR}/cari/settings/settingsconsolewidget.cpp PROPERTY SKIP_AUTOMOC ON)
+set_property(SOURCE ${CMAKE_CURRENT_SOURCE_DIR}/vsync/settings/settingsconsolewidget.cpp PROPERTY SKIP_AUTOMOC ON)
 execute_process(
         COMMAND ${MOC_BIN} -o moc_settingsconsolewidget.cpp settingsconsolewidget.h
-        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/cari/settings
+        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/vsync/settings
 )
 
 execute_process(
         COMMAND ${MOC_BIN} -o moc_pfborderimage.cpp pfborderimage.h
-        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/cari
+        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/vsync
 )
-list(APPEND QT_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/cari/moc_pfborderimage.cpp)
+list(APPEND QT_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/vsync/moc_pfborderimage.cpp)
 
 if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
     list(APPEND QT_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/macdockiconhandler.mm)
@@ -199,8 +199,8 @@ target_include_directories(qt_stuff PUBLIC ${CMAKE_SOURCE_DIR}/src
         ${CMAKE_SOURCE_DIR}/src/univalue/include
         ${CMAKE_SOURCE_DIR}/src/secp256k1/include
         ${CMAKE_CURRENT_SOURCE_DIR}
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari
-        ${CMAKE_CURRENT_SOURCE_DIR}/cari/settings
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync
+        ${CMAKE_CURRENT_SOURCE_DIR}/vsync/settings
         ${OPENSSL_INCLUDE_DIR}
         ${BerkeleyDB_INCLUDE_DIRS}
         )
@@ -214,13 +214,13 @@ set_source_files_properties(${QT_TRANSLATIONS_FILES} PROPERTIES OUTPUT_LOCATION 
 QT5_ADD_TRANSLATION(QM ${QT_TRANSLATIONS_FILES})
 add_custom_target(translations_target ALL DEPENDS ${QM})
 
-QT5_ADD_RESOURCES(QRC_RESOURCE cari.qrc)
-QT5_ADD_RESOURCES(QRC_LOCALE_RESOURCE cari_locale.qrc)
+QT5_ADD_RESOURCES(QRC_RESOURCE vsync.qrc)
+QT5_ADD_RESOURCES(QRC_LOCALE_RESOURCE vsync_locale.qrc)
 
-add_executable(cari-qt cari.cpp ${QM} ${QRC_RESOURCE} ${QRC_LOCALE_RESOURCE})
-add_dependencies(cari-qt translations_target libunivalue libsecp256k1 leveldb leveldb_sse42 memenv)
-target_include_directories(cari-qt PUBLIC ${ENDIAN_INCLUDES})
-target_link_libraries(cari-qt
+add_executable(vsync-qt vsync.cpp ${QM} ${QRC_RESOURCE} ${QRC_LOCALE_RESOURCE})
+add_dependencies(vsync-qt translations_target libunivalue libsecp256k1 leveldb leveldb_sse42 memenv)
+target_include_directories(vsync-qt PUBLIC ${ENDIAN_INCLUDES})
+target_link_libraries(vsync-qt
         qt_stuff
         univalue
         SERVER_A UTIL_A WALLET_A CLI_A COMMON_A BITCOIN_CRYPTO_A ZEROCOIN_A
@@ -229,30 +229,30 @@ target_link_libraries(cari-qt
         pthread
         )
 if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
-    target_link_libraries(cari-qt "-framework Cocoa")
+    target_link_libraries(vsync-qt "-framework Cocoa")
 endif()
 if(GMP_FOUND)
-    target_link_libraries(cari-qt ${GMP_LIBRARY})
-    target_include_directories(cari-qt PUBLIC ${GMP_INCLUDE_DIR})
+    target_link_libraries(vsync-qt ${GMP_LIBRARY})
+    target_include_directories(vsync-qt PUBLIC ${GMP_INCLUDE_DIR})
 endif()
 if(ZMQ_FOUND)
-    target_link_libraries(cari-qt ZMQ_A ${ZMQ_LIB})
-    target_include_directories(cari-qt PUBLIC ${ZMQ_INCLUDE_DIR})
+    target_link_libraries(vsync-qt ZMQ_A ${ZMQ_LIB})
+    target_include_directories(vsync-qt PUBLIC ${ZMQ_INCLUDE_DIR})
 endif()
 if (QRCODE_FOUND)
-    target_link_libraries(cari-qt ${QRCODE_LIB})
-    target_include_directories(cari-qt PUBLIC ${QRCODE_INCLUDE_DIR})
+    target_link_libraries(vsync-qt ${QRCODE_LIB})
+    target_include_directories(vsync-qt PUBLIC ${QRCODE_INCLUDE_DIR})
 endif()
 if(MINIUPNP_FOUND)
-    target_compile_definitions(cari-qt PUBLIC "-DSTATICLIB -DMINIUPNP_STATICLIB")
-    target_link_libraries(cari-qt ${MINIUPNP_LIBRARY})
-    target_include_directories(cari-qt PUBLIC ${MINIUPNP_INCLUDE_DIR})
+    target_compile_definitions(vsync-qt PUBLIC "-DSTATICLIB -DMINIUPNP_STATICLIB")
+    target_link_libraries(vsync-qt ${MINIUPNP_LIBRARY})
+    target_include_directories(vsync-qt PUBLIC ${MINIUPNP_INCLUDE_DIR})
 endif()
 
-target_link_libraries(cari-qt Qt5::Gui Qt5::Core Qt5::Widgets Qt5::Network Qt5::Svg ${QT_LIBRARIES})
+target_link_libraries(vsync-qt Qt5::Gui Qt5::Core Qt5::Widgets Qt5::Network Qt5::Svg ${QT_LIBRARIES})
 if (Qt5DBus_FOUND)
-    target_link_libraries(cari-qt Qt5::DBus ${QT_LIBRARIES})
+    target_link_libraries(vsync-qt Qt5::DBus ${QT_LIBRARIES})
 endif()
 if (Qt5Charts_FOUND)
-    target_link_libraries(cari-qt Qt5::Charts ${QT_LIBRARIES})
+    target_link_libraries(vsync-qt Qt5::Charts ${QT_LIBRARIES})
 endif()

@@ -1,7 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2015-2019 The PIVX developers
-// Copyright (c) 2020-2020 The CARI developers
+// Copyright (c) 2020-2020 The VSYNC developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -16,7 +16,15 @@
 
 uint256 CBlockHeader::GetHash() const
 {
-    return HashQuark(BEGIN(nVersion), END(nNonce));
+    if (nVersion < 4)  {
+        return XEVAN(BEGIN(nVersion), END(nNonce));
+    }
+
+    if (nVersion == 4) {
+        return XEVAN(BEGIN(nVersion), END(nAccumulatorCheckpoint));
+    }
+    // version >= 4
+    return XEVAN(BEGIN(nVersion), END(nNonce));
 }
 
 std::string CBlock::ToString() const

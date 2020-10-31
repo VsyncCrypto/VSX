@@ -15,7 +15,7 @@
 const struct NUInfo NetworkUpgradeInfo[Consensus::MAX_NETWORK_UPGRADES] = {
         {
                 /*.strName =*/ "Base",
-                /*.strInfo =*/ "CARI network",
+                /*.strInfo =*/ "VSYNC network",
         },
         {
                 /*.strName =*/ "PoS",
@@ -42,16 +42,16 @@ const struct NUInfo NetworkUpgradeInfo[Consensus::MAX_NETWORK_UPGRADES] = {
                 /*.strInfo =*/ "activation of zerocoin public spends (spend v3)",
         },
         {
-                /*.strName =*/ "CARI_v0.3.4",
+                /*.strName =*/ "VSYNC_v0.3.4",
                 /*.strInfo =*/ "new 256-bit stake modifier - start block v6",
         },
         {
-                /*.strName =*/ "CARI_v0.4.0",
+                /*.strName =*/ "VSYNC_v0.4.0",
                 /*.strInfo =*/ "new message sigs - start block v7 - time protocol - zc spend v4",
         },
         {
                 /*.strName =*/ "v5_dummy",
-                /*.strInfo =*/ "Placeholder for future CARI version 2.0 upgrade",
+                /*.strInfo =*/ "Placeholder for future VSYNC version 2.0 upgrade",
         },
         {
                 /*.strName =*/ "Test_dummy",

@@ -8,7 +8,7 @@
 #define BITCOIN_RPCSERVER_H
 
 #include "amount.h"
-#include "zcari/zerocoin.h"
+#include "zvsx/zerocoin.h"
 #include "rpc/protocol.h"
 #include "uint256.h"
 
@@ -128,7 +128,7 @@ public:
 };
 
 /**
- * CARI RPC command dispatcher.
+ * VSYNC RPC command dispatcher.
  */
 class CRPCTable
 {
@@ -188,7 +188,7 @@ extern std::string HelpExampleRpc(std::string methodname, std::string args);
 extern void EnsureWalletIsUnlocked(bool fAllowAnonOnly = false);
 // Ensure the wallet's existence.
 extern void EnsureWallet();
-extern UniValue DoZcariSpend(const CAmount nAmount, std::vector<CZerocoinMint>& vMintsSelected, std::string address_str);
+extern UniValue DoZvsyncSpend(const CAmount nAmount, std::vector<CZerocoinMint>& vMintsSelected, std::string address_str);
 
 extern UniValue getconnectioncount(       const JSONRPCRequest& request); // in rpc/net.cpp
 extern UniValue getpeerinfo(              const JSONRPCRequest& request);
@@ -234,11 +234,11 @@ extern UniValue importzerocoins(          const JSONRPCRequest& request);
 extern UniValue exportzerocoins(          const JSONRPCRequest& request);
 extern UniValue reconsiderzerocoins(      const JSONRPCRequest& request);
 extern UniValue getspentzerocoinamount(   const JSONRPCRequest& request);
-extern UniValue setzcariseed(             const JSONRPCRequest& request);
-extern UniValue getzcariseed(             const JSONRPCRequest& request);
+extern UniValue setzvsxseed(             const JSONRPCRequest& request);
+extern UniValue getzvsxseed(             const JSONRPCRequest& request);
 extern UniValue generatemintlist(         const JSONRPCRequest& request);
-extern UniValue searchdzcari(             const JSONRPCRequest& request);
-extern UniValue dzcaristate(              const JSONRPCRequest& request);
+extern UniValue searchdzvsx(             const JSONRPCRequest& request);
+extern UniValue dzvsxstate(              const JSONRPCRequest& request);
 
 extern UniValue getrawtransaction(        const JSONRPCRequest& request); // in rpc/rawtransaction.cpp
 extern UniValue createrawtransaction(     const JSONRPCRequest& request);

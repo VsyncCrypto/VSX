@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef CARI_CONSENSUS_UPGRADES_H
-#define CARI_CONSENSUS_UPGRADES_H
+#ifndef VSYNC_CONSENSUS_UPGRADES_H
+#define VSYNC_CONSENSUS_UPGRADES_H
 
 #include "consensus/params.h"
 #include "optional.h"
@@ -81,4 +81,4 @@ Optional<int> NextActivationHeight(
         int nHeight,
         const Consensus::Params& params);
 
-#endif // CARI_CONSENSUS_UPGRADES_H
+#endif // VSYNC_CONSENSUS_UPGRADES_H

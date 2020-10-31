@@ -1,7 +1,7 @@
 [main]
 host = https://www.transifex.com
 
-[cari-project-translations.qt-translation-42x]
-file_filter = src/qt/locale/cari_<lang>.ts
-source_file = src/qt/locale/cari_en.ts
+[vsync-project-translations.qt-translation-42x]
+file_filter = src/qt/locale/vsync_<lang>.ts
+source_file = src/qt/locale/vsync_en.ts
 source_lang = en

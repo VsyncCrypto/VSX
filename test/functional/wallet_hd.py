@@ -7,7 +7,7 @@
 import os
 import shutil
 
-from test_framework.test_framework import CariTestFramework
+from test_framework.test_framework import VsyncTestFramework
 from test_framework.util import (
     assert_equal,
     connect_nodes,
@@ -15,7 +15,7 @@ from test_framework.util import (
 )
 
 
-class WalletHDTest(CariTestFramework):
+class WalletHDTest(VsyncTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 2

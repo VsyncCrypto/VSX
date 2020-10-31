@@ -38,20 +38,20 @@ from the root of the repository.
 
 **Note**: You only need Berkeley DB if the wallet is enabled (see [*Disable-wallet mode*](/doc/build-osx.md#disable-wallet-mode)).
 
-Build CARI Core
+Build VSYNC Core
 ------------------------
 
-1. Clone the CARI Core source code:
+1. Clone the VSYNC Core source code:
 
-        git clone https://github.com/Carbon-Reduction-Initiative/CARI
-        cd cari
+        git clone https://github.com/Carbon-Reduction-Initiative/VSYNC
+        cd vsync
 
 2.  Make the Homebrew OpenSSL headers visible to the configure script  (do ```brew info openssl``` to find out why this is necessary, or if you use Homebrew with installation folders different from the default).
 
         export LDFLAGS+=-L/usr/local/opt/openssl/lib
         export CPPFLAGS+=-I/usr/local/opt/openssl/include
 
-3.  Build CARI Core:
+3.  Build VSYNC Core:
 
         ./autogen.sh
         ./configure
@@ -69,7 +69,7 @@ Disable-wallet mode
 --------------------
 **Note:** This functionality is not yet completely implemented, and compilation using the below option will currently fail.
 
-When the intention is to run only a P2P node without a wallet, CARI Core may be compiled in
+When the intention is to run only a P2P node without a wallet, VSYNC Core may be compiled in
 disable-wallet mode with:
 
     ./configure --disable-wallet
@@ -79,28 +79,28 @@ In this case there is no dependency on Berkeley DB 4.8.
 Running
 -------
 
-CARI Core is now available at `./src/carid`
+VSYNC Core is now available at `./src/vsyncd`
 
 Before running, you may create an empty configuration file:
 
-    mkdir -p "/Users/${USER}/Library/Application Support/CARI"
+    mkdir -p "/Users/${USER}/Library/Application Support/VSYNC"
 
-    touch "/Users/${USER}/Library/Application Support/CARI/cari.conf"
+    touch "/Users/${USER}/Library/Application Support/VSYNC/vsync.conf"
 
-    chmod 600 "/Users/${USER}/Library/Application Support/CARI/cari.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/VSYNC/vsync.conf"
 
-The first time you run carid, it will start downloading the blockchain. This process could take many hours, or even days on slower than average systems.
+The first time you run vsyncd, it will start downloading the blockchain. This process could take many hours, or even days on slower than average systems.
 
 You can monitor the download process by looking at the debug.log file:
 
-    tail -f $HOME/Library/Application\ Support/CARI/debug.log
+    tail -f $HOME/Library/Application\ Support/VSYNC/debug.log
 
 Other commands:
 -------
 
-    ./src/carid -daemon # Starts the cari daemon.
-    ./src/cari-cli --help # Outputs a list of command-line options.
-    ./src/cari-cli help # Outputs a list of RPC commands when the daemon is running.
+    ./src/vsyncd -daemon # Starts the vsync daemon.
+    ./src/vsync-cli --help # Outputs a list of command-line options.
+    ./src/vsync-cli help # Outputs a list of RPC commands when the daemon is running.
 
 Notes
 -----

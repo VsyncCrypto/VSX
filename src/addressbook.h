@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef CARI_ADDRESSBOOK_H
-#define CARI_ADDRESSBOOK_H
+#ifndef VSYNC_ADDRESSBOOK_H
+#define VSYNC_ADDRESSBOOK_H
 
 #include <map>
 #include <string>
@@ -43,4 +43,4 @@ namespace AddressBook {
 
 }
 
-#endif //CARI_ADDRESSBOOK_H
+#endif //VSYNC_ADDRESSBOOK_H

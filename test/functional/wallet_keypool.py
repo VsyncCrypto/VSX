@@ -4,10 +4,10 @@
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test the wallet keypool and interaction with wallet encryption/locking."""
 
-from test_framework.test_framework import CariTestFramework
+from test_framework.test_framework import VsyncTestFramework
 from test_framework.util import *
 
-class KeyPoolTest(CariTestFramework):
+class KeyPoolTest(VsyncTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
         self.extra_args = [['-keypool=1']]

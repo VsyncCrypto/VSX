@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Copyright (c) 2017 The Bitcoin Core developers
-# Copyright (c) 2020 The CARI developers
+# Copyright (c) 2020 The VSYNC developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -8,9 +8,9 @@
 
 import os
 
-from test_framework.test_framework import CariTestFramework
+from test_framework.test_framework import VsyncTestFramework
 
-class LoggingTest(CariTestFramework):
+class LoggingTest(VsyncTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
         self.setup_clean_chain = True

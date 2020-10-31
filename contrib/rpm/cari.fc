@@ -1,8 +1,0 @@
-/usr/bin/cari-cli		--	gen_context(system_u:object_r:cari_exec_t,s0)
-/usr/sbin/carid		--	gen_context(system_u:object_r:cari_exec_t,s0)
-/usr/lib(64)?/cari/carid		--	gen_context(system_u:object_r:cari_exec_t,s0)
-
-/etc/cari(/.*)?		gen_context(system_u:object_r:cari_conf_t,s0)
-/var/lib/cari(/.*)?		gen_context(system_u:object_r:cari_var_lib_t,s0)
-
-(/var)?/run/carid(/.*)?   gen_context(system_u:object_r:cari_var_run_t,s0)

@@ -18,7 +18,7 @@
 #include "main.h"
 #include "wallet/wallet.h"
 
-#include "qt/cari/qtutils.h"
+#include "qt/vsync/qtutils.h"
 
 #include <boost/assign/list_of.hpp> // for 'map_list_of()'
 
@@ -687,7 +687,7 @@ void CoinControlDialog::updateLabels()
     }
 
     // actually update labels
-    int nDisplayUnit = BitcoinUnits::CARI;
+    int nDisplayUnit = BitcoinUnits::VSX;
     if (model && model->getOptionsModel())
         nDisplayUnit = model->getOptionsModel()->getDisplayUnit();
 
@@ -840,7 +840,7 @@ void CoinControlDialog::updateView()
             if (haveDest) {
                 sAddress = QString::fromStdString(EncodeDestination(outputAddress));
 
-                // if listMode or change => show CARI address. In tree mode, address is not shown again for direct wallet address outputs
+                // if listMode or change => show VSYNC address. In tree mode, address is not shown again for direct wallet address outputs
                 if (!treeMode || (!(sAddress == sWalletAddress)))
                     itemOutput->setText(COLUMN_ADDRESS, sAddress);
                 else

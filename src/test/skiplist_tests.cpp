@@ -5,7 +5,7 @@
 
 #include "main.h"
 #include "util.h"
-#include "test/test_cari.h"
+#include "test/test_vsync.h"
 
 #include <vector>
 

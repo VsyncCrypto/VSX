@@ -4,7 +4,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #ifdef HAVE_CONFIG_H
-#include "config/cari-config.h"
+#include "config/vsync-config.h"
 #endif
 
 #include "netaddress.h"

@@ -5,8 +5,8 @@ Release Process
 
 ### Before every release candidate
 
-* Update translations (ping Fuzzbawls on Discord) see [translation_process.md](https://github.com/Carbon-Reduction-Initiative/CARI/blob/master/doc/translation_process.md#synchronising-translations).
-* Update manpages, see [gen-manpages.sh](https://github.com/Carbon-Reduction-Initiative/CARI/blob/master/contrib/devtools/README.md#gen-manpagessh).
+* Update translations (ping Fuzzbawls on Discord) see [translation_process.md](https://github.com/VsyncCrypto/VSX/blob/master/doc/translation_process.md#synchronising-translations).
+* Update manpages, see [gen-manpages.sh](https://github.com/VsyncCrypto/VSX/blob/master/contrib/devtools/README.md#gen-manpagessh).
 * Update release candidate version in `configure.ac` (`CLIENT_VERSION_RC`)
 
 ### Before every major and minor release
@@ -50,11 +50,11 @@ Check out the source code in the following directory hierarchy.
 
     cd /path/to/your/toplevel/build
     git clone https://github.com/Carbon-Reduction-Initiative/gitian.sigs.git
-    git clone https://github.com/Carbon-Reduction-Initiative/CARI-detached-sigs.git
+    git clone https://github.com/VsyncCrypto/VSX-detached-sigs.git
     git clone https://github.com/devrandom/gitian-builder.git
-    git clone https://github.com/Carbon-Reduction-Initiative/CARI.git
+    git clone https://github.com/VsyncCrypto/VSX.git
 
-### CARI maintainers/release engineers, suggestion for writing release notes
+### VSYNC maintainers/release engineers, suggestion for writing release notes
 
 Write release notes. git shortlog helps a lot, for example:
 
@@ -75,7 +75,7 @@ If you're using the automated script (found in [contrib/gitian-build.py](/contri
 
 Setup Gitian descriptors:
 
-    pushd ./cari
+    pushd ./vsync
     export SIGNER=(your Gitian key, ie bluematt, sipa, etc)
     export VERSION=(new version, e.g. 0.8.0)
     git fetch
@@ -108,10 +108,10 @@ Create the macOS SDK tarball, see the [macOS build instructions](build-osx.md#de
 
 NOTE: Gitian is sometimes unable to download files. If you have errors, try the step below.
 
-By default, Gitian will fetch source files as needed. To cache them ahead of time, make sure you have checked out the tag you want to build in cari, then:
+By default, Gitian will fetch source files as needed. To cache them ahead of time, make sure you have checked out the tag you want to build in vsync, then:
 
     pushd ./gitian-builder
-    make -C ../cari/depends download SOURCES_PATH=`pwd`/cache/common
+    make -C ../vsync/depends download SOURCES_PATH=`pwd`/cache/common
     popd
 
 Only missing files will be fetched, so this is safe to re-run for each build.
@@ -119,50 +119,50 @@ Only missing files will be fetched, so this is safe to re-run for each build.
 NOTE: Offline builds must use the --url flag to ensure Gitian fetches only from local URLs. For example:
 
     pushd ./gitian-builder
-    ./bin/gbuild --url cari=/path/to/cari,signature=/path/to/sigs {rest of arguments}
+    ./bin/gbuild --url vsync=/path/to/vsync,signature=/path/to/sigs {rest of arguments}
     popd
 
 The gbuild invocations below <b>DO NOT DO THIS</b> by default.
 
-### Build and sign CARI Core for Linux, Windows, and macOS:
+### Build and sign VSYNC Core for Linux, Windows, and macOS:
 
     pushd ./gitian-builder
-    ./bin/gbuild --num-make 2 --memory 3000 --commit cari=v${VERSION} ../cari/contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-linux --destination ../gitian.sigs/ ../cari/contrib/gitian-descriptors/gitian-linux.yml
-    mv build/out/cari-*.tar.gz build/out/src/cari-*.tar.gz ../
+    ./bin/gbuild --num-make 2 --memory 3000 --commit vsync=v${VERSION} ../vsync/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-linux --destination ../gitian.sigs/ ../vsync/contrib/gitian-descriptors/gitian-linux.yml
+    mv build/out/vsync-*.tar.gz build/out/src/vsync-*.tar.gz ../
 
-    ./bin/gbuild --num-make 2 --memory 3000 --commit cari=v${VERSION} ../cari/contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../cari/contrib/gitian-descriptors/gitian-win.yml
-    mv build/out/cari-*-win-unsigned.tar.gz inputs/cari-win-unsigned.tar.gz
-    mv build/out/cari-*.zip build/out/cari-*.exe ../
+    ./bin/gbuild --num-make 2 --memory 3000 --commit vsync=v${VERSION} ../vsync/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../vsync/contrib/gitian-descriptors/gitian-win.yml
+    mv build/out/vsync-*-win-unsigned.tar.gz inputs/vsync-win-unsigned.tar.gz
+    mv build/out/vsync-*.zip build/out/vsync-*.exe ../
 
-    ./bin/gbuild --num-make 2 --memory 3000 --commit cari=v${VERSION} ../cari/contrib/gitian-descriptors/gitian-osx.yml
-    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../cari/contrib/gitian-descriptors/gitian-osx.yml
-    mv build/out/cari-*-osx-unsigned.tar.gz inputs/cari-osx-unsigned.tar.gz
-    mv build/out/cari-*.tar.gz build/out/cari-*.dmg ../
+    ./bin/gbuild --num-make 2 --memory 3000 --commit vsync=v${VERSION} ../vsync/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../vsync/contrib/gitian-descriptors/gitian-osx.yml
+    mv build/out/vsync-*-osx-unsigned.tar.gz inputs/vsync-osx-unsigned.tar.gz
+    mv build/out/vsync-*.tar.gz build/out/vsync-*.dmg ../
     popd
 
 Build output expected:
 
-  1. source tarball (`cari-${VERSION}.tar.gz`)
-  2. linux 32-bit and 64-bit dist tarballs (`cari-${VERSION}-linux[32|64].tar.gz`)
-  3. windows 32-bit and 64-bit unsigned installers and dist zips (`cari-${VERSION}-win[32|64]-setup-unsigned.exe`, `cari-${VERSION}-win[32|64].zip`)
-  4. macOS unsigned installer and dist tarball (`cari-${VERSION}-osx-unsigned.dmg`, `cari-${VERSION}-osx64.tar.gz`)
+  1. source tarball (`vsync-${VERSION}.tar.gz`)
+  2. linux 32-bit and 64-bit dist tarballs (`vsync-${VERSION}-linux[32|64].tar.gz`)
+  3. windows 32-bit and 64-bit unsigned installers and dist zips (`vsync-${VERSION}-win[32|64]-setup-unsigned.exe`, `vsync-${VERSION}-win[32|64].zip`)
+  4. macOS unsigned installer and dist tarball (`vsync-${VERSION}-osx-unsigned.dmg`, `vsync-${VERSION}-osx64.tar.gz`)
   5. Gitian signatures (in `gitian.sigs/${VERSION}-<linux|{win,osx}-unsigned>/(your Gitian key)/`)
 
 ### Verify other gitian builders signatures to your own. (Optional)
 
 Add other gitian builders keys to your gpg keyring, and/or refresh keys.
 
-    gpg --import cari/contrib/gitian-keys/*.pgp
+    gpg --import vsync/contrib/gitian-keys/*.pgp
     gpg --refresh-keys
 
 Verify the signatures
 
     pushd ./gitian-builder
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../cari/contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../cari/contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../cari/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../vsync/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../vsync/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../vsync/contrib/gitian-descriptors/gitian-osx.yml
     popd
 
 ### Next steps:
@@ -183,22 +183,22 @@ Codesigner only: Create Windows/macOS detached signatures:
 
 Codesigner only: Sign the macOS binary:
 
-    transfer cari-osx-unsigned.tar.gz to macOS for signing
-    tar xf cari-osx-unsigned.tar.gz
+    transfer vsync-osx-unsigned.tar.gz to macOS for signing
+    tar xf vsync-osx-unsigned.tar.gz
     ./detached-sig-create.sh -s "Key ID"
     Enter the keychain password and authorize the signature
     Move signature-osx.tar.gz back to the gitian host
 
 Codesigner only: Sign the windows binaries:
 
-    tar xf cari-win-unsigned.tar.gz
+    tar xf vsync-win-unsigned.tar.gz
     ./detached-sig-create.sh -key /path/to/codesign.key
     Enter the passphrase for the key when prompted
     signature-win.tar.gz will be created
 
 Codesigner only: Commit the detached codesign payloads:
 
-    cd ~/cari-detached-sigs
+    cd ~/vsync-detached-sigs
     checkout the appropriate branch for this release series
     rm -rf *
     tar xf signature-osx.tar.gz
@@ -211,24 +211,24 @@ Codesigner only: Commit the detached codesign payloads:
 Non-codesigners: wait for Windows/macOS detached signatures:
 
 - Once the Windows/macOS builds each have 3 matching signatures, they will be signed with their respective release keys.
-- Detached signatures will then be committed to the [cari-detached-sigs](https://github.com/Carbon-Reduction-Initiative/CARI-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
+- Detached signatures will then be committed to the [vsync-detached-sigs](https://github.com/VsyncCrypto/VSX-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
 
 Create (and optionally verify) the signed macOS binary:
 
     pushd ./gitian-builder
-    ./bin/gbuild -i --commit signature=v${VERSION} ../cari/contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../cari/contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../cari/contrib/gitian-descriptors/gitian-osx-signer.yml
-    mv build/out/cari-osx-signed.dmg ../cari-${VERSION}-osx.dmg
+    ./bin/gbuild -i --commit signature=v${VERSION} ../vsync/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../vsync/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../vsync/contrib/gitian-descriptors/gitian-osx-signer.yml
+    mv build/out/vsync-osx-signed.dmg ../vsync-${VERSION}-osx.dmg
     popd
 
 Create (and optionally verify) the signed Windows binaries:
 
     pushd ./gitian-builder
-    ./bin/gbuild -i --commit signature=v${VERSION} ../cari/contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../cari/contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../cari/contrib/gitian-descriptors/gitian-win-signer.yml
-    mv build/out/cari-*win64-setup.exe ../cari-${VERSION}-win64-setup.exe
+    ./bin/gbuild -i --commit signature=v${VERSION} ../vsync/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../vsync/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../vsync/contrib/gitian-descriptors/gitian-win-signer.yml
+    mv build/out/vsync-*win64-setup.exe ../vsync-${VERSION}-win64-setup.exe
     popd
 
 Commit your signature for the signed macOS/Windows binaries:
@@ -250,16 +250,16 @@ sha256sum * > SHA256SUMS
 
 The list of files should be:
 ```
-cari-${VERSION}-aarch64-linux-gnu.tar.gz
-cari-${VERSION}-arm-linux-gnueabihf.tar.gz
-cari-${VERSION}-i686-pc-linux-gnu.tar.gz
-cari-${VERSION}-riscv64-linux-gnu.tar.gz
-cari-${VERSION}-x86_64-linux-gnu.tar.gz
-cari-${VERSION}-osx64.tar.gz
-cari-${VERSION}-osx.dmg
-cari-${VERSION}.tar.gz
-cari-${VERSION}-win64-setup.exe
-cari-${VERSION}-win64.zip
+vsync-${VERSION}-aarch64-linux-gnu.tar.gz
+vsync-${VERSION}-arm-linux-gnueabihf.tar.gz
+vsync-${VERSION}-i686-pc-linux-gnu.tar.gz
+vsync-${VERSION}-riscv64-linux-gnu.tar.gz
+vsync-${VERSION}-x86_64-linux-gnu.tar.gz
+vsync-${VERSION}-osx64.tar.gz
+vsync-${VERSION}-osx.dmg
+vsync-${VERSION}.tar.gz
+vsync-${VERSION}-win64-setup.exe
+vsync-${VERSION}-win64.zip
 ```
 The `*-debug*` files generated by the gitian build contain debug symbols
 for troubleshooting by developers. It is assumed that anyone that is interested
@@ -283,6 +283,6 @@ Note: check that SHA256SUMS itself doesn't end up in SHA256SUMS, which is a spur
 
   - Archive release notes for the new version to `doc/release-notes/` (branch `master` and branch of the release)
 
-  - Create a [new GitHub release](https://github.com/Carbon-Reduction-Initiative/CARI/releases/new) with a link to the archived release notes.
+  - Create a [new GitHub release](https://github.com/VsyncCrypto/VSX/releases/new) with a link to the archived release notes.
 
   - Celebrate

@@ -13,10 +13,10 @@
 #include "key.h"
 #include "keystore.h"
 #include "script/keyorigin.h"
-#include "zcari/zerocoin.h"
+#include "zvsx/zerocoin.h"
 #include "libzerocoin/Accumulator.h"
 #include "libzerocoin/Denominations.h"
-#include "zcari/zcaritracker.h"
+#include "zvsx/zvsxtracker.h"
 
 #include <list>
 #include <stdint.h>
@@ -197,14 +197,14 @@ public:
     bool ReadZerocoinSpendSerialEntry(const CBigNum& bnSerial);
     bool WriteCurrentSeedHash(const uint256& hashSeed);
     bool ReadCurrentSeedHash(uint256& hashSeed);
-    bool WriteZCARISeed(const uint256& hashSeed, const std::vector<unsigned char>& seed);
-    bool ReadZCARISeed(const uint256& hashSeed, std::vector<unsigned char>& seed);
-    bool ReadZCARISeed_deprecated(uint256& seed);
-    bool EraseZCARISeed();
-    bool EraseZCARISeed_deprecated();
+    bool WriteZVSYNCSeed(const uint256& hashSeed, const std::vector<unsigned char>& seed);
+    bool ReadZVSYNCSeed(const uint256& hashSeed, std::vector<unsigned char>& seed);
+    bool ReadZVSYNCSeed_deprecated(uint256& seed);
+    bool EraseZVSYNCSeed();
+    bool EraseZVSYNCSeed_deprecated();
 
-    bool WriteZCARICount(const uint32_t& nCount);
-    bool ReadZCARICount(uint32_t& nCount);
+    bool WriteZVSYNCCount(const uint32_t& nCount);
+    bool ReadZVSYNCCount(uint32_t& nCount);
     std::map<uint256, std::vector<std::pair<uint256, uint32_t> > > MapMintPool();
     bool WriteMintPoolPair(const uint256& hashMasterSeed, const uint256& hashPubcoin, const uint32_t& nCount);
 

@@ -1,4 +1,4 @@
-Source: cari
+Source: vsync
 Section: utils
 Priority: optional
 Maintainer: Fuzzbawls <fuzzbawls@gmail.com>
@@ -28,15 +28,15 @@ Build-Depends: debhelper,
  libzmq3-dev,
  dh-systemd
 Standards-Version: 3.9.2
-Homepage: http://www.cri.eco
-Vcs-Git: git://github.com/Carbon-Reduction-Initiative/CARI.git
-Vcs-Browser: http://github.com/Carbon-Reduction-Initiative/CARI
+Homepage: http://www.vsync.io
+Vcs-Git: git://github.com/VsyncCrypto/VSX.git
+Vcs-Browser: http://github.com/VsyncCrypto/VSX
 
-Package: carid
+Package: vsyncd
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - daemon
- CARI is a free, open source peer-to-peer electronic cash system that
+ VSYNC is a free, open source peer-to-peer electronic cash system that
  is completely decentralized, without the need for a central server or
  trusted parties.  Users hold the crypto keys to their own money and
  transact directly with each other, with the help of a P2P network to
@@ -45,14 +45,14 @@ Description: peer-to-peer network based digital currency - daemon
  Full transaction history is stored locally at each client.  This
  requires 18.5+ GB of space, slowly growing.
  .
- This package provides the daemon, carid, and the CLI tool
- cari-cli to interact with the daemon.
+ This package provides the daemon, vsyncd, and the CLI tool
+ vsync-cli to interact with the daemon.
 
-Package: cari-qt
+Package: vsync-qt
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - Qt GUI
- CARI is a free, open source peer-to-peer electronic cash system that
+ VSYNC is a free, open source peer-to-peer electronic cash system that
  is completely decentralized, without the need for a central server or
  trusted parties.  Users hold the crypto keys to their own money and
  transact directly with each other, with the help of a P2P network to
@@ -61,4 +61,4 @@ Description: peer-to-peer network based digital currency - Qt GUI
  Full transaction history is stored locally at each client.  This
  requires 18.5+ GB of space, slowly growing.
  .
- This package provides Cari-Qt, a GUI for CARI based on Qt.
+ This package provides Vsync-Qt, a GUI for VSYNC based on Qt.

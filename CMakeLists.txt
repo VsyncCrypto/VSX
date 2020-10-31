@@ -10,7 +10,7 @@ if(CCACHE_PROGRAM)
     set(CXX_LAUNCHER "${CCACHE_PROGRAM}")
 endif()
 
-project(CARI)
+project(VSYNC)
 
 set(BDB_VER "4.8.30")
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/contrib/cmake")
@@ -42,7 +42,7 @@ elseif(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
         message(STATUS "Compiling on WSL")
         set(ENV{DISPLAY} ":0")
         set(ENV{LIBGL_ALWAYS_INDIRECT} 1)
-        set(CMAKE_RUNTIME_OUTPUT_DIRECTORY /home/$ENV{USER}/cari-run)
+        set(CMAKE_RUNTIME_OUTPUT_DIRECTORY /home/$ENV{USER}/vsync-run)
         message(WARNING "WSL Runtime support requires VcXsrv to be installed and running")
     else()
         message(STATUS "Compiling on Linux")
@@ -96,8 +96,8 @@ else()
     )
 endif()
 
-# run configure if cari_config.h doesn't exist
-if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/src/config/cari-config.h")
+# run configure if vsync_config.h doesn't exist
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/src/config/vsync-config.h")
 else()
     execute_process(
         COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/configure ${CONFIGSITE} ${BDB_CONFIGURE_FLAGS} ${BIGNUM_CONFIGURE_FLAGS} ${SSL_CONFIGURE_FLAGS}
@@ -321,7 +321,7 @@ set(SERVER_SOURCES
         ./src/txdb.cpp
         ./src/txmempool.cpp
         ./src/validationinterface.cpp
-        ./src/zcarichain.cpp
+        ./src/zvsxchain.cpp
         )
 add_library(SERVER_A STATIC ${BitcoinHeaders} ${SERVER_SOURCES})
 if(MINIUPNP_FOUND)
@@ -360,11 +360,11 @@ set(WALLET_SOURCES
         ./src/masternodeconfig.cpp
         ./src/masternodeman.cpp
         ./src/messagesigner.cpp
-        ./src/zcari/mintpool.cpp
+        ./src/zvsx/mintpool.cpp
         ./src/wallet/hdchain.cpp
         ./src/wallet/rpcdump.cpp
-        ./src/zcari/deterministicmint.cpp
-        ./src/zcari/zerocoin.cpp
+        ./src/zvsx/deterministicmint.cpp
+        ./src/zvsx/zerocoin.cpp
         ./src/wallet/scriptpubkeyman.cpp
         ./src/wallet/rpcwallet.cpp
         ./src/kernel.cpp
@@ -373,10 +373,10 @@ set(WALLET_SOURCES
         ./src/wallet/wallet_zerocoin.cpp
         ./src/wallet/wallet_ismine.cpp
         ./src/wallet/walletdb.cpp
-        ./src/zcari/zcariwallet.cpp
-        ./src/zcari/zcaritracker.cpp
-        ./src/zcari/zcarimodule.cpp
-        ./src/zcari/zpos.cpp
+        ./src/zvsx/zvsxwallet.cpp
+        ./src/zvsx/zvsxtracker.cpp
+        ./src/zvsx/zvsxmodule.cpp
+        ./src/zvsx/zpos.cpp
         ./src/stakeinput.cpp
         )
 add_library(WALLET_A STATIC ${BitcoinHeaders} ${WALLET_SOURCES})
@@ -473,9 +473,9 @@ set(COMMON_SOURCES
         ./src/consensus/tx_verify.cpp
         ./src/consensus/zerocoin_verify.cpp
         ./src/primitives/block.cpp
-        ./src/zcari/deterministicmint.cpp
+        ./src/zvsx/deterministicmint.cpp
         ./src/primitives/transaction.cpp
-        ./src/zcari/zerocoin.cpp
+        ./src/zvsx/zerocoin.cpp
         ./src/core_read.cpp
         ./src/core_write.cpp
         ./src/hash.cpp
@@ -543,13 +543,13 @@ link_directories(
         ${CMAKE_SOURCE_DIR}/src/secp256k1/.libs
         )
 
-set(cari-cli_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/src/cari-cli.cpp)
+set(vsync-cli_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/src/vsync-cli.cpp)
 if($ENV{target} MATCHES "Windows")
-    list(APPEND cari-cli_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/src/cari-cli-res.rc)
+    list(APPEND vsync-cli_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/src/vsync-cli-res.rc)
 endif()
-add_executable(cari-cli ${cari-cli_SOURCES})
-add_dependencies(cari-cli libunivalue)
-target_link_libraries(cari-cli
+add_executable(vsync-cli ${vsync-cli_SOURCES})
+add_dependencies(vsync-cli libunivalue)
+target_link_libraries(vsync-cli
         CLI_A
         univalue
         UTIL_A
@@ -557,16 +557,16 @@ target_link_libraries(cari-cli
         ${Boost_LIBRARIES} ${OPENSSL_LIBRARIES} ${LIBEVENT_LIB}
         )
 if($ENV{target} MATCHES "Windows")
-    target_link_libraries(cari-cli ${WINDOWS_LDADD})
+    target_link_libraries(vsync-cli ${WINDOWS_LDADD})
 endif()
 
-set(cari-tx_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/src/cari-tx.cpp)
+set(vsync-tx_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/src/vsync-tx.cpp)
 if($ENV{target} MATCHES "Windows")
-    list(APPEND cari-tx_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/src/cari-tx-res.rc)
+    list(APPEND vsync-tx_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/src/vsync-tx-res.rc)
 endif()
-add_executable(cari-tx ${cari-tx_SOURCES})
-add_dependencies(cari-tx libunivalue libsecp256k1)
-target_link_libraries(cari-tx
+add_executable(vsync-tx ${vsync-tx_SOURCES})
+add_dependencies(vsync-tx libunivalue libsecp256k1)
+target_link_libraries(vsync-tx
         univalue
         COMMON_A
         ZEROCOIN_A
@@ -576,26 +576,26 @@ target_link_libraries(cari-tx
         ${Boost_LIBRARIES} ${OPENSSL_LIBRARIES} ${LIBEVENT_LIB}
         )
 if($ENV{target} MATCHES "Windows")
-    target_link_libraries(cari-tx ${WINDOWS_LDADD})
+    target_link_libraries(vsync-tx ${WINDOWS_LDADD})
 endif()
 if(GMP_FOUND)
-    target_link_libraries(cari-tx ${GMP_LIBRARY})
+    target_link_libraries(vsync-tx ${GMP_LIBRARY})
 endif()
 
 link_directories(${CMAKE_BINARY_DIR})
 
-set(carid_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/src/carid.cpp)
+set(vsyncd_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/src/vsyncd.cpp)
 if($ENV{target} MATCHES "Windows")
-    list(APPEND carid_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/src/carid-res.rc)
+    list(APPEND vsyncd_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/src/vsyncd-res.rc)
 endif()
-add_executable(carid ${carid_SOURCES} ${BitcoinHeaders})
-add_dependencies(carid libunivalue libsecp256k1 leveldb leveldb_sse42 memenv)
-target_include_directories(carid PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src
+add_executable(vsyncd ${vsyncd_SOURCES} ${BitcoinHeaders})
+add_dependencies(vsyncd libunivalue libsecp256k1 leveldb leveldb_sse42 memenv)
+target_include_directories(vsyncd PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src
         ${CMAKE_CURRENT_SOURCE_DIR}/src/leveldb
         ${CMAKE_CURRENT_SOURCE_DIR}/src/leveldb/include
         ${CMAKE_CURRENT_SOURCE_DIR}/src/leveldb/helpers/memenv
         ${LIBEVENT_INCLUDE_DIR})
-target_link_libraries(carid
+target_link_libraries(vsyncd
         pthread
         SERVER_A
         WALLET_A
@@ -612,22 +612,22 @@ target_link_libraries(carid
         )
 if($ENV{target} MATCHES "Windows")
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wstack-protector -fstack-protector-all -fPIE -pipe -O2 -pthread -Wl,--dynamicbase -Wl,--nxcompat -Wl,--high-entropy-va -pie --static")
-    target_link_libraries(carid ${WINDOWS_LDADD})
+    target_link_libraries(vsyncd ${WINDOWS_LDADD})
 endif()
 if(GMP_FOUND)
-    target_link_libraries(carid ${GMP_LIBRARY})
-    target_include_directories(carid PUBLIC ${GMP_INCLUDE_DIR})
+    target_link_libraries(vsyncd ${GMP_LIBRARY})
+    target_include_directories(vsyncd PUBLIC ${GMP_INCLUDE_DIR})
 endif()
 if(ZMQ_FOUND)
-    target_link_libraries(carid ZMQ_A ${ZMQ_LIB})
-    target_include_directories(carid PUBLIC ${ZMQ_INCLUDE_DIR})
+    target_link_libraries(vsyncd ZMQ_A ${ZMQ_LIB})
+    target_include_directories(vsyncd PUBLIC ${ZMQ_INCLUDE_DIR})
 endif()
 if(MINIUPNP_FOUND)
-    target_compile_definitions(carid PUBLIC "-DSTATICLIB -DMINIUPNP_STATICLIB")
-    target_link_libraries(carid ${MINIUPNP_LIBRARY})
-    target_include_directories(carid PUBLIC ${MINIUPNP_INCLUDE_DIR})
+    target_compile_definitions(vsyncd PUBLIC "-DSTATICLIB -DMINIUPNP_STATICLIB")
+    target_link_libraries(vsyncd ${MINIUPNP_LIBRARY})
+    target_include_directories(vsyncd PUBLIC ${MINIUPNP_INCLUDE_DIR})
 endif()
 
-target_link_libraries(carid -lpthread)
+target_link_libraries(vsyncd -lpthread)
 
 add_subdirectory(src/qt)

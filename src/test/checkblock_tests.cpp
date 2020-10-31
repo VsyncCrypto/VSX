@@ -12,7 +12,7 @@
 #include "fs.h"
 #include "main.h"
 #include "utiltime.h"
-#include "test/test_cari.h"
+#include "test/test_vsync.h"
 
 #include <cstdio>
 

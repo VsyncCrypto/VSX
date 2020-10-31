@@ -10,7 +10,7 @@
 #include "checkpoints.h"
 
 #include "uint256.h"
-#include "test_cari.h"
+#include "test_vsync.h"
 
 #include <boost/test/unit_test.hpp>
 

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef CARI_PAIRRESULT_H
-#define CARI_PAIRRESULT_H
+#ifndef VSYNC_PAIRRESULT_H
+#define VSYNC_PAIRRESULT_H
 
 
 class PairResult {
@@ -17,4 +17,4 @@ public:
 };
 
 
-#endif //CARI_PAIRRESULT_H
+#endif //VSYNC_PAIRRESULT_H

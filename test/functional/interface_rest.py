@@ -4,7 +4,7 @@
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test the REST API."""
 
-from test_framework.test_framework import CariTestFramework
+from test_framework.test_framework import VsyncTestFramework
 from test_framework.util import *
 from struct import *
 from io import BytesIO
@@ -40,7 +40,7 @@ def http_post_call(host, port, path, requestdata = '', response_object = 0):
 
     return conn.getresponse().read()
 
-class RESTTest (CariTestFramework):
+class RESTTest (VsyncTestFramework):
     FORMAT_SEPARATOR = "."
 
     def set_test_params(self):

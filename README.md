@@ -1,41 +1,25 @@
-CARI Core integration/staging repository
+VSYNC Core integration/staging repository (Verson 3.9.6.0)
 =====================================
 
-[![Build Status](https://travis-ci.org/CARI-Project/CARI.svg?branch=master)](https://travis-ci.org/CARI-Project/CARI) [![GitHub version](https://badge.fury.io/gh/CARI-Project%2FCARI.svg)](https://badge.fury.io/gh/CARI-Project%2FCARI)
+VSYNC is an open source cryptocurrency focused on fast, private transactions using the Zerocoin protocol, with low transaction fees & environmental footprint.  It utilizes the first ever anonymous proof of stake protocol, called zPoS, combined with regular PoS and masternodes for securing its network. zPoS incentivizes using the privacy features available in VSYNC by granting a higher block reward for zPoS over regular PoS and masternodes. In practice, VSYNC has between 4 to 10 times higher use of its privacy features in comparison to other coins that combine public and private transactions. This is thanks to innovations like zPoS and integrating the Zerocoin protocol into light/mobile wallets, allowing for a complete and lightweight privacy protocol that can be used on the go. This also includes security improvements like deterministic generation of zVSX for easy backups.
+The goal of VSYNC is to achieve a decentralized, sustainable cryptocurrency with near instant full-time private transactions, fair governance and community intelligence.
+- Anonymized transactions & consensus using the _Zerocoin Protocol_.
+- light/mobile wallet privacy using the Zerocoin Light Node Protocol.
+- Fast transactions featuring guaranteed zero confirmation transactions, we call it _SwiftX_.
+- Decentralized blockchain voting utilizing Masternode technology to form a DAO. The blockchain will distribute monthly treasury funds based on successful proposals submitted by the community and voted on by the DAO.
 
-CARI is the world's first carbon credit generating blockchain, being implemented by Carbon Reduction Initiative (CRI) Ltd as a low-energy, decentralised masternode blockchain that will generate carbon credits certified by a third-party issuing body. It is an open source cryptocurrency focused on fast, private transactions using the Zerocoin protocol, with low transaction fees & low environmental footprint.
-
-More information, including the Business Plan, can be found at [cri.eco](http://www.cri.eco). Join the community at [CRI Twitter](https://twitter.com/CRILtdUK).
+More information at [vsync.io](http://www.vsync.io) Visit our ANN thread at [BitcoinTalk](https://bitcointalk.org/index.php?topic=2133048.0)
 
 ### Coin Specs
 <table>
-<tr><td>Algo</td><td>Quark</td></tr>
-<tr><td>Block Time</td><td>60 Seconds</td></tr>
+<tr><td>ALGO</td><td>XEVAN</td></tr>
+<tr><td>BLOCK TIME</td><td>60 Seconds</td></tr>
+<tr><td>Masternode Collateral</td><td>100 000 VSX</td></tr>
+<tr><td>POW</td><td>Ends on Block 259200</td></tr>
+<tr><td>POS</td><td>Starting from Block 259201</td></tr>
 <tr><td>Difficulty Retargeting</td><td>Every Block</td></tr>
-<tr><td>Max Coin Supply (PoS)</td><td>10,191,520</td></tr>
-<tr><td>Premine</td><td>100,000 CARI</td></tr>
-</table>
-
-### Reward Distribution
-
-### PreMine Generation
-
-<table>
-<th>Block Height</th><th>Block Reward</th>
-<tr><td>1-5000</td><td>20 CARI</td></tr>
-</table>
-
-### PoS Rewards Breakdown
-
-<table>
-<th>Year</th><th>Block Height</th><th>Reward</th><th>Masternodes</th><th>Staking</th>
-<tr><td>Year 1</td><td>5001-530600</td><td>0.2 CARI</td><td>80% (0.16 CARI)</td><td>20% (0.04 CARI)</td></tr>
-<tr><td>Year 2</td><td>530601-1056200</td><td>1.0 CARI</td><td>80% (0.8 CARI)</td><td>20% (0.2 CARI)</td></tr>
-<tr><td>Year 3</td><td>1056201-1581800</td><td>2.0 CARI</td><td>80% (1.6 CARI)</td><td>20% (0.4 CARI)</td></tr>
-<tr><td>Year 4</td><td>1581801-2107400</td><td>3.0 CARI</td><td>80% (2.4 CARI)</td><td>20% (0.6 CARI)</td></tr>
-<tr><td>Year 5</td><td>2107401-2633000</td><td>4.0 CARI</td><td>80% (3.2 CARI)</td><td>20% (0.8 CARI)</td></tr>
-<tr><td>Year 6</td><td>2633001-3158600</td><td>4.5 CARI</td><td>80% (3.6 CARI)</td><td>20% (0.9 CARI)</td></tr>
-<tr><td>Year 7</td><td>3158601-3684200</td><td>2.0 CARI</td><td>80% (1.6 CARI)</td><td>20% (0.4 CARI)</td></tr>
-<tr><td>Year 8</td><td>3684201-4209800</td><td>1.5 CARI</td><td>80% (1.2 CARI)</td><td>20% (0.3 CARI)</td></tr>
-<tr><td>Year 9</td><td>4209801-4735400</td><td>1.0 CARI</td><td>80% (0.8 CARI)</td><td>20% (0.2 CARI)</td></tr>
+<tr><td>Privacy technology </td><td>Zerocoin (zVSX)</td></tr>
+<tr><td>INSTANTX</td><td>SwifTX</td></tr>
+<tr><td>RPC PORT</td><td>65015</td></tr>
+<tr><td>P2P PORT</td><td>65010</td></tr>
 </table>

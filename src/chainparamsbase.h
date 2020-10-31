@@ -10,8 +10,8 @@
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between cari-cli and carid)
- * of a given instance of the Cari system.
+ * CBaseChainParams defines the base parameters (shared between vsync-cli and vsyncd)
+ * of a given instance of the Vsync system.
  */
 class CBaseChainParams
 {

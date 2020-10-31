@@ -4,8 +4,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef CARI_QT_WALLETMODEL_H
-#define CARI_QT_WALLETMODEL_H
+#ifndef VSYNC_QT_WALLETMODEL_H
+#define VSYNC_QT_WALLETMODEL_H
 
 #include "askpassphrasedialog.h"
 #include "paymentrequestplus.h"
@@ -104,7 +104,7 @@ public:
     }
 };
 
-/** Interface to CARI wallet from Qt view code. */
+/** Interface to VSYNC wallet from Qt view code. */
 class WalletModel : public QObject
 {
     Q_OBJECT
@@ -148,6 +148,8 @@ public:
     CAmount getMinColdStakingAmount() const;
     /* current staking status from the miner thread **/
     bool isStakingStatusActive() const;
+
+    bool hasWallet() { return wallet; };
 
     bool isHDEnabled() const;
     bool upgradeWallet(std::string& upgradeError);
@@ -203,7 +205,7 @@ public:
     const CWalletTx* getTx(uint256 id);
 
     // prepare transaction for getting txfee before sending coins
-    SendCoinsReturn prepareTransaction(WalletModelTransaction& transaction, const CCoinControl* coinControl = NULL, bool fIncludeDelegations = true, bool fPoWAlternative = false);
+    SendCoinsReturn prepareTransaction(WalletModelTransaction& transaction, const CCoinControl* coinControl = NULL, bool fIncludeDelegations = true);
 
     // Send coins to a list of recipients
     SendCoinsReturn sendCoins(WalletModelTransaction& transaction);
@@ -364,4 +366,4 @@ public Q_SLOTS:
     bool updateAddressBookLabels(const CTxDestination& address, const std::string& strName, const std::string& strPurpose);
 };
 
-#endif // CARI_QT_WALLETMODEL_H
+#endif // VSYNC_QT_WALLETMODEL_H

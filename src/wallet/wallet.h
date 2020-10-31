@@ -20,7 +20,7 @@
 #include "pairresult.h"
 #include "primitives/block.h"
 #include "primitives/transaction.h"
-#include "zcari/zerocoin.h"
+#include "zvsx/zerocoin.h"
 #include "guiinterface.h"
 #include "util.h"
 #include "util/memory.h"
@@ -28,9 +28,9 @@
 #include "wallet/wallet_ismine.h"
 #include "wallet/scriptpubkeyman.h"
 #include "wallet/walletdb.h"
-#include "zcari/zcarimodule.h"
-#include "zcari/zcariwallet.h"
-#include "zcari/zcaritracker.h"
+#include "zvsx/zvsxmodule.h"
+#include "zvsx/zvsxwallet.h"
+#include "zvsx/zvsxtracker.h"
 
 #include <algorithm>
 #include <map>
@@ -67,7 +67,7 @@ static const unsigned int MAX_FREE_TRANSACTION_CREATE_SIZE = 1000;
 //! -custombackupthreshold default
 static const int DEFAULT_CUSTOMBACKUPTHRESHOLD = 1;
 //! -minstakesplit default
-static const CAmount DEFAULT_MIN_STAKE_SPLIT_THRESHOLD = 4 * COIN;
+static const CAmount DEFAULT_MIN_STAKE_SPLIT_THRESHOLD = 10000 * COIN;
 
 class CAccountingEntry;
 class CCoinControl;
@@ -84,7 +84,7 @@ enum WalletFeature {
     FEATURE_WALLETCRYPT = 40000, // wallet encryption
     FEATURE_COMPRPUBKEY = 60000, // compressed public keys
 
-    FEATURE_PRE_CARI = 61000, // inherited version..
+    FEATURE_PRE_VSYNC = 61000, // inherited version..
 
     // The following features were implemented in BTC but not in our wallet, we can simply skip them.
     // FEATURE_HD = 130000,  Hierarchical key derivation after BIP32 (HD Wallet)
@@ -101,25 +101,25 @@ enum AvailableCoinsType {
     STAKEABLE_COINS = 6                             // UTXO's that are valid for staking
 };
 
-// Possible states for zCARI send
+// Possible states for zVSX send
 enum ZerocoinSpendStatus {
-    ZCARI_SPEND_OKAY = 0,                            // No error
-    ZCARI_SPEND_ERROR = 1,                           // Unspecified class of errors, more details are (hopefully) in the returning text
-    ZCARI_WALLET_LOCKED = 2,                         // Wallet was locked
-    ZCARI_COMMIT_FAILED = 3,                         // Commit failed, reset status
-    ZCARI_ERASE_SPENDS_FAILED = 4,                   // Erasing spends during reset failed
-    ZCARI_ERASE_NEW_MINTS_FAILED = 5,                // Erasing new mints during reset failed
-    ZCARI_TRX_FUNDS_PROBLEMS = 6,                    // Everything related to available funds
-    ZCARI_TRX_CREATE = 7,                            // Everything related to create the transaction
-    ZCARI_TRX_CHANGE = 8,                            // Everything related to transaction change
-    ZCARI_TXMINT_GENERAL = 9,                        // General errors in MintsToInputVectorPublicSpend
-    ZCARI_INVALID_COIN = 10,                         // Selected mint coin is not valid
-    ZCARI_FAILED_ACCUMULATOR_INITIALIZATION = 11,    // Failed to initialize witness
-    ZCARI_INVALID_WITNESS = 12,                      // Spend coin transaction did not verify
-    ZCARI_BAD_SERIALIZATION = 13,                    // Transaction verification failed
-    ZCARI_SPENT_USED_ZCARI = 14,                      // Coin has already been spend
-    ZCARI_TX_TOO_LARGE = 15,                         // The transaction is larger than the max tx size
-    ZCARI_SPEND_V1_SEC_LEVEL                         // Spend is V1 and security level is not set to 100
+    ZVSYNC_SPEND_OKAY = 0,                            // No error
+    ZVSYNC_SPEND_ERROR = 1,                           // Unspecified class of errors, more details are (hopefully) in the returning text
+    ZVSYNC_WALLET_LOCKED = 2,                         // Wallet was locked
+    ZVSYNC_COMMIT_FAILED = 3,                         // Commit failed, reset status
+    ZVSYNC_ERASE_SPENDS_FAILED = 4,                   // Erasing spends during reset failed
+    ZVSYNC_ERASE_NEW_MINTS_FAILED = 5,                // Erasing new mints during reset failed
+    ZVSYNC_TRX_FUNDS_PROBLEMS = 6,                    // Everything related to available funds
+    ZVSYNC_TRX_CREATE = 7,                            // Everything related to create the transaction
+    ZVSYNC_TRX_CHANGE = 8,                            // Everything related to transaction change
+    ZVSYNC_TXMINT_GENERAL = 9,                        // General errors in MintsToInputVectorPublicSpend
+    ZVSYNC_INVALID_COIN = 10,                         // Selected mint coin is not valid
+    ZVSYNC_FAILED_ACCUMULATOR_INITIALIZATION = 11,    // Failed to initialize witness
+    ZVSYNC_INVALID_WITNESS = 12,                      // Spend coin transaction did not verify
+    ZVSYNC_BAD_SERIALIZATION = 13,                    // Transaction verification failed
+    ZVSYNC_SPENT_USED_ZVSYNC = 14,                      // Coin has already been spend
+    ZVSYNC_TX_TOO_LARGE = 15,                         // The transaction is larger than the max tx size
+    ZVSYNC_SPEND_V1_SEC_LEVEL                         // Spend is V1 and security level is not set to 100
 };
 
 /** A key pool entry */
@@ -255,7 +255,7 @@ private:
 
 public:
 
-    static const CAmount DEFAULT_STAKE_SPLIT_THRESHOLD = 20 * COIN;
+    static const CAmount DEFAULT_STAKE_SPLIT_THRESHOLD = 25000 * COIN;
 
     //! Generates hd wallet //
     bool SetupSPKM();
@@ -295,7 +295,7 @@ public:
     // Staker status (last hashed block and time)
     CStakerStatus* pStakerStatus = nullptr;
 
-    // User-defined fee CARI/kb
+    // User-defined fee VSYNC/kb
     bool fUseCustomFee;
     CAmount nCustomFee;
 
@@ -364,7 +364,7 @@ public:
 
     std::map<CTxDestination, std::vector<COutput> > AvailableCoinsByAddress(bool fConfirmed = true, CAmount maxCoinValue = 0);
 
-    /// Get 10000 CARI output and keys which can be used for the Masternode
+    /// Get 10000 VSYNC output and keys which can be used for the Masternode
     bool GetMasternodeVinAndKeys(CTxIn& txinRet, CPubKey& pubKeyRet,
             CKey& keyRet, std::string strTxHash, std::string strOutputIndex, std::string& strError);
     /// Extract txin information and keys from output
@@ -481,9 +481,8 @@ public:
         bool sign = true,
         bool useIX = false,
         CAmount nFeePay = 0,
-        bool fIncludeDelegated = false,
-        bool fPoWAlternative = false);
-    bool CreateTransaction(CScript scriptPubKey, const CAmount& nValue, CWalletTx& wtxNew, CReserveKey& reservekey, CAmount& nFeeRet, std::string& strFailReason, const CCoinControl* coinControl = NULL, AvailableCoinsType coin_type = ALL_COINS, bool useIX = false, CAmount nFeePay = 0, bool fIncludeDelegated = false, bool fPoWAlternative = false);
+        bool fIncludeDelegated = false);
+    bool CreateTransaction(CScript scriptPubKey, const CAmount& nValue, CWalletTx& wtxNew, CReserveKey& reservekey, CAmount& nFeeRet, std::string& strFailReason, const CCoinControl* coinControl = NULL, AvailableCoinsType coin_type = ALL_COINS, bool useIX = false, CAmount nFeePay = 0, bool fIncludeDelegated = false);
 
     // enumeration for CommitResult (return status of CommitTransaction)
     enum CommitStatus
@@ -614,12 +613,12 @@ public:
     bool AddDeterministicSeed(const uint256& seed);
 
     // Par of the tx rescan process
-    void doZCariRescan(const CBlockIndex* pindex, const CBlock& block, std::set<uint256>& setAddedToWallet, const Consensus::Params& consensus, bool fCheckZCARI);
+    void doZVsyncRescan(const CBlockIndex* pindex, const CBlock& block, std::set<uint256>& setAddedToWallet, const Consensus::Params& consensus, bool fCheckZVSYNC);
 
     //- ZC Mints (Only for regtest)
     std::string MintZerocoin(CAmount nValue, CWalletTx& wtxNew, std::vector<CDeterministicMint>& vDMints, const CCoinControl* coinControl = NULL);
     std::string MintZerocoinFromOutPoint(CAmount nValue, CWalletTx& wtxNew, std::vector<CDeterministicMint>& vDMints, const std::vector<COutPoint> vOutpts);
-    bool CreateZCARIOutPut(libzerocoin::CoinDenomination denomination, CTxOut& outMint, CDeterministicMint& dMint);
+    bool CreateZVSYNCOutPut(libzerocoin::CoinDenomination denomination, CTxOut& outMint, CDeterministicMint& dMint);
     bool CreateZerocoinMintTransaction(const CAmount nValue,
             CMutableTransaction& txNew,
             std::vector<CDeterministicMint>& vDMints,
@@ -646,11 +645,11 @@ public:
     CAmount GetImmatureZerocoinBalance() const;
     std::map<libzerocoin::CoinDenomination, CAmount> GetMyZerocoinDistribution() const;
 
-    // zCARI wallet
-    CzCARIWallet* zwalletMain{nullptr};
-    std::unique_ptr<CzCARITracker> zcariTracker{nullptr};
-    void setZWallet(CzCARIWallet* zwallet);
-    CzCARIWallet* getZWallet();
+    // zVSX wallet
+    CzVSXWallet* zwalletMain{nullptr};
+    std::unique_ptr<CzVSXTracker> zvsxTracker{nullptr};
+    void setZWallet(CzVSXWallet* zwallet);
+    CzVSXWallet* getZWallet();
     bool IsMyZerocoinSpend(const CBigNum& bnSerial) const;
     bool IsMyMint(const CBigNum& bnValue) const;
     std::string ResetMintZerocoin();
@@ -664,8 +663,8 @@ public:
     bool UpdateMint(const CBigNum& bnValue, const int& nHeight, const uint256& txid, const libzerocoin::CoinDenomination& denom);
     // Zerocoin entry changed. (called with lock cs_wallet held)
     boost::signals2::signal<void(CWallet* wallet, const std::string& pubCoin, const std::string& isUsed, ChangeType status)> NotifyZerocoinChanged;
-    // zCARI reset
-    boost::signals2::signal<void()> NotifyzCARIReset;
+    // zVSX reset
+    boost::signals2::signal<void()> NotifyzVSXReset;
 
     /* Wallets parameter interaction */
     static bool ParameterInteraction();

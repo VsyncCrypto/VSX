@@ -2,10 +2,10 @@
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-bin_PROGRAMS += qt/cari-qt
+bin_PROGRAMS += qt/vsync-qt
 EXTRA_LIBRARIES += qt/libbitcoinqt.a
 
-# cari qt core #
+# vsync qt core #
 include Makefile.qt_locale.include
 
 QT_FORMS_UI = \
@@ -18,54 +18,54 @@ QT_FORMS_UI = \
   qt/forms/openuridialog.ui \
   qt/forms/optionsdialog.ui \
   qt/forms/rpcconsole.ui \
-  qt/cari/forms/loadingdialog.ui \
-  qt/cari/forms/snackbar.ui \
-  qt/cari/forms/navmenuwidget.ui \
-  qt/cari/forms/lockunlock.ui \
-  qt/cari/forms/expandablebutton.ui \
-  qt/cari/forms/receivedialog.ui \
-  qt/cari/forms/topbar.ui \
-  qt/cari/forms/txrow.ui \
-  qt/cari/forms/dashboardwidget.ui \
-  qt/cari/forms/addresslabelrow.ui \
-  qt/cari/forms/contactdropdownrow.ui \
-  qt/cari/forms/mninfodialog.ui \
-  qt/cari/forms/optionbutton.ui \
-  qt/cari/forms/masternodewizarddialog.ui \
-  qt/cari/forms/mnrow.ui \
-  qt/cari/forms/masternodeswidget.ui \
-  qt/cari/forms/myaddressrow.ui \
-  qt/cari/forms/csrow.ui \
-  qt/cari/forms/sendchangeaddressdialog.ui \
-  qt/cari/forms/sendconfirmdialog.ui \
-  qt/cari/forms/sendcustomfeedialog.ui \
-  qt/cari/forms/sendchangeaddressdialog.ui \
-  qt/cari/forms/sendmultirow.ui \
-  qt/cari/forms/send.ui \
-  qt/cari/forms/addnewaddressdialog.ui \
-  qt/cari/forms/addnewcontactdialog.ui \
-  qt/cari/forms/requestdialog.ui \
-  qt/cari/forms/receivewidget.ui \
-  qt/cari/forms/tooltipmenu.ui \
-  qt/cari/forms/addresseswidget.ui \
-  qt/cari/forms/defaultdialog.ui \
-  qt/cari/forms/coldstakingwidget.ui \
-  qt/cari/settings/forms/settingsbackupwallet.ui \
-  qt/cari/settings/forms/settingsexportcsv.ui \
-  qt/cari/settings/forms/settingsbittoolwidget.ui \
-  qt/cari/settings/forms/settingsconsolewidget.ui \
-  qt/cari/settings/forms/settingsdisplayoptionswidget.ui \
-  qt/cari/settings/forms/settingsfaqwidget.ui \
-  qt/cari/settings/forms/settingsinformationwidget.ui \
-  qt/cari/settings/forms/settingsmainoptionswidget.ui \
-  qt/cari/settings/forms/settingsmultisenddialog.ui \
-  qt/cari/settings/forms/settingsmultisendwidget.ui \
-  qt/cari/settings/forms/settingssignmessagewidgets.ui \
-  qt/cari/settings/forms/settingswalletoptionswidget.ui \
-  qt/cari/settings/forms/settingswalletrepairwidget.ui \
-  qt/cari/settings/forms/settingswidget.ui \
-  qt/cari/forms/welcomecontentwidget.ui \
-  qt/cari/forms/splash.ui
+  qt/vsync/forms/loadingdialog.ui \
+  qt/vsync/forms/snackbar.ui \
+  qt/vsync/forms/navmenuwidget.ui \
+  qt/vsync/forms/lockunlock.ui \
+  qt/vsync/forms/expandablebutton.ui \
+  qt/vsync/forms/receivedialog.ui \
+  qt/vsync/forms/topbar.ui \
+  qt/vsync/forms/txrow.ui \
+  qt/vsync/forms/dashboardwidget.ui \
+  qt/vsync/forms/addresslabelrow.ui \
+  qt/vsync/forms/contactdropdownrow.ui \
+  qt/vsync/forms/mninfodialog.ui \
+  qt/vsync/forms/optionbutton.ui \
+  qt/vsync/forms/masternodewizarddialog.ui \
+  qt/vsync/forms/mnrow.ui \
+  qt/vsync/forms/masternodeswidget.ui \
+  qt/vsync/forms/myaddressrow.ui \
+  qt/vsync/forms/csrow.ui \
+  qt/vsync/forms/sendchangeaddressdialog.ui \
+  qt/vsync/forms/sendconfirmdialog.ui \
+  qt/vsync/forms/sendcustomfeedialog.ui \
+  qt/vsync/forms/sendchangeaddressdialog.ui \
+  qt/vsync/forms/sendmultirow.ui \
+  qt/vsync/forms/send.ui \
+  qt/vsync/forms/addnewaddressdialog.ui \
+  qt/vsync/forms/addnewcontactdialog.ui \
+  qt/vsync/forms/requestdialog.ui \
+  qt/vsync/forms/receivewidget.ui \
+  qt/vsync/forms/tooltipmenu.ui \
+  qt/vsync/forms/addresseswidget.ui \
+  qt/vsync/forms/defaultdialog.ui \
+  qt/vsync/forms/coldstakingwidget.ui \
+  qt/vsync/settings/forms/settingsbackupwallet.ui \
+  qt/vsync/settings/forms/settingsexportcsv.ui \
+  qt/vsync/settings/forms/settingsbittoolwidget.ui \
+  qt/vsync/settings/forms/settingsconsolewidget.ui \
+  qt/vsync/settings/forms/settingsdisplayoptionswidget.ui \
+  qt/vsync/settings/forms/settingsfaqwidget.ui \
+  qt/vsync/settings/forms/settingsinformationwidget.ui \
+  qt/vsync/settings/forms/settingsmainoptionswidget.ui \
+  qt/vsync/settings/forms/settingsmultisenddialog.ui \
+  qt/vsync/settings/forms/settingsmultisendwidget.ui \
+  qt/vsync/settings/forms/settingssignmessagewidgets.ui \
+  qt/vsync/settings/forms/settingswalletoptionswidget.ui \
+  qt/vsync/settings/forms/settingswalletrepairwidget.ui \
+  qt/vsync/settings/forms/settingswidget.ui \
+  qt/vsync/forms/welcomecontentwidget.ui \
+  qt/vsync/forms/splash.ui
 
 QT_MOC_CPP = \
   qt/moc_addressbookpage.cpp \
@@ -73,7 +73,7 @@ QT_MOC_CPP = \
   qt/moc_askpassphrasedialog.cpp \
   qt/moc_bantablemodel.cpp \
   qt/moc_bitcoinaddressvalidator.cpp \
-  qt/cari/moc_carigui.cpp \
+  qt/vsync/moc_vsyncgui.cpp \
   qt/moc_bitcoinunits.cpp \
   qt/moc_clientmodel.cpp \
   qt/moc_coincontroldialog.cpp \
@@ -100,76 +100,76 @@ QT_MOC_CPP = \
   qt/moc_transactiontablemodel.cpp \
   qt/moc_utilitydialog.cpp \
   qt/moc_walletmodel.cpp \
-  qt/cari/moc_loadingdialog.cpp \
-  qt/cari/moc_pwidget.cpp \
-  qt/cari/moc_focuseddialog.cpp \
-  qt/cari/moc_snackbar.cpp \
-  qt/cari/moc_navmenuwidget.cpp \
-  qt/cari/moc_lockunlock.cpp \
-  qt/cari/moc_expandablebutton.cpp \
-  qt/cari/moc_furabstractlistitemdelegate.cpp \
-  qt/cari/moc_receivedialog.cpp \
-  qt/cari/moc_pfborderimage.cpp \
-  qt/cari/moc_topbar.cpp \
-  qt/cari/moc_txrow.cpp \
-  qt/cari/moc_dashboardwidget.cpp \
-  qt/cari/moc_addresslabelrow.cpp \
-  qt/cari/moc_contactdropdownrow.cpp \
-  qt/cari/moc_mninfodialog.cpp \
-  qt/cari/moc_optionbutton.cpp \
-  qt/cari/moc_coldstakingmodel.cpp \
-  qt/cari/moc_mnmodel.cpp \
-  qt/cari/moc_masternodewizarddialog.cpp \
-  qt/cari/moc_mnrow.cpp \
-  qt/cari/moc_masternodeswidget.cpp \
-  qt/cari/moc_myaddressrow.cpp \
-  qt/cari/moc_csrow.cpp \
-  qt/cari/moc_contactsdropdown.cpp \
-  qt/cari/moc_sendchangeaddressdialog.cpp \
-  qt/cari/moc_sendconfirmdialog.cpp \
-  qt/cari/moc_sendcustomfeedialog.cpp \
-  qt/cari/moc_sendchangeaddressdialog.cpp \
-  qt/cari/moc_sendmultirow.cpp \
-  qt/cari/moc_send.cpp \
-  qt/cari/moc_addnewaddressdialog.cpp \
-  qt/cari/moc_addnewcontactdialog.cpp \
-  qt/cari/moc_requestdialog.cpp \
-  qt/cari/moc_receivewidget.cpp \
-  qt/cari/moc_tooltipmenu.cpp \
-  qt/cari/moc_addresseswidget.cpp \
-  qt/cari/moc_defaultdialog.cpp \
-  qt/cari/moc_coldstakingwidget.cpp \
-  qt/cari/settings/moc_settingsbackupwallet.cpp \
-  qt/cari/settings/moc_settingsexportcsv.cpp \
-  qt/cari/settings/moc_settingsbittoolwidget.cpp \
-  qt/cari/settings/moc_settingsconsolewidget.cpp \
-  qt/cari/settings/moc_settingsdisplayoptionswidget.cpp \
-  qt/cari/settings/moc_settingsfaqwidget.cpp \
-  qt/cari/settings/moc_settingsinformationwidget.cpp \
-  qt/cari/settings/moc_settingsmainoptionswidget.cpp \
-  qt/cari/settings/moc_settingsmultisenddialog.cpp \
-  qt/cari/settings/moc_settingsmultisendwidget.cpp \
-  qt/cari/settings/moc_settingssignmessagewidgets.cpp \
-  qt/cari/settings/moc_settingswalletoptionswidget.cpp \
-  qt/cari/settings/moc_settingswalletrepairwidget.cpp \
-  qt/cari/settings/moc_settingswidget.cpp \
-  qt/cari/moc_welcomecontentwidget.cpp \
-  qt/cari/moc_splash.cpp
+  qt/vsync/moc_loadingdialog.cpp \
+  qt/vsync/moc_pwidget.cpp \
+  qt/vsync/moc_focuseddialog.cpp \
+  qt/vsync/moc_snackbar.cpp \
+  qt/vsync/moc_navmenuwidget.cpp \
+  qt/vsync/moc_lockunlock.cpp \
+  qt/vsync/moc_expandablebutton.cpp \
+  qt/vsync/moc_furabstractlistitemdelegate.cpp \
+  qt/vsync/moc_receivedialog.cpp \
+  qt/vsync/moc_pfborderimage.cpp \
+  qt/vsync/moc_topbar.cpp \
+  qt/vsync/moc_txrow.cpp \
+  qt/vsync/moc_dashboardwidget.cpp \
+  qt/vsync/moc_addresslabelrow.cpp \
+  qt/vsync/moc_contactdropdownrow.cpp \
+  qt/vsync/moc_mninfodialog.cpp \
+  qt/vsync/moc_optionbutton.cpp \
+  qt/vsync/moc_coldstakingmodel.cpp \
+  qt/vsync/moc_mnmodel.cpp \
+  qt/vsync/moc_masternodewizarddialog.cpp \
+  qt/vsync/moc_mnrow.cpp \
+  qt/vsync/moc_masternodeswidget.cpp \
+  qt/vsync/moc_myaddressrow.cpp \
+  qt/vsync/moc_csrow.cpp \
+  qt/vsync/moc_contactsdropdown.cpp \
+  qt/vsync/moc_sendchangeaddressdialog.cpp \
+  qt/vsync/moc_sendconfirmdialog.cpp \
+  qt/vsync/moc_sendcustomfeedialog.cpp \
+  qt/vsync/moc_sendchangeaddressdialog.cpp \
+  qt/vsync/moc_sendmultirow.cpp \
+  qt/vsync/moc_send.cpp \
+  qt/vsync/moc_addnewaddressdialog.cpp \
+  qt/vsync/moc_addnewcontactdialog.cpp \
+  qt/vsync/moc_requestdialog.cpp \
+  qt/vsync/moc_receivewidget.cpp \
+  qt/vsync/moc_tooltipmenu.cpp \
+  qt/vsync/moc_addresseswidget.cpp \
+  qt/vsync/moc_defaultdialog.cpp \
+  qt/vsync/moc_coldstakingwidget.cpp \
+  qt/vsync/settings/moc_settingsbackupwallet.cpp \
+  qt/vsync/settings/moc_settingsexportcsv.cpp \
+  qt/vsync/settings/moc_settingsbittoolwidget.cpp \
+  qt/vsync/settings/moc_settingsconsolewidget.cpp \
+  qt/vsync/settings/moc_settingsdisplayoptionswidget.cpp \
+  qt/vsync/settings/moc_settingsfaqwidget.cpp \
+  qt/vsync/settings/moc_settingsinformationwidget.cpp \
+  qt/vsync/settings/moc_settingsmainoptionswidget.cpp \
+  qt/vsync/settings/moc_settingsmultisenddialog.cpp \
+  qt/vsync/settings/moc_settingsmultisendwidget.cpp \
+  qt/vsync/settings/moc_settingssignmessagewidgets.cpp \
+  qt/vsync/settings/moc_settingswalletoptionswidget.cpp \
+  qt/vsync/settings/moc_settingswalletrepairwidget.cpp \
+  qt/vsync/settings/moc_settingswidget.cpp \
+  qt/vsync/moc_welcomecontentwidget.cpp \
+  qt/vsync/moc_splash.cpp
 
 BITCOIN_MM = \
   qt/macdockiconhandler.mm \
   qt/macnotificationhandler.mm
 
 QT_MOC = \
-  qt/cari.moc \
+  qt/vsync.moc \
   qt/intro.moc \
   qt/rpcconsole.moc \
-  qt/cari/settings/moc_settingsconsolewidget.cpp
+  qt/vsync/settings/moc_settingsconsolewidget.cpp
 
-QT_QRC_CPP = qt/qrc_cari.cpp
-QT_QRC = qt/cari.qrc
-QT_QRC_LOCALE_CPP = qt/qrc_cari_locale.cpp
-QT_QRC_LOCALE = qt/cari_locale.qrc
+QT_QRC_CPP = qt/qrc_vsync.cpp
+QT_QRC = qt/vsync.qrc
+QT_QRC_LOCALE_CPP = qt/qrc_vsync_locale.cpp
+QT_QRC_LOCALE = qt/vsync_locale.qrc
 
 PROTOBUF_CC = qt/paymentrequest.pb.cc
 PROTOBUF_H = qt/paymentrequest.pb.h
@@ -181,7 +181,7 @@ BITCOIN_QT_H = \
   qt/askpassphrasedialog.h \
   qt/bantablemodel.h \
   qt/bitcoinaddressvalidator.h \
-  qt/cari/carigui.h \
+  qt/vsync/vsyncgui.h \
   qt/bitcoinunits.h \
   qt/clientmodel.h \
   qt/coincontroldialog.h \
@@ -214,69 +214,69 @@ BITCOIN_QT_H = \
   qt/utilitydialog.h \
   qt/walletmodel.h \
   qt/walletmodeltransaction.h \
-  qt/cari/prunnable.h \
-  qt/cari/pfborderimage.h \
-  qt/cari/loadingdialog.h \
+  qt/vsync/prunnable.h \
+  qt/vsync/pfborderimage.h \
+  qt/vsync/loadingdialog.h \
   qt/winshutdownmonitor.h \
-  qt/cari/pwidget.h \
-  qt/cari/focuseddialog.h \
-  qt/cari/guitransactionsutils.h \
-  qt/cari/snackbar.h \
-  qt/cari/navmenuwidget.h \
-  qt/cari/lockunlock.h \
-  qt/cari/receivedialog.h \
-  qt/cari/furlistrow.h \
-  qt/cari/furabstractlistitemdelegate.h \
-  qt/cari/txviewholder.h \
-  qt/cari/qtutils.h \
-  qt/cari/expandablebutton.h \
-  qt/cari/topbar.h \
-  qt/cari/txrow.h \
-  qt/cari/addressholder.h \
-  qt/cari/addressfilterproxymodel.h \
-  qt/cari/dashboardwidget.h \
-  qt/cari/addresslabelrow.h \
-  qt/cari/contactdropdownrow.h \
-  qt/cari/mninfodialog.h \
-  qt/cari/optionbutton.h \
-  qt/cari/coldstakingmodel.h \
-  qt/cari/mnmodel.h \
-  qt/cari/masternodewizarddialog.h \
-  qt/cari/mnrow.h \
-  qt/cari/masternodeswidget.h \
-  qt/cari/myaddressrow.h \
-  qt/cari/csrow.h \
-  qt/cari/contactsdropdown.h \
-  qt/cari/sendchangeaddressdialog.h \
-  qt/cari/sendconfirmdialog.h \
-  qt/cari/sendcustomfeedialog.h \
-  qt/cari/sendchangeaddressdialog.h \
-  qt/cari/sendmultirow.h \
-  qt/cari/send.h \
-  qt/cari/addnewaddressdialog.h \
-  qt/cari/addnewcontactdialog.h \
-  qt/cari/requestdialog.h \
-  qt/cari/receivewidget.h \
-  qt/cari/tooltipmenu.h \
-  qt/cari/addresseswidget.h \
-  qt/cari/defaultdialog.h \
-  qt/cari/coldstakingwidget.h \
-  qt/cari/settings/settingsbackupwallet.h \
-  qt/cari/settings/settingsexportcsv.h \
-  qt/cari/settings/settingsbittoolwidget.h \
-  qt/cari/settings/settingsconsolewidget.h \
-  qt/cari/settings/settingsdisplayoptionswidget.h \
-  qt/cari/settings/settingsfaqwidget.h \
-  qt/cari/settings/settingsinformationwidget.h \
-  qt/cari/settings/settingsmainoptionswidget.h \
-  qt/cari/settings/settingsmultisenddialog.h \
-  qt/cari/settings/settingsmultisendwidget.h \
-  qt/cari/settings/settingssignmessagewidgets.h \
-  qt/cari/settings/settingswalletoptionswidget.h \
-  qt/cari/settings/settingswalletrepairwidget.h \
-  qt/cari/settings/settingswidget.h \
-  qt/cari/welcomecontentwidget.h \
-  qt/cari/splash.h
+  qt/vsync/pwidget.h \
+  qt/vsync/focuseddialog.h \
+  qt/vsync/guitransactionsutils.h \
+  qt/vsync/snackbar.h \
+  qt/vsync/navmenuwidget.h \
+  qt/vsync/lockunlock.h \
+  qt/vsync/receivedialog.h \
+  qt/vsync/furlistrow.h \
+  qt/vsync/furabstractlistitemdelegate.h \
+  qt/vsync/txviewholder.h \
+  qt/vsync/qtutils.h \
+  qt/vsync/expandablebutton.h \
+  qt/vsync/topbar.h \
+  qt/vsync/txrow.h \
+  qt/vsync/addressholder.h \
+  qt/vsync/addressfilterproxymodel.h \
+  qt/vsync/dashboardwidget.h \
+  qt/vsync/addresslabelrow.h \
+  qt/vsync/contactdropdownrow.h \
+  qt/vsync/mninfodialog.h \
+  qt/vsync/optionbutton.h \
+  qt/vsync/coldstakingmodel.h \
+  qt/vsync/mnmodel.h \
+  qt/vsync/masternodewizarddialog.h \
+  qt/vsync/mnrow.h \
+  qt/vsync/masternodeswidget.h \
+  qt/vsync/myaddressrow.h \
+  qt/vsync/csrow.h \
+  qt/vsync/contactsdropdown.h \
+  qt/vsync/sendchangeaddressdialog.h \
+  qt/vsync/sendconfirmdialog.h \
+  qt/vsync/sendcustomfeedialog.h \
+  qt/vsync/sendchangeaddressdialog.h \
+  qt/vsync/sendmultirow.h \
+  qt/vsync/send.h \
+  qt/vsync/addnewaddressdialog.h \
+  qt/vsync/addnewcontactdialog.h \
+  qt/vsync/requestdialog.h \
+  qt/vsync/receivewidget.h \
+  qt/vsync/tooltipmenu.h \
+  qt/vsync/addresseswidget.h \
+  qt/vsync/defaultdialog.h \
+  qt/vsync/coldstakingwidget.h \
+  qt/vsync/settings/settingsbackupwallet.h \
+  qt/vsync/settings/settingsexportcsv.h \
+  qt/vsync/settings/settingsbittoolwidget.h \
+  qt/vsync/settings/settingsconsolewidget.h \
+  qt/vsync/settings/settingsdisplayoptionswidget.h \
+  qt/vsync/settings/settingsfaqwidget.h \
+  qt/vsync/settings/settingsinformationwidget.h \
+  qt/vsync/settings/settingsmainoptionswidget.h \
+  qt/vsync/settings/settingsmultisenddialog.h \
+  qt/vsync/settings/settingsmultisendwidget.h \
+  qt/vsync/settings/settingssignmessagewidgets.h \
+  qt/vsync/settings/settingswalletoptionswidget.h \
+  qt/vsync/settings/settingswalletrepairwidget.h \
+  qt/vsync/settings/settingswidget.h \
+  qt/vsync/welcomecontentwidget.h \
+  qt/vsync/splash.h
 
 RES_ICONS = \
   qt/res/icons/bitcoin.ico \
@@ -291,218 +291,218 @@ RES_ICONS = \
   qt/res/icons/ic-transaction-mint.svg \
   qt/res/icons/ic-transaction-sent.svg \
   qt/res/icons/ic-transaction-staked.svg \
-  qt/cari/res/img/bg-dashboard-banner.png \
-  qt/cari/res/img/bg-multi-number-dark.svg \
-  qt/cari/res/img/ic-check-locked.svg \
-  qt/cari/res/img/ic-nav-address.svg \
-  qt/cari/res/img/ic-update.svg \
-  qt/cari/res/img/bg-multi-number.svg \
-  qt/cari/res/img/ic-check-mint-off.svg \
-  qt/cari/res/img/ic-nav-cold-staking.svg \
-  qt/cari/res/img/ic-nav-cold-staking-active.svg \
-  qt/cari/res/img/ic-nav-dashboard-active.svg \
-  qt/cari/res/img/ic-wallet-status-locked.svg \
-  qt/cari/res/img/bg-splash.svg \
-  qt/cari/res/img/bg-splash.png \
-  qt/cari/res/img/ic-check-mint.svg \
-  qt/cari/res/img/ic-nav-dashboard-hover.svg \
-  qt/cari/res/img/ic-wallet-status-staking.svg \
-  qt/cari/res/img/ic-check-peers-off.svg \
-  qt/cari/res/img/ic-nav-dashboard.svg \
-  qt/cari/res/img/ic-wallet-status-unlocked.svg \
-  qt/cari/res/img/ic-check-peers.svg \
-  qt/cari/res/img/ic-nav-master-active.svg \
-  qt/cari/res/img/ic-watch-password-white.svg \
-  qt/cari/res/img/bg-welcome-container.jpg \
-  qt/cari/res/img/bg-welcome-container.png \
-  qt/cari/res/img/bg-welcome-container.svg \
-  qt/cari/res/img/bg-welcome-container@2x.png \
-  qt/cari/res/img/bg-welcome-container@3x.png \
-  qt/cari/res/img/ic-check-staking-off.svg \
-  qt/cari/res/img/ic-nav-master-hover.svg \
-  qt/cari/res/img/ic-watch-password.svg \
-  qt/cari/res/img/bg-welcome.jpg \
-  qt/cari/res/img/bg-welcome.svg \
-  qt/cari/res/img/bg-welcome@2x.jpg \
-  qt/cari/res/img/bg-welcome@3x.jpg \
-  qt/cari/res/img/bg-welcome.png \
-  qt/cari/res/img/ic-check-staking.svg \
-  qt/cari/res/img/ic-nav-master.svg \
-  qt/cari/res/img/img-dashboard-banner.jpg \
-  qt/cari/res/img/btn-radio-active.svg \
-  qt/cari/res/img/ic-check-sync-off.svg \
-  qt/cari/res/img/ic-nav-privacy-active.svg \
-  qt/cari/res/img/img-empty-contacts.svg \
-  qt/cari/res/img/btn-radio-off.svg \
-  qt/cari/res/img/ic-check-sync.png \
-  qt/cari/res/img/ic-nav-privacy-hover.svg \
-  qt/cari/res/img/img-empty-dark-contacts.svg \
-  qt/cari/res/img/ic-contact-arrow-down.svg \
-  qt/cari/res/img/ic-contact-arrow-down-white.svg \
-  qt/cari/res/img/ic-check-sync.svg \
-  qt/cari/res/img/ic-check-faq.svg \
-  qt/cari/res/img/ic-nav-privacy.svg \
-  qt/cari/res/img/img-empty-dark-error.svg \
-  qt/cari/res/img/ic-add-label.svg \
-  qt/cari/res/img/ic-pending.svg \
-  qt/cari/res/img/ic-check-theme-dark.svg \
-  qt/cari/res/img/ic-nav-receive-active.svg \
-  qt/cari/res/img/img-empty-dark-masternode.svg \
-  qt/cari/res/img/ic-add-liliac.svg \
-  qt/cari/res/img/ic-check-theme-light.svg \
-  qt/cari/res/img/ic-nav-receive-hover.svg \
-  qt/cari/res/img/img-empty-dark-multisend.svg \
-  qt/cari/res/img/ic-add-purple.svg \
-  qt/cari/res/img/ic-check-white.svg \
-  qt/cari/res/img/ic-nav-receive.svg \
-  qt/cari/res/img/img-empty-dark-peers.svg \
-  qt/cari/res/img/ic-add.svg \
-  qt/cari/res/img/ic-check.svg \
-  qt/cari/res/img/ic-nav-send-active.svg \
-  qt/cari/res/img/img-empty-dark-staking-off.svg \
-  qt/cari/res/img/img-empty-dark-staking-on.svg \
-  qt/cari/res/img/ic-address-book-grey.svg \
-  qt/cari/res/img/ic-chevron-left.svg \
-  qt/cari/res/img/ic-nav-send-hover.svg \
-  qt/cari/res/img/img-empty-dark-transactions.svg \
-  qt/cari/res/img/ic-address-book-white.svg \
-  qt/cari/res/img/ic-chevron-right.svg \
-  qt/cari/res/img/ic-nav-send.svg \
-  qt/cari/res/img/img-empty-error.svg \
-  qt/cari/res/img/ic-address-book.svg \
-  qt/cari/res/img/ic-clear-liliac.svg \
-  qt/cari/res/img/ic-nav-settings-active.svg \
-  qt/cari/res/img/img-empty-masternode.svg \
-  qt/cari/res/img/ic-address-send-white.svg \
-  qt/cari/res/img/ic-clear-purple.svg \
-  qt/cari/res/img/ic-nav-settings-hover.svg \
-  qt/cari/res/img/img-empty-multisend.svg \
-  qt/cari/res/img/ic-address-send.svg \
-  qt/cari/res/img/ic-close-white.svg \
-  qt/cari/res/img/ic-nav-settings.svg \
-  qt/cari/res/img/img-empty-peers.svg \
-  qt/cari/res/img/img-empty-privacy.svg \
-  qt/cari/res/img/img-empty-privacy-dark.svg \
-  qt/cari/res/img/ic-arrow-drop-down-white.svg \
-  qt/cari/res/img/ic-close.svg \
-  qt/cari/res/img/ic-radio-liliac-on.svg \
-  qt/cari/res/img/img-empty-staking-off.svg \
-  qt/cari/res/img/ic-arrow-drop-down.svg \
-  qt/cari/res/img/ic-coin-cari.svg \
-  qt/cari/res/img/ic-receive-off.svg \
-  qt/cari/res/img/img-empty-staking-on.svg \
-  qt/cari/res/img/ic-arrow-drop-up-white.svg \
-  qt/cari/res/img/ic-coin-zcari.png \
-  qt/cari/res/img/ic-receive-on.svg \
-  qt/cari/res/img/img-empty-transactions.svg \
-  qt/cari/res/img/ic-arrow-drop-up.svg \
-  qt/cari/res/img/ic-coin-zcari.svg \
-  qt/cari/res/img/ic-received.svg \
-  qt/cari/res/img/img-logo-cari.png \
-  qt/cari/res/img/ic-arrow-drop-white-down.svg \
-  qt/cari/res/img/ic-combo-box.svg \
-  qt/cari/res/img/ic-send.svg \
-  qt/cari/res/img/img-logo-cari@2x.png \
-  qt/cari/res/img/ic-arrow-purple-down.svg \
-  qt/cari/res/img/ic-connect.svg \
-  qt/cari/res/img/ic-submenu-lock.svg \
-  qt/cari/res/img/img-logo-cari@3x.png \
-  qt/cari/res/img/img-logo-cari.svg \
-  qt/cari/res/img/ic-arrow-right-white.svg \
-  qt/cari/res/img/ic-arrow-left-white.svg \
-  qt/cari/res/img/ic-arrow-left.svg \
-  qt/cari/res/img/ic-copy-liliac.svg \
-  qt/cari/res/img/ic-submenu-staking.svg \
-  qt/cari/res/img/img-nav-logo-cari.png \
-  qt/cari/res/img/ic-arrow-right.svg \
-  qt/cari/res/img/ic-copy.svg \
-  qt/cari/res/img/ic-copy-big.svg \
-  qt/cari/res/img/ic-copy-big-white.svg \
-  qt/cari/res/img/ic-submenu-unlock.svg \
-  qt/cari/res/img/img-nav-logo.png \
-  qt/cari/res/img/ic-arrow-white-left.svg \
-  qt/cari/res/img/ic-exit.svg \
-  qt/cari/res/img/ic-switch-liliac-on.svg \
-  qt/cari/res/img/img-nav-logo.svg \
-  qt/cari/res/img/ic-arrow-white-right.svg \
-  qt/cari/res/img/ic-expand.svg \
-  qt/cari/res/img/ic-switch-off.svg \
-  qt/cari/res/img/img-qr-test-big.png \
-  qt/cari/res/img/ic-check-active.svg \
-  qt/cari/res/img/ic-folder.svg \
-  qt/cari/res/img/ic-switch-on.svg \
-  qt/cari/res/img/img-qr-test.png \
-  qt/cari/res/img/ic-check-box.svg \
-  qt/cari/res/img/ic-check-box-dark-active.svg \
-  qt/cari/res/img/ic-check-box-indeterminate.svg \
-  qt/cari/res/img/ic-check-box-liliac-indeterminate.svg \
-  qt/cari/res/img/ic-label-liliac.svg \
-  qt/cari/res/img/ic-transaction-warning.svg \
-  qt/cari/res/img/ic-transaction-mint.svg \
-  qt/cari/res/img/ic-transaction-mint-inactive.svg \
-  qt/cari/res/img/ic-check-cold-staking.svg \
-  qt/cari/res/img/ic-check-cold-staking-off.svg \
-  qt/cari/res/img/ic-check-cold-staking-enabled.svg \
-  qt/cari/res/img/dark/ic-transaction-cs-contract.svg \
-  qt/cari/res/img/dark/ic-transaction-cs-contract-inactive.svg \
-  qt/cari/res/img/img-qr.svg \
-  qt/cari/res/img/ic-check-connect-off.svg \
-  qt/cari/res/img/ic-check-tor-off.svg \
-  qt/cari/res/img/ic-check-tor.svg \
-  qt/cari/res/img/ic-label.svg \
-  qt/cari/res/img/ic-transaction-received.svg \
-  qt/cari/res/img/dark/ic-transaction-received.svg \
-  qt/cari/res/img/dark/ic-transaction-warning.svg \
-  qt/cari/res/img/dark/ic-transaction-mint.svg \
-  qt/cari/res/img/dark/ic-transaction-mint-inactive.svg \
-  qt/cari/res/img/ic-transaction-received-inactive.svg \
-  qt/cari/res/img/dark/ic-transaction-received-inactive.svg \
-  qt/cari/res/img/img-welcome-step1.png \
-  qt/cari/res/img/ic-check-connect.svg \
-  qt/cari/res/img/ic-menu-hover.svg \
-  qt/cari/res/img/ic-transaction-sent.svg \
-  qt/cari/res/img/ic-transaction-sent-inactive.svg \
-  qt/cari/res/img/dark/ic-transaction-sent.svg \
-  qt/cari/res/img/dark/ic-transaction-sent-inactive.svg \
-  qt/cari/res/img/img-welcome-step2.png \
-  qt/cari/res/img/ic-check-dark.svg \
-  qt/cari/res/img/ic-mint.svg \
-  qt/cari/res/img/ic-transaction-staked.svg \
-  qt/cari/res/img/ic-transaction-staked-inactive.svg \
-  qt/cari/res/img/dark/ic-transaction-staked.svg \
-  qt/cari/res/img/dark/ic-transaction-staked-inactive.svg \
-  qt/cari/res/img/img-welcome-step3.png \
-  qt/cari/res/img/ic-check-liliac-on.svg \
-  qt/cari/res/img/ic-nav-address-active.svg \
-  qt/cari/res/img/ic-unlock-staking.svg \
-  qt/cari/res/img/img-welcome-step4.png \
-  qt/cari/res/img/ic-check-locked-off.svg \
-  qt/cari/res/img/ic-nav-address-hover.svg \
-  qt/cari/res/img/ic-update-liliac.svg \
-  qt/cari/res/img/ic-arrow-drop-down-purple.svg \
-  qt/cari/res/img/ic-arrow-drop-up-purple.svg \
-  qt/cari/res/img/ic-check-liliac-indeterminate.svg \
-  qt/cari/res/img/ic-check-box-liliac-indeterminate.svg \
-  qt/cari/res/img/ic-transaction-stake-delegated.svg \
-  qt/cari/res/img/ic-transaction-stake-delegated-inactive.svg \
-  qt/cari/res/img/ic-transaction-stake-hot.svg \
-  qt/cari/res/img/ic-transaction-stake-hot-inactive.svg \
-  qt/cari/res/img/dark/ic-transaction-stake-hot.svg \
-  qt/cari/res/img/dark/ic-transaction-stake-hot-inactive.svg \
-  qt/cari/res/img/dark/ic-transaction-stake-delegated.svg \
-  qt/cari/res/img/dark/ic-transaction-stake-delegated-inactive.svg \
-  qt/cari/res/img/ic-transaction-cs-contract.svg \
-  qt/cari/res/img/ic-transaction-cs-contract-inactive.svg \
-  qt/cari/res/img/ic-check-box-indeterminate.svg \
-  qt/cari/res/img/ani-loading-dark.gif \
-  qt/cari/res/img/ani-loading.gif
+  qt/vsync/res/img/bg-dashboard-banner.png \
+  qt/vsync/res/img/bg-multi-number-dark.svg \
+  qt/vsync/res/img/ic-check-locked.svg \
+  qt/vsync/res/img/ic-nav-address.svg \
+  qt/vsync/res/img/ic-update.svg \
+  qt/vsync/res/img/bg-multi-number.svg \
+  qt/vsync/res/img/ic-check-mint-off.svg \
+  qt/vsync/res/img/ic-nav-cold-staking.svg \
+  qt/vsync/res/img/ic-nav-cold-staking-active.svg \
+  qt/vsync/res/img/ic-nav-dashboard-active.svg \
+  qt/vsync/res/img/ic-wallet-status-locked.svg \
+  qt/vsync/res/img/bg-splash.svg \
+  qt/vsync/res/img/bg-splash.png \
+  qt/vsync/res/img/ic-check-mint.svg \
+  qt/vsync/res/img/ic-nav-dashboard-hover.svg \
+  qt/vsync/res/img/ic-wallet-status-staking.svg \
+  qt/vsync/res/img/ic-check-peers-off.svg \
+  qt/vsync/res/img/ic-nav-dashboard.svg \
+  qt/vsync/res/img/ic-wallet-status-unlocked.svg \
+  qt/vsync/res/img/ic-check-peers.svg \
+  qt/vsync/res/img/ic-nav-master-active.svg \
+  qt/vsync/res/img/ic-watch-password-white.svg \
+  qt/vsync/res/img/bg-welcome-container.jpg \
+  qt/vsync/res/img/bg-welcome-container.png \
+  qt/vsync/res/img/bg-welcome-container.svg \
+  qt/vsync/res/img/bg-welcome-container@2x.png \
+  qt/vsync/res/img/bg-welcome-container@3x.png \
+  qt/vsync/res/img/ic-check-staking-off.svg \
+  qt/vsync/res/img/ic-nav-master-hover.svg \
+  qt/vsync/res/img/ic-watch-password.svg \
+  qt/vsync/res/img/bg-welcome.jpg \
+  qt/vsync/res/img/bg-welcome.svg \
+  qt/vsync/res/img/bg-welcome@2x.jpg \
+  qt/vsync/res/img/bg-welcome@3x.jpg \
+  qt/vsync/res/img/bg-welcome.png \
+  qt/vsync/res/img/ic-check-staking.svg \
+  qt/vsync/res/img/ic-nav-master.svg \
+  qt/vsync/res/img/img-dashboard-banner.jpg \
+  qt/vsync/res/img/btn-radio-active.svg \
+  qt/vsync/res/img/ic-check-sync-off.svg \
+  qt/vsync/res/img/ic-nav-privacy-active.svg \
+  qt/vsync/res/img/img-empty-contacts.svg \
+  qt/vsync/res/img/btn-radio-off.svg \
+  qt/vsync/res/img/ic-check-sync.png \
+  qt/vsync/res/img/ic-nav-privacy-hover.svg \
+  qt/vsync/res/img/img-empty-dark-contacts.svg \
+  qt/vsync/res/img/ic-contact-arrow-down.svg \
+  qt/vsync/res/img/ic-contact-arrow-down-white.svg \
+  qt/vsync/res/img/ic-check-sync.svg \
+  qt/vsync/res/img/ic-check-faq.svg \
+  qt/vsync/res/img/ic-nav-privacy.svg \
+  qt/vsync/res/img/img-empty-dark-error.svg \
+  qt/vsync/res/img/ic-add-label.svg \
+  qt/vsync/res/img/ic-pending.svg \
+  qt/vsync/res/img/ic-check-theme-dark.svg \
+  qt/vsync/res/img/ic-nav-receive-active.svg \
+  qt/vsync/res/img/img-empty-dark-masternode.svg \
+  qt/vsync/res/img/ic-add-liliac.svg \
+  qt/vsync/res/img/ic-check-theme-light.svg \
+  qt/vsync/res/img/ic-nav-receive-hover.svg \
+  qt/vsync/res/img/img-empty-dark-multisend.svg \
+  qt/vsync/res/img/ic-add-purple.svg \
+  qt/vsync/res/img/ic-check-white.svg \
+  qt/vsync/res/img/ic-nav-receive.svg \
+  qt/vsync/res/img/img-empty-dark-peers.svg \
+  qt/vsync/res/img/ic-add.svg \
+  qt/vsync/res/img/ic-check.svg \
+  qt/vsync/res/img/ic-nav-send-active.svg \
+  qt/vsync/res/img/img-empty-dark-staking-off.svg \
+  qt/vsync/res/img/img-empty-dark-staking-on.svg \
+  qt/vsync/res/img/ic-address-book-grey.svg \
+  qt/vsync/res/img/ic-chevron-left.svg \
+  qt/vsync/res/img/ic-nav-send-hover.svg \
+  qt/vsync/res/img/img-empty-dark-transactions.svg \
+  qt/vsync/res/img/ic-address-book-white.svg \
+  qt/vsync/res/img/ic-chevron-right.svg \
+  qt/vsync/res/img/ic-nav-send.svg \
+  qt/vsync/res/img/img-empty-error.svg \
+  qt/vsync/res/img/ic-address-book.svg \
+  qt/vsync/res/img/ic-clear-liliac.svg \
+  qt/vsync/res/img/ic-nav-settings-active.svg \
+  qt/vsync/res/img/img-empty-masternode.svg \
+  qt/vsync/res/img/ic-address-send-white.svg \
+  qt/vsync/res/img/ic-clear-purple.svg \
+  qt/vsync/res/img/ic-nav-settings-hover.svg \
+  qt/vsync/res/img/img-empty-multisend.svg \
+  qt/vsync/res/img/ic-address-send.svg \
+  qt/vsync/res/img/ic-close-white.svg \
+  qt/vsync/res/img/ic-nav-settings.svg \
+  qt/vsync/res/img/img-empty-peers.svg \
+  qt/vsync/res/img/img-empty-privacy.svg \
+  qt/vsync/res/img/img-empty-privacy-dark.svg \
+  qt/vsync/res/img/ic-arrow-drop-down-white.svg \
+  qt/vsync/res/img/ic-close.svg \
+  qt/vsync/res/img/ic-radio-liliac-on.svg \
+  qt/vsync/res/img/img-empty-staking-off.svg \
+  qt/vsync/res/img/ic-arrow-drop-down.svg \
+  qt/vsync/res/img/ic-coin-vsync.svg \
+  qt/vsync/res/img/ic-receive-off.svg \
+  qt/vsync/res/img/img-empty-staking-on.svg \
+  qt/vsync/res/img/ic-arrow-drop-up-white.svg \
+  qt/vsync/res/img/ic-coin-zvsx.png \
+  qt/vsync/res/img/ic-receive-on.svg \
+  qt/vsync/res/img/img-empty-transactions.svg \
+  qt/vsync/res/img/ic-arrow-drop-up.svg \
+  qt/vsync/res/img/ic-coin-zvsx.svg \
+  qt/vsync/res/img/ic-received.svg \
+  qt/vsync/res/img/img-logo-vsync.png \
+  qt/vsync/res/img/ic-arrow-drop-white-down.svg \
+  qt/vsync/res/img/ic-combo-box.svg \
+  qt/vsync/res/img/ic-send.svg \
+  qt/vsync/res/img/img-logo-vsync@2x.png \
+  qt/vsync/res/img/ic-arrow-purple-down.svg \
+  qt/vsync/res/img/ic-connect.svg \
+  qt/vsync/res/img/ic-submenu-lock.svg \
+  qt/vsync/res/img/img-logo-vsync@3x.png \
+  qt/vsync/res/img/img-logo-vsync.svg \
+  qt/vsync/res/img/ic-arrow-right-white.svg \
+  qt/vsync/res/img/ic-arrow-left-white.svg \
+  qt/vsync/res/img/ic-arrow-left.svg \
+  qt/vsync/res/img/ic-copy-liliac.svg \
+  qt/vsync/res/img/ic-submenu-staking.svg \
+  qt/vsync/res/img/img-nav-logo-vsync.png \
+  qt/vsync/res/img/ic-arrow-right.svg \
+  qt/vsync/res/img/ic-copy.svg \
+  qt/vsync/res/img/ic-copy-big.svg \
+  qt/vsync/res/img/ic-copy-big-white.svg \
+  qt/vsync/res/img/ic-submenu-unlock.svg \
+  qt/vsync/res/img/img-nav-logo.png \
+  qt/vsync/res/img/ic-arrow-white-left.svg \
+  qt/vsync/res/img/ic-exit.svg \
+  qt/vsync/res/img/ic-switch-liliac-on.svg \
+  qt/vsync/res/img/img-nav-logo.svg \
+  qt/vsync/res/img/ic-arrow-white-right.svg \
+  qt/vsync/res/img/ic-expand.svg \
+  qt/vsync/res/img/ic-switch-off.svg \
+  qt/vsync/res/img/img-qr-test-big.png \
+  qt/vsync/res/img/ic-check-active.svg \
+  qt/vsync/res/img/ic-folder.svg \
+  qt/vsync/res/img/ic-switch-on.svg \
+  qt/vsync/res/img/img-qr-test.png \
+  qt/vsync/res/img/ic-check-box.svg \
+  qt/vsync/res/img/ic-check-box-dark-active.svg \
+  qt/vsync/res/img/ic-check-box-indeterminate.svg \
+  qt/vsync/res/img/ic-check-box-liliac-indeterminate.svg \
+  qt/vsync/res/img/ic-label-liliac.svg \
+  qt/vsync/res/img/ic-transaction-warning.svg \
+  qt/vsync/res/img/ic-transaction-mint.svg \
+  qt/vsync/res/img/ic-transaction-mint-inactive.svg \
+  qt/vsync/res/img/ic-check-cold-staking.svg \
+  qt/vsync/res/img/ic-check-cold-staking-off.svg \
+  qt/vsync/res/img/ic-check-cold-staking-enabled.svg \
+  qt/vsync/res/img/dark/ic-transaction-cs-contract.svg \
+  qt/vsync/res/img/dark/ic-transaction-cs-contract-inactive.svg \
+  qt/vsync/res/img/img-qr.svg \
+  qt/vsync/res/img/ic-check-connect-off.svg \
+  qt/vsync/res/img/ic-check-tor-off.svg \
+  qt/vsync/res/img/ic-check-tor.svg \
+  qt/vsync/res/img/ic-label.svg \
+  qt/vsync/res/img/ic-transaction-received.svg \
+  qt/vsync/res/img/dark/ic-transaction-received.svg \
+  qt/vsync/res/img/dark/ic-transaction-warning.svg \
+  qt/vsync/res/img/dark/ic-transaction-mint.svg \
+  qt/vsync/res/img/dark/ic-transaction-mint-inactive.svg \
+  qt/vsync/res/img/ic-transaction-received-inactive.svg \
+  qt/vsync/res/img/dark/ic-transaction-received-inactive.svg \
+  qt/vsync/res/img/img-welcome-step1.png \
+  qt/vsync/res/img/ic-check-connect.svg \
+  qt/vsync/res/img/ic-menu-hover.svg \
+  qt/vsync/res/img/ic-transaction-sent.svg \
+  qt/vsync/res/img/ic-transaction-sent-inactive.svg \
+  qt/vsync/res/img/dark/ic-transaction-sent.svg \
+  qt/vsync/res/img/dark/ic-transaction-sent-inactive.svg \
+  qt/vsync/res/img/img-welcome-step2.png \
+  qt/vsync/res/img/ic-check-dark.svg \
+  qt/vsync/res/img/ic-mint.svg \
+  qt/vsync/res/img/ic-transaction-staked.svg \
+  qt/vsync/res/img/ic-transaction-staked-inactive.svg \
+  qt/vsync/res/img/dark/ic-transaction-staked.svg \
+  qt/vsync/res/img/dark/ic-transaction-staked-inactive.svg \
+  qt/vsync/res/img/img-welcome-step3.png \
+  qt/vsync/res/img/ic-check-liliac-on.svg \
+  qt/vsync/res/img/ic-nav-address-active.svg \
+  qt/vsync/res/img/ic-unlock-staking.svg \
+  qt/vsync/res/img/img-welcome-step4.png \
+  qt/vsync/res/img/ic-check-locked-off.svg \
+  qt/vsync/res/img/ic-nav-address-hover.svg \
+  qt/vsync/res/img/ic-update-liliac.svg \
+  qt/vsync/res/img/ic-arrow-drop-down-purple.svg \
+  qt/vsync/res/img/ic-arrow-drop-up-purple.svg \
+  qt/vsync/res/img/ic-check-liliac-indeterminate.svg \
+  qt/vsync/res/img/ic-check-box-liliac-indeterminate.svg \
+  qt/vsync/res/img/ic-transaction-stake-delegated.svg \
+  qt/vsync/res/img/ic-transaction-stake-delegated-inactive.svg \
+  qt/vsync/res/img/ic-transaction-stake-hot.svg \
+  qt/vsync/res/img/ic-transaction-stake-hot-inactive.svg \
+  qt/vsync/res/img/dark/ic-transaction-stake-hot.svg \
+  qt/vsync/res/img/dark/ic-transaction-stake-hot-inactive.svg \
+  qt/vsync/res/img/dark/ic-transaction-stake-delegated.svg \
+  qt/vsync/res/img/dark/ic-transaction-stake-delegated-inactive.svg \
+  qt/vsync/res/img/ic-transaction-cs-contract.svg \
+  qt/vsync/res/img/ic-transaction-cs-contract-inactive.svg \
+  qt/vsync/res/img/ic-check-box-indeterminate.svg \
+  qt/vsync/res/img/ani-loading-dark.gif \
+  qt/vsync/res/img/ani-loading.gif
 
 
 
 BITCOIN_QT_BASE_CPP = \
   qt/bantablemodel.cpp \
   qt/bitcoinaddressvalidator.cpp \
-  qt/cari/carigui.cpp \
+  qt/vsync/vsyncgui.cpp \
   qt/bitcoinunits.cpp \
   qt/clientmodel.cpp \
   qt/csvmodelwriter.cpp \
@@ -539,65 +539,65 @@ BITCOIN_QT_WALLET_CPP = \
   qt/transactiontablemodel.cpp \
   qt/walletmodel.cpp \
   qt/walletmodeltransaction.cpp \
-  qt/cari/loadingdialog.cpp \
-  qt/cari/pwidget.cpp \
-  qt/cari/focuseddialog.cpp \
-  qt/cari/guitransactionsutils.cpp \
-  qt/cari/snackbar.cpp \
-  qt/cari/navmenuwidget.cpp \
-  qt/cari/lockunlock.cpp \
-  qt/cari/receivedialog.cpp \
-  qt/cari/furabstractlistitemdelegate.cpp \
-  qt/cari/txviewholder.cpp \
-  qt/cari/qtutils.cpp \
-  qt/cari/expandablebutton.cpp \
-  qt/cari/topbar.cpp \
-  qt/cari/txrow.cpp \
-  qt/cari/addressholder.cpp \
-  qt/cari/addressfilterproxymodel.cpp \
-  qt/cari/dashboardwidget.cpp \
-  qt/cari/addresslabelrow.cpp \
-  qt/cari/contactdropdownrow.cpp \
-  qt/cari/contactsdropdown.cpp \
-  qt/cari/optionbutton.cpp \
-  qt/cari/mninfodialog.cpp \
-  qt/cari/coldstakingmodel.cpp \
-  qt/cari/mnmodel.cpp \
-  qt/cari/masternodewizarddialog.cpp \
-  qt/cari/mnrow.cpp \
-  qt/cari/masternodeswidget.cpp \
-  qt/cari/myaddressrow.cpp \
-  qt/cari/csrow.cpp \
-  qt/cari/sendchangeaddressdialog.cpp \
-  qt/cari/sendconfirmdialog.cpp \
-  qt/cari/sendcustomfeedialog.cpp \
-  qt/cari/sendchangeaddressdialog.cpp \
-  qt/cari/sendmultirow.cpp \
-  qt/cari/send.cpp \
-  qt/cari/addnewaddressdialog.cpp \
-  qt/cari/addnewcontactdialog.cpp \
-  qt/cari/requestdialog.cpp \
-  qt/cari/receivewidget.cpp \
-  qt/cari/tooltipmenu.cpp \
-  qt/cari/addresseswidget.cpp \
-  qt/cari/defaultdialog.cpp \
-  qt/cari/coldstakingwidget.cpp \
-  qt/cari/settings/settingsbackupwallet.cpp \
-  qt/cari/settings/settingsexportcsv.cpp \
-  qt/cari/settings/settingsbittoolwidget.cpp \
-  qt/cari/settings/settingsconsolewidget.cpp \
-  qt/cari/settings/settingsdisplayoptionswidget.cpp \
-  qt/cari/settings/settingsfaqwidget.cpp \
-  qt/cari/settings/settingsinformationwidget.cpp \
-  qt/cari/settings/settingsmainoptionswidget.cpp \
-  qt/cari/settings/settingsmultisenddialog.cpp \
-  qt/cari/settings/settingsmultisendwidget.cpp \
-  qt/cari/settings/settingssignmessagewidgets.cpp \
-  qt/cari/settings/settingswalletoptionswidget.cpp \
-  qt/cari/settings/settingswalletrepairwidget.cpp \
-  qt/cari/settings/settingswidget.cpp \
-  qt/cari/welcomecontentwidget.cpp \
-  qt/cari/splash.cpp
+  qt/vsync/loadingdialog.cpp \
+  qt/vsync/pwidget.cpp \
+  qt/vsync/focuseddialog.cpp \
+  qt/vsync/guitransactionsutils.cpp \
+  qt/vsync/snackbar.cpp \
+  qt/vsync/navmenuwidget.cpp \
+  qt/vsync/lockunlock.cpp \
+  qt/vsync/receivedialog.cpp \
+  qt/vsync/furabstractlistitemdelegate.cpp \
+  qt/vsync/txviewholder.cpp \
+  qt/vsync/qtutils.cpp \
+  qt/vsync/expandablebutton.cpp \
+  qt/vsync/topbar.cpp \
+  qt/vsync/txrow.cpp \
+  qt/vsync/addressholder.cpp \
+  qt/vsync/addressfilterproxymodel.cpp \
+  qt/vsync/dashboardwidget.cpp \
+  qt/vsync/addresslabelrow.cpp \
+  qt/vsync/contactdropdownrow.cpp \
+  qt/vsync/contactsdropdown.cpp \
+  qt/vsync/optionbutton.cpp \
+  qt/vsync/mninfodialog.cpp \
+  qt/vsync/coldstakingmodel.cpp \
+  qt/vsync/mnmodel.cpp \
+  qt/vsync/masternodewizarddialog.cpp \
+  qt/vsync/mnrow.cpp \
+  qt/vsync/masternodeswidget.cpp \
+  qt/vsync/myaddressrow.cpp \
+  qt/vsync/csrow.cpp \
+  qt/vsync/sendchangeaddressdialog.cpp \
+  qt/vsync/sendconfirmdialog.cpp \
+  qt/vsync/sendcustomfeedialog.cpp \
+  qt/vsync/sendchangeaddressdialog.cpp \
+  qt/vsync/sendmultirow.cpp \
+  qt/vsync/send.cpp \
+  qt/vsync/addnewaddressdialog.cpp \
+  qt/vsync/addnewcontactdialog.cpp \
+  qt/vsync/requestdialog.cpp \
+  qt/vsync/receivewidget.cpp \
+  qt/vsync/tooltipmenu.cpp \
+  qt/vsync/addresseswidget.cpp \
+  qt/vsync/defaultdialog.cpp \
+  qt/vsync/coldstakingwidget.cpp \
+  qt/vsync/settings/settingsbackupwallet.cpp \
+  qt/vsync/settings/settingsexportcsv.cpp \
+  qt/vsync/settings/settingsbittoolwidget.cpp \
+  qt/vsync/settings/settingsconsolewidget.cpp \
+  qt/vsync/settings/settingsdisplayoptionswidget.cpp \
+  qt/vsync/settings/settingsfaqwidget.cpp \
+  qt/vsync/settings/settingsinformationwidget.cpp \
+  qt/vsync/settings/settingsmainoptionswidget.cpp \
+  qt/vsync/settings/settingsmultisenddialog.cpp \
+  qt/vsync/settings/settingsmultisendwidget.cpp \
+  qt/vsync/settings/settingssignmessagewidgets.cpp \
+  qt/vsync/settings/settingswalletoptionswidget.cpp \
+  qt/vsync/settings/settingswalletrepairwidget.cpp \
+  qt/vsync/settings/settingswidget.cpp \
+  qt/vsync/welcomecontentwidget.cpp \
+  qt/vsync/splash.cpp
 
 
 BITCOIN_QT_CPP = $(BITCOIN_QT_BASE_CPP)
@@ -616,10 +616,10 @@ RES_IMAGES = \
 
 RES_CSS = \
   qt/res/css/default.css \
-  qt/cari/res/css/style_dark.css \
-  qt/cari/res/css/style_light.css
+  qt/vsync/res/css/style_dark.css \
+  qt/vsync/res/css/style_light.css
 
-BITCOIN_RC = qt/res/cari-qt-res.rc
+BITCOIN_RC = qt/res/vsync-qt-res.rc
 
 BITCOIN_QT_INCLUDES = -I$(builddir)/qt -I$(srcdir)/qt -I$(srcdir)/qt/forms \
   -I$(builddir)/qt/forms -DQT_NO_KEYWORDS
@@ -641,71 +641,71 @@ QT_FORMS_H=$(join $(dir $(QT_FORMS_UI)),$(addprefix ui_, $(notdir $(QT_FORMS_UI:
 # Most files will depend on the forms and moc files as includes. Generate them
 # before anything else.
 $(QT_MOC): $(QT_FORMS_H)
-$(qt_libbitcoinqt_a_OBJECTS) $(qt_cari_qt_OBJECTS) : | $(QT_MOC)
+$(qt_libbitcoinqt_a_OBJECTS) $(qt_vsync_qt_OBJECTS) : | $(QT_MOC)
 
 #Generating these with a half-written protobuf header leads to wacky results.
 #This makes sure it's done.
 $(QT_MOC): $(PROTOBUF_H)
 $(QT_MOC_CPP): $(PROTOBUF_H)
 
-# cari-qt binary #
-qt_cari_qt_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
+# vsync-qt binary #
+qt_vsync_qt_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
   $(QT_INCLUDES) $(PROTOBUF_CFLAGS) $(QR_CFLAGS) $(SVG_CFLAGS) $(CHARTS_CFLAGS)
-qt_cari_qt_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
+qt_vsync_qt_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
 
-qt_cari_qt_SOURCES = qt/cari.cpp
+qt_vsync_qt_SOURCES = qt/vsync.cpp
 if TARGET_DARWIN
-  qt_cari_qt_SOURCES += $(BITCOIN_MM)
+  qt_vsync_qt_SOURCES += $(BITCOIN_MM)
 endif
 if TARGET_WINDOWS
-  qt_cari_qt_SOURCES += $(BITCOIN_RC)
+  qt_vsync_qt_SOURCES += $(BITCOIN_RC)
 endif
-qt_cari_qt_LDADD = qt/libbitcoinqt.a $(LIBBITCOIN_SERVER)
+qt_vsync_qt_LDADD = qt/libbitcoinqt.a $(LIBBITCOIN_SERVER)
 if ENABLE_WALLET
-qt_cari_qt_LDADD += $(LIBBITCOIN_UTIL) $(LIBBITCOIN_WALLET)
+qt_vsync_qt_LDADD += $(LIBBITCOIN_UTIL) $(LIBBITCOIN_WALLET)
 endif
 if ENABLE_ZMQ
-qt_cari_qt_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+qt_vsync_qt_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 endif
-qt_cari_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) $(LIBBITCOIN_ZEROCOIN) $(LIBLEVELDB) $(LIBLEVELDB_SSE42) $(LIBMEMENV) \
+qt_vsync_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) $(LIBBITCOIN_ZEROCOIN) $(LIBLEVELDB) $(LIBLEVELDB_SSE42) $(LIBMEMENV) \
   $(BOOST_LIBS) $(QT_LIBS) $(QT_DBUS_LIBS) $(QR_LIBS) $(PROTOBUF_LIBS) $(SVG_LIBS) $(CHARTS_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(LIBSECP256K1) \
   $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
-qt_cari_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-qt_cari_qt_LIBTOOLFLAGS = $(AM_LIBTOOLFLAGS) --tag CXX
+qt_vsync_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+qt_vsync_qt_LIBTOOLFLAGS = $(AM_LIBTOOLFLAGS) --tag CXX
 
 #locale/foo.ts -> locale/foo.qm
 QT_QM=$(QT_TS:.ts=.qm)
 
 SECONDARY: $(QT_QM)
 
-$(srcdir)/qt/caristrings.cpp: $(libbitcoin_server_a_SOURCES) $(libbitcoin_wallet_a_SOURCES) $(libbitcoin_common_a_SOURCES) $(libbitcoin_zmq_a_SOURCES) $(libbitcoin_util_a_SOURCES)
+$(srcdir)/qt/vsyncstrings.cpp: $(libbitcoin_server_a_SOURCES) $(libbitcoin_wallet_a_SOURCES) $(libbitcoin_common_a_SOURCES) $(libbitcoin_zmq_a_SOURCES) $(libbitcoin_util_a_SOURCES)
 	@test -n $(XGETTEXT) || echo "xgettext is required for updating translations"
 	$(AM_V_GEN) cd $(srcdir); XGETTEXT=$(XGETTEXT) PACKAGE_NAME="$(PACKAGE_NAME)" $(PYTHON) ../share/qt/extract_strings_qt.py $^
 
-translate: $(srcdir)/qt/caristrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_BASE_CPP) qt/cari.cpp $(BITCOIN_QT_WINDOWS_CPP) $(BITCOIN_QT_WALLET_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
+translate: $(srcdir)/qt/vsyncstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_BASE_CPP) qt/vsync.cpp $(BITCOIN_QT_WINDOWS_CPP) $(BITCOIN_QT_WALLET_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
 	@test -n $(LUPDATE) || echo "lupdate is required for updating translations"
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts $(srcdir)/qt/locale/cari_en.ts
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts $(srcdir)/qt/locale/vsync_en.ts
 
 $(QT_QRC_LOCALE_CPP): $(QT_QRC_LOCALE) $(QT_QM)
 	@test -f $(RCC)
 	@cp -f $< $(@D)/temp_$(<F)
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name cari_locale $(@D)/temp_$(<F) | \
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name vsync_locale $(@D)/temp_$(<F) | \
 	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 	@rm $(@D)/temp_$(<F)
 
 $(QT_QRC_CPP): $(QT_QRC) $(QT_FORMS_H) $(RES_ICONS) $(RES_IMAGES) $(RES_CSS) $(PROTOBUF_H)
 	@test -f $(RCC)
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name cari $< | \
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name vsync $< | \
 	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 
-CLEAN_QT = $(nodist_qt_libbitcoinqt_a_SOURCES) $(QT_QM) $(QT_FORMS_H) qt/*.gcda qt/*.gcno qt/temp_cari_locale.qrc
+CLEAN_QT = $(nodist_qt_libbitcoinqt_a_SOURCES) $(QT_QM) $(QT_FORMS_H) qt/*.gcda qt/*.gcno qt/temp_vsync_locale.qrc
 
 CLEANFILES += $(CLEAN_QT)
 
-cari_qt_clean: FORCE
-	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_cari_qt_OBJECTS) qt/cari-qt$(EXEEXT) $(LIBBITCOINQT)
+vsync_qt_clean: FORCE
+	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_vsync_qt_OBJECTS) qt/vsync-qt$(EXEEXT) $(LIBBITCOINQT)
 
-cari_qt : qt/cari-qt$(EXEEXT)
+vsync_qt : qt/vsync-qt$(EXEEXT)
 
 ui_%.h: %.ui
 	@test -f $(UIC)

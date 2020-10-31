@@ -9,7 +9,7 @@
 #include "uint256.h"
 #include "version.h"
 #include "consensus/merkle.h"
-#include "test/test_cari.h"
+#include "test/test_vsync.h"
 
 #include <vector>
 

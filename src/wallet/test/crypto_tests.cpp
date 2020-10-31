@@ -4,7 +4,7 @@
 
 #include "random.h"
 #include "utilstrencodings.h"
-#include "test/test_cari.h"
+#include "test/test_vsync.h"
 #include "crypter.h"
 
 #include <vector>

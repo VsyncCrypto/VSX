@@ -5,7 +5,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "netbase.h"
-#include "test/test_cari.h"
+#include "test/test_vsync.h"
 
 #include <string>
 
@@ -77,15 +77,15 @@ BOOST_AUTO_TEST_CASE(netbase_splithost)
     BOOST_CHECK(TestSplitHost("www.bitcoin.org:80", "www.bitcoin.org", 80));
     BOOST_CHECK(TestSplitHost("[www.bitcoin.org]:80", "www.bitcoin.org", 80));
     BOOST_CHECK(TestSplitHost("127.0.0.1", "127.0.0.1", -1));
-    BOOST_CHECK(TestSplitHost("127.0.0.1:31813", "127.0.0.1", 31813));
+    BOOST_CHECK(TestSplitHost("127.0.0.1:65010", "127.0.0.1", 65010));
     BOOST_CHECK(TestSplitHost("[127.0.0.1]", "127.0.0.1", -1));
-    BOOST_CHECK(TestSplitHost("[127.0.0.1]:31813", "127.0.0.1", 31813));
+    BOOST_CHECK(TestSplitHost("[127.0.0.1]:65010", "127.0.0.1", 65010));
     BOOST_CHECK(TestSplitHost("::ffff:127.0.0.1", "::ffff:127.0.0.1", -1));
-    BOOST_CHECK(TestSplitHost("[::ffff:127.0.0.1]:31813", "::ffff:127.0.0.1", 31813));
-    BOOST_CHECK(TestSplitHost("[::]:31813", "::", 31813));
-    BOOST_CHECK(TestSplitHost("::31813", "::31813", -1));
-    BOOST_CHECK(TestSplitHost(":31813", "", 31813));
-    BOOST_CHECK(TestSplitHost("[]:31813", "", 31813));
+    BOOST_CHECK(TestSplitHost("[::ffff:127.0.0.1]:65010", "::ffff:127.0.0.1", 65010));
+    BOOST_CHECK(TestSplitHost("[::]:65010", "::", 65010));
+    BOOST_CHECK(TestSplitHost("::65010", "::65010", -1));
+    BOOST_CHECK(TestSplitHost(":65010", "", 65010));
+    BOOST_CHECK(TestSplitHost("[]:65010", "", 65010));
     BOOST_CHECK(TestSplitHost("", "", -1));
 }
 
@@ -98,10 +98,10 @@ bool static TestParse(std::string src, std::string canon)
 BOOST_AUTO_TEST_CASE(netbase_lookupnumeric)
 {
     BOOST_CHECK(TestParse("127.0.0.1", "127.0.0.1:65535"));
-    BOOST_CHECK(TestParse("127.0.0.1:31813", "127.0.0.1:31813"));
+    BOOST_CHECK(TestParse("127.0.0.1:65010", "127.0.0.1:65010"));
     BOOST_CHECK(TestParse("::ffff:127.0.0.1", "127.0.0.1:65535"));
     BOOST_CHECK(TestParse("::", "[::]:65535"));
-    BOOST_CHECK(TestParse("[::]:31813", "[::]:31813"));
+    BOOST_CHECK(TestParse("[::]:65010", "[::]:65010"));
     BOOST_CHECK(TestParse("[127.0.0.1]", "127.0.0.1:65535"));
     BOOST_CHECK(TestParse(":::", "[::]:0"));
 }

@@ -6,7 +6,7 @@
 #include "random.h"
 #include "scheduler.h"
 #if defined(HAVE_CONFIG_H)
-#include "config/cari-config.h"
+#include "config/vsync-config.h"
 #endif
 
 #include <boost/bind.hpp>
