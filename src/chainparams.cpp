@@ -138,7 +138,7 @@ public:
         consensus.nTimeSlotLength                        = 15;
 
         // spork keys
-        consensus.strSporkPubKey                         = "04B433E6598390C992F4F022F20D3B4CBBE691652EE7C48243B81701CBDB7CC7D7BF0EE09E154E6FCBF2043D65AF4E9E97B89B5DBAF830D83B9B7F469A6C45A717";
+        consensus.strSporkPubKey                         = "047288f894b9743b998709571f7f516c36c1782c729b90cbd636d9b82c1ad7d9e164829e557b81a7431494f5c5511a2d1567f17aac68df3552d782deb8955bd3cd";
         consensus.strSporkPubKeyOld                      = "";
         consensus.nTime_EnforceNewSporkKey               = 0;
         consensus.nTime_RejectOldSporkKey                = 0;
